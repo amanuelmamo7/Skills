@@ -19,10 +19,11 @@ BUCKET_NOTES = {
     "market-analysis": " (from Sefer)",
     "personal-assistant": " (from Bari + Cowork, plus reviewed third-party)",
     "web-application": " (third-party, from Agentic Awesome Skills — pinned `5e31f23`)",
-    "agent-infrastructure": " (third-party, from Agentic Awesome Skills — pinned `5e31f23`)",
-    "general": " (third-party, from Agentic Awesome Skills — pinned `5e31f23`)",
+    "agent-infrastructure": " (third-party AAS + distilled first-party)",
+    "general": " (third-party AAS + distilled first-party)",
     "attorney-workflow": "",
     "projects": "",
+    "dev-operations": " (distilled from StreamEZ project practice)",
 }
 
 FLAG_WORDS = ("RUNS", "DELEGATED", "HIGH CONSEQUENCE", "unvetted", "supply-chain")

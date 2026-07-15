@@ -12,12 +12,12 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (44 skills across 7 buckets)."
+      "description": "The full curated library (67 skills across 8 buckets)."
     },
     {
       "name": "general",
       "source": "./plugins/general",
-      "description": "Research, writing, and thinking utilities: deep research, research briefs, note synthesis, proofreading. (5 skills)"
+      "description": "Research, writing, and thinking utilities: deep research, research briefs, note synthesis, proofreading. (7 skills)"
     },
     {
       "name": "web-application",
@@ -32,12 +32,12 @@
     {
       "name": "market-analysis",
       "source": "./plugins/market-analysis",
-      "description": "Market and equity analysis: pre/post-market briefs, macro readthroughs, deep dives, theses. (8 skills)"
+      "description": "Market and equity analysis: pre/post-market briefs, macro readthroughs, deep dives, theses. (11 skills)"
     },
     {
       "name": "personal-assistant",
       "source": "./plugins/personal-assistant",
-      "description": "Executive-assistant capabilities: briefs, comms, transcription, time tracking, redaction, reminders. (15 skills)"
+      "description": "Executive-assistant capabilities: briefs, comms, transcription, time tracking, redaction, reminders. (18 skills)"
     },
     {
       "name": "projects",
@@ -47,7 +47,12 @@
     {
       "name": "agent-infrastructure",
       "source": "./plugins/agent-infrastructure",
-      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (5 skills)"
+      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (9 skills)"
+    },
+    {
+      "name": "dev-operations",
+      "source": "./plugins/dev-operations",
+      "description": "Running software responsibly: house rules, audits, incidents, rotations, costs, CI gates. (11 skills)"
     }
   ]
 }

@@ -28,6 +28,7 @@ BUCKET_DESCRIPTIONS = {
     "personal-assistant": "Executive-assistant capabilities: briefs, comms, transcription, time tracking, redaction, reminders.",
     "projects": "Standalone project skills.",
     "agent-infrastructure": "Building and running agents: design patterns, orchestration, scheduling, memory.",
+    "dev-operations": "Running software responsibly: house rules, audits, incidents, rotations, costs, CI gates.",
 }
 
 OWNER = {"name": "Amanuel Mamo", "email": "amanuelmamo7@gmail.com"}

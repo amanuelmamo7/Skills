@@ -21,6 +21,7 @@ BUCKET_COLORS = {
     "general": "#76b7b2",
     "attorney-workflow": "#e15759",
     "projects": "#edc948",
+    "dev-operations": "#9c755f",
 }
 
 TEMPLATE = """<!DOCTYPE html>
@@ -38,7 +39,7 @@ TEMPLATE = """<!DOCTYPE html>
 </style>
 </head>
 <body>
-<div id="legend">__LEGEND__ &nbsp;|&nbsp; ◆ source &nbsp; ★ reviewer &nbsp;|&nbsp; hover a node for details, drag to explore</div>
+<div id="legend">__LEGEND__ &nbsp;|&nbsp; ◆ source &nbsp; ■ system &nbsp; ★ reviewer &nbsp;|&nbsp; hover a node for details, drag to explore</div>
 <div id="graph"></div>
 <script>
 const data = __DATA__;
@@ -46,6 +47,7 @@ const bucketColors = __COLORS__;
 const nodes = data.nodes.map(n => {
   if (n.type === "human") return { id:n.id, label:n.name, shape:"star", size:28, color:"#f1c40f", title:n.role };
   if (n.type === "source") return { id:n.id, label:n.name, shape:"diamond", size:18, color:"#95a5a6", title:n.location||"" };
+  if (n.type === "system") return { id:n.id, label:n.name, shape:"square", size:14, color:"#5d7a99", title:n.role||"" };
   const b = (n.buckets||[])[0];
   return { id:n.id, label:n.id, shape:"dot", size:12,
            color: bucketColors[b] || "#7f8c8d",
