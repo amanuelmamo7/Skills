@@ -155,6 +155,105 @@
       "license": "MIT",
       "risk_notes": "DELEGATED TRUST. Wrapper docs for external MCP memory server (webzler/agentMemory) installed via npm — the server code itself is NOT reviewed here and MUST be vetted before actual use. Memory is a persistence surface: treat recalled content as untrusted input in later sessions. Near-duplicate 'agent-memory' rejected as redundant.",
       "buckets": ["agent-infrastructure"]
+    },
+    {
+      "skill": "gemini-deep-research",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/gemini-deep-research",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review incl. research.py)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Cleanest artifact of its batch. One script, one endpoint (generativelanguage.googleapis.com), GEMINI_API_KEY from env sent only as auth header, explicit approval gate and cost warning. Local plaintext query cache in ~/.cache/deep-research.",
+      "buckets": ["general"]
+    },
+    {
+      "skill": "bulletmind",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/bulletmind",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, pure formatting method. No commands, network, or persistence.",
+      "buckets": ["general"]
+    },
+    {
+      "skill": "internal-comms",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/internal-comms",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "Apache-2.0 (upstream: anthropics/skills — genuine, LICENSE.txt ships)",
+      "risk_notes": "Markdown only. Reads broad Slack/Drive/Email/Calendar context — disclosed and inherent to writing internal comms. All example files ship.",
+      "buckets": ["personal-assistant"]
+    },
+    {
+      "skill": "professional-proofreader",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/professional-proofreader",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory; both referenced mode files ship. No commands or network.",
+      "buckets": ["general"]
+    },
+    {
+      "skill": "audio-transcriber",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/audio-transcriber",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review of all 3 scripts)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "RUNS SCRIPTS. Transcription itself is fully local (Whisper). Caveats: transcribe.py silently pip-installs rich/tqdm on ImportError; can pipe full transcripts to Claude/Copilot CLIs (meeting content leaves machine — disable unless wanted); recommends unofficial 'pip install claude-cli' (DO NOT — supply-chain risk); install script modifies system (pip/brew). Doc half-Portuguese, self-contradicts on external APIs.",
+      "buckets": ["personal-assistant"]
+    },
+    {
+      "skill": "time-ledger",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/time-ledger",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT (upstream: cruisekkk/time-ledger)",
+      "risk_notes": "Markdown only. Writes to user's own Notion DB via the OFFICIAL Notion connector (relies on its approval prompts). Anti-fabrication honesty contract is a genuine safety property. External template repo is delegated trust for setup only.",
+      "buckets": ["personal-assistant"]
+    },
+    {
+      "skill": "research-prompt",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/research-prompt",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, prompt-crafting method. IGNORE line 58's ghost 'DeepAPI POST /v1/research/deep' reference — no such endpoint ships or is explained. Limitations section properly requires approval for active steps.",
+      "buckets": ["general"]
+    },
+    {
+      "skill": "efficient-web-research",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/efficient-web-research",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, token-efficiency research protocol. Circular trigger line; references foreign tool names (read_url_content, browser_subagent) that need mental mapping to local tools. Only endpoint: read-only api.github.com examples.",
+      "buckets": ["general"]
+    },
+    {
+      "skill": "privacy-mask",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/privacy-mask",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "DELEGATED TRUST. All functionality is the external pip package 'privacy-mask' (fullstackcrew-alpha/privacy-mask) — MUST be vetted before actual use; 'all processing local/offline' claim is unverifiable from this folder. Auto-triggers on shared screenshots (defensive intent, but routes credential-bearing images through third-party code).",
+      "buckets": ["personal-assistant"]
     }
   ],
   "rejected": [
@@ -197,6 +296,54 @@
       "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
       "decision_date": "2026-07-15",
       "reason": "Quality, not security: persona-only content with circular trigger guidance, no procedures, and an instruction to open resources/implementation-playbook.md which does not ship. Topic covered better by ai-agents-architect."
+    },
+    {
+      "skill": "gmail-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/gmail-automation",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "SECURITY FAIL: instructs running scripts/auth.py + gmail.py which do not ship (unreviewable payload); token refresh via undisclosed author-run cloud endpoint mislabeled as 'Google's cloud function'; send/delete with no approval gate. Do not revisit without shipped, reviewable scripts and full disclosure of the refresh endpoint."
+    },
+    {
+      "skill": "google-calendar-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/google-calendar-automation",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "SECURITY FAIL: same ghost-scripts + undisclosed token-refresh endpoint pattern as gmail-automation (same author); delete/decline with --no-notify and no approval gate."
+    },
+    {
+      "skill": "linkedin-cli",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/linkedin-cli",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "SECURITY FAIL: frontmatter 'risk: safe' is false — vendor cloud browser (linkedapi.io) drives the user's live LinkedIn session; DMs/connections/tokens transit vendor servers; can message/post/remove connections with no confirmation; violates LinkedIn ToS (account-restriction risk)."
+    },
+    {
+      "skill": "notion-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/notion-automation",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Data custody, not dishonesty: honest wrapper, but all workspace content + OAuth tokens transit Composio's Rube proxy (rube.app). Rejected for executive-data use; revisit if a direct official-connector alternative is needed or Composio is separately vetted and accepted."
+    },
+    {
+      "skill": "todoist-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/todoist-automation",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Data custody: same Rube/Composio proxy pattern as notion-automation; permanent DELETE_TASK with no confirmation requirement."
+    },
+    {
+      "skill": "rich-elicitation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "skills/rich-elicitation",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Consistency with ui-a11y precedent: written for a foreign system (Antigravity) with tools that don't exist here (ask_user_input_v0), ghost references, and a self-declared review exemption. Method is sound — revisit if ported cleanly."
     }
   ]
 }

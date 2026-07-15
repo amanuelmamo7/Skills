@@ -16,13 +16,13 @@ Buckets are metadata, not folders — a skill can live in more than one.
 
 | Bucket | Skills | Status |
 |---|---:|---|
-| market-analysis | 8 | active |
-| personal-assistant | 12 | active |
+| personal-assistant | 15 | active |
 | web-application | 9 | active |
+| market-analysis | 8 | active |
+| general | 5 | active |
 | agent-infrastructure | 5 | active |
 | attorney-workflow | 1 | growing |
 | projects | 1 | active |
-| general | 0 | reserved |
 
 ### market-analysis (from Sefer)
 
@@ -52,6 +52,10 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`morning-music-alarm`](skills/morning-music-alarm/SKILL.md) | Sonos wake-up music via curl-only SOAP |
 | [`daily-brief-export`](skills/daily-brief-export/SKILL.md) | Token-protected JSON endpoint exporting calendar/email/tasks |
 | [`daily-job-search-crawl`](skills/daily-job-search-crawl/SKILL.md) | Daily job-search crawl: saved searches, scoring, auto-promote, follow-ups |
+| [`internal-comms`](skills/internal-comms/SKILL.md) | Status reports, leadership updates, newsletters (Anthropic; third-party) |
+| [`audio-transcriber`](skills/audio-transcriber/SKILL.md) | Local Whisper meeting transcription — ⚠ script caveats, see manifest |
+| [`time-ledger`](skills/time-ledger/SKILL.md) | Natural-language time tracking into your Notion DB (third-party) |
+| [`privacy-mask`](skills/privacy-mask/SKILL.md) | Screenshot PII redaction — ⚠ external package unvetted, see manifest |
 
 ### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
 
@@ -77,6 +81,16 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Unattended recurring agent runs — ⚠ high consequence, see manifest |
 | [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory — ⚠ external server unvetted, see manifest |
 
+### general (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
+
+| Skill | Use it for |
+|---|---|
+| [`gemini-deep-research`](skills/gemini-deep-research/SKILL.md) | Autonomous multi-step research with cited reports (needs GEMINI_API_KEY) |
+| [`research-prompt`](skills/research-prompt/SKILL.md) | Turns vague asks into one precise deep-research brief |
+| [`efficient-web-research`](skills/efficient-web-research/SKILL.md) | Token-efficient web research protocol |
+| [`bulletmind`](skills/bulletmind/SKILL.md) | Any input into clean hierarchical bullet notes |
+| [`professional-proofreader`](skills/professional-proofreader/SKILL.md) | Proofread and correct while preserving the author's voice |
+
 ### attorney-workflow
 
 | Skill | Use it for |
@@ -101,7 +115,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Sefer (`~/.openclaw/workspace-sefer`) | All 8 market-analysis skills |
 | Bari (`~/.openclaw/workspace`) | 8 assistant skills + poker-hud-advisor |
 | Cowork (`~/Documents/Claude/Scheduled`) | 4 scheduled-task skills |
-| [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 9 web-application + 5 agent-infrastructure skills (intake 2026-07-15; 5 rejected — see manifest.json) |
+| [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 23 skills: 9 web-application, 5 agent-infrastructure, 5 general, 4 personal-assistant (intake 2026-07-15; 11 rejected — see manifest.json) |
 
 Originals were copied, never moved. Scripts keep machine-specific paths as working references.
 
