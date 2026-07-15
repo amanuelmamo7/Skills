@@ -14,7 +14,7 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Run drift audit
         id: audit
@@ -28,7 +28,7 @@ jobs:
 
       - name: Open issue if drift found
         if: steps.audit.outputs.exit_code == '1'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         with:
           script: |
             const fs = require('fs');
