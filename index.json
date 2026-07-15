@@ -16,6 +16,7 @@
     { "id": "src-sefer", "type": "source", "name": "Sefer (OpenClaw finance agent)", "location": "~/.openclaw/workspace-sefer" },
     { "id": "src-bari", "type": "source", "name": "Bari (OpenClaw assistant agent)", "location": "~/.openclaw/workspace" },
     { "id": "src-cowork", "type": "source", "name": "Claude Cowork scheduled tasks", "location": "~/Documents/Claude/Scheduled" },
+    { "id": "src-aas", "type": "source", "name": "Agentic Awesome Skills (third-party)", "location": "https://github.com/sickn33/agentic-awesome-skills", "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0" },
 
     { "id": "pre-market-brief", "type": "skill", "buckets": ["market-analysis"], "description": "Morning market rundown: overnight tape, catalysts, earnings docket", "review_date": "2026-07-14", "risk": "first-party" },
     { "id": "post-market-brief", "type": "skill", "buckets": ["market-analysis"], "description": "End-of-day wrap + gainers tracking with catalyst verification", "review_date": "2026-07-14", "risk": "first-party" },
@@ -40,7 +41,17 @@
     { "id": "daily-job-search-crawl", "type": "skill", "buckets": ["personal-assistant"], "description": "Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups", "review_date": "2026-07-15", "risk": "first-party; uses Gmail, Chrome MCP, Excel files" },
     { "id": "daily-legal-workflow-app-ideas", "type": "skill", "buckets": ["attorney-workflow"], "description": "Daily legal-AI research digest + app-idea brainstorm with run-memory dedup", "review_date": "2026-07-15", "risk": "first-party; web research only" },
     { "id": "weekday-morning-brief", "type": "skill", "buckets": ["personal-assistant"], "description": "Weekday 8am brief: calendar, VIP email + reply drafts, markets, system health", "review_date": "2026-07-15", "risk": "first-party; uses Gmail + Calendar connectors, creates drafts/events" },
-    { "id": "weekly-system-self-audit", "type": "skill", "buckets": ["personal-assistant"], "description": "Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP auto-refresh", "review_date": "2026-07-15", "risk": "first-party; edits vip-senders.md, performs backfill POSTs" }
+    { "id": "weekly-system-self-audit", "type": "skill", "buckets": ["personal-assistant"], "description": "Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP auto-refresh", "review_date": "2026-07-15", "risk": "first-party; edits vip-senders.md, performs backfill POSTs" },
+
+    { "id": "form-cro", "type": "skill", "buckets": ["web-application"], "description": "Form conversion-rate optimization methodology", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "frontend-design", "type": "skill", "buckets": ["web-application"], "description": "Design direction and visual quality guidance for web UI", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "frontend-developer", "type": "skill", "buckets": ["web-application"], "description": "Frontend engineering persona and capability catalog", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "nextjs-app-router-patterns", "type": "skill", "buckets": ["web-application"], "description": "Next.js App Router patterns and playbook", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "nextjs-best-practices", "type": "skill", "buckets": ["web-application"], "description": "Next.js App Router principles and best practices", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "react-best-practices", "type": "skill", "buckets": ["web-application"], "description": "Vercel Engineering's React performance guide (47 rules)", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "seo-audit", "type": "skill", "buckets": ["web-application"], "description": "Diagnostic-only SEO audit framework", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "shadcn", "type": "skill", "buckets": ["web-application"], "description": "shadcn/ui component workflows via the official CLI", "review_date": "2026-07-15", "risk": "third-party, RUNS COMMANDS: auto-executes npx shadcn@latest at load; npm supply-chain exposure accepted — see manifest.json" },
+    { "id": "tailwind-patterns", "type": "skill", "buckets": ["web-application"], "description": "Tailwind CSS v4 patterns and reference", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" }
   ],
   "edges": [
     { "from": "pre-market-brief", "to": "src-sefer", "type": "copied-from" },
@@ -69,6 +80,28 @@
     { "from": "daily-legal-workflow-app-ideas", "to": "amanuel", "type": "reviewed-by" },
     { "from": "weekday-morning-brief", "to": "amanuel", "type": "reviewed-by" },
     { "from": "weekly-system-self-audit", "to": "amanuel", "type": "reviewed-by" },
+
+    { "from": "form-cro", "to": "src-aas", "type": "copied-from" },
+    { "from": "frontend-design", "to": "src-aas", "type": "copied-from" },
+    { "from": "frontend-developer", "to": "src-aas", "type": "copied-from" },
+    { "from": "nextjs-app-router-patterns", "to": "src-aas", "type": "copied-from" },
+    { "from": "nextjs-best-practices", "to": "src-aas", "type": "copied-from" },
+    { "from": "react-best-practices", "to": "src-aas", "type": "copied-from" },
+    { "from": "seo-audit", "to": "src-aas", "type": "copied-from" },
+    { "from": "shadcn", "to": "src-aas", "type": "copied-from" },
+    { "from": "tailwind-patterns", "to": "src-aas", "type": "copied-from" },
+
+    { "from": "form-cro", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "frontend-design", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "frontend-developer", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "nextjs-app-router-patterns", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "nextjs-best-practices", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "react-best-practices", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "seo-audit", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "shadcn", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "tailwind-patterns", "to": "amanuel", "type": "reviewed-by" },
+
+    { "from": "nextjs-app-router-patterns", "to": "nextjs-best-practices", "type": "overlaps-with", "note": "same domain; patterns is example-driven, best-practices is principle tables" },
 
     { "from": "morning-brief", "to": "weekday-morning-brief", "type": "use-instead", "note": "weekday-morning-brief is the live Cowork version; morning-brief is the Bari original kept for reference" },
     { "from": "assistant-heartbeat", "to": "weekly-system-self-audit", "type": "overlaps-with", "note": "both do system-health checks at different cadences" }

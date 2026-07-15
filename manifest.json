@@ -1,5 +1,115 @@
 {
   "version": 1,
   "description": "Provenance ledger for THIRD-PARTY skills pulled from other repos. Every entry records the exact commit reviewed, so update audits are diff-reviews. First-party skills (authored by Amanuel or his agents) live only in index.json. See docs/INTAKE.md for the intake checklist and entry template.",
-  "third_party_skills": []
+  "third_party_skills": [
+    {
+      "skill": "form-cro",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/form-cro",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. No commands, no network, no undisclosed behavior.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "frontend-design",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/frontend-design",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Frontmatter description is persona-style rather than descriptive; content clean.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "frontend-developer",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/frontend-developer",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory persona/capability catalog. No executable instructions.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "nextjs-app-router-patterns",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/nextjs-app-router-patterns",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Code examples only.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "nextjs-best-practices",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/nextjs-best-practices",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Nothing executable.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "react-best-practices",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/react-best-practices",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only (SKILL.md + 47 rule files), advisory. Upstream author: Vercel Engineering. One benign 'npx svgo' example.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "seo-audit",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/seo-audit",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, diagnostic-only framework; explicitly refrains from implementing fixes unless asked.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "shadcn",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/shadcn",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "RUNS COMMANDS. Auto-executes 'npx shadcn@latest info --json' when the skill loads (SKILL.md line 29) — executes whatever shadcn@latest resolves to on npm that day (supply-chain exposure, accepted 2026-07-15). Also instructs blind pass-through of server-resolved preset codes to the CLI. Upstream: official shadcn/ui skill. Re-review this one with extra care on any upstream drift.",
+      "buckets": ["web-application"]
+    },
+    {
+      "skill": "tailwind-patterns",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/tailwind-patterns",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory Tailwind v4 reference. No commands or network.",
+      "buckets": ["web-application"]
+    }
+  ],
+  "rejected": [
+    {
+      "skill": "ui-a11y",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/ui-a11y",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Quality, not security: rebadged copy of bitjaru/styleseed 'ss-a11y' still referencing StyleSeed-specific commands and jargon; likely to behave oddly outside that system. Revisit if cleaned up upstream."
+    }
+  ]
 }

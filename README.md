@@ -18,10 +18,10 @@ Buckets are metadata, not folders — a skill can live in more than one.
 |---|---:|---|
 | market-analysis | 8 | active |
 | personal-assistant | 12 | active |
+| web-application | 9 | active |
 | attorney-workflow | 1 | growing |
 | projects | 1 | active |
 | general | 0 | reserved |
-| web-application | 0 | reserved |
 
 ### market-analysis (from Sefer)
 
@@ -52,6 +52,20 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`daily-brief-export`](skills/daily-brief-export/SKILL.md) | Token-protected JSON endpoint exporting calendar/email/tasks |
 | [`daily-job-search-crawl`](skills/daily-job-search-crawl/SKILL.md) | Daily job-search crawl: saved searches, scoring, auto-promote, follow-ups |
 
+### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
+
+| Skill | Use it for |
+|---|---|
+| [`react-best-practices`](skills/react-best-practices/SKILL.md) | Vercel Engineering's React performance guide (47 rules) |
+| [`nextjs-best-practices`](skills/nextjs-best-practices/SKILL.md) | Next.js App Router principles and best practices |
+| [`nextjs-app-router-patterns`](skills/nextjs-app-router-patterns/SKILL.md) | Next.js App Router patterns, example-driven |
+| [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
+| [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows — ⚠ runs CLI commands, see manifest |
+| [`frontend-design`](skills/frontend-design/SKILL.md) | Design direction and visual quality guidance |
+| [`frontend-developer`](skills/frontend-developer/SKILL.md) | Frontend engineering persona and capability catalog |
+| [`form-cro`](skills/form-cro/SKILL.md) | Form conversion-rate optimization methodology |
+| [`seo-audit`](skills/seo-audit/SKILL.md) | Diagnostic-only SEO audit framework |
+
 ### attorney-workflow
 
 | Skill | Use it for |
@@ -76,7 +90,8 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Sefer (`~/.openclaw/workspace-sefer`) | All 8 market-analysis skills |
 | Bari (`~/.openclaw/workspace`) | 8 assistant skills + poker-hud-advisor |
 | Cowork (`~/Documents/Claude/Scheduled`) | 4 scheduled-task skills |
+| [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 9 web-application skills (intake 2026-07-15; 1 rejected — see manifest.json) |
 
 Originals were copied, never moved. Scripts keep machine-specific paths as working references.
 
-*Seeded 2026-07-15 from the AI Skills library (built 2026-07-14). Roadmap: Phase 1 complete; next is Phase 2 (first third-party intake) and Phase 3 (bucket-level plugins).*
+*Seeded 2026-07-15 from the AI Skills library (built 2026-07-14). Roadmap: Phases 1-2 complete (first third-party intake done); next is Phase 3 (bucket-level plugins).*
