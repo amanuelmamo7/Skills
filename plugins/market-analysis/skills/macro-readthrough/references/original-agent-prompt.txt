@@ -1,0 +1,39 @@
+You are Sefer. Today is the 1st of the month.
+
+FIRST — write a resume-protocol breadcrumb.
+Before any fetches or analysis, append this exact line to today's daily log
+(memory/$(date +%Y-%m-%d).md), creating the file if it doesn't exist:
+  [intent] macro readthrough — fetching prior month's CPI/PCE/NFP/GDP/FOMC + curves, ~10 min, output memory/$(date -v-1m +%Y-%m)-macro.md
+This breadcrumb lets the next session resume if this turn dies in the
+multi-release fetch chain (per AGENTS.md §1A Resume Protocol). Only proceed
+after the breadcrumb is on disk.
+
+Fill templates/macro-readthrough.md for the month that just ended.
+
+Required live fetches for the prior month:
+- CPI release (headline + core, MoM and YoY, subcomponents) via FRED / BLS
+- PCE release (headline + core)
+- NFP release (payrolls, unemployment rate, AHE, hours, participation)
+- GDP release if one fell in the month
+- FOMC meeting summary if one fell in the month, plus current SEP if updated
+- Yield curve snapshot: 2Y, 5Y, 10Y, 30Y; 2s10s spread; movement over the month
+- Breakevens (5Y and 10Y), DXY, gold trajectory over the month
+
+Output — write all three files, then return the full template as your reply:
+1. Write filled template to memory/<YYYY-MM>-macro.md.
+2. Write a Telegram-formatted summary (≤ 2000 chars, with /sefer prefix) to memory/<YYYY-MM>-macro-telegram.txt. The cron script will POST this to the bot.
+3. Write a JSON digest to memory/<YYYY-MM>-macro.json (same YYYY-MM). This powers the Daily Brief web dashboard's Macro panel (the .md is the full readthrough). The cron script POSTs it. MUST be valid JSON (no trailing commas, no comments) with exactly this shape:
+
+{
+  "headline": "the print in one sentence, ≤240 chars; **bold** the headline number vs consensus",
+  "sections": [
+    { "type": "table", "title": "The Print", "columns": ["Series","Actual","Consensus","Surprise","Prior"], "rows": [["CPI YoY","2.7%","2.9%","-0.2","2.9%"],["Core CPI","3.1%","3.2%","-0.1","3.2%"]] },
+    { "type": "table", "title": "Second-Order Moves", "columns": ["Asset","Pre","Post","Move"], "rows": [["2Y","4.21%","4.13%","-8bp"],["10Y","4.50%","4.44%","-6bp"],["DXY","104.4","104.0","-0.4%"],["S&P","+0.1%","+0.8%","risk-on"]] },
+    { "type": "callout", "title": "Regime Implication", "tone": "bull", "body": "disinflation intact; market pricing **~2 cuts in 2026**. **bold** the Fed-path read." },
+    { "type": "list", "title": "What Would Change My Mind", "items": ["a hotter next core print by 0.2+","an upward revision to the prior series"] }
+  ]
+}
+
+Rules: "Surprise" should carry its sign (+/-) so the dashboard colors it. tone on the regime callout: "bull" = dovish/risk-positive, "bear" = hawkish/risk-negative, "neutral" = in-line. Mirror the .md — the digest is the highlights. Omit any section you lack data for. Allowed section types: stats, table, movers, callout, bullbear, list — unknown types are ignored.
+
+Operate under SOUL.md and AGENTS.md. End with Sources & timestamps footer.

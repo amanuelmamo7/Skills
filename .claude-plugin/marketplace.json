@@ -5,14 +5,49 @@
     "email": "amanuelmamo7@gmail.com"
   },
   "metadata": {
-    "description": "Amanuel's curated skills library — reviewed, pinned, and indexed. See index.json for the knowledge graph and manifest.json for third-party provenance.",
-    "version": "0.1.0"
+    "description": "Amanuel's curated skills library \u2014 reviewed, pinned, and indexed. index.json is the knowledge graph; manifest.json is third-party provenance.",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (21 skills). Bucket-level plugins (general, web-application, attorney-workflow, market-analysis, personal-assistant) arrive in Phase 3."
+      "description": "The full curated library (44 skills across 7 buckets)."
+    },
+    {
+      "name": "general",
+      "source": "./plugins/general",
+      "description": "Research, writing, and thinking utilities: deep research, research briefs, note synthesis, proofreading. (5 skills)"
+    },
+    {
+      "name": "web-application",
+      "source": "./plugins/web-application",
+      "description": "Web app development: React, Next.js, Tailwind, shadcn/ui, frontend design, form CRO, SEO audits. (9 skills)"
+    },
+    {
+      "name": "attorney-workflow",
+      "source": "./plugins/attorney-workflow",
+      "description": "Legal practice workflows and legal-AI research. (1 skill)"
+    },
+    {
+      "name": "market-analysis",
+      "source": "./plugins/market-analysis",
+      "description": "Market and equity analysis: pre/post-market briefs, macro readthroughs, deep dives, theses. (8 skills)"
+    },
+    {
+      "name": "personal-assistant",
+      "source": "./plugins/personal-assistant",
+      "description": "Executive-assistant capabilities: briefs, comms, transcription, time tracking, redaction, reminders. (15 skills)"
+    },
+    {
+      "name": "projects",
+      "source": "./plugins/projects",
+      "description": "Standalone project skills. (1 skill)"
+    },
+    {
+      "name": "agent-infrastructure",
+      "source": "./plugins/agent-infrastructure",
+      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (5 skills)"
     }
   ]
 }

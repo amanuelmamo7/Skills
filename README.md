@@ -10,6 +10,20 @@ Curated skills library — reviewed, pinned, and indexed. Skills I write myself 
 - [`.claude-plugin/`](.claude-plugin/) makes this repo installable in Claude Code: `/plugin marketplace add amanuelmamo7/Skills`
 - Nothing here updates automatically. A skill enters or changes only after human review.
 
+## Installing
+
+Add the marketplace once, then install only the buckets you need:
+
+```
+/plugin marketplace add amanuelmamo7/Skills
+/plugin install personal-assistant@amanuel-skills
+/plugin install attorney-workflow@amanuel-skills
+```
+
+Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`.
+
+Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by [`tools/build_plugins.py`](tools/build_plugins.py) — never edit them by hand. After adding or re-bucketing a skill, run `python3 tools/build_plugins.py` and commit the result.
+
 ## Buckets
 
 Buckets are metadata, not folders — a skill can live in more than one.

@@ -1,0 +1,9 @@
+{
+  "name": "personal-assistant",
+  "version": "0.2.0",
+  "description": "Executive-assistant capabilities: briefs, comms, transcription, time tracking, redaction, reminders. (15 skills \u2014 generated from index.json, do not edit by hand.)",
+  "author": {
+    "name": "Amanuel Mamo",
+    "email": "amanuelmamo7@gmail.com"
+  }
+}

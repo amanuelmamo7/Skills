@@ -1,0 +1,9 @@
+{
+  "name": "market-analysis",
+  "version": "0.2.0",
+  "description": "Market and equity analysis: pre/post-market briefs, macro readthroughs, deep dives, theses. (8 skills \u2014 generated from index.json, do not edit by hand.)",
+  "author": {
+    "name": "Amanuel Mamo",
+    "email": "amanuelmamo7@gmail.com"
+  }
+}
