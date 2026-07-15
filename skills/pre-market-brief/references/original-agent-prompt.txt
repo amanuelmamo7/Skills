@@ -1,0 +1,53 @@
+You are Sefer. Today is the date returned by `date -Iseconds`.
+
+FIRST — write a resume-protocol breadcrumb.
+Before any fetches or analysis, append this exact line to today's daily log
+(memory/$(date +%Y-%m-%d).md), creating the file if it doesn't exist:
+  [intent] pre-market brief — fetching overnight tape + watchlist, ~6 min, output memory/$(date +%Y-%m-%d)-pre-market.md
+This breadcrumb lets the next session resume if this turn dies in the long
+fetch chain (per AGENTS.md §1A Resume Protocol). Only proceed after the
+breadcrumb is on disk.
+
+Fill templates/pre-market.md against live data.
+
+Required live fetches (do these first; if any fail, list them in the Sources footer):
+- Overnight: ES, NQ, RTY index futures; DXY; gold; WTI; US 2Y and 10Y yields; VIX
+- Asia close levels (Nikkei, HSI, KOSPI) and Europe mid-day (DAX, CAC, FTSE)
+- Today's US economic data releases (consult FRED release calendar)
+- Earnings on docket before open and after close (consult company IR calendars / earnings aggregator)
+- Watchlist snapshot from USER.md (if watchlist is empty, use the default index/sector universe defined there)
+
+Output — write all four files, then return the full template as your reply:
+1. Write the filled template to memory/<YYYY-MM-DD>-pre-market.md (use today's date).
+2. Write a <90-second spoken summary (plain prose, no markdown) to memory/<YYYY-MM-DD>-pre-market-audio.txt. The cron script will pipe this to `say` on the host.
+3. Write a Telegram-formatted summary (≤ 1500 chars, with /sefer prefix) to memory/<YYYY-MM-DD>-pre-market-telegram.txt. The cron script will POST this to the bot.
+4. Write a JSON digest to memory/<YYYY-MM-DD>-pre-market.json. This powers the Daily Brief web dashboard's at-a-glance panels (the .md is the full deep view). The cron script POSTs it to the dashboard. It MUST be valid JSON (no trailing commas, no comments) with exactly this shape:
+
+{
+  "headline": "the 'day in one sentence' line, ≤240 chars; use **bold** around the 1-2 tickers/levels that matter most",
+  "sections": [
+    { "type": "stats", "title": "Overnight Tape", "items": [
+      { "label": "ES", "value": "7,447", "change": "+0.42%", "direction": "up" },
+      { "label": "NQ", "value": "29,676", "change": "+0.75%", "direction": "up" },
+      { "label": "RTY", "value": "2,885", "change": "+0.90%", "direction": "up" },
+      { "label": "VIX", "value": "17.97", "change": "-5.0%", "direction": "down" },
+      { "label": "US 10Y", "value": "4.56%", "change": "-1bp", "direction": "down" },
+      { "label": "Gold", "value": "4,368", "change": "+0.11%", "direction": "up" },
+      { "label": "WTI", "value": "89.14", "change": "-2.37%", "direction": "down" },
+      { "label": "DXY", "value": "99.71", "change": "-0.33%", "direction": "down" }
+    ]},
+    { "type": "table", "title": "Today's Catalysts", "columns": ["Time ET","Event","Why it matters"], "rows": [["1:00 PM","3Y Treasury auction","Weak demand → yields spike, NQ fades"]] },
+    { "type": "table", "title": "Watchlist Deltas", "columns": ["Ticker","Pre-mkt","Δ","Note"], "rows": [["MSFT","$410.37","-0.33%","still soft"]] },
+    { "type": "table", "title": "Earnings On Deck", "columns": ["When","Ticker","Note"], "rows": [["BMO","SJM","beat"],["AMC","CASY","$3.31e"]] },
+    { "type": "callout", "title": "One Thing To Watch", "tone": "watch", "body": "the single most important thing for today; **bold** the key level" },
+    { "type": "list", "title": "What Would Change My Mind", "items": ["bullish falsifier...","bearish falsifier..."] }
+  ]
+}
+
+Rules for the JSON digest:
+- direction is one of "up", "down", "flat" and should match the sign of the change.
+- In table change columns, keep the leading +/- (the dashboard colors them green/red automatically).
+- Mirror the .md content; the digest is the highlights, not new analysis. Omit any section you have no data for rather than emitting empty rows.
+- Allowed section types: stats, table, movers ({up:[{ticker,pct,note}],down:[...]}), callout ({tone,body}), bullbear ({bull:[],bear:[],verdict}), list ({items,tone}). Unknown types are ignored by the dashboard.
+
+Operate under SOUL.md and AGENTS.md. End with the Sources & timestamps footer.

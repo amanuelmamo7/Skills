@@ -1,0 +1,9 @@
+{
+  "name": "skills-library",
+  "version": "0.1.0",
+  "description": "Amanuel's curated skills library. Skills are auto-discovered from the skills/ directory.",
+  "author": {
+    "name": "Amanuel Mamo",
+    "email": "amanuelmamo7@gmail.com"
+  }
+}

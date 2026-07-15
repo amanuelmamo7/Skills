@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "updated": "2026-07-15",
+  "description": "Source of truth for this repo. Nodes are skills, sources, and humans. Edges are typed relationships. README bucket tables are generated from this file.",
+  "buckets": [
+    "general",
+    "web-application",
+    "attorney-workflow",
+    "market-analysis",
+    "personal-assistant",
+    "projects"
+  ],
+  "nodes": [
+    { "id": "amanuel", "type": "human", "name": "Amanuel Mamo", "role": "owner / reviewer" },
+
+    { "id": "src-sefer", "type": "source", "name": "Sefer (OpenClaw finance agent)", "location": "~/.openclaw/workspace-sefer" },
+    { "id": "src-bari", "type": "source", "name": "Bari (OpenClaw assistant agent)", "location": "~/.openclaw/workspace" },
+    { "id": "src-cowork", "type": "source", "name": "Claude Cowork scheduled tasks", "location": "~/Documents/Claude/Scheduled" },
+
+    { "id": "pre-market-brief", "type": "skill", "buckets": ["market-analysis"], "description": "Morning market rundown: overnight tape, catalysts, earnings docket", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "post-market-brief", "type": "skill", "buckets": ["market-analysis"], "description": "End-of-day wrap + gainers tracking with catalyst verification", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "macro-readthrough", "type": "skill", "buckets": ["market-analysis"], "description": "CPI/PCE/NFP/GDP/FOMC prints: what's under the headline", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "weekly-deep-dive", "type": "skill", "buckets": ["market-analysis"], "description": "Weekly aggregation of daily gainers: what held, what faded", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "stock-deep-dive", "type": "skill", "buckets": ["market-analysis"], "description": "12-section deep-dive on a single stock's big move", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "company-thesis", "type": "skill", "buckets": ["market-analysis"], "description": "Full company thesis: what's priced in, bull/bear cases, catalysts", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "trend-justification", "type": "skill", "buckets": ["market-analysis"], "description": "Is this rally justified? Observed/Implied/Actual/Gap framework", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "pointed-analysis", "type": "skill", "buckets": ["market-analysis"], "description": "Sharp one-off market questions: direct answer, fetch log, falsifiers", "review_date": "2026-07-14", "risk": "first-party" },
+
+    { "id": "morning-brief", "type": "skill", "buckets": ["personal-assistant"], "description": "Daily start-of-day brief: calendar, filtered email signal, tasks", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "evening-wrap", "type": "skill", "buckets": ["personal-assistant"], "description": "End-of-workday wrap: tomorrow's calendar, honest review of today", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "weekly-wrap", "type": "skill", "buckets": ["personal-assistant"], "description": "Friday synthesis of the week's logs: themes, time allocation", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "memory-maintenance", "type": "skill", "buckets": ["personal-assistant"], "description": "Weekly distillation of raw logs into durable long-term memory", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "assistant-heartbeat", "type": "skill", "buckets": ["personal-assistant"], "description": "Periodic rotating check (email/calendar/cron health)", "review_date": "2026-07-14", "risk": "first-party" },
+    { "id": "meeting-reminder", "type": "skill", "buckets": ["personal-assistant"], "description": "Deterministic no-LLM voice reminders 20 minutes before meetings", "review_date": "2026-07-14", "risk": "first-party, contains scripts" },
+    { "id": "morning-music-alarm", "type": "skill", "buckets": ["personal-assistant"], "description": "Sonos wake-up music via curl-only SOAP", "review_date": "2026-07-14", "risk": "first-party, contains scripts" },
+    { "id": "daily-brief-export", "type": "skill", "buckets": ["personal-assistant"], "description": "Token-protected JSON endpoint exporting calendar/email/tasks", "review_date": "2026-07-14", "risk": "first-party, contains scripts + endpoint" },
+
+    { "id": "poker-hud-advisor", "type": "skill", "buckets": ["projects"], "description": "Real-time Claude advice layer for the poker HUD", "review_date": "2026-07-14", "risk": "first-party, contains scripts" },
+
+    { "id": "daily-job-search-crawl", "type": "skill", "buckets": ["personal-assistant"], "description": "Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups", "review_date": "2026-07-15", "risk": "first-party; uses Gmail, Chrome MCP, Excel files" },
+    { "id": "daily-legal-workflow-app-ideas", "type": "skill", "buckets": ["attorney-workflow"], "description": "Daily legal-AI research digest + app-idea brainstorm with run-memory dedup", "review_date": "2026-07-15", "risk": "first-party; web research only" },
+    { "id": "weekday-morning-brief", "type": "skill", "buckets": ["personal-assistant"], "description": "Weekday 8am brief: calendar, VIP email + reply drafts, markets, system health", "review_date": "2026-07-15", "risk": "first-party; uses Gmail + Calendar connectors, creates drafts/events" },
+    { "id": "weekly-system-self-audit", "type": "skill", "buckets": ["personal-assistant"], "description": "Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP auto-refresh", "review_date": "2026-07-15", "risk": "first-party; edits vip-senders.md, performs backfill POSTs" }
+  ],
+  "edges": [
+    { "from": "pre-market-brief", "to": "src-sefer", "type": "copied-from" },
+    { "from": "post-market-brief", "to": "src-sefer", "type": "copied-from" },
+    { "from": "macro-readthrough", "to": "src-sefer", "type": "copied-from" },
+    { "from": "weekly-deep-dive", "to": "src-sefer", "type": "copied-from" },
+    { "from": "stock-deep-dive", "to": "src-sefer", "type": "copied-from" },
+    { "from": "company-thesis", "to": "src-sefer", "type": "copied-from" },
+    { "from": "trend-justification", "to": "src-sefer", "type": "copied-from" },
+    { "from": "pointed-analysis", "to": "src-sefer", "type": "copied-from" },
+    { "from": "morning-brief", "to": "src-bari", "type": "copied-from" },
+    { "from": "evening-wrap", "to": "src-bari", "type": "copied-from" },
+    { "from": "weekly-wrap", "to": "src-bari", "type": "copied-from" },
+    { "from": "memory-maintenance", "to": "src-bari", "type": "copied-from" },
+    { "from": "assistant-heartbeat", "to": "src-bari", "type": "copied-from" },
+    { "from": "meeting-reminder", "to": "src-bari", "type": "copied-from" },
+    { "from": "morning-music-alarm", "to": "src-bari", "type": "copied-from" },
+    { "from": "daily-brief-export", "to": "src-bari", "type": "copied-from" },
+    { "from": "poker-hud-advisor", "to": "src-bari", "type": "copied-from" },
+    { "from": "daily-job-search-crawl", "to": "src-cowork", "type": "copied-from" },
+    { "from": "daily-legal-workflow-app-ideas", "to": "src-cowork", "type": "copied-from" },
+    { "from": "weekday-morning-brief", "to": "src-cowork", "type": "copied-from" },
+    { "from": "weekly-system-self-audit", "to": "src-cowork", "type": "copied-from" },
+
+    { "from": "daily-job-search-crawl", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "daily-legal-workflow-app-ideas", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "weekday-morning-brief", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "weekly-system-self-audit", "to": "amanuel", "type": "reviewed-by" },
+
+    { "from": "morning-brief", "to": "weekday-morning-brief", "type": "use-instead", "note": "weekday-morning-brief is the live Cowork version; morning-brief is the Bari original kept for reference" },
+    { "from": "assistant-heartbeat", "to": "weekly-system-self-audit", "type": "overlaps-with", "note": "both do system-health checks at different cadences" }
+  ]
+}

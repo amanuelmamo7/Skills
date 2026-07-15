@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "description": "Provenance ledger for THIRD-PARTY skills pulled from other repos. Every entry records the exact commit reviewed, so update audits are diff-reviews. First-party skills (authored by Amanuel or his agents) live only in index.json. See docs/INTAKE.md for the intake checklist and entry template.",
+  "third_party_skills": []
+}
