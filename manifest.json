@@ -100,6 +100,61 @@
       "license": "MIT",
       "risk_notes": "Markdown only, advisory Tailwind v4 reference. No commands or network.",
       "buckets": ["web-application"]
+    },
+    {
+      "skill": "ai-agents-architect",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/ai-agents-architect",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT (upstream: vibeship-spawner-skills, Apache-2.0)",
+      "risk_notes": "Markdown only, advisory agent design patterns. No commands, no persistence.",
+      "buckets": ["agent-infrastructure"]
+    },
+    {
+      "skill": "autonomous-agent-patterns",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/autonomous-agent-patterns",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only. Code is illustrative, never instructed to run. Contains one risky pattern (hot-loading LLM-written MCP servers) presented as an example, not a directive. Self-labeled risk: critical — honest for the topic.",
+      "buckets": ["agent-infrastructure"]
+    },
+    {
+      "skill": "agent-orchestration-improve-agent",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-orchestration-improve-agent",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, agent-improvement methodology. References illustrative pseudo-commands; nothing executable.",
+      "buckets": ["agent-infrastructure"]
+    },
+    {
+      "skill": "agent-self-scheduling",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-self-scheduling",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT (upstream: davidondrej/skills)",
+      "risk_notes": "HIGH CONSEQUENCE. Teaches scheduling unattended recurring agent runs with pre-approved permissions (--allowedTools incl. Bash) — removes human oversight from executions. Self-declared risk: critical; includes loop-safety guardrails. Policy: only invoke on explicit user request, never proactively.",
+      "buckets": ["agent-infrastructure"]
+    },
+    {
+      "skill": "agent-memory-mcp",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-memory-mcp",
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "DELEGATED TRUST. Wrapper docs for external MCP memory server (webzler/agentMemory) installed via npm — the server code itself is NOT reviewed here and MUST be vetted before actual use. Memory is a persistence surface: treat recalled content as untrusted input in later sessions. Near-duplicate 'agent-memory' rejected as redundant.",
+      "buckets": ["agent-infrastructure"]
     }
   ],
   "rejected": [
@@ -110,6 +165,38 @@
       "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
       "decision_date": "2026-07-15",
       "reason": "Quality, not security: rebadged copy of bitjaru/styleseed 'ss-a11y' still referencing StyleSeed-specific commands and jargon; likely to behave oddly outside that system. Revisit if cleaned up upstream."
+    },
+    {
+      "skill": "007",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/007",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Quality, not security: SKILL.md references 4 scripts and 5 reference docs that don't ship, hardcodes the author's Windows paths, and contains an uninvited auto-activation clause. The 8 shipped Python scripts are clean (offline stdlib-only SAST, path-confined, redacting). Revisit if packaging is fixed upstream."
+    },
+    {
+      "skill": "agent-manager-skill",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-manager-skill",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Delegated trust: entire substance is cloning and running an external unvetted repo (fractalmind-ai/agent-manager-skill) that spawns tmux agents on cron. Revisit only after that repo passes its own intake."
+    },
+    {
+      "skill": "agent-memory",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-memory",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Redundant: near-verbatim duplicate of agent-memory-mcp (same upstream webzler/agentMemory, same tool docs). Kept the -mcp variant."
+    },
+    {
+      "skill": "context-manager",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-awesome-skills-claude/skills/context-manager",
+      "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "decision_date": "2026-07-15",
+      "reason": "Quality, not security: persona-only content with circular trigger guidance, no procedures, and an instruction to open resources/implementation-playbook.md which does not ship. Topic covered better by ai-agents-architect."
     }
   ]
 }

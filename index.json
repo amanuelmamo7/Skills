@@ -8,7 +8,8 @@
     "attorney-workflow",
     "market-analysis",
     "personal-assistant",
-    "projects"
+    "projects",
+    "agent-infrastructure"
   ],
   "nodes": [
     { "id": "amanuel", "type": "human", "name": "Amanuel Mamo", "role": "owner / reviewer" },
@@ -51,7 +52,13 @@
     { "id": "react-best-practices", "type": "skill", "buckets": ["web-application"], "description": "Vercel Engineering's React performance guide (47 rules)", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
     { "id": "seo-audit", "type": "skill", "buckets": ["web-application"], "description": "Diagnostic-only SEO audit framework", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
     { "id": "shadcn", "type": "skill", "buckets": ["web-application"], "description": "shadcn/ui component workflows via the official CLI", "review_date": "2026-07-15", "risk": "third-party, RUNS COMMANDS: auto-executes npx shadcn@latest at load; npm supply-chain exposure accepted — see manifest.json" },
-    { "id": "tailwind-patterns", "type": "skill", "buckets": ["web-application"], "description": "Tailwind CSS v4 patterns and reference", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" }
+    { "id": "tailwind-patterns", "type": "skill", "buckets": ["web-application"], "description": "Tailwind CSS v4 patterns and reference", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+
+    { "id": "ai-agents-architect", "type": "skill", "buckets": ["agent-infrastructure"], "description": "Agent system design patterns and sharp edges", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "autonomous-agent-patterns", "type": "skill", "buckets": ["agent-infrastructure"], "description": "Autonomous agent design patterns: loops, permissions, sandboxing", "review_date": "2026-07-15", "risk": "third-party, markdown-only; risky patterns shown as examples only" },
+    { "id": "agent-orchestration-improve-agent", "type": "skill", "buckets": ["agent-infrastructure"], "description": "Methodology for measuring and improving an agent's performance", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
+    { "id": "agent-self-scheduling", "type": "skill", "buckets": ["agent-infrastructure"], "description": "Scheduling unattended recurring agent runs (cron + pre-approved tools)", "review_date": "2026-07-15", "risk": "third-party, HIGH CONSEQUENCE: unattended execution — explicit user request only, see manifest" },
+    { "id": "agent-memory-mcp", "type": "skill", "buckets": ["agent-infrastructure"], "description": "Persistent agent memory via external MCP server (webzler/agentMemory)", "review_date": "2026-07-15", "risk": "third-party, DELEGATED TRUST: external server unvetted — see manifest" }
   ],
   "edges": [
     { "from": "pre-market-brief", "to": "src-sefer", "type": "copied-from" },
@@ -80,6 +87,18 @@
     { "from": "daily-legal-workflow-app-ideas", "to": "amanuel", "type": "reviewed-by" },
     { "from": "weekday-morning-brief", "to": "amanuel", "type": "reviewed-by" },
     { "from": "weekly-system-self-audit", "to": "amanuel", "type": "reviewed-by" },
+
+    { "from": "ai-agents-architect", "to": "src-aas", "type": "copied-from" },
+    { "from": "autonomous-agent-patterns", "to": "src-aas", "type": "copied-from" },
+    { "from": "agent-orchestration-improve-agent", "to": "src-aas", "type": "copied-from" },
+    { "from": "agent-self-scheduling", "to": "src-aas", "type": "copied-from" },
+    { "from": "agent-memory-mcp", "to": "src-aas", "type": "copied-from" },
+    { "from": "ai-agents-architect", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "autonomous-agent-patterns", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "agent-orchestration-improve-agent", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "agent-self-scheduling", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "agent-memory-mcp", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "ai-agents-architect", "to": "autonomous-agent-patterns", "type": "overlaps-with", "note": "architect = design guidance; patterns = concrete loop/permission/sandbox examples" },
 
     { "from": "form-cro", "to": "src-aas", "type": "copied-from" },
     { "from": "frontend-design", "to": "src-aas", "type": "copied-from" },

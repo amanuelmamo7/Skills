@@ -19,6 +19,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | market-analysis | 8 | active |
 | personal-assistant | 12 | active |
 | web-application | 9 | active |
+| agent-infrastructure | 5 | active |
 | attorney-workflow | 1 | growing |
 | projects | 1 | active |
 | general | 0 | reserved |
@@ -66,6 +67,16 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`form-cro`](skills/form-cro/SKILL.md) | Form conversion-rate optimization methodology |
 | [`seo-audit`](skills/seo-audit/SKILL.md) | Diagnostic-only SEO audit framework |
 
+### agent-infrastructure (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
+
+| Skill | Use it for |
+|---|---|
+| [`ai-agents-architect`](skills/ai-agents-architect/SKILL.md) | Agent system design patterns and sharp edges |
+| [`autonomous-agent-patterns`](skills/autonomous-agent-patterns/SKILL.md) | Concrete agent patterns: loops, permissions, sandboxing |
+| [`agent-orchestration-improve-agent`](skills/agent-orchestration-improve-agent/SKILL.md) | Measuring and improving an agent's performance |
+| [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Unattended recurring agent runs — ⚠ high consequence, see manifest |
+| [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory — ⚠ external server unvetted, see manifest |
+
 ### attorney-workflow
 
 | Skill | Use it for |
@@ -90,7 +101,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Sefer (`~/.openclaw/workspace-sefer`) | All 8 market-analysis skills |
 | Bari (`~/.openclaw/workspace`) | 8 assistant skills + poker-hud-advisor |
 | Cowork (`~/Documents/Claude/Scheduled`) | 4 scheduled-task skills |
-| [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 9 web-application skills (intake 2026-07-15; 1 rejected — see manifest.json) |
+| [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 9 web-application + 5 agent-infrastructure skills (intake 2026-07-15; 5 rejected — see manifest.json) |
 
 Originals were copied, never moved. Scripts keep machine-specific paths as working references.
 
