@@ -1,7 +1,7 @@
 {
   "name": "agent-infrastructure",
   "version": "0.2.0",
-  "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (9 skills \u2014 generated from index.json, do not edit by hand.)",
+  "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (11 skills \u2014 generated from index.json, do not edit by hand.)",
   "author": {
     "name": "Amanuel Mamo",
     "email": "amanuelmamo7@gmail.com"

@@ -23,7 +23,7 @@ Add the marketplace once, then install only the buckets you need:
 /plugin install attorney-workflow@amanuel-skills
 ```
 
-Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`, `dev-operations`.
+Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`, `dev-operations`, `software-architecture`.
 
 Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by [`tools/build_plugins.py`](tools/build_plugins.py) — never edit them by hand. After adding or re-bucketing a skill, run `python3 tools/build_plugins.py` and commit the result.
 
@@ -35,11 +35,12 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Bucket | Skills | Status |
 |---|---:|---|
 | personal-assistant | 18 | active |
+| dev-operations | 12 | active |
 | market-analysis | 11 | active |
-| dev-operations | 11 | active |
+| agent-infrastructure | 11 | active |
 | web-application | 9 | active |
-| agent-infrastructure | 9 | active |
-| general | 7 | active |
+| general | 9 | active |
+| software-architecture | 8 | active |
 | projects | 1 | active |
 | attorney-workflow | 1 | active |
 
@@ -66,6 +67,23 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`task-capture`](skills/task-capture/SKILL.md) | Parse chat task requests, post to task API, confirm, fallback |
 | [`vip-list-management`](skills/vip-list-management/SKILL.md) | VIP-senders file with manual tiers and protected auto-generated block |
 
+### dev-operations (distilled from StreamEZ project practice)
+
+| Skill | Use it for |
+|---|---|
+| [`ai-build-house-rules`](skills/ai-build-house-rules/SKILL.md) | 26-rule structural contract for building safely with AI assistance |
+| [`security-audit-vibe-coded-app`](skills/security-audit-vibe-coded-app/SKILL.md) | Repeatable security-audit methodology for AI-built apps, confidence-scored findings |
+| [`adversarial-fresh-context-audit`](skills/adversarial-fresh-context-audit/SKILL.md) | Monthly fresh-context multi-agent audit; P0/P1/P2 findings gate the close |
+| [`incident-runbook`](skills/incident-runbook/SKILL.md) | Incident runbook format: symptoms, diagnosis, mitigation, recovery, post-incident |
+| [`secret-rotation-drill`](skills/secret-rotation-drill/SKILL.md) | Blast-radius-ordered secret rotation with quarterly drills and emergency mode |
+| [`solo-founder-oncall-policy`](skills/solo-founder-oncall-policy/SKILL.md) | One-person on-call policy: SLOs, routing, severity taxonomy, honest gaps |
+| [`postgres-migration-rollback-policy`](skills/postgres-migration-rollback-policy/SKILL.md) | Forward-fix-first migrations, down-files as documentation, PITR recovery |
+| [`cloud-cost-guardrails`](skills/cloud-cost-guardrails/SKILL.md) | Hard-cap vs alert-only cost enforcement, worst-case burn math, upgrade triggers |
+| [`pre-deploy-gate`](skills/pre-deploy-gate/SKILL.md) | Encode house rules as CI gates: custom checks, ephemeral-DB migration verification |
+| [`cloud-account-hardening`](skills/cloud-account-hardening/SKILL.md) | Account bootstrap with root-of-trust ordering and hardware-key 2FA |
+| [`solo-founder-build-plan`](skills/solo-founder-build-plan/SKILL.md) | Contract-files discipline, build vs review phases, when to buy expert review |
+| [`workflow-automation`](skills/workflow-automation/SKILL.md) | Workflow-engine patterns: n8n, Temporal, Inngest |
+
 ### market-analysis (from Sefer)
 
 | Skill | Use it for |
@@ -82,21 +100,21 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`investor-profile-template`](skills/investor-profile-template/SKILL.md) | Financial-profile template: horizon, risk, liquidity, watchlist, delivery preferences |
 | [`analyst-house-style`](skills/analyst-house-style/SKILL.md) | Eight non-negotiable analysis rules as a pre-ship rigor checklist |
 
-### dev-operations (distilled from StreamEZ project practice)
+### agent-infrastructure (third-party AAS + distilled first-party)
 
 | Skill | Use it for |
 |---|---|
-| [`ai-build-house-rules`](skills/ai-build-house-rules/SKILL.md) | 26-rule structural contract for building safely with AI assistance |
-| [`security-audit-vibe-coded-app`](skills/security-audit-vibe-coded-app/SKILL.md) | Repeatable security-audit methodology for AI-built apps, confidence-scored findings |
-| [`adversarial-fresh-context-audit`](skills/adversarial-fresh-context-audit/SKILL.md) | Monthly fresh-context multi-agent audit; P0/P1/P2 findings gate the close |
-| [`incident-runbook`](skills/incident-runbook/SKILL.md) | Incident runbook format: symptoms, diagnosis, mitigation, recovery, post-incident |
-| [`secret-rotation-drill`](skills/secret-rotation-drill/SKILL.md) | Blast-radius-ordered secret rotation with quarterly drills and emergency mode |
-| [`solo-founder-oncall-policy`](skills/solo-founder-oncall-policy/SKILL.md) | One-person on-call policy: SLOs, routing, severity taxonomy, honest gaps |
-| [`postgres-migration-rollback-policy`](skills/postgres-migration-rollback-policy/SKILL.md) | Forward-fix-first migrations, down-files as documentation, PITR recovery |
-| [`cloud-cost-guardrails`](skills/cloud-cost-guardrails/SKILL.md) | Hard-cap vs alert-only cost enforcement, worst-case burn math, upgrade triggers |
-| [`pre-deploy-gate`](skills/pre-deploy-gate/SKILL.md) | Encode house rules as CI gates: custom checks, ephemeral-DB migration verification |
-| [`cloud-account-hardening`](skills/cloud-account-hardening/SKILL.md) | Account bootstrap with root-of-trust ordering and hardware-key 2FA |
-| [`solo-founder-build-plan`](skills/solo-founder-build-plan/SKILL.md) | Contract-files discipline, build vs review phases, when to buy expert review |
+| [`ai-agents-architect`](skills/ai-agents-architect/SKILL.md) | Agent system design patterns and sharp edges |
+| [`autonomous-agent-patterns`](skills/autonomous-agent-patterns/SKILL.md) | Autonomous agent design patterns: loops, permissions, sandboxing |
+| [`agent-orchestration-improve-agent`](skills/agent-orchestration-improve-agent/SKILL.md) | Methodology for measuring and improving an agent's performance |
+| [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Scheduling unattended recurring agent runs (cron + pre-approved tools) — ⚠ see manifest |
+| [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory via external MCP server (webzler/agentMemory) — ⚠ see manifest |
+| [`agent-install-runbook`](skills/agent-install-runbook/SKILL.md) | Checkpointed runbook for one agent installing a sibling agent, with rollback |
+| [`agent-resume-protocol`](skills/agent-resume-protocol/SKILL.md) | Detect interruptions, log intent breadcrumbs, reconstruct state, resume one step |
+| [`verify-before-trusting-memory`](skills/verify-before-trusting-memory/SKILL.md) | Live-test remembered facts before acting; date every fact update |
+| [`launchagent-scheduling`](skills/launchagent-scheduling/SKILL.md) | LaunchAgents vs cron vs session-scoped scheduling, with manifest conventions |
+| [`mcp-builder`](skills/mcp-builder/SKILL.md) | Build and evaluate MCP servers (Anthropic) — ⚠ see manifest |
+| [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
 
 ### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
 
@@ -112,20 +130,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows via the official CLI — ⚠ see manifest |
 | [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
 
-### agent-infrastructure (third-party AAS + distilled first-party)
-
-| Skill | Use it for |
-|---|---|
-| [`ai-agents-architect`](skills/ai-agents-architect/SKILL.md) | Agent system design patterns and sharp edges |
-| [`autonomous-agent-patterns`](skills/autonomous-agent-patterns/SKILL.md) | Autonomous agent design patterns: loops, permissions, sandboxing |
-| [`agent-orchestration-improve-agent`](skills/agent-orchestration-improve-agent/SKILL.md) | Methodology for measuring and improving an agent's performance |
-| [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Scheduling unattended recurring agent runs (cron + pre-approved tools) — ⚠ see manifest |
-| [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory via external MCP server (webzler/agentMemory) — ⚠ see manifest |
-| [`agent-install-runbook`](skills/agent-install-runbook/SKILL.md) | Checkpointed runbook for one agent installing a sibling agent, with rollback |
-| [`agent-resume-protocol`](skills/agent-resume-protocol/SKILL.md) | Detect interruptions, log intent breadcrumbs, reconstruct state, resume one step |
-| [`verify-before-trusting-memory`](skills/verify-before-trusting-memory/SKILL.md) | Live-test remembered facts before acting; date every fact update |
-| [`launchagent-scheduling`](skills/launchagent-scheduling/SKILL.md) | LaunchAgents vs cron vs session-scoped scheduling, with manifest conventions |
-
 ### general (third-party AAS + distilled first-party)
 
 | Skill | Use it for |
@@ -137,6 +141,21 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`efficient-web-research`](skills/efficient-web-research/SKILL.md) | Token-efficient web research protocol |
 | [`decision-log-keeping`](skills/decision-log-keeping/SKILL.md) | Append-only decision log with LOCKED/PROPOSED/OPEN statuses and supersede rules |
 | [`deferred-work-register`](skills/deferred-work-register/SKILL.md) | What / why-not-now / trigger register for consciously postponed work |
+| [`concise-planning`](skills/concise-planning/SKILL.md) | Plan work concisely before executing multi-step tasks |
+| [`product-manager-toolkit`](skills/product-manager-toolkit/SKILL.md) | PM toolkit: RICE prioritization and customer-interview analysis scripts — ⚠ see manifest |
+
+### software-architecture (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)
+
+| Skill | Use it for |
+|---|---|
+| [`cqrs-implementation`](skills/cqrs-implementation/SKILL.md) | CQRS command/query separation with read-model synchronization |
+| [`ddd-context-mapping`](skills/ddd-context-mapping/SKILL.md) | Mapping relationships between bounded contexts |
+| [`ddd-strategic-design`](skills/ddd-strategic-design/SKILL.md) | Bounded contexts, subdomains, and strategic DDD |
+| [`ddd-tactical-patterns`](skills/ddd-tactical-patterns/SKILL.md) | Entities, value objects, aggregates, and tactical DDD patterns |
+| [`event-store-design`](skills/event-store-design/SKILL.md) | Designing an append-only event store for event sourcing |
+| [`projection-patterns`](skills/projection-patterns/SKILL.md) | Building read-model projections from event streams |
+| [`saga-orchestration`](skills/saga-orchestration/SKILL.md) | Distributed transactions via sagas and compensating actions |
+| [`dbt-transformation-patterns`](skills/dbt-transformation-patterns/SKILL.md) | dbt data-transformation modeling patterns |
 
 ### projects
 

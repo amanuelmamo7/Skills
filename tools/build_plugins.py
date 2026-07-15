@@ -29,6 +29,7 @@ BUCKET_DESCRIPTIONS = {
     "projects": "Standalone project skills.",
     "agent-infrastructure": "Building and running agents: design patterns, orchestration, scheduling, memory.",
     "dev-operations": "Running software responsibly: house rules, audits, incidents, rotations, costs, CI gates.",
+    "software-architecture": "Design patterns for software: DDD, CQRS, event sourcing, sagas, dbt modeling.",
 }
 
 OWNER = {"name": "Amanuel Mamo", "email": "amanuelmamo7@gmail.com"}

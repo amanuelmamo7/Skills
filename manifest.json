@@ -254,6 +254,149 @@
       "license": "MIT",
       "risk_notes": "DELEGATED TRUST. All functionality is the external pip package 'privacy-mask' (fullstackcrew-alpha/privacy-mask) — MUST be vetted before actual use; 'all processing local/offline' claim is unverifiable from this folder. Auto-triggers on shared screenshots (defensive intent, but routes credential-bearing images through third-party code).",
       "buckets": ["personal-assistant"]
+    },
+    {
+      "skill": "cqrs-implementation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/cqrs-implementation",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Read-model sync section overlaps projection-patterns (complementary).",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "ddd-context-mapping",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/ddd-context-mapping",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Clean.",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "ddd-strategic-design",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/ddd-strategic-design",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Clean.",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "ddd-tactical-patterns",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/ddd-tactical-patterns",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Clean.",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "event-store-design",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/event-store-design",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Template sections inverted (real content in SKILL.md, thin playbook) — cosmetic.",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "projection-patterns",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/projection-patterns",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. Playbook duplicates SKILL.md verbatim — cosmetic.",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "saga-orchestration",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/saga-orchestration",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. VENDOR STEERING: contains an undisclosed promotional section for DBOS and references foreign skills — treat that section as an ad, not advice. Minor code nit (undefined dataclass field in one example).",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "dbt-transformation-patterns",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-data-engineering/skills/dbt-transformation-patterns",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. All commands are illustrative dbt usage.",
+      "buckets": ["software-architecture"]
+    },
+    {
+      "skill": "concise-planning",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-essentials/skills/concise-planning",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, advisory. One circular boilerplate section — cosmetic.",
+      "buckets": ["general"]
+    },
+    {
+      "skill": "product-manager-toolkit",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-startup-founder/skills/product-manager-toolkit",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review of both scripts)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "RUNS SCRIPTS (clean): stdlib-only RICE prioritizer + interview analyzer, cwd-confined, no network. 'NLP-based' claim overstates keyword matching.",
+      "buckets": ["general"]
+    },
+    {
+      "skill": "mcp-builder",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-automation-builder/skills/mcp-builder",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review of both scripts)",
+      "review_date": "2026-07-15",
+      "license": "MIT (upstream: Anthropic)",
+      "risk_notes": "RUNS SCRIPTS (clean): MCP build + eval harness. Egress only api.anthropic.com (ANTHROPIC_API_KEY from env) and the user-specified MCP server under test.",
+      "buckets": ["agent-infrastructure"]
+    },
+    {
+      "skill": "effective-agent-skills",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-skill-author/skills/effective-agent-skills",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT (upstream: davidondrej/skills)",
+      "risk_notes": "Markdown only, skill-authoring guide. Ships its own third-party-skill security checklist (§11) — aligns with this repo's intake process.",
+      "buckets": ["agent-infrastructure"]
+    },
+    {
+      "skill": "workflow-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-automation-builder/skills/workflow-automation",
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-15",
+      "license": "MIT",
+      "risk_notes": "Markdown only, educational n8n/Temporal/Inngest patterns; no endpoints. Over-broad triggers (fires on bare 'automation'/'cron') and ghost delegation references — ignore those.",
+      "buckets": ["dev-operations"]
     }
   ],
   "rejected": [
@@ -344,6 +487,62 @@
       "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
       "decision_date": "2026-07-15",
       "reason": "Consistency with ui-a11y precedent: written for a foreign system (Antigravity) with tools that don't exist here (ask_user_input_v0), ghost references, and a self-declared review exemption. Method is sound — revisit if ported cleanly."
+    },
+    {
+      "skill": "airtable-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-automation-builder/skills/airtable-automation",
+      "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "decision_date": "2026-07-15",
+      "reason": "Data custody: same Composio Rube proxy pattern as notion/todoist-automation (data + OAuth tokens transit rube.app)."
+    },
+    {
+      "skill": "googlesheets-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-automation-builder/skills/googlesheets-automation",
+      "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "decision_date": "2026-07-15",
+      "reason": "Data custody: Rube proxy — Google Sheets data + OAuth transit vendor servers."
+    },
+    {
+      "skill": "make-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-automation-builder/skills/make-automation",
+      "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "decision_date": "2026-07-15",
+      "reason": "Data custody: Rube proxy; skill itself admits the toolkit is limited."
+    },
+    {
+      "skill": "slack-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-automation-builder/skills/slack-automation",
+      "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "decision_date": "2026-07-15",
+      "reason": "Data custody: Rube proxy, and the description conceals the Rube/MCP dependency behind 'Composio's Slack toolkit'."
+    },
+    {
+      "skill": "skill-creator (AAS copy)",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-skill-author/skills/skill-creator",
+      "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "decision_date": "2026-07-15",
+      "reason": "SECURITY + QUALITY FAIL: instructs ungated symlinking of generated skills into ~/.claude, ~/.copilot, ~/.codex skill dirs (cross-platform persistence with no content-safety validation); workflow invokes 5 scripts and 4 reference docs that don't ship; body grafted from a different project; 'risk: safe' dishonest; fails its own bundled validator. Use Anthropic's official skill-creator instead."
+    },
+    {
+      "skill": "domain-driven-design",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/domain-driven-design",
+      "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "decision_date": "2026-07-15",
+      "reason": "Quality: pure router skill with 2 of 8 routes pointing to skills that don't exist; the 7 content-bearing DDD skills were accepted and this repo's index does the routing."
+    },
+    {
+      "skill": "browser-automation",
+      "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
+      "source_path": "plugins/agentic-bundle-automation-builder/skills/browser-automation",
+      "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "decision_date": "2026-07-15",
+      "reason": "Policy: educational and egress-free, but ~100 lines coach bot-detection evasion (fingerprint hiding, proxy rotation, human-like delays) — ToS-circumvention territory rejected for consistency with the linkedin-cli precedent."
     }
   ]
 }

@@ -22,6 +22,7 @@ BUCKET_COLORS = {
     "attorney-workflow": "#e15759",
     "projects": "#edc948",
     "dev-operations": "#9c755f",
+    "software-architecture": "#bab0ac",
 }
 
 TEMPLATE = """<!DOCTYPE html>

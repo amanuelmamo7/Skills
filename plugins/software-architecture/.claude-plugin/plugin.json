@@ -1,0 +1,9 @@
+{
+  "name": "software-architecture",
+  "version": "0.2.0",
+  "description": "Design patterns for software: DDD, CQRS, event sourcing, sagas, dbt modeling. (8 skills \u2014 generated from index.json, do not edit by hand.)",
+  "author": {
+    "name": "Amanuel Mamo",
+    "email": "amanuelmamo7@gmail.com"
+  }
+}

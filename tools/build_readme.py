@@ -24,6 +24,7 @@ BUCKET_NOTES = {
     "attorney-workflow": "",
     "projects": "",
     "dev-operations": " (distilled from StreamEZ project practice)",
+    "software-architecture": " (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)",
 }
 
 FLAG_WORDS = ("RUNS", "DELEGATED", "HIGH CONSEQUENCE", "unvetted", "supply-chain")
