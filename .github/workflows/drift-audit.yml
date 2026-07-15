@@ -1,0 +1,60 @@
+name: drift-audit
+
+on:
+  schedule:
+    # Sundays 14:00 UTC (~8-9am Central) — pairs with the Sunday self-audit habit
+    - cron: "0 14 * * 0"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run drift audit
+        id: audit
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 tools/drift_audit.py | tee report.txt
+          echo "exit_code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+          exit "${PIPESTATUS[0]}"
+
+      - name: Open issue if drift found
+        if: steps.audit.outputs.exit_code == '1'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('report.txt', 'utf8');
+            const title = `Drift audit: upstream changes detected (${new Date().toISOString().slice(0,10)})`;
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'drift-audit'
+            });
+            const body = 'Weekly drift audit found upstream changes to vendored skills.\n' +
+              'Review each diff per docs/INTAKE.md Update flow — nothing updates automatically.\n\n' +
+              '```\n' + report + '\n```';
+            if (issues.length > 0) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issues[0].number, body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: ['drift-audit']
+              });
+            }
+
+      - name: Fail loudly on audit errors
+        if: steps.audit.outputs.exit_code == '2'
+        run: |
+          echo "Audit hit errors (rate limit? renamed upstream?). See report above."
+          exit 1
