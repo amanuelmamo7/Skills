@@ -9,6 +9,8 @@ Curated skills library — reviewed, pinned, and indexed. Skills I write myself 
 - [`manifest.json`](manifest.json) is the provenance ledger for third-party skills — each pinned to the exact commit reviewed. Updates are diff-reviews, never blind re-pulls.
 - [`.claude-plugin/`](.claude-plugin/) makes this repo installable in Claude Code: `/plugin marketplace add amanuelmamo7/Skills`
 - Nothing here updates automatically. A skill enters or changes only after human review.
+- [`graph.html`](graph.html) is an interactive view of the knowledge graph — open it in a browser.
+- After ANY change to index.json, run `python3 tools/build.py` to regenerate plugins, README tables, and the graph.
 
 ## Installing
 
@@ -26,6 +28,7 @@ Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by
 
 ## Buckets
 
+<!-- GENERATED-BUCKETS:START (run tools/build_readme.py — do not edit by hand) -->
 Buckets are metadata, not folders — a skill can live in more than one.
 
 | Bucket | Skills | Status |
@@ -33,10 +36,44 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | personal-assistant | 15 | active |
 | web-application | 9 | active |
 | market-analysis | 8 | active |
-| general | 5 | active |
 | agent-infrastructure | 5 | active |
-| attorney-workflow | 1 | growing |
+| general | 5 | active |
 | projects | 1 | active |
+| attorney-workflow | 1 | active |
+
+### personal-assistant (from Bari + Cowork, plus reviewed third-party)
+
+| Skill | Use it for |
+|---|---|
+| [`morning-brief`](skills/morning-brief/SKILL.md) | Daily start-of-day brief: calendar, filtered email signal, tasks |
+| [`evening-wrap`](skills/evening-wrap/SKILL.md) | End-of-workday wrap: tomorrow's calendar, honest review of today |
+| [`weekly-wrap`](skills/weekly-wrap/SKILL.md) | Friday synthesis of the week's logs: themes, time allocation |
+| [`memory-maintenance`](skills/memory-maintenance/SKILL.md) | Weekly distillation of raw logs into durable long-term memory |
+| [`assistant-heartbeat`](skills/assistant-heartbeat/SKILL.md) | Periodic rotating check (email/calendar/cron health) |
+| [`meeting-reminder`](skills/meeting-reminder/SKILL.md) | Deterministic no-LLM voice reminders 20 minutes before meetings |
+| [`morning-music-alarm`](skills/morning-music-alarm/SKILL.md) | Sonos wake-up music via curl-only SOAP |
+| [`daily-brief-export`](skills/daily-brief-export/SKILL.md) | Token-protected JSON endpoint exporting calendar/email/tasks |
+| [`daily-job-search-crawl`](skills/daily-job-search-crawl/SKILL.md) | Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups |
+| [`weekday-morning-brief`](skills/weekday-morning-brief/SKILL.md) | Weekday 8am brief: calendar, VIP email + reply drafts, markets, system health |
+| [`weekly-system-self-audit`](skills/weekly-system-self-audit/SKILL.md) | Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP auto-refresh |
+| [`internal-comms`](skills/internal-comms/SKILL.md) | Status reports, leadership updates, and newsletters in repeatable formats (Anthropic) |
+| [`audio-transcriber`](skills/audio-transcriber/SKILL.md) | Local Whisper transcription of meetings/audio to structured markdown — ⚠ see manifest |
+| [`time-ledger`](skills/time-ledger/SKILL.md) | Natural-language time tracking into user's own Notion DB |
+| [`privacy-mask`](skills/privacy-mask/SKILL.md) | PII/secret redaction in screenshots via OCR — ⚠ see manifest |
+
+### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
+
+| Skill | Use it for |
+|---|---|
+| [`form-cro`](skills/form-cro/SKILL.md) | Form conversion-rate optimization methodology |
+| [`frontend-design`](skills/frontend-design/SKILL.md) | Design direction and visual quality guidance for web UI |
+| [`frontend-developer`](skills/frontend-developer/SKILL.md) | Frontend engineering persona and capability catalog |
+| [`nextjs-app-router-patterns`](skills/nextjs-app-router-patterns/SKILL.md) | Next.js App Router patterns and playbook |
+| [`nextjs-best-practices`](skills/nextjs-best-practices/SKILL.md) | Next.js App Router principles and best practices |
+| [`react-best-practices`](skills/react-best-practices/SKILL.md) | Vercel Engineering's React performance guide (47 rules) |
+| [`seo-audit`](skills/seo-audit/SKILL.md) | Diagnostic-only SEO audit framework |
+| [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows via the official CLI — ⚠ see manifest |
+| [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
 
 ### market-analysis (from Sefer)
 
@@ -48,74 +85,41 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`weekly-deep-dive`](skills/weekly-deep-dive/SKILL.md) | Weekly aggregation of daily gainers: what held, what faded |
 | [`stock-deep-dive`](skills/stock-deep-dive/SKILL.md) | 12-section deep-dive on a single stock's big move |
 | [`company-thesis`](skills/company-thesis/SKILL.md) | Full company thesis: what's priced in, bull/bear cases, catalysts |
-| [`trend-justification`](skills/trend-justification/SKILL.md) | "Is this rally justified?" Observed/Implied/Actual/Gap framework |
+| [`trend-justification`](skills/trend-justification/SKILL.md) | Is this rally justified? Observed/Implied/Actual/Gap framework |
 | [`pointed-analysis`](skills/pointed-analysis/SKILL.md) | Sharp one-off market questions: direct answer, fetch log, falsifiers |
-
-### personal-assistant (from Bari + Cowork)
-
-| Skill | Use it for |
-|---|---|
-| [`weekday-morning-brief`](skills/weekday-morning-brief/SKILL.md) | Weekday 8am brief: calendar, VIP email + reply drafts, markets, system health |
-| [`morning-brief`](skills/morning-brief/SKILL.md) | Bari original of the daily brief — superseded by `weekday-morning-brief` |
-| [`evening-wrap`](skills/evening-wrap/SKILL.md) | End-of-workday wrap: tomorrow's calendar, honest review of today |
-| [`weekly-wrap`](skills/weekly-wrap/SKILL.md) | Friday synthesis of the week's logs: themes, time allocation |
-| [`memory-maintenance`](skills/memory-maintenance/SKILL.md) | Weekly distillation of raw logs into durable long-term memory |
-| [`assistant-heartbeat`](skills/assistant-heartbeat/SKILL.md) | Periodic rotating check (email/calendar/cron health) |
-| [`weekly-system-self-audit`](skills/weekly-system-self-audit/SKILL.md) | Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP refresh |
-| [`meeting-reminder`](skills/meeting-reminder/SKILL.md) | Deterministic no-LLM voice reminders 20 minutes before meetings |
-| [`morning-music-alarm`](skills/morning-music-alarm/SKILL.md) | Sonos wake-up music via curl-only SOAP |
-| [`daily-brief-export`](skills/daily-brief-export/SKILL.md) | Token-protected JSON endpoint exporting calendar/email/tasks |
-| [`daily-job-search-crawl`](skills/daily-job-search-crawl/SKILL.md) | Daily job-search crawl: saved searches, scoring, auto-promote, follow-ups |
-| [`internal-comms`](skills/internal-comms/SKILL.md) | Status reports, leadership updates, newsletters (Anthropic; third-party) |
-| [`audio-transcriber`](skills/audio-transcriber/SKILL.md) | Local Whisper meeting transcription — ⚠ script caveats, see manifest |
-| [`time-ledger`](skills/time-ledger/SKILL.md) | Natural-language time tracking into your Notion DB (third-party) |
-| [`privacy-mask`](skills/privacy-mask/SKILL.md) | Screenshot PII redaction — ⚠ external package unvetted, see manifest |
-
-### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
-
-| Skill | Use it for |
-|---|---|
-| [`react-best-practices`](skills/react-best-practices/SKILL.md) | Vercel Engineering's React performance guide (47 rules) |
-| [`nextjs-best-practices`](skills/nextjs-best-practices/SKILL.md) | Next.js App Router principles and best practices |
-| [`nextjs-app-router-patterns`](skills/nextjs-app-router-patterns/SKILL.md) | Next.js App Router patterns, example-driven |
-| [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
-| [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows — ⚠ runs CLI commands, see manifest |
-| [`frontend-design`](skills/frontend-design/SKILL.md) | Design direction and visual quality guidance |
-| [`frontend-developer`](skills/frontend-developer/SKILL.md) | Frontend engineering persona and capability catalog |
-| [`form-cro`](skills/form-cro/SKILL.md) | Form conversion-rate optimization methodology |
-| [`seo-audit`](skills/seo-audit/SKILL.md) | Diagnostic-only SEO audit framework |
 
 ### agent-infrastructure (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
 
 | Skill | Use it for |
 |---|---|
 | [`ai-agents-architect`](skills/ai-agents-architect/SKILL.md) | Agent system design patterns and sharp edges |
-| [`autonomous-agent-patterns`](skills/autonomous-agent-patterns/SKILL.md) | Concrete agent patterns: loops, permissions, sandboxing |
-| [`agent-orchestration-improve-agent`](skills/agent-orchestration-improve-agent/SKILL.md) | Measuring and improving an agent's performance |
-| [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Unattended recurring agent runs — ⚠ high consequence, see manifest |
-| [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory — ⚠ external server unvetted, see manifest |
+| [`autonomous-agent-patterns`](skills/autonomous-agent-patterns/SKILL.md) | Autonomous agent design patterns: loops, permissions, sandboxing |
+| [`agent-orchestration-improve-agent`](skills/agent-orchestration-improve-agent/SKILL.md) | Methodology for measuring and improving an agent's performance |
+| [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Scheduling unattended recurring agent runs (cron + pre-approved tools) — ⚠ see manifest |
+| [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory via external MCP server (webzler/agentMemory) — ⚠ see manifest |
 
 ### general (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
 
 | Skill | Use it for |
 |---|---|
-| [`gemini-deep-research`](skills/gemini-deep-research/SKILL.md) | Autonomous multi-step research with cited reports (needs GEMINI_API_KEY) |
-| [`research-prompt`](skills/research-prompt/SKILL.md) | Turns vague asks into one precise deep-research brief |
-| [`efficient-web-research`](skills/efficient-web-research/SKILL.md) | Token-efficient web research protocol |
+| [`gemini-deep-research`](skills/gemini-deep-research/SKILL.md) | Autonomous multi-step research with cited reports via Gemini API |
 | [`bulletmind`](skills/bulletmind/SKILL.md) | Any input into clean hierarchical bullet notes |
-| [`professional-proofreader`](skills/professional-proofreader/SKILL.md) | Proofread and correct while preserving the author's voice |
-
-### attorney-workflow
-
-| Skill | Use it for |
-|---|---|
-| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm |
+| [`professional-proofreader`](skills/professional-proofreader/SKILL.md) | Proofread and correct documents while preserving voice |
+| [`research-prompt`](skills/research-prompt/SKILL.md) | Turns vague asks into one precise deep-research prompt |
+| [`efficient-web-research`](skills/efficient-web-research/SKILL.md) | Token-efficient web research protocol |
 
 ### projects
 
 | Skill | Use it for |
 |---|---|
 | [`poker-hud-advisor`](skills/poker-hud-advisor/SKILL.md) | Real-time Claude advice layer for the poker HUD |
+
+### attorney-workflow
+
+| Skill | Use it for |
+|---|---|
+| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup |
+<!-- GENERATED-BUCKETS:END -->
 
 ## Adding a skill
 
