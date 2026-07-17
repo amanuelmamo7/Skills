@@ -25,6 +25,7 @@ BUCKET_NOTES = {
     "projects": "",
     "dev-operations": " (distilled from StreamEZ project practice)",
     "software-architecture": " (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)",
+    "job-search": " (third-party, from Proficiently — pinned `9bc1f6f` — plus first-party crawl)",
 }
 
 FLAG_WORDS = ("RUNS", "DELEGATED", "HIGH CONSEQUENCE", "unvetted", "supply-chain")

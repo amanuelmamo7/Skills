@@ -23,6 +23,7 @@ BUCKET_COLORS = {
     "projects": "#edc948",
     "dev-operations": "#9c755f",
     "software-architecture": "#bab0ac",
+    "job-search": "#ff9da7",
 }
 
 TEMPLATE = """<!DOCTYPE html>

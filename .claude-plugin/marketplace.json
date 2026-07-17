@@ -12,7 +12,7 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (80 skills across 9 buckets)."
+      "description": "The full curated library (84 skills across 10 buckets)."
     },
     {
       "name": "general",
@@ -58,6 +58,11 @@
       "name": "software-architecture",
       "source": "./plugins/software-architecture",
       "description": "Design patterns for software: DDD, CQRS, event sourcing, sagas, dbt modeling. (8 skills)"
+    },
+    {
+      "name": "job-search",
+      "source": "./plugins/job-search",
+      "description": "Job-search pipeline: setup, interactive search, cover letters, network matching, daily crawl. (5 skills)"
     }
   ]
 }

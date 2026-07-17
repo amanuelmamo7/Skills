@@ -11,7 +11,8 @@
     "projects",
     "agent-infrastructure",
     "dev-operations",
-    "software-architecture"
+    "software-architecture",
+    "job-search"
   ],
   "nodes": [
     { "id": "amanuel", "type": "human", "name": "Amanuel Mamo", "role": "owner / reviewer" },
@@ -22,6 +23,7 @@
     { "id": "src-aas", "type": "source", "name": "Agentic Awesome Skills (third-party)", "location": "https://github.com/sickn33/agentic-awesome-skills", "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0" },
     { "id": "src-aas-2", "type": "source", "name": "Agentic Awesome Skills (2nd intake)", "location": "https://github.com/sickn33/agentic-awesome-skills", "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d" },
     { "id": "src-streamez", "type": "source", "name": "StreamEZ project docs", "location": "~/dev/StreamEZ" },
+    { "id": "src-proficiently", "type": "source", "name": "Proficiently claude-skills (third-party)", "location": "https://github.com/proficientlyjobs/proficiently-claude-skills", "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53" },
 
     { "id": "daily-brief-app", "type": "system", "name": "Daily Brief app", "role": "personal dashboard + task/calendar/email API (Vercel-hosted)" },
     { "id": "openclaw-gateway", "type": "system", "name": "OpenClaw gateway", "role": "local agent host running Bari and Sefer; webhook-triggered turns" },
@@ -58,7 +60,7 @@
 
     { "id": "poker-hud-advisor", "type": "skill", "buckets": ["projects"], "description": "Real-time Claude advice layer for the poker HUD", "review_date": "2026-07-14", "risk": "first-party, contains scripts" },
 
-    { "id": "daily-job-search-crawl", "type": "skill", "buckets": ["personal-assistant"], "description": "Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups", "review_date": "2026-07-15", "risk": "first-party; uses Gmail, Chrome MCP, Excel files" },
+    { "id": "daily-job-search-crawl", "type": "skill", "buckets": ["personal-assistant", "job-search"], "description": "Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups", "review_date": "2026-07-15", "risk": "first-party; uses Gmail, Chrome MCP, Excel files" },
     { "id": "daily-legal-workflow-app-ideas", "type": "skill", "buckets": ["attorney-workflow"], "description": "Daily legal-AI research digest + app-idea brainstorm with run-memory dedup", "review_date": "2026-07-15", "risk": "first-party; web research only" },
     { "id": "weekday-morning-brief", "type": "skill", "buckets": ["personal-assistant"], "description": "Weekday 8am brief: calendar, VIP email + reply drafts, markets, system health", "review_date": "2026-07-15", "risk": "first-party; uses Gmail + Calendar connectors, creates drafts/events" },
     { "id": "weekly-system-self-audit", "type": "skill", "buckets": ["personal-assistant"], "description": "Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP auto-refresh", "review_date": "2026-07-15", "risk": "first-party; edits vip-senders.md, performs backfill POSTs" },
@@ -125,9 +127,28 @@
     { "id": "product-manager-toolkit", "type": "skill", "buckets": ["general"], "description": "PM toolkit: RICE prioritization and customer-interview analysis scripts", "review_date": "2026-07-15", "risk": "third-party, RUNS SCRIPTS (clean, stdlib-only, no network)" },
     { "id": "mcp-builder", "type": "skill", "buckets": ["agent-infrastructure"], "description": "Build and evaluate MCP servers (Anthropic)", "review_date": "2026-07-15", "risk": "third-party, RUNS SCRIPTS (clean); egress only Anthropic API + server under test" },
     { "id": "effective-agent-skills", "type": "skill", "buckets": ["agent-infrastructure"], "description": "How to author effective agent skills, with a security checklist", "review_date": "2026-07-15", "risk": "third-party, markdown-only advisory" },
-    { "id": "workflow-automation", "type": "skill", "buckets": ["dev-operations"], "description": "Workflow-engine patterns: n8n, Temporal, Inngest", "review_date": "2026-07-15", "risk": "third-party, markdown-only; over-broad triggers — see manifest" }
+    { "id": "workflow-automation", "type": "skill", "buckets": ["dev-operations"], "description": "Workflow-engine patterns: n8n, Temporal, Inngest", "review_date": "2026-07-15", "risk": "third-party, markdown-only; over-broad triggers — see manifest" },
+
+    { "id": "job-search-setup", "type": "skill", "buckets": ["job-search"], "description": "One-time setup: local resume/preferences/contacts data directory for the job-search suite", "review_date": "2026-07-17", "risk": "third-party, markdown-only; all PII stays local" },
+    { "id": "job-search", "type": "skill", "buckets": ["job-search"], "description": "Interactive job search across hiring.cafe and public ATS boards with fit scoring", "review_date": "2026-07-17", "risk": "third-party, markdown-only; browses public boards — see manifest" },
+    { "id": "cover-letter", "type": "skill", "buckets": ["job-search"], "description": "Draft tailored cover letters from resume + job posting, anti-fabrication guarded", "review_date": "2026-07-17", "risk": "third-party, markdown-only, local-only" },
+    { "id": "network-scan", "type": "skill", "buckets": ["job-search"], "description": "Match your LinkedIn-export contacts against target-company openings", "review_date": "2026-07-17", "risk": "third-party, markdown-only; employer names in search queries — see manifest" }
   ],
   "edges": [
+    { "from": "job-search-setup", "to": "src-proficiently", "type": "copied-from" },
+    { "from": "job-search", "to": "src-proficiently", "type": "copied-from" },
+    { "from": "cover-letter", "to": "src-proficiently", "type": "copied-from" },
+    { "from": "network-scan", "to": "src-proficiently", "type": "copied-from" },
+    { "from": "job-search-setup", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "job-search", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "cover-letter", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "network-scan", "to": "amanuel", "type": "reviewed-by" },
+    { "from": "job-search", "to": "job-search-setup", "type": "depends-on" },
+    { "from": "cover-letter", "to": "job-search-setup", "type": "depends-on" },
+    { "from": "network-scan", "to": "job-search-setup", "type": "depends-on" },
+    { "from": "job-search", "to": "daily-job-search-crawl", "type": "overlaps-with", "note": "job-search is interactive; the crawl is the automated daily pipeline" },
+    { "from": "job-search", "to": "cover-letter", "type": "use-with", "note": "search surfaces the posting; cover-letter drafts for it" },
+
     { "from": "cqrs-implementation", "to": "src-aas-2", "type": "copied-from" },
     { "from": "ddd-context-mapping", "to": "src-aas-2", "type": "copied-from" },
     { "from": "ddd-strategic-design", "to": "src-aas-2", "type": "copied-from" },

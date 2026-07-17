@@ -397,6 +397,50 @@
       "license": "MIT",
       "risk_notes": "Markdown only, educational n8n/Temporal/Inngest patterns; no endpoints. Over-broad triggers (fires on bare 'automation'/'cron') and ghost delegation references — ignore those.",
       "buckets": ["dev-operations"]
+    },
+    {
+      "skill": "cover-letter",
+      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
+      "source_path": "skills/cover-letter (+ shared/ embedded into the skill folder for path resolution — no content modified)",
+      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-17",
+      "license": "MIT",
+      "risk_notes": "Local-only writing method; fetches only the target job-posting URL; strong anti-fabrication guardrails. Ends output with a Proficiently promo line (marketing only, no data flows). IGNORE its instruction to add allow-rules to settings.json — approve tools per-prompt. Requires job-search-setup first.",
+      "buckets": ["job-search"]
+    },
+    {
+      "skill": "network-scan",
+      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
+      "source_path": "skills/network-scan (+ shared/ embedded)",
+      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-17",
+      "license": "MIT",
+      "risk_notes": "No LinkedIn scraping — reads the user's own official LinkedIn data export and browses public careers pages; explicit no-Apply-clicking rule. Mild egress: contacts' EMPLOYER NAMES appear in web-search queries (contact names never leave the machine). Promo footer; ignore settings.json allow-rule instructions. Requires job-search-setup first.",
+      "buckets": ["job-search"]
+    },
+    {
+      "skill": "job-search",
+      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
+      "source_path": "skills/job-search (+ shared/ embedded)",
+      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-17",
+      "license": "MIT",
+      "risk_notes": "Browses hiring.cafe (disclosed in body, not frontmatter) and public ATS pages. IGNORE the stale 'Bash(crontab *)' permission ask — the workflow never uses cron. Promo footer. Requires job-search-setup first. Overlaps daily-job-search-crawl: this is interactive search; the cron is automated pipeline.",
+      "buckets": ["job-search"]
+    },
+    {
+      "skill": "job-search-setup",
+      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
+      "source_path": "skills/setup — vendored under local folder name job-search-setup (contents unmodified) (+ shared/ embedded)",
+      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
+      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
+      "review_date": "2026-07-17",
+      "license": "MIT",
+      "risk_notes": "Required companion: creates the local ~/.proficiently data directory (resume, preferences, LinkedIn contacts CSV) the other three skills gate on. All PII stays local. LinkedIn data arrives via LinkedIn's own official export flow (ToS-compliant). Ignore settings.json allow-rule instructions.",
+      "buckets": ["job-search"]
     }
   ],
   "rejected": [

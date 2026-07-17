@@ -23,7 +23,7 @@ Add the marketplace once, then install only the buckets you need:
 /plugin install attorney-workflow@amanuel-skills
 ```
 
-Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`, `dev-operations`, `software-architecture`.
+Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`, `dev-operations`, `software-architecture`, `job-search`.
 
 Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by [`tools/build_plugins.py`](tools/build_plugins.py) — never edit them by hand. After adding or re-bucketing a skill, run `python3 tools/build_plugins.py` and commit the result.
 
@@ -41,6 +41,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | web-application | 9 | active |
 | general | 9 | active |
 | software-architecture | 8 | active |
+| job-search | 5 | active |
 | projects | 1 | active |
 | attorney-workflow | 1 | active |
 
@@ -156,6 +157,16 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`projection-patterns`](skills/projection-patterns/SKILL.md) | Building read-model projections from event streams |
 | [`saga-orchestration`](skills/saga-orchestration/SKILL.md) | Distributed transactions via sagas and compensating actions |
 | [`dbt-transformation-patterns`](skills/dbt-transformation-patterns/SKILL.md) | dbt data-transformation modeling patterns |
+
+### job-search (third-party, from Proficiently — pinned `9bc1f6f` — plus first-party crawl)
+
+| Skill | Use it for |
+|---|---|
+| [`daily-job-search-crawl`](skills/daily-job-search-crawl/SKILL.md) | Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups |
+| [`job-search-setup`](skills/job-search-setup/SKILL.md) | One-time setup: local resume/preferences/contacts data directory for the job-search suite |
+| [`job-search`](skills/job-search/SKILL.md) | Interactive job search across hiring.cafe and public ATS boards with fit scoring |
+| [`cover-letter`](skills/cover-letter/SKILL.md) | Draft tailored cover letters from resume + job posting, anti-fabrication guarded |
+| [`network-scan`](skills/network-scan/SKILL.md) | Match your LinkedIn-export contacts against target-company openings |
 
 ### projects
 
