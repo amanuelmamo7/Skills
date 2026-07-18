@@ -132,7 +132,9 @@
     { "id": "job-search-setup", "type": "skill", "buckets": ["job-search"], "description": "One-time setup: local resume/preferences/contacts data directory for the job-search suite", "review_date": "2026-07-17", "risk": "third-party, markdown-only; all PII stays local" },
     { "id": "job-search", "type": "skill", "buckets": ["job-search"], "description": "Interactive job search across hiring.cafe and public ATS boards with fit scoring", "review_date": "2026-07-17", "risk": "third-party, markdown-only; browses public boards — see manifest" },
     { "id": "cover-letter", "type": "skill", "buckets": ["job-search"], "description": "Draft tailored cover letters from resume + job posting, anti-fabrication guarded", "review_date": "2026-07-17", "risk": "third-party, markdown-only, local-only" },
-    { "id": "network-scan", "type": "skill", "buckets": ["job-search"], "description": "Match your LinkedIn-export contacts against target-company openings", "review_date": "2026-07-17", "risk": "third-party, markdown-only; employer names in search queries — see manifest" }
+    { "id": "network-scan", "type": "skill", "buckets": ["job-search"], "description": "Match your LinkedIn-export contacts against target-company openings", "review_date": "2026-07-17", "risk": "third-party, markdown-only; employer names in search queries — see manifest" },
+
+    { "id": "skills-dispatcher", "type": "skill", "buckets": ["general"], "description": "Routing map of the whole library: buckets, preferences, pipelines, caveats (generated)", "review_date": "2026-07-17", "risk": "first-party (GENERATED from index.json — never edit by hand)" }
   ],
   "edges": [
     { "from": "job-search-setup", "to": "src-proficiently", "type": "copied-from" },

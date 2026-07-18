@@ -12,12 +12,12 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (84 skills across 10 buckets)."
+      "description": "The full curated library (85 skills across 10 buckets)."
     },
     {
       "name": "general",
       "source": "./plugins/general",
-      "description": "Research, writing, and thinking utilities: deep research, research briefs, note synthesis, proofreading. (9 skills)"
+      "description": "Research, writing, and thinking utilities: deep research, research briefs, note synthesis, proofreading. (10 skills)"
     },
     {
       "name": "web-application",

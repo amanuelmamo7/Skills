@@ -38,8 +38,8 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | dev-operations | 12 | active |
 | market-analysis | 11 | active |
 | agent-infrastructure | 11 | active |
+| general | 10 | active |
 | web-application | 9 | active |
-| general | 9 | active |
 | software-architecture | 8 | active |
 | job-search | 5 | active |
 | projects | 1 | active |
@@ -117,20 +117,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`mcp-builder`](skills/mcp-builder/SKILL.md) | Build and evaluate MCP servers (Anthropic) — ⚠ see manifest |
 | [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
 
-### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
-
-| Skill | Use it for |
-|---|---|
-| [`form-cro`](skills/form-cro/SKILL.md) | Form conversion-rate optimization methodology |
-| [`frontend-design`](skills/frontend-design/SKILL.md) | Design direction and visual quality guidance for web UI |
-| [`frontend-developer`](skills/frontend-developer/SKILL.md) | Frontend engineering persona and capability catalog |
-| [`nextjs-app-router-patterns`](skills/nextjs-app-router-patterns/SKILL.md) | Next.js App Router patterns and playbook |
-| [`nextjs-best-practices`](skills/nextjs-best-practices/SKILL.md) | Next.js App Router principles and best practices |
-| [`react-best-practices`](skills/react-best-practices/SKILL.md) | Vercel Engineering's React performance guide (47 rules) |
-| [`seo-audit`](skills/seo-audit/SKILL.md) | Diagnostic-only SEO audit framework |
-| [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows via the official CLI — ⚠ see manifest |
-| [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
-
 ### general (third-party AAS + distilled first-party)
 
 | Skill | Use it for |
@@ -144,6 +130,21 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`deferred-work-register`](skills/deferred-work-register/SKILL.md) | What / why-not-now / trigger register for consciously postponed work |
 | [`concise-planning`](skills/concise-planning/SKILL.md) | Plan work concisely before executing multi-step tasks |
 | [`product-manager-toolkit`](skills/product-manager-toolkit/SKILL.md) | PM toolkit: RICE prioritization and customer-interview analysis scripts — ⚠ see manifest |
+| [`skills-dispatcher`](skills/skills-dispatcher/SKILL.md) | Routing map of the whole library: buckets, preferences, pipelines, caveats (generated) |
+
+### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
+
+| Skill | Use it for |
+|---|---|
+| [`form-cro`](skills/form-cro/SKILL.md) | Form conversion-rate optimization methodology |
+| [`frontend-design`](skills/frontend-design/SKILL.md) | Design direction and visual quality guidance for web UI |
+| [`frontend-developer`](skills/frontend-developer/SKILL.md) | Frontend engineering persona and capability catalog |
+| [`nextjs-app-router-patterns`](skills/nextjs-app-router-patterns/SKILL.md) | Next.js App Router patterns and playbook |
+| [`nextjs-best-practices`](skills/nextjs-best-practices/SKILL.md) | Next.js App Router principles and best practices |
+| [`react-best-practices`](skills/react-best-practices/SKILL.md) | Vercel Engineering's React performance guide (47 rules) |
+| [`seo-audit`](skills/seo-audit/SKILL.md) | Diagnostic-only SEO audit framework |
+| [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows via the official CLI — ⚠ see manifest |
+| [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
 
 ### software-architecture (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)
 
