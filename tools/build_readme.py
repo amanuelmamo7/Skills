@@ -21,11 +21,9 @@ BUCKET_NOTES = {
     "web-application": " (third-party, from Agentic Awesome Skills — pinned `5e31f23`)",
     "agent-infrastructure": " (third-party AAS + distilled first-party)",
     "general": " (third-party AAS + distilled first-party)",
-    "attorney-workflow": "",
-    "projects": "",
+    "attorney-workflow": " (first-party, built with skill-distiller)",
     "dev-operations": " (distilled from StreamEZ project practice)",
     "software-architecture": " (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)",
-    "job-search": " (third-party, from Proficiently — pinned `9bc1f6f` — plus first-party crawl)",
 }
 
 FLAG_WORDS = ("RUNS", "DELEGATED", "HIGH CONSEQUENCE", "unvetted", "supply-chain")

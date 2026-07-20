@@ -23,7 +23,7 @@ Add the marketplace once, then install only the buckets you need:
 /plugin install attorney-workflow@amanuel-skills
 ```
 
-Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`, `dev-operations`, `software-architecture`, `job-search`.
+Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `agent-infrastructure`, `dev-operations`, `software-architecture`.
 
 Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by [`tools/build_plugins.py`](tools/build_plugins.py) — never edit them by hand. After adding or re-bucketing a skill, run `python3 tools/build_plugins.py` and commit the result.
 
@@ -155,7 +155,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`saga-orchestration`](skills/saga-orchestration/SKILL.md) | Distributed transactions via sagas and compensating actions |
 | [`dbt-transformation-patterns`](skills/dbt-transformation-patterns/SKILL.md) | dbt data-transformation modeling patterns |
 
-### attorney-workflow
+### attorney-workflow (first-party, built with skill-distiller)
 
 | Skill | Use it for |
 |---|---|
