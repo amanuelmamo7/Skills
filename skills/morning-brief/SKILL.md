@@ -15,10 +15,6 @@ A weekday start-of-day briefing: what's on the calendar, what came in overnight 
    - **Written form** — a dated markdown log (`memory/YYYY-MM-DD-morning.md` in the original) with sections for calendar, email signal, tasks, and suggested first task.
 3. Be selective: the brief is signal, not a dump. Two or three emails that actually need attention beat a list of twenty.
 
-## Bundled resources
-
-- `scripts/morning-brief.sh` — the original macOS cron wrapper (7:00 AM weekdays) that triggered the brief through the OpenClaw gateway and spoke it via Sonos. Machine-specific paths and tokens; keep as reference for re-automating.
-
 Related skills: `evening-wrap`, `weekly-wrap`, `daily-brief-export`, `morning-music-alarm`.
 
-> Source: OpenClaw agent "Bari" — `~/.openclaw/workspace/morning-brief.sh`.
+> Adapted from the author's personal assistant stack.

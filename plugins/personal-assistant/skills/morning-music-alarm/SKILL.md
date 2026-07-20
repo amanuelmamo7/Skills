@@ -26,4 +26,4 @@ A scheduled Sonos wake-up that survives the two things that kill naive versions:
 
 Related skills: `morning-brief` (the original stack played music, then delivered the spoken brief).
 
-> Source: OpenClaw agent "Bari" — `~/.openclaw/workspace/morning-jazz.sh`.
+> Adapted from the author's personal assistant stack.

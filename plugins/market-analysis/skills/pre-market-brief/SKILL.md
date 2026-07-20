@@ -22,7 +22,5 @@ The day in one sentence → Overnight tape table → Asia + Europe (two lines ma
 
 - `assets/pre-market-template.md` — the exact output template.
 - `references/analysis-rules.md` — the house analysis rules; read before writing.
-- `references/original-agent-prompt.txt` — the original OpenClaw (Sefer) cron prompt, including Telegram-summary and JSON-digest output variants for dashboard integration.
-- `scripts/pre-market-brief.sh` — the original macOS cron wrapper that triggered this brief via the OpenClaw gateway (machine-specific paths; reference only).
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/` (templates, prompts, cron scripts).
+> Adapted from the author's personal market-analysis agent stack.

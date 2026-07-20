@@ -31,4 +31,4 @@ Conviction: <low | medium | high>
 
 Related skills: `company-thesis`, `stock-deep-dive`, `pointed-analysis`.
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/templates/trend-justification.md`.
+> Adapted from the author's personal market-analysis agent stack.

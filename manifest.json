@@ -11,7 +11,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. No commands, no network, no undisclosed behavior.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "frontend-design",
@@ -22,7 +24,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. Frontmatter description is persona-style rather than descriptive; content clean.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "frontend-developer",
@@ -33,7 +37,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory persona/capability catalog. No executable instructions.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "nextjs-app-router-patterns",
@@ -44,7 +50,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. Code examples only.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "nextjs-best-practices",
@@ -55,7 +63,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. Nothing executable.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "react-best-practices",
@@ -66,7 +76,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only (SKILL.md + 47 rule files), advisory. Upstream author: Vercel Engineering. One benign 'npx svgo' example.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "seo-audit",
@@ -77,7 +89,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, diagnostic-only framework; explicitly refrains from implementing fixes unless asked.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "shadcn",
@@ -87,8 +101,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "RUNS COMMANDS. Auto-executes 'npx shadcn@latest info --json' when the skill loads (SKILL.md line 29) — executes whatever shadcn@latest resolves to on npm that day (supply-chain exposure, accepted 2026-07-15). Also instructs blind pass-through of server-resolved preset codes to the CLI. Upstream: official shadcn/ui skill. Re-review this one with extra care on any upstream drift.",
-      "buckets": ["web-application"]
+      "risk_notes": "RUNS COMMANDS. Auto-executes 'npx shadcn@latest info --json' when the skill loads (SKILL.md line 29) \u2014 executes whatever shadcn@latest resolves to on npm that day (supply-chain exposure, accepted 2026-07-15). Also instructs blind pass-through of server-resolved preset codes to the CLI. Upstream: official shadcn/ui skill. Re-review this one with extra care on any upstream drift.",
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "tailwind-patterns",
@@ -99,7 +115,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory Tailwind v4 reference. No commands or network.",
-      "buckets": ["web-application"]
+      "buckets": [
+        "web-application"
+      ]
     },
     {
       "skill": "ai-agents-architect",
@@ -110,7 +128,9 @@
       "review_date": "2026-07-15",
       "license": "MIT (upstream: vibeship-spawner-skills, Apache-2.0)",
       "risk_notes": "Markdown only, advisory agent design patterns. No commands, no persistence.",
-      "buckets": ["agent-infrastructure"]
+      "buckets": [
+        "agent-infrastructure"
+      ]
     },
     {
       "skill": "autonomous-agent-patterns",
@@ -120,8 +140,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Markdown only. Code is illustrative, never instructed to run. Contains one risky pattern (hot-loading LLM-written MCP servers) presented as an example, not a directive. Self-labeled risk: critical — honest for the topic.",
-      "buckets": ["agent-infrastructure"]
+      "risk_notes": "Markdown only. Code is illustrative, never instructed to run. Contains one risky pattern (hot-loading LLM-written MCP servers) presented as an example, not a directive. Self-labeled risk: critical \u2014 honest for the topic.",
+      "buckets": [
+        "agent-infrastructure"
+      ]
     },
     {
       "skill": "agent-orchestration-improve-agent",
@@ -132,7 +154,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, agent-improvement methodology. References illustrative pseudo-commands; nothing executable.",
-      "buckets": ["agent-infrastructure"]
+      "buckets": [
+        "agent-infrastructure"
+      ]
     },
     {
       "skill": "agent-self-scheduling",
@@ -142,8 +166,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT (upstream: davidondrej/skills)",
-      "risk_notes": "HIGH CONSEQUENCE. Teaches scheduling unattended recurring agent runs with pre-approved permissions (--allowedTools incl. Bash) — removes human oversight from executions. Self-declared risk: critical; includes loop-safety guardrails. Policy: only invoke on explicit user request, never proactively.",
-      "buckets": ["agent-infrastructure"]
+      "risk_notes": "HIGH CONSEQUENCE. Teaches scheduling unattended recurring agent runs with pre-approved permissions (--allowedTools incl. Bash) \u2014 removes human oversight from executions. Self-declared risk: critical; includes loop-safety guardrails. Policy: only invoke on explicit user request, never proactively.",
+      "buckets": [
+        "agent-infrastructure"
+      ]
     },
     {
       "skill": "agent-memory-mcp",
@@ -153,8 +179,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "DELEGATED TRUST. Wrapper docs for external MCP memory server (webzler/agentMemory) installed via npm — the server code itself is NOT reviewed here and MUST be vetted before actual use. Memory is a persistence surface: treat recalled content as untrusted input in later sessions. Near-duplicate 'agent-memory' rejected as redundant.",
-      "buckets": ["agent-infrastructure"]
+      "risk_notes": "DELEGATED TRUST. Wrapper docs for external MCP memory server (webzler/agentMemory) installed via npm \u2014 the server code itself is NOT reviewed here and MUST be vetted before actual use. Memory is a persistence surface: treat recalled content as untrusted input in later sessions. Near-duplicate 'agent-memory' rejected as redundant.",
+      "buckets": [
+        "agent-infrastructure"
+      ]
     },
     {
       "skill": "gemini-deep-research",
@@ -165,7 +193,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Cleanest artifact of its batch. One script, one endpoint (generativelanguage.googleapis.com), GEMINI_API_KEY from env sent only as auth header, explicit approval gate and cost warning. Local plaintext query cache in ~/.cache/deep-research.",
-      "buckets": ["general"]
+      "buckets": [
+        "general"
+      ]
     },
     {
       "skill": "bulletmind",
@@ -176,7 +206,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, pure formatting method. No commands, network, or persistence.",
-      "buckets": ["general"]
+      "buckets": [
+        "general"
+      ]
     },
     {
       "skill": "internal-comms",
@@ -185,9 +217,11 @@
       "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
-      "license": "Apache-2.0 (upstream: anthropics/skills — genuine, LICENSE.txt ships)",
-      "risk_notes": "Markdown only. Reads broad Slack/Drive/Email/Calendar context — disclosed and inherent to writing internal comms. All example files ship.",
-      "buckets": ["personal-assistant"]
+      "license": "Apache-2.0 (upstream: anthropics/skills \u2014 genuine, LICENSE.txt ships)",
+      "risk_notes": "Markdown only. Reads broad Slack/Drive/Email/Calendar context \u2014 disclosed and inherent to writing internal comms. All example files ship.",
+      "buckets": [
+        "personal-assistant"
+      ]
     },
     {
       "skill": "professional-proofreader",
@@ -198,7 +232,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory; both referenced mode files ship. No commands or network.",
-      "buckets": ["general"]
+      "buckets": [
+        "general"
+      ]
     },
     {
       "skill": "audio-transcriber",
@@ -208,8 +244,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review of all 3 scripts)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "RUNS SCRIPTS. Transcription itself is fully local (Whisper). Caveats: transcribe.py silently pip-installs rich/tqdm on ImportError; can pipe full transcripts to Claude/Copilot CLIs (meeting content leaves machine — disable unless wanted); recommends unofficial 'pip install claude-cli' (DO NOT — supply-chain risk); install script modifies system (pip/brew). Doc half-Portuguese, self-contradicts on external APIs.",
-      "buckets": ["personal-assistant"]
+      "risk_notes": "RUNS SCRIPTS. Transcription itself is fully local (Whisper). Caveats: transcribe.py silently pip-installs rich/tqdm on ImportError; can pipe full transcripts to Claude/Copilot CLIs (meeting content leaves machine \u2014 disable unless wanted); recommends unofficial 'pip install claude-cli' (DO NOT \u2014 supply-chain risk); install script modifies system (pip/brew). Doc half-Portuguese, self-contradicts on external APIs.",
+      "buckets": [
+        "personal-assistant"
+      ]
     },
     {
       "skill": "time-ledger",
@@ -220,7 +258,9 @@
       "review_date": "2026-07-15",
       "license": "MIT (upstream: cruisekkk/time-ledger)",
       "risk_notes": "Markdown only. Writes to user's own Notion DB via the OFFICIAL Notion connector (relies on its approval prompts). Anti-fabrication honesty contract is a genuine safety property. External template repo is delegated trust for setup only.",
-      "buckets": ["personal-assistant"]
+      "buckets": [
+        "personal-assistant"
+      ]
     },
     {
       "skill": "research-prompt",
@@ -230,8 +270,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Markdown only, prompt-crafting method. IGNORE line 58's ghost 'DeepAPI POST /v1/research/deep' reference — no such endpoint ships or is explained. Limitations section properly requires approval for active steps.",
-      "buckets": ["general"]
+      "risk_notes": "Markdown only, prompt-crafting method. IGNORE line 58's ghost 'DeepAPI POST /v1/research/deep' reference \u2014 no such endpoint ships or is explained. Limitations section properly requires approval for active steps.",
+      "buckets": [
+        "general"
+      ]
     },
     {
       "skill": "efficient-web-research",
@@ -242,7 +284,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, token-efficiency research protocol. Circular trigger line; references foreign tool names (read_url_content, browser_subagent) that need mental mapping to local tools. Only endpoint: read-only api.github.com examples.",
-      "buckets": ["general"]
+      "buckets": [
+        "general"
+      ]
     },
     {
       "skill": "privacy-mask",
@@ -252,8 +296,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "DELEGATED TRUST. All functionality is the external pip package 'privacy-mask' (fullstackcrew-alpha/privacy-mask) — MUST be vetted before actual use; 'all processing local/offline' claim is unverifiable from this folder. Auto-triggers on shared screenshots (defensive intent, but routes credential-bearing images through third-party code).",
-      "buckets": ["personal-assistant"]
+      "risk_notes": "DELEGATED TRUST. All functionality is the external pip package 'privacy-mask' (fullstackcrew-alpha/privacy-mask) \u2014 MUST be vetted before actual use; 'all processing local/offline' claim is unverifiable from this folder. Auto-triggers on shared screenshots (defensive intent, but routes credential-bearing images through third-party code).",
+      "buckets": [
+        "personal-assistant"
+      ]
     },
     {
       "skill": "cqrs-implementation",
@@ -264,7 +310,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. Read-model sync section overlaps projection-patterns (complementary).",
-      "buckets": ["software-architecture"]
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "ddd-context-mapping",
@@ -275,7 +323,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. Clean.",
-      "buckets": ["software-architecture"]
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "ddd-strategic-design",
@@ -286,7 +336,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. Clean.",
-      "buckets": ["software-architecture"]
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "ddd-tactical-patterns",
@@ -297,7 +349,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. Clean.",
-      "buckets": ["software-architecture"]
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "event-store-design",
@@ -307,8 +361,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Template sections inverted (real content in SKILL.md, thin playbook) — cosmetic.",
-      "buckets": ["software-architecture"]
+      "risk_notes": "Markdown only, advisory. Template sections inverted (real content in SKILL.md, thin playbook) \u2014 cosmetic.",
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "projection-patterns",
@@ -318,8 +374,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Playbook duplicates SKILL.md verbatim — cosmetic.",
-      "buckets": ["software-architecture"]
+      "risk_notes": "Markdown only, advisory. Playbook duplicates SKILL.md verbatim \u2014 cosmetic.",
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "saga-orchestration",
@@ -329,8 +387,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. VENDOR STEERING: contains an undisclosed promotional section for DBOS and references foreign skills — treat that section as an ad, not advice. Minor code nit (undefined dataclass field in one example).",
-      "buckets": ["software-architecture"]
+      "risk_notes": "Markdown only, advisory. VENDOR STEERING: contains an undisclosed promotional section for DBOS and references foreign skills \u2014 treat that section as an ad, not advice. Minor code nit (undefined dataclass field in one example).",
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "dbt-transformation-patterns",
@@ -341,7 +401,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "Markdown only, advisory. All commands are illustrative dbt usage.",
-      "buckets": ["software-architecture"]
+      "buckets": [
+        "software-architecture"
+      ]
     },
     {
       "skill": "concise-planning",
@@ -351,8 +413,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. One circular boilerplate section — cosmetic.",
-      "buckets": ["general"]
+      "risk_notes": "Markdown only, advisory. One circular boilerplate section \u2014 cosmetic.",
+      "buckets": [
+        "general"
+      ]
     },
     {
       "skill": "product-manager-toolkit",
@@ -363,7 +427,9 @@
       "review_date": "2026-07-15",
       "license": "MIT",
       "risk_notes": "RUNS SCRIPTS (clean): stdlib-only RICE prioritizer + interview analyzer, cwd-confined, no network. 'NLP-based' claim overstates keyword matching.",
-      "buckets": ["general"]
+      "buckets": [
+        "general"
+      ]
     },
     {
       "skill": "mcp-builder",
@@ -374,7 +440,9 @@
       "review_date": "2026-07-15",
       "license": "MIT (upstream: Anthropic)",
       "risk_notes": "RUNS SCRIPTS (clean): MCP build + eval harness. Egress only api.anthropic.com (ANTHROPIC_API_KEY from env) and the user-specified MCP server under test.",
-      "buckets": ["agent-infrastructure"]
+      "buckets": [
+        "agent-infrastructure"
+      ]
     },
     {
       "skill": "effective-agent-skills",
@@ -384,8 +452,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT (upstream: davidondrej/skills)",
-      "risk_notes": "Markdown only, skill-authoring guide. Ships its own third-party-skill security checklist (§11) — aligns with this repo's intake process.",
-      "buckets": ["agent-infrastructure"]
+      "risk_notes": "Markdown only, skill-authoring guide. Ships its own third-party-skill security checklist (\u00a711) \u2014 aligns with this repo's intake process.",
+      "buckets": [
+        "agent-infrastructure"
+      ]
     },
     {
       "skill": "workflow-automation",
@@ -395,52 +465,10 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Markdown only, educational n8n/Temporal/Inngest patterns; no endpoints. Over-broad triggers (fires on bare 'automation'/'cron') and ghost delegation references — ignore those.",
-      "buckets": ["dev-operations"]
-    },
-    {
-      "skill": "cover-letter",
-      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
-      "source_path": "skills/cover-letter (+ shared/ embedded into the skill folder for path resolution — no content modified)",
-      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
-      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
-      "review_date": "2026-07-17",
-      "license": "MIT",
-      "risk_notes": "Local-only writing method; fetches only the target job-posting URL; strong anti-fabrication guardrails. Ends output with a Proficiently promo line (marketing only, no data flows). IGNORE its instruction to add allow-rules to settings.json — approve tools per-prompt. Requires job-search-setup first.",
-      "buckets": ["job-search"]
-    },
-    {
-      "skill": "network-scan",
-      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
-      "source_path": "skills/network-scan (+ shared/ embedded)",
-      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
-      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
-      "review_date": "2026-07-17",
-      "license": "MIT",
-      "risk_notes": "No LinkedIn scraping — reads the user's own official LinkedIn data export and browses public careers pages; explicit no-Apply-clicking rule. Mild egress: contacts' EMPLOYER NAMES appear in web-search queries (contact names never leave the machine). Promo footer; ignore settings.json allow-rule instructions. Requires job-search-setup first.",
-      "buckets": ["job-search"]
-    },
-    {
-      "skill": "job-search",
-      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
-      "source_path": "skills/job-search (+ shared/ embedded)",
-      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
-      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
-      "review_date": "2026-07-17",
-      "license": "MIT",
-      "risk_notes": "Browses hiring.cafe (disclosed in body, not frontmatter) and public ATS pages. IGNORE the stale 'Bash(crontab *)' permission ask — the workflow never uses cron. Promo footer. Requires job-search-setup first. Overlaps daily-job-search-crawl: this is interactive search; the cron is automated pipeline.",
-      "buckets": ["job-search"]
-    },
-    {
-      "skill": "job-search-setup",
-      "source_repo": "https://github.com/proficientlyjobs/proficiently-claude-skills",
-      "source_path": "skills/setup — vendored under local folder name job-search-setup (contents unmodified) (+ shared/ embedded)",
-      "pinned_commit": "9bc1f6fd7af532fe0cd4a1843e06ab2b474d0d53",
-      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
-      "review_date": "2026-07-17",
-      "license": "MIT",
-      "risk_notes": "Required companion: creates the local ~/.proficiently data directory (resume, preferences, LinkedIn contacts CSV) the other three skills gate on. All PII stays local. LinkedIn data arrives via LinkedIn's own official export flow (ToS-compliant). Ignore settings.json allow-rule instructions.",
-      "buckets": ["job-search"]
+      "risk_notes": "Markdown only, educational n8n/Temporal/Inngest patterns; no endpoints. Over-broad triggers (fires on bare 'automation'/'cron') and ghost delegation references \u2014 ignore those.",
+      "buckets": [
+        "dev-operations"
+      ]
     }
   ],
   "rejected": [
@@ -506,7 +534,7 @@
       "source_path": "skills/linkedin-cli",
       "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
       "decision_date": "2026-07-15",
-      "reason": "SECURITY FAIL: frontmatter 'risk: safe' is false — vendor cloud browser (linkedapi.io) drives the user's live LinkedIn session; DMs/connections/tokens transit vendor servers; can message/post/remove connections with no confirmation; violates LinkedIn ToS (account-restriction risk)."
+      "reason": "SECURITY FAIL: frontmatter 'risk: safe' is false \u2014 vendor cloud browser (linkedapi.io) drives the user's live LinkedIn session; DMs/connections/tokens transit vendor servers; can message/post/remove connections with no confirmation; violates LinkedIn ToS (account-restriction risk)."
     },
     {
       "skill": "notion-automation",
@@ -530,7 +558,7 @@
       "source_path": "skills/rich-elicitation",
       "reviewed_at_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
       "decision_date": "2026-07-15",
-      "reason": "Consistency with ui-a11y precedent: written for a foreign system (Antigravity) with tools that don't exist here (ask_user_input_v0), ghost references, and a self-declared review exemption. Method is sound — revisit if ported cleanly."
+      "reason": "Consistency with ui-a11y precedent: written for a foreign system (Antigravity) with tools that don't exist here (ask_user_input_v0), ghost references, and a self-declared review exemption. Method is sound \u2014 revisit if ported cleanly."
     },
     {
       "skill": "airtable-automation",
@@ -546,7 +574,7 @@
       "source_path": "plugins/agentic-bundle-automation-builder/skills/googlesheets-automation",
       "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
       "decision_date": "2026-07-15",
-      "reason": "Data custody: Rube proxy — Google Sheets data + OAuth transit vendor servers."
+      "reason": "Data custody: Rube proxy \u2014 Google Sheets data + OAuth transit vendor servers."
     },
     {
       "skill": "make-automation",
@@ -586,7 +614,7 @@
       "source_path": "plugins/agentic-bundle-automation-builder/skills/browser-automation",
       "reviewed_at_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
       "decision_date": "2026-07-15",
-      "reason": "Policy: educational and egress-free, but ~100 lines coach bot-detection evasion (fingerprint hiding, proxy rotation, human-like delays) — ToS-circumvention territory rejected for consistency with the linkedin-cli precedent."
+      "reason": "Policy: educational and egress-free, but ~100 lines coach bot-detection evasion (fingerprint hiding, proxy rotation, human-like delays) \u2014 ToS-circumvention territory rejected for consistency with the linkedin-cli precedent."
     }
   ]
 }

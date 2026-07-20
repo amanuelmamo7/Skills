@@ -21,4 +21,4 @@ The lightweight format for one-off analytical questions: direct answer first, th
 
 Related skills: escalate to `trend-justification`, `company-thesis`, or `stock-deep-dive` when the question deserves the full treatment.
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/templates/pointed-analysis.md`.
+> Adapted from the author's personal market-analysis agent stack.

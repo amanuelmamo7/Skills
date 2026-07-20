@@ -12,7 +12,7 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (85 skills across 10 buckets)."
+      "description": "The full curated library (78 skills across 8 buckets)."
     },
     {
       "name": "general",
@@ -37,17 +37,12 @@
     {
       "name": "personal-assistant",
       "source": "./plugins/personal-assistant",
-      "description": "Executive-assistant capabilities: briefs, comms, transcription, time tracking, redaction, reminders. (18 skills)"
-    },
-    {
-      "name": "projects",
-      "source": "./plugins/projects",
-      "description": "Standalone project skills. (1 skill)"
+      "description": "Executive-assistant capabilities: briefs, comms, transcription, time tracking, redaction, reminders. (15 skills)"
     },
     {
       "name": "agent-infrastructure",
       "source": "./plugins/agent-infrastructure",
-      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (11 skills)"
+      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (12 skills)"
     },
     {
       "name": "dev-operations",
@@ -58,11 +53,6 @@
       "name": "software-architecture",
       "source": "./plugins/software-architecture",
       "description": "Design patterns for software: DDD, CQRS, event sourcing, sagas, dbt modeling. (8 skills)"
-    },
-    {
-      "name": "job-search",
-      "source": "./plugins/job-search",
-      "description": "Job-search pipeline: setup, interactive search, cover letters, network matching, daily crawl. (5 skills)"
     }
   ]
 }

@@ -34,15 +34,13 @@ Buckets are metadata, not folders — a skill can live in more than one.
 
 | Bucket | Skills | Status |
 |---|---:|---|
-| personal-assistant | 18 | active |
+| personal-assistant | 15 | active |
+| agent-infrastructure | 12 | active |
 | dev-operations | 12 | active |
 | market-analysis | 11 | active |
-| agent-infrastructure | 11 | active |
 | general | 10 | active |
 | web-application | 9 | active |
 | software-architecture | 8 | active |
-| job-search | 5 | active |
-| projects | 1 | active |
 | attorney-workflow | 1 | active |
 
 ### personal-assistant (from Bari + Cowork, plus reviewed third-party)
@@ -57,9 +55,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`meeting-reminder`](skills/meeting-reminder/SKILL.md) | Deterministic no-LLM voice reminders 20 minutes before meetings |
 | [`morning-music-alarm`](skills/morning-music-alarm/SKILL.md) | Sonos wake-up music via curl-only SOAP |
 | [`daily-brief-export`](skills/daily-brief-export/SKILL.md) | Token-protected JSON endpoint exporting calendar/email/tasks |
-| [`daily-job-search-crawl`](skills/daily-job-search-crawl/SKILL.md) | Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups |
-| [`weekday-morning-brief`](skills/weekday-morning-brief/SKILL.md) | Weekday 8am brief: calendar, VIP email + reply drafts, markets, system health |
-| [`weekly-system-self-audit`](skills/weekly-system-self-audit/SKILL.md) | Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP auto-refresh |
 | [`internal-comms`](skills/internal-comms/SKILL.md) | Status reports, leadership updates, and newsletters in repeatable formats (Anthropic) |
 | [`audio-transcriber`](skills/audio-transcriber/SKILL.md) | Local Whisper transcription of meetings/audio to structured markdown — ⚠ see manifest |
 | [`time-ledger`](skills/time-ledger/SKILL.md) | Natural-language time tracking into user's own Notion DB |
@@ -67,6 +62,23 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`proactive-announce-policy`](skills/proactive-announce-policy/SKILL.md) | Deterministic voice/chat/silence announce routing with state-file dedup |
 | [`task-capture`](skills/task-capture/SKILL.md) | Parse chat task requests, post to task API, confirm, fallback |
 | [`vip-list-management`](skills/vip-list-management/SKILL.md) | VIP-senders file with manual tiers and protected auto-generated block |
+
+### agent-infrastructure (third-party AAS + distilled first-party)
+
+| Skill | Use it for |
+|---|---|
+| [`ai-agents-architect`](skills/ai-agents-architect/SKILL.md) | Agent system design patterns and sharp edges |
+| [`autonomous-agent-patterns`](skills/autonomous-agent-patterns/SKILL.md) | Autonomous agent design patterns: loops, permissions, sandboxing |
+| [`agent-orchestration-improve-agent`](skills/agent-orchestration-improve-agent/SKILL.md) | Methodology for measuring and improving an agent's performance |
+| [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Scheduling unattended recurring agent runs (cron + pre-approved tools) — ⚠ see manifest |
+| [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory via external MCP server (webzler/agentMemory) — ⚠ see manifest |
+| [`agent-install-runbook`](skills/agent-install-runbook/SKILL.md) | Checkpointed runbook for one agent installing a sibling agent, with rollback |
+| [`agent-resume-protocol`](skills/agent-resume-protocol/SKILL.md) | Detect interruptions, log intent breadcrumbs, reconstruct state, resume one step |
+| [`verify-before-trusting-memory`](skills/verify-before-trusting-memory/SKILL.md) | Live-test remembered facts before acting; date every fact update |
+| [`launchagent-scheduling`](skills/launchagent-scheduling/SKILL.md) | LaunchAgents vs cron vs session-scoped scheduling, with manifest conventions |
+| [`mcp-builder`](skills/mcp-builder/SKILL.md) | Build and evaluate MCP servers (Anthropic) — ⚠ see manifest |
+| [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
+| [`skill-distiller`](skills/skill-distiller/SKILL.md) | Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers |
 
 ### dev-operations (distilled from StreamEZ project practice)
 
@@ -100,22 +112,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`gainers-tracking`](skills/gainers-tracking/SKILL.md) | Daily-to-quarterly gainers tracking schema with catalyst-pattern library |
 | [`investor-profile-template`](skills/investor-profile-template/SKILL.md) | Financial-profile template: horizon, risk, liquidity, watchlist, delivery preferences |
 | [`analyst-house-style`](skills/analyst-house-style/SKILL.md) | Eight non-negotiable analysis rules as a pre-ship rigor checklist |
-
-### agent-infrastructure (third-party AAS + distilled first-party)
-
-| Skill | Use it for |
-|---|---|
-| [`ai-agents-architect`](skills/ai-agents-architect/SKILL.md) | Agent system design patterns and sharp edges |
-| [`autonomous-agent-patterns`](skills/autonomous-agent-patterns/SKILL.md) | Autonomous agent design patterns: loops, permissions, sandboxing |
-| [`agent-orchestration-improve-agent`](skills/agent-orchestration-improve-agent/SKILL.md) | Methodology for measuring and improving an agent's performance |
-| [`agent-self-scheduling`](skills/agent-self-scheduling/SKILL.md) | Scheduling unattended recurring agent runs (cron + pre-approved tools) — ⚠ see manifest |
-| [`agent-memory-mcp`](skills/agent-memory-mcp/SKILL.md) | Persistent agent memory via external MCP server (webzler/agentMemory) — ⚠ see manifest |
-| [`agent-install-runbook`](skills/agent-install-runbook/SKILL.md) | Checkpointed runbook for one agent installing a sibling agent, with rollback |
-| [`agent-resume-protocol`](skills/agent-resume-protocol/SKILL.md) | Detect interruptions, log intent breadcrumbs, reconstruct state, resume one step |
-| [`verify-before-trusting-memory`](skills/verify-before-trusting-memory/SKILL.md) | Live-test remembered facts before acting; date every fact update |
-| [`launchagent-scheduling`](skills/launchagent-scheduling/SKILL.md) | LaunchAgents vs cron vs session-scoped scheduling, with manifest conventions |
-| [`mcp-builder`](skills/mcp-builder/SKILL.md) | Build and evaluate MCP servers (Anthropic) — ⚠ see manifest |
-| [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
 
 ### general (third-party AAS + distilled first-party)
 
@@ -159,22 +155,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`saga-orchestration`](skills/saga-orchestration/SKILL.md) | Distributed transactions via sagas and compensating actions |
 | [`dbt-transformation-patterns`](skills/dbt-transformation-patterns/SKILL.md) | dbt data-transformation modeling patterns |
 
-### job-search (third-party, from Proficiently — pinned `9bc1f6f` — plus first-party crawl)
-
-| Skill | Use it for |
-|---|---|
-| [`daily-job-search-crawl`](skills/daily-job-search-crawl/SKILL.md) | Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups |
-| [`job-search-setup`](skills/job-search-setup/SKILL.md) | One-time setup: local resume/preferences/contacts data directory for the job-search suite |
-| [`job-search`](skills/job-search/SKILL.md) | Interactive job search across hiring.cafe and public ATS boards with fit scoring |
-| [`cover-letter`](skills/cover-letter/SKILL.md) | Draft tailored cover letters from resume + job posting, anti-fabrication guarded |
-| [`network-scan`](skills/network-scan/SKILL.md) | Match your LinkedIn-export contacts against target-company openings |
-
-### projects
-
-| Skill | Use it for |
-|---|---|
-| [`poker-hud-advisor`](skills/poker-hud-advisor/SKILL.md) | Real-time Claude advice layer for the poker HUD |
-
 ### attorney-workflow
 
 | Skill | Use it for |
@@ -192,7 +172,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Origin | What came from it |
 |---|---|
 | Sefer (`~/.openclaw/workspace-sefer`) | All 8 market-analysis skills |
-| Bari (`~/.openclaw/workspace`) | 8 assistant skills + poker-hud-advisor |
+| Bari (`~/.openclaw/workspace`) | 8 assistant skills |
 | Cowork (`~/Documents/Claude/Scheduled`) | 4 scheduled-task skills |
 | [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 23 skills: 9 web-application, 5 agent-infrastructure, 5 general, 4 personal-assistant (intake 2026-07-15; 11 rejected — see manifest.json) |
 

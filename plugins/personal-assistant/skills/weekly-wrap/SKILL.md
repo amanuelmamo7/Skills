@@ -18,10 +18,6 @@ Read a week's worth of daily logs and synthesize — not a re-listing of each da
    - **What got punted** — the honest list, carried forward explicitly.
 3. Write to a week-stamped file (`memory/YYYY-Www-wrap.md` in the original, ISO week number).
 
-## Bundled resources
-
-- `scripts/weekly-wrap.sh` — the original macOS cron wrapper (Friday 4:00 PM) that triggered the wrap through the OpenClaw gateway. Machine-specific; reference for re-automating.
-
 Related skills: `morning-brief`, `evening-wrap` (produce the inputs), `memory-maintenance` (the Sunday distillation pass).
 
-> Source: OpenClaw agent "Bari" — `~/.openclaw/workspace/weekly-wrap.sh`.
+> Adapted from the author's personal assistant stack.

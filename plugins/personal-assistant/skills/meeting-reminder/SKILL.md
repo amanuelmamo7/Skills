@@ -17,13 +17,13 @@ Time-critical reminders should not depend on an agent being awake. This is a pur
 
 ## How to use
 
-1. `scripts/meeting-reminder.sh` is the reference implementation (macOS: `say` for voice, launchd every 5 minutes, calendar fetched from a private JSON endpoint — see the `daily-brief-export` skill).
+1. `scripts/meeting-reminder.sh` is the reference implementation (macOS: `say` for voice, launchd every 5 minutes, calendar fetched from a private token-protected JSON endpoint).
 2. To adapt: swap the calendar source (any endpoint/CLI returning today's timed events), the announcer (`say`, notify-send, push), and the schedule (launchd/cron/systemd timer). Keep the dedup-state, quiet-hours, and announce-once semantics — they're the design.
 
 ## Bundled resources
 
 - `scripts/meeting-reminder.sh` — the original, working macOS implementation (machine-specific endpoint and paths).
 
-Related skills: `daily-brief-export` (the calendar JSON source), `assistant-heartbeat` (must defer to this for meeting announcements).
+Related skills: `assistant-heartbeat` (must defer to this skill for meeting announcements).
 
-> Source: OpenClaw "EA stack" — `~/.openclaw/workspace/meeting-reminder.sh`.
+> Adapted from the author's personal assistant stack.

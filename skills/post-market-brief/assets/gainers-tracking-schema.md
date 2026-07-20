@@ -3,18 +3,18 @@
 Per-day tracking files for the post-market gainers wrap. Designed so weekly / monthly / quarterly aggregations can mechanically parse them and surface patterns.
 
 **File locations:**
-- Daily: `~/.openclaw/workspace-sefer/memory/gainers/YYYY-MM-DD.md`
-- Weekly: `~/.openclaw/workspace-sefer/memory/gainers/YYYY-WW-tracking.md`
-- Monthly: `~/.openclaw/workspace-sefer/memory/gainers/YYYY-MM-tracking.md`
-- Quarterly: `~/.openclaw/workspace-sefer/memory/gainers/YYYY-QQ-tracking.md`
-- Catalyst pattern library: `~/.openclaw/workspace-sefer/memory/gainers/gainers-patterns.md`
-- Regime check (monthly): `~/.openclaw/workspace-sefer/memory/gainers/quarterly-regime-check.md`
+- Daily: `memory/gainers/YYYY-MM-DD.md`
+- Weekly: `memory/gainers/YYYY-WW-tracking.md`
+- Monthly: `memory/gainers/YYYY-MM-tracking.md`
+- Quarterly: `memory/gainers/YYYY-QQ-tracking.md`
+- Catalyst pattern library: `memory/gainers/gainers-patterns.md`
+- Regime check (monthly): `memory/gainers/quarterly-regime-check.md`
 
 ---
 
 ## Daily file format
 
-Markdown wrapper with a structured YAML block per name so future Sefer sessions can both read for context and parse for aggregation.
+Markdown wrapper with a structured YAML block per name so future sessions can both read for context and parse for aggregation.
 
 ```markdown
 # Gainers Tracking — YYYY-MM-DD
@@ -63,7 +63,7 @@ sources:
   - { url: "https://...", fetched: "2026-06-04T22:09Z", tier: 1 }
 ```
 
-[Free-form 200-300 word analysis follows the YAML block, matching SOUL rules]
+[Free-form 200-300 word analysis follows the YAML block, matching the house rules]
 
 ### TICKER2
 [same structure]
@@ -193,7 +193,7 @@ selected_for_quarterly_wrap: true
 
 ## Catalyst pattern library format
 
-`gainers-patterns.md` — only entries with ≥ 3 repeat occurrences across tracking files. Disciplined curation per SOUL rules.
+`gainers-patterns.md` — only entries with ≥ 3 repeat occurrences across tracking files. Disciplined curation per the house rules.
 
 ```yaml
 - pattern_id: lottery_ticket_thematic_pr_lowfloat
@@ -224,7 +224,7 @@ selected_for_quarterly_wrap: true
   refreshed: 2026-09-XX
 ```
 
-Sefer reads this file at the top of every pre-market brief and references patterns when analyzing overnight movers. The goal: pattern-recognition in pre-market analysis, not after-the-fact narration in post-market.
+The agent reads this file at the top of every pre-market brief and references patterns when analyzing overnight movers. The goal: pattern-recognition in pre-market analysis, not after-the-fact narration in post-market.
 
 ---
 
@@ -234,4 +234,4 @@ Sefer reads this file at the top of every pre-market brief and references patter
 - **All numeric fields normalized to base units** (dollars not "in millions" — use scientific notation like `7.06e9`).
 - **Verification tier and confidence labeled per name.** Catalyst-library learns which tiers produced strongest signal over time.
 - **Selection flags propagate up.** A name flagged for weekly deep-dive must be readable from a single grep across daily files.
-- **Markdown body still required.** YAML is for aggregation; the markdown free-form analysis is for human (and future Sefer) reading.
+- **Markdown body still required.** YAML is for aggregation; the markdown free-form analysis is for human (and future-session) reading.

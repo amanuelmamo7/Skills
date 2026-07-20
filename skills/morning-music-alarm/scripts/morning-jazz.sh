@@ -7,10 +7,10 @@
 # BEHAVIOR: picks a RANDOM playable Sonos favorite each morning, enables
 # shuffle mode, sets volume, plays. Retries next favorite on failure.
 
-IP="192.168.1.79"
+IP="192.168.1.XXX"            # your speaker's LAN IP
 BASE="http://$IP:1400"
 VOLUME="40"
-LOG="$HOME/.openclaw/workspace/logs/cron-$(date +%Y-%m-%d)-morning-jazz.log"
+LOG="$HOME/.assistant/logs/cron-$(date +%Y-%m-%d)-morning-music.log"
 mkdir -p "$(dirname "$LOG")"
 log(){ echo "$(date): $*" >> "$LOG"; }
 

@@ -17,10 +17,6 @@ The bookend to the morning brief: close today honestly, set up tomorrow concrete
    - **First task for tomorrow** — one concrete suggestion, chosen from what was punted or what tomorrow's calendar makes urgent.
 3. Write to a dated log (`memory/YYYY-MM-DD-evening.md` in the original) and keep the delivered form short enough to be read aloud.
 
-## Bundled resources
-
-- `scripts/evening-wrap.sh` — the original macOS cron wrapper (6:00 PM weekdays) that triggered the wrap through the OpenClaw gateway. Machine-specific; reference for re-automating.
-
 Related skills: `morning-brief`, `weekly-wrap`, `memory-maintenance`.
 
-> Source: OpenClaw agent "Bari" — `~/.openclaw/workspace/evening-wrap.sh`.
+> Adapted from the author's personal assistant stack.

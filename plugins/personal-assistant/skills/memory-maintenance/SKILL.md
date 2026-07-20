@@ -16,10 +16,6 @@ Raw daily logs are append-only and noisy; long-term memory should be small and d
 
 The discipline that makes this work: **distill, don't accumulate.** A memory file that doubles every month is a log, not a memory.
 
-## Bundled resources
+Related skills: `assistant-heartbeat` (this skill keeps the memory that heartbeat sessions rely on).
 
-- `scripts/memory-maintenance.sh` — the original macOS cron wrapper (Sunday 9:00 AM) that triggered this pass through the OpenClaw gateway. Machine-specific; reference for re-automating.
-
-Related skills: `weekly-wrap` (synthesis for the human), this skill (synthesis for the agent).
-
-> Source: OpenClaw agent "Bari" — `~/.openclaw/workspace/memory-maintenance.sh`.
+> Adapted from the author's personal assistant stack.

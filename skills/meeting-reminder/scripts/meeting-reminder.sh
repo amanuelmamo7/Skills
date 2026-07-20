@@ -1,19 +1,18 @@
 #!/bin/bash
 # meeting-reminder.sh — deterministic voice reminders for upcoming meetings.
 #
-# Runs every 5 minutes via launchd (com.bari.meeting-reminder). NO LLM in the
-# loop: fetches today's calendar from the Daily Brief bari export, and if a
+# Runs every 5 minutes via launchd (or cron/systemd timer). NO LLM in the
+# loop: fetches today's calendar from a private token-protected JSON endpoint, and if a
 # timed event starts within the next 20 minutes, announces it once via `say`.
 # Dedup state lives in memory/meeting-reminder-state.json so an event is
 # never announced twice. Quiet hours: silent before 08:00 and after 22:00.
 #
-# Built 2026-07-07 as part of the EA stack. Bari's heartbeat must NOT also
-# voice-announce meetings (see HEARTBEAT.md announce policy) — this daemon
-# owns that job.
+# Any coexisting assistant heartbeat must NOT also voice-announce meetings
+# (see the assistant-heartbeat skill's announce policy) — this daemon owns that job.
 
 set -u
 
-WORKSPACE="$HOME/.openclaw/workspace"
+WORKSPACE="$HOME/.assistant"          # adjust: state + logs directory
 STATE="$WORKSPACE/memory/meeting-reminder-state.json"
 LOG="$WORKSPACE/logs/meeting-reminder.log"
 mkdir -p "$WORKSPACE/memory" "$WORKSPACE/logs"
@@ -33,11 +32,11 @@ if [ "$HOUR" -lt 8 ] || [ "$HOUR" -ge 22 ]; then exit 0; fi
 JQ="/opt/homebrew/bin/jq"; command -v jq >/dev/null 2>&1 && JQ="$(command -v jq)"
 [ -x "$JQ" ] || { log "FATAL: jq not found"; exit 1; }
 
-BARI_TOKEN=$(tr -d '[:space:]' < "$WORKSPACE/secrets/bari-token.txt" 2>/dev/null || true)
-[ -n "$BARI_TOKEN" ] || { log "FATAL: bari-token.txt missing/empty"; exit 1; }
+API_TOKEN=$(tr -d '[:space:]' < "$WORKSPACE/secrets/api-token.txt" 2>/dev/null || true)
+[ -n "$API_TOKEN" ] || { log "FATAL: api-token.txt missing/empty"; exit 1; }
 
-RESP=$(curl -s --max-time 20 -H "x-bari-token: $BARI_TOKEN" \
-  "https://daily-brief-beta-neon.vercel.app/api/progress?bari=1") || { log "WARN: fetch failed (network?)"; exit 0; }
+RESP=$(curl -s --max-time 20 -H "x-api-token: $API_TOKEN" \
+  "https://YOUR-DEPLOYMENT.example.com/api/daily-brief") || { log "WARN: fetch failed (network?)"; exit 0; }
 
 echo "$RESP" | "$JQ" -e '.calendar' >/dev/null 2>&1 || {
   log "WARN: unexpected payload: $(echo "$RESP" | head -c 150)"; exit 0; }

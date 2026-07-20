@@ -9,19 +9,19 @@ Assistants and cron scripts shouldn't each implement Google OAuth. This is the p
 
 ## Design
 
-- **Auth**: a shared secret in the `x-bari-token` header (or query param), checked against an env var. No cookies, no browser session — callable from cron, launchd, or an agent.
+- **Auth**: a shared secret in the `x-api-token` header (or query param), checked against an env var. No cookies, no browser session — callable from cron, launchd, or an agent.
 - **Google access**: a stored OAuth refresh token (env var) → client, so the endpoint works headlessly forever.
 - **Email noise filter**: the Gmail query excludes promotions, social, and a maintained blocklist of automated senders — the endpoint returns *signal*, which keeps every downstream consumer simple.
 - **Shape**: `{ date, calendar: [{time, summary, location, attendees}], tasks: [...], email: [...] }` — flat, predictable, easy for both scripts (`jq`) and agents.
 
 ## How to use
 
-1. `scripts/bari-export.js` is the reference implementation (a Vercel serverless function importing helpers for calendar/threads/tasks).
+1. `scripts/daily-brief-export.js` is the reference implementation (a Vercel serverless function importing helpers for calendar/threads/tasks).
 2. To adapt: deploy alongside helper lib functions for `clientFromRefreshToken`, `listTodaysEvents`, `listThreads`, `listIncompleteTasks`; set `BARI_TOKEN` and `GOOGLE_REFRESH_TOKEN` env vars; tune the email exclusion query to your own noise senders.
 3. Consumers: the `morning-brief` and `meeting-reminder` skills in this repository both read from this endpoint in the original stack.
 
 ## Bundled resources
 
-- `scripts/bari-export.js` — the original endpoint source.
+- `scripts/daily-brief-export.js` — the reference endpoint source.
 
-> Source: Daily-Brief project (Vercel) — copied from `~/.openclaw/workspace/bari-export.js`.
+> Adapted from the author's personal assistant stack.

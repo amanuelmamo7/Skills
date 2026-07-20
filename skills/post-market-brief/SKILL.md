@@ -20,7 +20,5 @@ Two deliverables after the US close: a readable **daily wrap** and a machine-par
 - `assets/post-market-template.md` — the wrap template.
 - `assets/gainers-tracking-schema.md` — full YAML schema for daily/weekly/monthly/quarterly tracking files and the catalyst-pattern library; read it before writing any tracking file.
 - `references/analysis-rules.md` — house analysis rules.
-- `references/original-agent-prompt.txt` — the original OpenClaw (Sefer) cron prompt with Telegram/JSON-digest output variants.
-- `scripts/post-market-brief.sh` — original macOS cron wrapper (machine-specific; reference only).
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/`.
+> Adapted from the author's personal market-analysis agent stack.

@@ -21,4 +21,4 @@ The heaviest single-name analysis format: decompose a violent move, judge whethe
 
 Related skills: `post-market-brief` (daily tracking files that seed deep-dives), `company-thesis` (the calmer full-thesis format when there's no violent move to decompose).
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/templates/gainers-deep-dive.md`.
+> Adapted from the author's personal market-analysis agent stack.

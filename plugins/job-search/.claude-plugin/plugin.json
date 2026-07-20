@@ -1,9 +1,0 @@
-{
-  "name": "job-search",
-  "version": "0.2.0",
-  "description": "Job-search pipeline: setup, interactive search, cover letters, network matching, daily crawl. (5 skills \u2014 generated from index.json, do not edit by hand.)",
-  "author": {
-    "name": "Amanuel Mamo",
-    "email": "amanuelmamo7@gmail.com"
-  }
-}

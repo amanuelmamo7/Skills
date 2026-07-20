@@ -17,7 +17,5 @@ Analyze an economic data release (or a full month of them) the way a rates desk 
 
 - `assets/macro-readthrough-template.md` — the exact output template.
 - `references/analysis-rules.md` — house analysis rules.
-- `references/original-agent-prompt.txt` — original OpenClaw (Sefer) monthly cron prompt, including the JSON digest format for a dashboard Macro panel.
-- `scripts/macro-readthrough.sh` — original macOS cron wrapper (machine-specific; reference only).
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/`.
+> Adapted from the author's personal market-analysis agent stack.

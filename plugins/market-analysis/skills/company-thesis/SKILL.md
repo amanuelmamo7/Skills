@@ -20,4 +20,4 @@ A full-company analytical thesis: not "is the stock good," but *what is priced i
 
 Related skills: `stock-deep-dive` (for decomposing a violent single move), `trend-justification` (for sector/theme-level moves).
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/templates/company-thesis.md`.
+> Adapted from the author's personal market-analysis agent stack.

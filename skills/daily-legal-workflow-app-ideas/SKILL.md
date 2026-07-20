@@ -3,10 +3,10 @@ name: daily-legal-workflow-app-ideas
 description: Daily legal-tech research + brainstorm: scan AI-for-lawyers articles, LinkedIn, and GitHub, then generate app ideas for in-house counsel teams and law firm practice groups
 ---
 
-This task has two phases each morning: (1) research the current legal-AI landscape, then (2) use what you found to generate fresh application ideas. Deliver everything in the Cowork chat.
+This task has two phases each morning: (1) research the current legal-AI landscape, then (2) use what you found to generate fresh application ideas. Deliver everything in chat.
 
 === PHASE 0: LOAD RUN MEMORY ===
-Read `/Users/amanuelmamo/Documents/Claude/Scheduled/daily-legal-workflow-app-ideas/ideas-log.md` if it exists (Desktop Commander read_file, or bash). It lists idea names already generated on previous runs. Your unique ideas today must NOT repeat or lightly rebrand anything on that list.
+Read `ideas-log.md` in this skill's folder if it exists. It lists idea names already generated on previous runs. Your unique ideas today must NOT repeat or lightly rebrand anything on that list.
 
 === PHASE 1: RESEARCH ===
 Scan for what's new and notable in AI use by lawyers. Use web search and web fetch. RECENCY RULE: restrict searches to the last 7–14 days where the search tool supports it, and prefer sources with an explicit publication date; state the date next to each cited item. Cover these sources:
@@ -38,9 +38,9 @@ SOURCING REQUIREMENT: for each application idea (or at minimum each of the three
 For each idea include: a short name; the specific pain point/workflow it targets; how it would work (key features); who would use it; the supporting source and the value-add argument it backs; and, where relevant, how it connects to a Phase 1 trend or tool. Favor practical, buildable ideas that meaningfully leverage AI/LLMs. Push for day-to-day novelty.
 
 === PHASE 3: SAVE RUN MEMORY ===
-Append one line to `/Users/amanuelmamo/Documents/Claude/Scheduled/daily-legal-workflow-app-ideas/ideas-log.md` (create it if missing) in the format: `YYYY-MM-DD: <idea name 1>; <idea name 2>; ... | repos: <repo names discussed>`. Use Desktop Commander write/edit or bash append. Keep the log append-only.
+Append one line to `ideas-log.md` in this skill's folder (create it if missing) in the format: `YYYY-MM-DD: <idea name 1>; <idea name 2>; ... | repos: <repo names discussed>`. Keep the log append-only.
 
-=== OUTPUT FORMAT (in Cowork chat) ===
+=== OUTPUT FORMAT (in chat) ===
 Structure the response in two clearly headed sections:
 - "What's happening in legal AI" — a concise, skimmable research digest (bulleted themes from articles, LinkedIn, and GitHub), with linked sources and dates.
 - "App ideas" — split by the two audiences. Clearly flag which ideas are the unique/creative ones (at least three). Mark any "what not to do" notes. End with a single "Wildcard" idea that's more ambitious or unconventional.

@@ -19,8 +19,7 @@ The proactive loop for a background assistant: check a rotation of sources every
 ## Bundled resources
 
 - `references/heartbeat-policy.md` — the original HEARTBEAT.md rotation/announce policy.
-- `scripts/heartbeat.sh` — the original macOS cron wrapper (every 2 hours, 9 AM–7 PM weekdays) that fired the heartbeat through the OpenClaw gateway. Machine-specific; reference for re-automating.
 
 Related skills: `meeting-reminder` (owns voice announcements for meetings — the heartbeat must not duplicate it).
 
-> Source: OpenClaw agent "Bari" — `~/.openclaw/workspace/heartbeat.sh` + `HEARTBEAT.md`.
+> Adapted from the author's personal assistant stack.

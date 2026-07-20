@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (84 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (77 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -21,9 +21,6 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `meeting-reminder` — Deterministic no-LLM voice reminders 20 minutes before meetings
 - `morning-music-alarm` — Sonos wake-up music via curl-only SOAP
 - `daily-brief-export` — Token-protected JSON endpoint exporting calendar/email/tasks
-- `daily-job-search-crawl` — Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups
-- `weekday-morning-brief` — Weekday 8am brief: calendar, VIP email + reply drafts, markets, system health
-- `weekly-system-self-audit` — Sunday audit: Sefer cadence, delivery health, Cowork crons, VIP auto-refresh
 - `internal-comms` — Status reports, leadership updates, and newsletters in repeatable formats (Anthropic)
 - `audio-transcriber` ⚠ — Local Whisper transcription of meetings/audio to structured markdown
 - `time-ledger` — Natural-language time tracking into user's own Notion DB
@@ -31,6 +28,20 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `proactive-announce-policy` — Deterministic voice/chat/silence announce routing with state-file dedup
 - `task-capture` — Parse chat task requests, post to task API, confirm, fallback
 - `vip-list-management` — VIP-senders file with manual tiers and protected auto-generated block
+
+### agent-infrastructure
+- `ai-agents-architect` — Agent system design patterns and sharp edges
+- `autonomous-agent-patterns` — Autonomous agent design patterns: loops, permissions, sandboxing
+- `agent-orchestration-improve-agent` — Methodology for measuring and improving an agent's performance
+- `agent-self-scheduling` ⚠ — Scheduling unattended recurring agent runs (cron + pre-approved tools)
+- `agent-memory-mcp` ⚠ — Persistent agent memory via external MCP server (webzler/agentMemory)
+- `agent-install-runbook` — Checkpointed runbook for one agent installing a sibling agent, with rollback
+- `agent-resume-protocol` — Detect interruptions, log intent breadcrumbs, reconstruct state, resume one step
+- `verify-before-trusting-memory` — Live-test remembered facts before acting; date every fact update
+- `launchagent-scheduling` — LaunchAgents vs cron vs session-scoped scheduling, with manifest conventions
+- `mcp-builder` ⚠ — Build and evaluate MCP servers (Anthropic)
+- `effective-agent-skills` — How to author effective agent skills, with a security checklist
+- `skill-distiller` — Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers
 
 ### dev-operations
 - `ai-build-house-rules` — 26-rule structural contract for building safely with AI assistance
@@ -58,19 +69,6 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `gainers-tracking` — Daily-to-quarterly gainers tracking schema with catalyst-pattern library
 - `investor-profile-template` — Financial-profile template: horizon, risk, liquidity, watchlist, delivery preferences
 - `analyst-house-style` — Eight non-negotiable analysis rules as a pre-ship rigor checklist
-
-### agent-infrastructure
-- `ai-agents-architect` — Agent system design patterns and sharp edges
-- `autonomous-agent-patterns` — Autonomous agent design patterns: loops, permissions, sandboxing
-- `agent-orchestration-improve-agent` — Methodology for measuring and improving an agent's performance
-- `agent-self-scheduling` ⚠ — Scheduling unattended recurring agent runs (cron + pre-approved tools)
-- `agent-memory-mcp` ⚠ — Persistent agent memory via external MCP server (webzler/agentMemory)
-- `agent-install-runbook` — Checkpointed runbook for one agent installing a sibling agent, with rollback
-- `agent-resume-protocol` — Detect interruptions, log intent breadcrumbs, reconstruct state, resume one step
-- `verify-before-trusting-memory` — Live-test remembered facts before acting; date every fact update
-- `launchagent-scheduling` — LaunchAgents vs cron vs session-scoped scheduling, with manifest conventions
-- `mcp-builder` ⚠ — Build and evaluate MCP servers (Anthropic)
-- `effective-agent-skills` — How to author effective agent skills, with a security checklist
 
 ### web-application
 - `form-cro` — Form conversion-rate optimization methodology
@@ -104,30 +102,16 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `saga-orchestration` — Distributed transactions via sagas and compensating actions
 - `dbt-transformation-patterns` — dbt data-transformation modeling patterns
 
-### job-search
-- `daily-job-search-crawl` — Daily job-search crawl: saved searches, scoring, auto-promote, Monday follow-ups
-- `job-search-setup` — One-time setup: local resume/preferences/contacts data directory for the job-search suite
-- `job-search` — Interactive job search across hiring.cafe and public ATS boards with fit scoring
-- `cover-letter` — Draft tailored cover letters from resume + job posting, anti-fabrication guarded
-- `network-scan` — Match your LinkedIn-export contacts against target-company openings
-
-### projects
-- `poker-hud-advisor` — Real-time Claude advice layer for the poker HUD
-
 ### attorney-workflow
 - `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup
 
 ## Routing rules (prefer / disambiguate)
 
-- `job-search` and `daily-job-search-crawl` overlap — job-search is interactive; the crawl is the automated daily pipeline
 - `ai-agents-architect` and `autonomous-agent-patterns` overlap — architect = design guidance; patterns = concrete loop/permission/sandbox examples
 - `nextjs-app-router-patterns` and `nextjs-best-practices` overlap — same domain; patterns is example-driven, best-practices is principle tables
-- Prefer `weekday-morning-brief` over `morning-brief` — weekday-morning-brief is the live Cowork version; morning-brief is the Bari original kept for reference
-- `assistant-heartbeat` and `weekly-system-self-audit` overlap — both do system-health checks at different cadences
 
 ## Pipelines (skills that compose)
 
-- `job-search` → `cover-letter` — search surfaces the posting; cover-letter drafts for it
 - `cqrs-implementation` → `projection-patterns` — read-model sync patterns are complementary
 - `event-store-design` → `projection-patterns` — projections are built from the event store
 - `effective-agent-skills` → `ai-agents-architect` — authoring guidance pairs with agent design patterns
@@ -136,17 +120,13 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `secret-rotation-drill` → `incident-runbook` — rotation drill is the practiced form of the secret-compromise scenario
 - `research-prompt` → `gemini-deep-research` — research-prompt crafts the brief; gemini-deep-research executes it
 - `audio-transcriber` → `internal-comms` — transcripts feed status updates and meeting summaries
+- `skill-distiller` → `effective-agent-skills`
 
 ## Dependencies (what a skill needs before it works)
 
-- `job-search` needs skill `job-search-setup`
-- `cover-letter` needs skill `job-search-setup`
-- `network-scan` needs skill `job-search-setup`
 - `morning-brief` needs `daily-brief-app` (personal dashboard + task/calendar/email API (Vercel-hosted))
 - `evening-wrap` needs `daily-brief-app` (personal dashboard + task/calendar/email API (Vercel-hosted))
 - `assistant-heartbeat` needs `openclaw-gateway` (local agent host running Bari and Sefer; webhook-triggered turns)
-- `weekly-system-self-audit` needs `openclaw-gateway` (local agent host running Bari and Sefer; webhook-triggered turns)
-- `weekly-system-self-audit` needs `daily-brief-app` (personal dashboard + task/calendar/email API (Vercel-hosted))
 - `meeting-reminder` needs `launchd` (schedules recurring agent jobs (survives sleep/reboot))
 - `morning-music-alarm` needs `sonos` (voice/audio announce channel)
 - `proactive-announce-policy` needs `telegram-bot` (chat delivery channel to/from Bari)

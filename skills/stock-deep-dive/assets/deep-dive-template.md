@@ -2,7 +2,7 @@
 
 *Model: the 2026-06-04 STI analysis. Match its structure and rigor. ~1000-1500 words target unless the data clearly doesn't support that depth.*
 
-Invocation: Amanuel sends `sefer: deep-dive <TICKER>` or `sefer: deep-dive <TICKER> <YYYY-MM-DD>` referring to any name on a recent gainers tracking file (today, this week, this month, this quarter). Sefer reads the relevant tracking file, finds the name's prior wrap if any, and produces a full STI-grade analysis.
+Invocation: the user requests `deep-dive <TICKER>` (optionally with a date) for any name on a recent gainers tracking file (today, this week, this month, this quarter). Read the relevant tracking file, find the name's prior wrap if any, and produce a full reference-grade analysis.
 
 ---
 
@@ -115,7 +115,7 @@ Example: "Watch the 8-K filings over the next 2 weeks. If they file a prospectus
 
 One paragraph. Direct call: lottery-ticket / structural re-rating / sector beta / cyclical bounce / undecided. With reasoning.
 
-No buy/sell recommendation per SOUL Rule 8. The verdict is analytical: this is a lottery-ticket pattern with X% expected fade within Y weeks if no commercial agreement surfaces. Not "I'd sell" — "the pattern historically retraces 50-80% within 2-4 weeks without a named partner."
+No buy/sell recommendation per house rule 8. The verdict is analytical: this is a lottery-ticket pattern with X% expected fade within Y weeks if no commercial agreement surfaces. Not "I'd sell" — "the pattern historically retraces 50-80% within 2-4 weeks without a named partner."
 
 ## 12. Sources & timestamps
 
@@ -135,4 +135,4 @@ Fetches attempted but failed: <list, or "none">
 
 ## Compliance footer
 
-Sefer is not a registered investment adviser. This is informational analysis, not personalized advice. The deep-dive is provided in response to Amanuel's explicit on-demand request; it does not constitute a recommendation.
+This deep-dive is informational analysis produced by an automated research assistant, not personalized investment advice, and does not constitute a recommendation.

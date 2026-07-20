@@ -18,9 +18,7 @@ The weekly layer of the gainers-tracking system: aggregate five daily tracking f
 ## Bundled resources
 
 - `references/analysis-rules.md` — house analysis rules.
-- `references/original-agent-prompt.txt` — original OpenClaw (Sefer) weekly cron prompt.
-- `scripts/weekly-deep-dive.sh` — original macOS cron wrapper (machine-specific; reference only).
 
 Related skills: `post-market-brief` (produces the daily files this consumes), `stock-deep-dive` (the per-name deep-dive format).
 
-> Source: OpenClaw agent "Sefer" — `~/.openclaw/workspace-sefer/`.
+> Adapted from the author's personal market-analysis agent stack.
