@@ -9,6 +9,7 @@ Run from the repo root:  python3 tools/build_readme.py
 """
 
 import json
+import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -64,8 +65,19 @@ def main() -> None:
         raise SystemExit("README.md is missing the GENERATED-BUCKETS markers")
     head, rest = readme.split(START, 1)
     _, tail = rest.split(END, 1)
-    readme_path.write_text(head + START + "\n" + "\n".join(lines) + END + tail)
-    print(f"README.md: regenerated {len(ordered)} bucket sections, {len(skills)} skills")
+    out = head + START + "\n" + "\n".join(lines) + END + tail
+
+    # Also regenerate the "Available plugins:" line in the Installing section,
+    # so the plugin list can never drift from index.json (it did once).
+    plugin_names = [b for b in index.get("buckets", []) if b in buckets]
+    plugins_line = ("Available plugins: `skills-library` (everything), "
+                    + ", ".join(f"`{b}`" for b in plugin_names) + ".")
+    out, n = re.subn(r"^Available plugins: .*$", plugins_line, out, count=1, flags=re.M)
+    if n != 1:
+        raise SystemExit("README.md is missing the 'Available plugins:' line")
+
+    readme_path.write_text(out)
+    print(f"README.md: regenerated {len(ordered)} bucket sections, {len(skills)} skills, {len(plugin_names) + 1} plugins listed")
 
 
 if __name__ == "__main__":
