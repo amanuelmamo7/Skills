@@ -920,6 +920,46 @@
       "description": "Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills \u2014 evidence gate, boundary card, staleness falsifiers",
       "review_date": "2026-07-20",
       "risk": "first-party"
+    },
+    {
+      "id": "commercial-contract-review",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags",
+      "review_date": "2026-07-20",
+      "risk": "first-party"
+    },
+    {
+      "id": "litigation-hold-and-triage",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Dispute intake triage + litigation-hold notice drafting \u2014 counsel decides, the skill structures",
+      "review_date": "2026-07-20",
+      "risk": "first-party"
+    },
+    {
+      "id": "legal-research-memo",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers",
+      "review_date": "2026-07-20",
+      "risk": "first-party"
+    },
+    {
+      "id": "regulatory-change-analysis",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "New rule \u2192 calibrated applicability, cited obligations table, gap analysis, ranked actions",
+      "review_date": "2026-07-20",
+      "risk": "first-party"
     }
   ],
   "edges": [
@@ -1656,6 +1696,46 @@
     {
       "from": "skill-distiller",
       "to": "effective-agent-skills",
+      "type": "use-with"
+    },
+    {
+      "from": "commercial-contract-review",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "litigation-hold-and-triage",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "legal-research-memo",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "regulatory-change-analysis",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "legal-research-memo",
+      "to": "commercial-contract-review",
+      "type": "feeds"
+    },
+    {
+      "from": "legal-research-memo",
+      "to": "regulatory-change-analysis",
+      "type": "feeds"
+    },
+    {
+      "from": "commercial-contract-review",
+      "to": "litigation-hold-and-triage",
+      "type": "use-with"
+    },
+    {
+      "from": "regulatory-change-analysis",
+      "to": "commercial-contract-review",
       "type": "use-with"
     }
   ]

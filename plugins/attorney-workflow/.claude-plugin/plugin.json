@@ -1,7 +1,7 @@
 {
   "name": "attorney-workflow",
   "version": "0.2.0",
-  "description": "Legal practice workflows and legal-AI research. (1 skill \u2014 generated from index.json, do not edit by hand.)",
+  "description": "Legal practice workflows and legal-AI research. (5 skills \u2014 generated from index.json, do not edit by hand.)",
   "author": {
     "name": "Amanuel Mamo",
     "email": "amanuelmamo7@gmail.com"
