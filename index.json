@@ -960,6 +960,16 @@
       "description": "New rule \u2192 calibrated applicability, cited obligations table, gap analysis, ranked actions",
       "review_date": "2026-07-20",
       "risk": "first-party"
+    },
+    {
+      "id": "contract-dispute-analysis",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Sequential UCC/common-law dispute analysis: governing law \u2192 formation \u2192 defenses \u2192 terms \u2192 breach \u2192 excuses \u2192 remedies, contested-nodes-only depth",
+      "review_date": "2026-07-20",
+      "risk": "first-party"
     }
   ],
   "edges": [
@@ -1737,6 +1747,26 @@
       "from": "regulatory-change-analysis",
       "to": "commercial-contract-review",
       "type": "use-with"
+    },
+    {
+      "from": "contract-dispute-analysis",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "contract-dispute-analysis",
+      "to": "commercial-contract-review",
+      "type": "overlaps-with"
+    },
+    {
+      "from": "contract-dispute-analysis",
+      "to": "litigation-hold-and-triage",
+      "type": "use-with"
+    },
+    {
+      "from": "legal-research-memo",
+      "to": "contract-dispute-analysis",
+      "type": "feeds"
     }
   ]
 }

@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (77 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (82 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -104,11 +104,17 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 
 ### attorney-workflow
 - `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup
+- `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags
+- `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures
+- `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers
+- `regulatory-change-analysis` — New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions
+- `contract-dispute-analysis` — Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth
 
 ## Routing rules (prefer / disambiguate)
 
 - `ai-agents-architect` and `autonomous-agent-patterns` overlap — architect = design guidance; patterns = concrete loop/permission/sandbox examples
 - `nextjs-app-router-patterns` and `nextjs-best-practices` overlap — same domain; patterns is example-driven, best-practices is principle tables
+- `contract-dispute-analysis` and `commercial-contract-review` overlap
 
 ## Pipelines (skills that compose)
 
@@ -121,6 +127,9 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `research-prompt` → `gemini-deep-research` — research-prompt crafts the brief; gemini-deep-research executes it
 - `audio-transcriber` → `internal-comms` — transcripts feed status updates and meeting summaries
 - `skill-distiller` → `effective-agent-skills`
+- `commercial-contract-review` → `litigation-hold-and-triage`
+- `regulatory-change-analysis` → `commercial-contract-review`
+- `contract-dispute-analysis` → `litigation-hold-and-triage`
 
 ## Dependencies (what a skill needs before it works)
 

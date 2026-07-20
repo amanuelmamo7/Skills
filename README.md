@@ -41,7 +41,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | general | 10 | active |
 | web-application | 9 | active |
 | software-architecture | 8 | active |
-| attorney-workflow | 5 | active |
+| attorney-workflow | 6 | active |
 
 ### personal-assistant (from Bari + Cowork, plus reviewed third-party)
 
@@ -164,6 +164,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures |
 | [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers |
 | [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions |
+| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth |
 <!-- GENERATED-BUCKETS:END -->
 
 ## Adding a skill

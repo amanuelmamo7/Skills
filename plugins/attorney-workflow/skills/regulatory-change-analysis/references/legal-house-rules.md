@@ -24,6 +24,10 @@ These rules govern every skill in the attorney-workflow family. They are the leg
 
 8. **Analysis support, never legal advice.** Output is a first-pass work product for attorney review — it does not create an attorney-client relationship, and it never says "you should sign / sue / terminate." Every deliverable carries an attorney-review flag and a draft work-product label. Where an output would be sent externally (a hold notice, a comment letter), the skill drafts; a human attorney sends. Hard rule, no exceptions.
 
+## Application discipline (evidence anchoring)
+
+When applying a rule's element to facts, use the anchored form: *the element <name>, i.e. <plain-English gloss>, is present/absent on these facts because <fact>, as evident by <record cite>, demonstrating <inference>.* Every "because" must point at a real fact in the record or documents reviewed — an element application without its evidencing fact is a conclusion wearing an analysis costume. Apply full element-by-element treatment only where the point is genuinely contested; uncontested points get one line and a cite.
+
 ## Confidentiality and privilege discipline
 
 - Label drafts: `DRAFT — ATTORNEY WORK PRODUCT — PREPARED FOR COUNSEL REVIEW`.

@@ -12,7 +12,7 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (82 skills across 8 buckets)."
+      "description": "The full curated library (83 skills across 8 buckets)."
     },
     {
       "name": "general",
@@ -27,7 +27,7 @@
     {
       "name": "attorney-workflow",
       "source": "./plugins/attorney-workflow",
-      "description": "Legal practice workflows and legal-AI research. (5 skills)"
+      "description": "Legal practice workflows and legal-AI research. (6 skills)"
     },
     {
       "name": "market-analysis",
