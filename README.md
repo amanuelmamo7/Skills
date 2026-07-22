@@ -43,7 +43,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | software-architecture | 8 | active |
 | attorney-workflow | 6 | active |
 
-### personal-assistant (from Bari + Cowork, plus reviewed third-party)
+### personal-assistant (first-party + Cowork + reviewed third-party)
 
 | Skill | Use it for |
 |---|---|
@@ -80,8 +80,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
 | [`skill-distiller`](skills/skill-distiller/SKILL.md) | Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers |
 
-### dev-operations (distilled from StreamEZ project practice)
-
+### dev-operations (distilled from personal project)
 | Skill | Use it for |
 |---|---|
 | [`ai-build-house-rules`](skills/ai-build-house-rules/SKILL.md) | 26-rule structural contract for building safely with AI assistance |
@@ -97,7 +96,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`solo-founder-build-plan`](skills/solo-founder-build-plan/SKILL.md) | Contract-files discipline, build vs review phases, when to buy expert review |
 | [`workflow-automation`](skills/workflow-automation/SKILL.md) | Workflow-engine patterns: n8n, Temporal, Inngest |
 
-### market-analysis (from Sefer)
+### market-analysis (first-party)
 
 | Skill | Use it for |
 |---|---|
@@ -128,7 +127,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`product-manager-toolkit`](skills/product-manager-toolkit/SKILL.md) | PM toolkit: RICE prioritization and customer-interview analysis scripts — ⚠ see manifest |
 | [`skills-dispatcher`](skills/skills-dispatcher/SKILL.md) | Routing map of the whole library: buckets, preferences, pipelines, caveats (generated) |
 
-### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
+### web-application (third-party, from AAS — pinned `5e31f23`)
 
 | Skill | Use it for |
 |---|---|
@@ -142,7 +141,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows via the official CLI — ⚠ see manifest |
 | [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
 
-### software-architecture (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)
+### software-architecture (third-party, from AAS — pinned `ee66a9b`)
 
 | Skill | Use it for |
 |---|---|
