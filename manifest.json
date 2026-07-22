@@ -616,5 +616,15 @@
       "decision_date": "2026-07-15",
       "reason": "Policy: educational and egress-free, but ~100 lines coach bot-detection evasion (fingerprint hiding, proxy rotation, human-like delays) \u2014 ToS-circumvention territory rejected for consistency with the linkedin-cli precedent."
     }
+  ],
+  "referenced_standards": [
+    {
+      "standard": "SALI LMSS (Legal Matter Standard Specification)",
+      "source": "https://github.com/sali-legal/LMSS",
+      "publisher": "SALI Alliance \u2014 https://sali.org",
+      "license": "CC BY-ND 4.0",
+      "usage": "Concept labels and IRIs referenced as classification tags on attorney-workflow skills (index.json `lmss` fields). The standard itself is neither redistributed nor modified: tools/lmss_align.py resolves tags against the canonical LMSS.owl downloaded at run time to a gitignored local cache. No extract of the ontology is committed to this repository.",
+      "reviewed": "2026-07-26"
+    }
   ]
 }

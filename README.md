@@ -27,6 +27,10 @@ Available plugins: `skills-library` (everything), `general`, `web-application`, 
 
 Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by [`tools/build_plugins.py`](tools/build_plugins.py) — never edit them by hand. After adding or re-bucketing a skill, run `python3 tools/build_plugins.py` and commit the result.
 
+## SALI alignment
+
+Attorney-workflow skills are classified with concept labels and IRIs from the [SALI Legal Matter Standard Specification](https://sali.org) (LMSS), used with attribution under its CC BY-ND license. Tags are resolved against the canonical ontology by [`tools/lmss_align.py`](tools/lmss_align.py) — exact-label matches only, and the standard itself is never redistributed or modified here; the canonical version lives with the [SALI Alliance](https://github.com/sali-legal/LMSS).
+
 ## Buckets
 
 <!-- GENERATED-BUCKETS:START (run tools/build_readme.py — do not edit by hand) -->
