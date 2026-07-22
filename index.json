@@ -309,7 +309,19 @@
       ],
       "description": "Daily legal-AI research digest + app-idea brainstorm with run-memory dedup",
       "review_date": "2026-07-15",
-      "risk": "first-party; web research only"
+      "risk": "first-party; web research only",
+      "lmss": [
+        {
+          "facet": "Industry",
+          "query": [
+            "Legal Technology",
+            "Legal Services"
+          ],
+          "label": "Legal Services Industry",
+          "iri": "http://lmss.sali.org/RmVqE62aGlOtAoEND19KjU",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "form-cro",
@@ -929,7 +941,31 @@
       ],
       "description": "Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags",
       "review_date": "2026-07-20",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Area of Law",
+          "query": [
+            "Contracts Law",
+            "Contract Law",
+            "Commercial Law"
+          ],
+          "label": "Contract Law",
+          "iri": "http://lmss.sali.org/RCIPwpgRpMs1eVz4vPid0pV",
+          "status": "resolved"
+        },
+        {
+          "facet": "Service",
+          "query": [
+            "Contract Review",
+            "Document Review",
+            "Reviewing"
+          ],
+          "label": "Document Review",
+          "iri": "http://lmss.sali.org/RIqMae8AYRo634OG4XtuV0A",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "litigation-hold-and-triage",
@@ -939,7 +975,18 @@
       ],
       "description": "Dispute intake triage + litigation-hold notice drafting \u2014 counsel decides, the skill structures",
       "review_date": "2026-07-20",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Service",
+          "query": [
+            "Legal Hold Management"
+          ],
+          "label": "Legal Hold Management",
+          "iri": "http://lmss.sali.org/RC2H4sdBxtPmzSlLf3H63Iu",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "legal-research-memo",
@@ -949,7 +996,30 @@
       ],
       "description": "Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers",
       "review_date": "2026-07-20",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Service",
+          "query": [
+            "Legal Research",
+            "Research"
+          ],
+          "label": "Legal Research",
+          "iri": "http://lmss.sali.org/R7TB5AJsngthjmL6KsEht3G",
+          "status": "resolved"
+        },
+        {
+          "facet": "Document/Artifact",
+          "query": [
+            "Memorandum",
+            "Legal Memorandum",
+            "Research Memorandum"
+          ],
+          "label": "Brief / Memorandum of Law",
+          "iri": "http://lmss.sali.org/R8wEzsnWA30YRmdfZKRkFuH",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "regulatory-change-analysis",
@@ -959,7 +1029,20 @@
       ],
       "description": "New rule \u2192 calibrated applicability, cited obligations table, gap analysis, ranked actions",
       "review_date": "2026-07-20",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Area of Law",
+          "query": [
+            "Regulatory Law",
+            "Regulatory Compliance",
+            "Compliance"
+          ],
+          "label": "Regulatory Compliance",
+          "iri": "http://lmss.sali.org/RDEuNPJBSNIARaYTXJwi86w",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "contract-dispute-analysis",
@@ -969,7 +1052,30 @@
       ],
       "description": "Sequential UCC/common-law dispute analysis: governing law \u2192 formation \u2192 defenses \u2192 terms \u2192 breach \u2192 excuses \u2192 remedies, contested-nodes-only depth",
       "review_date": "2026-07-20",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Area of Law",
+          "query": [
+            "Contracts Law",
+            "Contract Law"
+          ],
+          "label": "Contract Law",
+          "iri": "http://lmss.sali.org/RCIPwpgRpMs1eVz4vPid0pV",
+          "status": "resolved"
+        },
+        {
+          "facet": "Service",
+          "query": [
+            "Dispute Resolution",
+            "Disputes",
+            "Breach of Contract"
+          ],
+          "label": "Dispute Service",
+          "iri": "http://lmss.sali.org/RDigDgTiLFmt7iX3436yCOT",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "authority-synthesis",
@@ -979,7 +1085,20 @@
       ],
       "description": "Cases \u2192 usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations",
       "review_date": "2026-07-26",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Service",
+          "query": [
+            "Legal Research",
+            "Case Law Research",
+            "Legal Analysis"
+          ],
+          "label": "Legal Research",
+          "iri": "http://lmss.sali.org/R7TB5AJsngthjmL6KsEht3G",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "legal-writing-editor",
@@ -989,7 +1108,21 @@
       ],
       "description": "Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics \u2014 edits style, flags substance",
       "review_date": "2026-07-26",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Service",
+          "query": [
+            "Draft/revise",
+            "A103 Draft/revise",
+            "Drafting Services",
+            "Legal Writing Services"
+          ],
+          "label": "A103 Draft/revise",
+          "iri": "http://lmss.sali.org/RZ82g1rvM9Q67e3BhSirpw",
+          "status": "resolved"
+        }
+      ]
     },
     {
       "id": "client-advice-letter",
@@ -999,7 +1132,21 @@
       ],
       "description": "Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation",
       "review_date": "2026-07-26",
-      "risk": "first-party"
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Document/Artifact",
+          "query": [
+            "Opinion Letter",
+            "Client Letter",
+            "Letter",
+            "Correspondence"
+          ],
+          "label": "Letter Communication",
+          "iri": "http://lmss.sali.org/RPzuFFXebWVvkhzE9KZ304",
+          "status": "resolved"
+        }
+      ]
     }
   ],
   "edges": [

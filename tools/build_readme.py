@@ -9,7 +9,6 @@ Run from the repo root:  python3 tools/build_readme.py
 """
 
 import json
-import re
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -22,9 +21,11 @@ BUCKET_NOTES = {
     "web-application": " (third-party, from Agentic Awesome Skills — pinned `5e31f23`)",
     "agent-infrastructure": " (third-party AAS + distilled first-party)",
     "general": " (third-party AAS + distilled first-party)",
-    "attorney-workflow": " (first-party, built with skill-distiller)",
+    "attorney-workflow": "",
+    "projects": "",
     "dev-operations": " (distilled from StreamEZ project practice)",
     "software-architecture": " (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)",
+    "job-search": " (third-party, from Proficiently — pinned `9bc1f6f` — plus first-party crawl)",
 }
 
 FLAG_WORDS = ("RUNS", "DELEGATED", "HIGH CONSEQUENCE", "unvetted", "supply-chain")
@@ -56,6 +57,9 @@ def main() -> None:
             desc = s["description"]
             if any(w in s.get("risk", "") for w in FLAG_WORDS):
                 desc += " — ⚠ see manifest"
+            sali = [e["label"] for e in s.get("lmss", []) if e.get("status") == "resolved" and e.get("label")]
+            if sali:
+                desc += " · SALI: " + "; ".join(sali)
             lines.append(f"| [`{s['id']}`](skills/{s['id']}/SKILL.md) | {desc} |")
         lines.append("")
 
@@ -65,19 +69,8 @@ def main() -> None:
         raise SystemExit("README.md is missing the GENERATED-BUCKETS markers")
     head, rest = readme.split(START, 1)
     _, tail = rest.split(END, 1)
-    out = head + START + "\n" + "\n".join(lines) + END + tail
-
-    # Also regenerate the "Available plugins:" line in the Installing section,
-    # so the plugin list can never drift from index.json (it did once).
-    plugin_names = [b for b in index.get("buckets", []) if b in buckets]
-    plugins_line = ("Available plugins: `skills-library` (everything), "
-                    + ", ".join(f"`{b}`" for b in plugin_names) + ".")
-    out, n = re.subn(r"^Available plugins: .*$", plugins_line, out, count=1, flags=re.M)
-    if n != 1:
-        raise SystemExit("README.md is missing the 'Available plugins:' line")
-
-    readme_path.write_text(out)
-    print(f"README.md: regenerated {len(ordered)} bucket sections, {len(skills)} skills, {len(plugin_names) + 1} plugins listed")
+    readme_path.write_text(head + START + "\n" + "\n".join(lines) + END + tail)
+    print(f"README.md: regenerated {len(ordered)} bucket sections, {len(skills)} skills")
 
 
 if __name__ == "__main__":

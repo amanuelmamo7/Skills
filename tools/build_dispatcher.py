@@ -47,7 +47,9 @@ def main() -> None:
         lines.append(f"### {b}")
         for s in buckets[b]:
             flag = " ⚠" if any(w in s.get("risk", "") for w in FLAG_WORDS) else ""
-            lines.append(f"- `{s['id']}`{flag} — {s['description']}")
+            sali = [e["label"] for e in s.get("lmss", []) if e.get("status") == "resolved" and e.get("label")]
+            tag = f" [SALI: {'; '.join(sali)}]" if sali else ""
+            lines.append(f"- `{s['id']}`{flag} — {s['description']}{tag}")
         lines.append("")
 
     routing = [e for e in edges if e["type"] in ("use-instead", "overlaps-with")]

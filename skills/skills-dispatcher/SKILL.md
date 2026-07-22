@@ -71,15 +71,15 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `analyst-house-style` — Eight non-negotiable analysis rules as a pre-ship rigor checklist
 
 ### attorney-workflow
-- `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup
-- `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags
-- `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures
-- `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers
-- `regulatory-change-analysis` — New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions
-- `contract-dispute-analysis` — Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth
-- `authority-synthesis` — Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations
-- `legal-writing-editor` — Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance
-- `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation
+- `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup [SALI: Legal Services Industry]
+- `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags [SALI: Contract Law; Document Review]
+- `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures [SALI: Legal Hold Management]
+- `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers [SALI: Legal Research; Brief / Memorandum of Law]
+- `regulatory-change-analysis` — New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions [SALI: Regulatory Compliance]
+- `contract-dispute-analysis` — Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth [SALI: Contract Law; Dispute Service]
+- `authority-synthesis` — Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations [SALI: Legal Research]
+- `legal-writing-editor` — Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance [SALI: A103 Draft/revise]
+- `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation [SALI: Letter Communication]
 
 ### web-application
 - `form-cro` — Form conversion-rate optimization methodology

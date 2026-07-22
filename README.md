@@ -132,15 +132,15 @@ Buckets are metadata, not folders — a skill can live in more than one.
 
 | Skill | Use it for |
 |---|---|
-| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup |
-| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags |
-| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures |
-| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers |
-| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions |
-| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth |
-| [`authority-synthesis`](skills/authority-synthesis/SKILL.md) | Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations |
-| [`legal-writing-editor`](skills/legal-writing-editor/SKILL.md) | Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance |
-| [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation |
+| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup · SALI: Legal Services Industry |
+| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags · SALI: Contract Law; Document Review |
+| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures · SALI: Legal Hold Management |
+| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers · SALI: Legal Research; Brief / Memorandum of Law |
+| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions · SALI: Regulatory Compliance |
+| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth · SALI: Contract Law; Dispute Service |
+| [`authority-synthesis`](skills/authority-synthesis/SKILL.md) | Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations · SALI: Legal Research |
+| [`legal-writing-editor`](skills/legal-writing-editor/SKILL.md) | Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance · SALI: A103 Draft/revise |
+| [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation · SALI: Letter Communication |
 
 ### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
 
