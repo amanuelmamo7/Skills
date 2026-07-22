@@ -20,12 +20,13 @@ Answer a legal question the way it will be checked: authority first, calibration
 
 ## Workflow
 
-1. **Frame the question.** Restate it as a Question Presented: one sentence, jurisdiction named, decisive facts embedded. If the question is really three questions, split it and say so. State the facts assumed and unknown per `references/legal-house-rules.md` rule 1.
+1. **Frame the question.** Restate it as a Question Presented in under/does/when form — *Under [governing law], does/is/can [legal consequence] when [the determinative facts]?* — with the determinative facts stated concretely, not as legal conclusions that assume the answer. One QP per issue; if the question is really three questions, split it and say so. State the facts assumed and unknown per `references/legal-house-rules.md` rule 1.
 2. **State the prior.** What you'd expect the answer to be and why — doctrine, analogous rules, market understanding. The reader should see whether research confirmed or surprised.
 3. **Research primary authority first.** Statutes and regulations before cases, cases before commentary. For each authority actually retrieved and read: quote the operative language with a pincite, note the court/agency and date, and check currency (later amendments, negative treatment, pending appeals — flag anything you cannot confirm as current).
 4. **Assign verification tiers as you go.** Tier 1 = read directly this session. Tier 2 = specific secondary source confirmed. Tier 3 = `[UNVERIFIED]` — recalled, not checked. The evidence of execution for any Tier 1 claim is the quote + pincite in the memo; if you can't produce the quote, the tier drops.
-5. **Hunt the contrary authority.** Mandatory: find and fairly state the strongest authority or argument against your answer. If genuinely none exists after looking, say what searches came back empty — an absence you searched for is a finding; an absence you assumed is a gap.
-6. **Write the memo** using `assets/research-memo-template.md`: QP → calibrated brief answer ("clearly established / better reading / unsettled / cannot answer without X") → facts assumed → discussion → contrary authority → open questions → what would change the analysis → Sources & citations footer with tiers and as-of dates.
+5. **Hunt the contrary authority.** Mandatory, in the three-part counter-analysis shape: (a) state the strongest opposing argument fairly, as its best advocate would; (b) explain why the better reading rejects it — or concede that it may prevail and recalibrate; (c) return to the conclusion, adjusted for what the counter-analysis taught. If genuinely no contrary authority exists after looking, say what searches came back empty — an absence you searched for is a finding; an absence you assumed is a gap.
+5a. **For statutory questions**, work the interpretation ladder in order: intrinsic evidence first (text and plain meaning → the provision in the context of the whole statute → textual canons), then extrinsic (interpreting cases, agency interpretations, legislative history, substantive canons) — and say which rung the answer rests on, because an answer resting on legislative history is weaker than one resting on text and should be calibrated accordingly.
+6. **Write the memo** using `assets/research-memo-template.md`: QP → brief answer (a direct answer, the because-clause carrying the chief reason, and the chief caveat — calibrated: "clearly established / better reading / unsettled / cannot answer without X") → facts assumed → discussion → counter-analysis → open questions → what would change the analysis → Sources & citations footer with tiers and as-of dates.
 
 ## Validation loop
 
@@ -36,7 +37,7 @@ Before delivering: re-scan the memo for any legal proposition lacking a tier-lab
 - `assets/research-memo-template.md` — the exact memo structure.
 - `references/legal-house-rules.md` — the eight rules; read before writing.
 
-Related skills: feeds `commercial-contract-review` (research on clause enforceability) and `regulatory-change-analysis` (research on applicability). Use `efficient-web-research` for the retrieval layer.
+Related skills: `authority-synthesis` builds the discussion section's rule layer when multiple cases bear on the question; feeds `commercial-contract-review` (clause enforceability) and `regulatory-change-analysis` (applicability); `client-advice-letter` translates the finished memo for the client; run `legal-writing-editor` before delivery. Use `efficient-web-research` for the retrieval layer.
 
 ## What would make this skill wrong
 

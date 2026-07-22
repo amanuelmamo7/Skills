@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-20",
+  "updated": "2026-07-26",
   "description": "Source of truth for this repo. Nodes are skills, sources, and humans. Edges are typed relationships. README bucket tables are generated from this file.",
   "buckets": [
     "general",
@@ -970,6 +970,36 @@
       "description": "Sequential UCC/common-law dispute analysis: governing law \u2192 formation \u2192 defenses \u2192 terms \u2192 breach \u2192 excuses \u2192 remedies, contested-nodes-only depth",
       "review_date": "2026-07-20",
       "risk": "first-party"
+    },
+    {
+      "id": "authority-synthesis",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Cases \u2192 usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations",
+      "review_date": "2026-07-26",
+      "risk": "first-party"
+    },
+    {
+      "id": "legal-writing-editor",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics \u2014 edits style, flags substance",
+      "review_date": "2026-07-26",
+      "risk": "first-party"
+    },
+    {
+      "id": "client-advice-letter",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation",
+      "review_date": "2026-07-26",
+      "risk": "first-party"
     }
   ],
   "edges": [
@@ -1767,6 +1797,46 @@
       "from": "legal-research-memo",
       "to": "contract-dispute-analysis",
       "type": "feeds"
+    },
+    {
+      "from": "authority-synthesis",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "legal-writing-editor",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "client-advice-letter",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "authority-synthesis",
+      "to": "legal-research-memo",
+      "type": "feeds"
+    },
+    {
+      "from": "legal-research-memo",
+      "to": "client-advice-letter",
+      "type": "feeds"
+    },
+    {
+      "from": "legal-writing-editor",
+      "to": "legal-research-memo",
+      "type": "use-with"
+    },
+    {
+      "from": "legal-writing-editor",
+      "to": "client-advice-letter",
+      "type": "use-with"
+    },
+    {
+      "from": "legal-writing-editor",
+      "to": "contract-dispute-analysis",
+      "type": "use-with"
     }
   ]
 }

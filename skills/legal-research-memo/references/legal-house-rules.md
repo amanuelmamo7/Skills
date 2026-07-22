@@ -28,6 +28,12 @@ These rules govern every skill in the attorney-workflow family. They are the leg
 
 When applying a rule's element to facts, use the anchored form: *the element <name>, i.e. <plain-English gloss>, is present/absent on these facts because <fact>, as evident by <record cite>, demonstrating <inference>.* Every "because" must point at a real fact in the record or documents reviewed — an element application without its evidencing fact is a conclusion wearing an analysis costume. Apply full element-by-element treatment only where the point is genuinely contested; uncontested points get one line and a cite.
 
+**Analogies** carry the same anchoring burden: run the client's concrete facts against the specific facts the prior case's outcome turned on — not against its holding in the abstract. Introduce no fact about the prior case mid-analogy that its illustration didn't already give the reader, and always say why the comparison matters to the element at issue. A comparison whose significance goes unstated makes the reader do the analysis.
+
+## Fact statements
+
+Any fact section (memo statement of facts, triage intake, letter facts-as-understood) includes every fact the analysis relies on — including the unfavorable ones, because an analysis built on curated facts fails the first time opposing counsel or the counterparty supplies the rest. Default to chronological order; flag facts that are assumed rather than sourced; keep argument out of fact sections entirely.
+
 ## Confidentiality and privilege discipline
 
 - Label drafts: `DRAFT — ATTORNEY WORK PRODUCT — PREPARED FOR COUNSEL REVIEW`.

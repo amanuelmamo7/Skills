@@ -5,7 +5,7 @@ As of: <date> · Jurisdiction: <governing law> · Prepared for: <requester>
 
 ## Question presented
 
-<One sentence. Jurisdiction named. Decisive facts embedded.>
+<Under [governing law], does/is/can [legal consequence] when [determinative facts, concretely stated]? One QP per issue; no legal conclusions that assume the answer.>
 
 ## Brief answer
 
@@ -21,9 +21,9 @@ As of: <date> · Jurisdiction: <governing law> · Prepared for: <requester>
 
 <Issue by issue: governing rule with tiered authority → application to the facts → sub-conclusion with calibration. Quote operative language with pincites. Plain English; define terms of art once.>
 
-## Strongest contrary authority
+## Counter-analysis
 
-<The best case/statute/argument against the brief answer, stated fairly — or the specific searches that came back empty.>
+<(a) The strongest opposing argument, stated as its best advocate would. (b) Why the better reading rejects it — or a concession that it may prevail. (c) The conclusion, adjusted for what this taught. If none found: the specific searches that came back empty.>
 
 ## Open questions
 

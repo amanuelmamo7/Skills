@@ -23,7 +23,7 @@ Add the marketplace once, then install only the buckets you need:
 /plugin install attorney-workflow@amanuel-skills
 ```
 
-Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `agent-infrastructure`, `dev-operations`, `software-architecture`.
+Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`, `dev-operations`, `software-architecture`, `job-search`.
 
 Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by [`tools/build_plugins.py`](tools/build_plugins.py) — never edit them by hand. After adding or re-bucketing a skill, run `python3 tools/build_plugins.py` and commit the result.
 
@@ -39,11 +39,11 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | dev-operations | 12 | active |
 | market-analysis | 11 | active |
 | general | 10 | active |
+| attorney-workflow | 9 | active |
 | web-application | 9 | active |
 | software-architecture | 8 | active |
-| attorney-workflow | 6 | active |
 
-### personal-assistant (first-party + Cowork + reviewed third-party)
+### personal-assistant (from Bari + Cowork, plus reviewed third-party)
 
 | Skill | Use it for |
 |---|---|
@@ -80,7 +80,8 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
 | [`skill-distiller`](skills/skill-distiller/SKILL.md) | Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers |
 
-### dev-operations (distilled from personal project)
+### dev-operations (distilled from StreamEZ project practice)
+
 | Skill | Use it for |
 |---|---|
 | [`ai-build-house-rules`](skills/ai-build-house-rules/SKILL.md) | 26-rule structural contract for building safely with AI assistance |
@@ -96,7 +97,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`solo-founder-build-plan`](skills/solo-founder-build-plan/SKILL.md) | Contract-files discipline, build vs review phases, when to buy expert review |
 | [`workflow-automation`](skills/workflow-automation/SKILL.md) | Workflow-engine patterns: n8n, Temporal, Inngest |
 
-### market-analysis (first-party)
+### market-analysis (from Sefer)
 
 | Skill | Use it for |
 |---|---|
@@ -127,7 +128,21 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`product-manager-toolkit`](skills/product-manager-toolkit/SKILL.md) | PM toolkit: RICE prioritization and customer-interview analysis scripts — ⚠ see manifest |
 | [`skills-dispatcher`](skills/skills-dispatcher/SKILL.md) | Routing map of the whole library: buckets, preferences, pipelines, caveats (generated) |
 
-### web-application (third-party, from AAS — pinned `5e31f23`)
+### attorney-workflow
+
+| Skill | Use it for |
+|---|---|
+| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup |
+| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags |
+| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures |
+| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers |
+| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions |
+| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth |
+| [`authority-synthesis`](skills/authority-synthesis/SKILL.md) | Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations |
+| [`legal-writing-editor`](skills/legal-writing-editor/SKILL.md) | Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance |
+| [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation |
+
+### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
 
 | Skill | Use it for |
 |---|---|
@@ -141,7 +156,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows via the official CLI — ⚠ see manifest |
 | [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
 
-### software-architecture (third-party, from AAS — pinned `ee66a9b`)
+### software-architecture (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)
 
 | Skill | Use it for |
 |---|---|
@@ -153,17 +168,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`projection-patterns`](skills/projection-patterns/SKILL.md) | Building read-model projections from event streams |
 | [`saga-orchestration`](skills/saga-orchestration/SKILL.md) | Distributed transactions via sagas and compensating actions |
 | [`dbt-transformation-patterns`](skills/dbt-transformation-patterns/SKILL.md) | dbt data-transformation modeling patterns |
-
-### attorney-workflow (first-party, built with skill-distiller)
-
-| Skill | Use it for |
-|---|---|
-| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup |
-| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags |
-| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures |
-| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers |
-| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions |
-| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth |
 <!-- GENERATED-BUCKETS:END -->
 
 ## Adding a skill

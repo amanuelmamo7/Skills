@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (82 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (85 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -70,6 +70,17 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `investor-profile-template` — Financial-profile template: horizon, risk, liquidity, watchlist, delivery preferences
 - `analyst-house-style` — Eight non-negotiable analysis rules as a pre-ship rigor checklist
 
+### attorney-workflow
+- `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup
+- `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags
+- `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures
+- `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers
+- `regulatory-change-analysis` — New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions
+- `contract-dispute-analysis` — Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth
+- `authority-synthesis` — Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations
+- `legal-writing-editor` — Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance
+- `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation
+
 ### web-application
 - `form-cro` — Form conversion-rate optimization methodology
 - `frontend-design` — Design direction and visual quality guidance for web UI
@@ -102,14 +113,6 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `saga-orchestration` — Distributed transactions via sagas and compensating actions
 - `dbt-transformation-patterns` — dbt data-transformation modeling patterns
 
-### attorney-workflow
-- `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup
-- `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags
-- `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures
-- `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers
-- `regulatory-change-analysis` — New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions
-- `contract-dispute-analysis` — Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth
-
 ## Routing rules (prefer / disambiguate)
 
 - `ai-agents-architect` and `autonomous-agent-patterns` overlap — architect = design guidance; patterns = concrete loop/permission/sandbox examples
@@ -130,6 +133,9 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `commercial-contract-review` → `litigation-hold-and-triage`
 - `regulatory-change-analysis` → `commercial-contract-review`
 - `contract-dispute-analysis` → `litigation-hold-and-triage`
+- `legal-writing-editor` → `legal-research-memo`
+- `legal-writing-editor` → `client-advice-letter`
+- `legal-writing-editor` → `contract-dispute-analysis`
 
 ## Dependencies (what a skill needs before it works)
 
