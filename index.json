@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-26",
+  "updated": "2026-07-27",
   "description": "Source of truth for this repo. Nodes are skills, sources, and humans. Edges are typed relationships. README bucket tables are generated from this file.",
   "buckets": [
     "general",
@@ -1114,9 +1114,7 @@
           "facet": "Service",
           "query": [
             "Draft/revise",
-            "A103 Draft/revise",
-            "Drafting Services",
-            "Legal Writing Services"
+            "A103 Draft/revise"
           ],
           "label": "A103 Draft/revise",
           "iri": "http://lmss.sali.org/RZ82g1rvM9Q67e3BhSirpw",
@@ -1144,6 +1142,59 @@
           ],
           "label": "Letter Communication",
           "iri": "http://lmss.sali.org/RPzuFFXebWVvkhzE9KZ304",
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "negotiation-prep",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist",
+      "review_date": "2026-07-27",
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Service",
+          "query": [
+            "Contract Negotiation Management"
+          ],
+          "label": "Contract Negotiation Management",
+          "iri": "http://lmss.sali.org/R9DQN1qXDWQVlCBmsujhPHf",
+          "status": "resolved"
+        }
+      ]
+    },
+    {
+      "id": "mediation-prep",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness",
+      "review_date": "2026-07-27",
+      "risk": "first-party",
+      "lmss": [
+        {
+          "facet": "Service",
+          "query": [
+            "Mediation",
+            "Mediation Services"
+          ],
+          "label": "Mediation Practice",
+          "iri": "http://lmss.sali.org/R9zgcjBBIdWMnwIR8nqsoS8",
+          "status": "resolved"
+        },
+        {
+          "facet": "Area of Law",
+          "query": [
+            "Alternative Dispute Resolution",
+            "Dispute Resolution"
+          ],
+          "label": "Alternative Dispute Resolution Practice",
+          "iri": "http://lmss.sali.org/R85H4hDZWq92xwwBFP7WCtM",
           "status": "resolved"
         }
       ]
@@ -1984,6 +2035,31 @@
       "from": "legal-writing-editor",
       "to": "contract-dispute-analysis",
       "type": "use-with"
+    },
+    {
+      "from": "negotiation-prep",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "mediation-prep",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "commercial-contract-review",
+      "to": "negotiation-prep",
+      "type": "feeds"
+    },
+    {
+      "from": "negotiation-prep",
+      "to": "mediation-prep",
+      "type": "use-with"
+    },
+    {
+      "from": "contract-dispute-analysis",
+      "to": "mediation-prep",
+      "type": "feeds"
     }
   ]
 }

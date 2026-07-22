@@ -11,7 +11,8 @@ As of: <date> · Parties: <A> v. <B> · Record reviewed: <documents, communicati
 
 | # | Stage | Status | One-line conclusion | Depth below |
 |---|---|---|---|---|
-| 1 | Governing law | contested / uncontested | | §1 |
+| 0 | Forum & arbitrability | contested / uncontested | | §0 |
+| 1 | Governing law | | | §1 |
 | 2 | Formation | | | §2 |
 | 3 | Defenses | | | §3 |
 | 4 | Terms | | | §4 |

@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (85 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (87 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -80,6 +80,8 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `authority-synthesis` — Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations [SALI: Legal Research]
 - `legal-writing-editor` — Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance [SALI: A103 Draft/revise]
 - `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation [SALI: Letter Communication]
+- `negotiation-prep` — Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist [SALI: Contract Negotiation Management]
+- `mediation-prep` — Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness [SALI: Mediation Practice; Alternative Dispute Resolution Practice]
 
 ### web-application
 - `form-cro` — Form conversion-rate optimization methodology
@@ -136,6 +138,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `legal-writing-editor` → `legal-research-memo`
 - `legal-writing-editor` → `client-advice-letter`
 - `legal-writing-editor` → `contract-dispute-analysis`
+- `negotiation-prep` → `mediation-prep`
 
 ## Dependencies (what a skill needs before it works)
 
