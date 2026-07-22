@@ -624,7 +624,8 @@
       "publisher": "SALI Alliance \u2014 https://sali.org",
       "license": "CC BY-ND 4.0",
       "usage": "Concept labels and IRIs referenced as classification tags on attorney-workflow skills (index.json `lmss` fields). The standard itself is neither redistributed nor modified: tools/lmss_align.py resolves tags against the canonical LMSS.owl downloaded at run time to a gitignored local cache. No extract of the ontology is committed to this repository.",
-      "reviewed": "2026-07-26"
+      "reviewed": "2026-07-26",
+      "publisher_confirmation": "SALI (Jim) confirmed by email, 2026-07: use permitted with credit, provided the data is not used as the basis for a new taxonomy/code set. Both conditions are met by design: attribution in README + this ledger; tags reference LMSS concepts to classify this repo's own skills and no subset, extract, or derived code set of LMSS is published here."
     }
   ]
 }
