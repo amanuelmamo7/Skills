@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (88 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (89 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -31,7 +31,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 
 ### attorney-workflow
 - `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup [SALI: Legal Services Industry]
-- `contract-anatomy` — Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures
+- `contract-anatomy` — Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures [SALI: Contract Law]
 - `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags [SALI: Contract Law; Document Review]
 - `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures [SALI: Legal Hold Management]
 - `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers [SALI: Legal Research; Brief / Memorandum of Law]
@@ -42,6 +42,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation [SALI: Letter Communication]
 - `negotiation-prep` — Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist [SALI: Contract Negotiation Management]
 - `mediation-prep` — Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness [SALI: Mediation Practice; Alternative Dispute Resolution Practice]
+- `tax-analysis` — Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay — reads the actual IRC at runtime via a 1,896-section page index [SALI: Tax Law]
 
 ### agent-infrastructure
 - `ai-agents-architect` — Agent system design patterns and sharp edges
@@ -140,6 +141,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `legal-writing-editor` → `client-advice-letter`
 - `legal-writing-editor` → `contract-dispute-analysis`
 - `negotiation-prep` → `mediation-prep`
+- `legal-research-memo` → `tax-analysis`
 
 ## Dependencies (what a skill needs before it works)
 

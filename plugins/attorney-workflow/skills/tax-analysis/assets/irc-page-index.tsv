@@ -1,0 +1,1897 @@
+# IRC section -> PDF page -> title | Source: IRC PDF, Release Point 119-102 (Aug 2026), 7,171 pages | Regenerate: pdftotext + regex ^§(sec)\. per page
+1	92	Tax imposed
+2	143	Definitions and special rules
+3	147	Tax tables for individuals
+5	150	Cross references relating to tax on individuals
+11	152	Tax imposed
+12	157	Cross references relating to tax on corporations
+15	159	Effect of changes
+21	164	Expenses for household and dependent care services necessary for gainful
+22	172	Credit for the elderly and the permanently and totally disabled
+23	177	Adoption expenses
+24	185	Child tax credit
+25	198	Interest on certain home mortgages
+25A	208	American Opportunity and Lifetime Learning credits
+25B	216	Elective deferrals and IRA contributions by certain individuals
+25C	221	Energy efficient home improvement credit
+25D	230	Residential clean energy credit
+25E	236	Previously-owned clean vehicles
+25F	238	Qualified elementary and secondary education scholarships
+26	241	Limitation based on tax liability; definition of tax liability
+27	249	Taxes of foreign countries and possessions of the United States
+30B	251	Alternative motor vehicle credit
+30C	264	Alternative fuel vehicle refueling property credit
+30D	270	Clean vehicle credit
+31	280	Tax withheld on wages
+32	281	Earned income
+33	302	Tax withheld at source on nonresident aliens and foreign corporations
+34	302	Certain uses of gasoline and special fuels
+35	305	Health insurance costs of eligible individuals
+36	317	First-time homebuyer credit
+36B	323	Refundable credit for coverage under a qualified health plan
+37	337	Overpayments of tax
+38	339	General business credit
+39	358	Carryback and carryforward of unused credits
+40	362	Alcohol, etc., used as fuel
+40A	375	Biodiesel and renewable diesel used as fuel
+40B	382	Sustainable aviation fuel credit
+41	384	Credit for increasing research activities
+42	409	Low-income housing credit
+43	459	Enhanced oil recovery credit
+44	463	Expenditures to provide access to disabled individuals
+45	466	Electricity produced from certain renewable resources, etc.
+45A	492	Indian employment credit
+45AA	604	Military spouse retirement plan eligibility credit for small employers
+45B	497	Credit for portion of employer social security taxes paid with respect to
+45C	499	Clinical testing expenses for certain drugs for rare diseases or conditions
+45D	505	New markets tax credit
+45E	512	Small employer pension plan startup costs
+45F	516	Employer-provided child care credit
+45G	520	Railroad track maintenance credit
+45H	523	Credit for production of low sulfur diesel fuel
+45I	526	Credit for producing oil and gas from marginal wells
+45J	529	Credit for production from advanced nuclear power facilities
+45K	532	Credit for producing fuel from a nonconventional source
+45L	541	New energy efficient home credit
+45N	546	Mine rescue team training credit
+45O	547	Agricultural chemicals security credit
+45P	549	Employer wage credit for employees who are active duty members of the
+45Q	551	Credit for carbon oxide sequestration
+45R	561	Employee health insurance expenses of small employers
+45S	566	Employer credit for paid family and medical leave
+45T	569	Auto-enrollment option for retirement savings options provided by small
+45U	570	Zero-emission nuclear power production credit
+45V	573	Credit for production of clean hydrogen
+45W	576	Credit for qualified commercial clean vehicles
+45X	578	Advanced manufacturing production credit
+45Y	590	Clean electricity production credit
+45Z	598	Clean fuel production credit
+46	606	Amount of credit
+47	624	Rehabilitation credit
+48	633	Energy credit
+48A	670	Qualifying advanced coal project credit
+48B	677	Qualifying gasification project credit
+48C	680	Qualifying advanced energy project credit
+48D	686	Advanced manufacturing investment credit
+48E	689	Clean electricity investment credit
+49	698	At-risk rules
+50	704	Other special rules
+51	713	Amount of credit
+52	734	Special rules
+53	737	Credit for prior year minimum tax liability
+55	744	Alternative minimum tax imposed
+56	758	Adjustments in computing alternative minimum taxable income
+56A	777	Adjusted financial statement income
+57	782	Items of tax preference
+58	787	Denial of certain losses
+59	790	Other definitions and special rules
+59A	800	Tax on base erosion payments of taxpayers with substantial gross receipts
+61	808	Gross income defined
+62	812	Adjusted gross income defined
+63	824	Taxable income defined
+64	833	Ordinary income defined
+65	833	Ordinary loss defined
+66	833	Treatment of community income
+67	835	2-percent floor on miscellaneous itemized deductions
+68	839	Overall limitation on itemized deductions
+72	842	Annuities; certain proceeds of endowment and life insurance contracts
+73	892	Services of child
+74	892	Prizes and awards
+75	895	Dealers in tax-exempt securities
+77	896	Commodity credit loans
+78	897	Gross up for deemed paid foreign tax credit
+79	898	Group-term life insurance purchased for employees
+80	903	Restoration of value of certain securities
+82	904	Reimbursement of moving expenses
+83	905	Property transferred in connection with performance of services
+84	913	Transfer of appreciated property to political organizations
+85	914	Unemployment compensation
+86	916	Social security and tier 1 railroad retirement benefits
+87	922	Alcohol and biodiesel fuels credits
+88	922	Certain amounts with respect to nuclear decommissioning costs
+90	924	Illegal Federal irrigation subsidies
+91	924	Certain foreign branch losses transferred to specified 10-percent owned
+101	930	Certain death benefits
+102	942	Gifts and inheritances
+103	943	Interest on State and local bonds
+104	963	Compensation for injuries or sickness
+105	967	Amounts received under accident and health plans
+106	975	Contributions by employer to accident and health plans
+107	980	Rental value of parsonages
+108	980	Income from discharge of indebtedness
+109	1002	Improvements by lessee on lessor's property
+110	1002	Qualified lessee construction allowances for short-term leases
+111	1003	Recovery of tax benefit items
+112	1005	Certain combat zone compensation of members of the Armed Forces
+115	1012	Income of States, municipalities, etc.
+117	1013	Qualified scholarships
+118	1018	Contributions to the capital of a corporation
+119	1022	Meals or lodging furnished for the convenience of the employer
+121	1026	Exclusion of gain from sale of principal residence
+122	1037	Certain reduced uniformed services retirement pay
+123	1038	Amounts received under insurance contracts for certain living expenses
+125	1039	Cafeteria plans
+126	1052	Certain cost-sharing payments
+127	1054	Educational assistance programs
+128	1060	Employer contributions to Trump accounts
+129	1061	Dependent care assistance programs
+130	1068	Certain personal injury liability assignments
+131	1070	Certain foster care payments
+132	1072	Certain fringe benefits
+133	1086	INTEREST ON CERTAIN LOANS USED TO ACQUIRE EMPLOYER SECURITIES
+134	1088	Certain military benefits
+135	1091	Income from United States savings bonds used to pay higher education
+136	1096	Energy conservation subsidies provided by public utilities
+137	1097	Adoption assistance programs
+138	1101	Medicare Advantage MSA
+139	1103	Disaster relief payments
+139A	1105	Federal subsidies for prescription drug plans
+139B	1106	Benefits provided to volunteer firefighters and emergency medical
+139C	1107	Certain disability-related first responder retirement payments
+139D	1108	Indian health care benefits
+139E	1110	Indian general welfare benefits
+139F	1112	Certain amounts received by wrongfully incarcerated individuals
+139G	1113	Assignments to Alaska Native Settlement Trusts
+139H	1114	Interest received in action to recover property seized by the Internal
+139I	1114	Continuation coverage premium assistance
+139J	1114	Certain contributions to Trump accounts
+139K	1115	Scholarships for qualified elementary or secondary education expenses of
+139L	1115	Interest on loans secured by rural or agricultural real property
+140	1117	Cross references to other Acts
+141	1120	Private activity bond; qualified bond
+142	1164	Exempt facility bond
+143	1184	Mortgage revenue bonds: qualified mortgage bond and qualified veterans'
+144	1205	Qualified small issue bond; qualified student loan bond; qualified
+145	1216	Qualified 501(c)(3) bond
+146	1220	Volume cap
+147	1228	Other requirements applicable to certain private activity bonds
+148	1236	Arbitrage
+149	1251	Bonds must be registered to be tax exempt; other requirements
+150	1260	Definitions and special rules
+151	1266	Allowance of deductions for personal exemptions
+152	1272	Dependent defined
+153	1281	Cross references
+161	1284	Allowance of deductions
+162	1285	Trade or business expenses
+163	1312	Interest
+164	1342	Taxes
+165	1351	Losses
+166	1366	Bad debts
+167	1369	Depreciation
+168	1384	Accelerated cost recovery system
+169	1478	Amortization of pollution control facilities
+170	1482	Charitable, etc., contributions and gifts
+171	1533	Amortizable bond premium
+172	1538	Net operating loss deduction
+173	1561	Circulation expenditures
+174	1562	Amortization of research and experimental expenditures
+174A	1565	Domestic research or experimental expenditures
+175	1567	Soil and water conservation expenditures; endangered species recovery
+176	1571	Payments with respect to employees of certain foreign corporations
+178	1571	Amortization of cost of acquiring a lease
+179	1572	Election to expense certain depreciable business assets
+179B	1583	Deduction for capital costs incurred in complying with Environmental
+179C	1584	Election to expense certain refineries
+179D	1587	Energy efficient commercial buildings deduction
+179E	1594	Election to expense advanced mine safety equipment
+180	1596	Expenditures by farmers for fertilizer, etc.
+181	1596	Treatment of certain qualified productions
+183	1601	Activities not engaged in for profit
+186	1604	Recoveries of damages for antitrust violations, etc.
+190	1607	Expenditures to remove architectural and transportation barriers to the
+192	1608	Contributions to black lung benefit trust
+193	1611	Tertiary injectants
+194	1612	Treatment of reforestation expenditures
+194A	1615	Contributions to employer liability trusts
+195	1616	Start-up expenditures
+196	1618	Deduction for certain unused business credits
+197	1622	Amortization of goodwill and certain other intangibles
+198	1628	Expensing of environmental remediation costs
+199A	1632	Qualified business income
+211	1645	Allowance of deductions
+212	1645	Expenses for production of income
+213	1645	Medical, dental, etc., expenses
+216	1653	Deduction of taxes, interest, and business depreciation by cooperative
+217	1659	Moving expenses
+219	1664	Retirement savings
+220	1680	Archer MSAs
+221	1694	Interest on education loans
+223	1699	Health savings accounts
+224	1711	Qualified tips
+225	1713	Qualified overtime compensation
+226	1714	Cross reference
+241	1716	Allowance of special deductions
+243	1717	Dividends received by corporations
+245	1723	Dividends received from certain foreign corporations
+245A	1728	Deduction for foreign source-portion of dividends received by domestic
+246	1730	Rules applying to deductions for dividends received
+246A	1738	Dividends received deduction reduced where portfolio stock is debt
+247	1741	Contributions to Alaska Native Settlement Trusts
+248	1744	Organizational expenditures
+249	1745	Limitation on deduction of bond premium on repurchase
+250	1746	Foreign-derived deduction eligible income and net CFC tested income
+261	1751	General rule for disallowance of deductions
+262	1752	Personal, living, and family expenses
+263	1752	Capital expenditures
+263A	1760	Capitalization and inclusion in inventory costs of certain expenses
+264	1771	Certain amounts paid in connection with insurance contracts
+265	1778	Expenses and interest relating to tax-exempt income
+266	1786	Carrying charges
+267	1786	Losses, expenses, and interest with respect to transactions between related
+267A	1794	Certain related party amounts paid or accrued in hybrid transactions or
+268	1796	Sale of land with unharvested crop
+269	1796	Acquisitions made to evade or avoid income tax
+269A	1797	Personal service corporations formed or availed of to avoid or evade
+269B	1798	Stapled entities
+271	1804	Debts owed by political parties, etc.
+272	1805	Disposal of coal or domestic iron ore
+273	1806	Holders of life or terminable interest
+274	1806	Disallowance of certain entertainment, etc., expenses
+275	1823	Certain taxes
+276	1825	Certain indirect contributions to political parties
+277	1827	Deductions incurred by certain membership organizations in transactions
+279	1828	Interest on indebtedness incurred by corporation to acquire stock or assets
+280A	1833	Disallowance of certain expenses in connection with business use of home,
+280B	1839	Demolition of structures
+280C	1840	Certain expenses for which credits are allowable
+280E	1848	Expenditures in connection with the illegal sale of drugs
+280F	1848	Limitation on depreciation for luxury automobiles; limitation where
+280G	1857	Golden parachute payments
+280H	1863	Limitation on certain amounts paid to employee-owners by personal
+281	1865	Terminal railroad corporations and their shareholders
+291	1867	Special rules relating to corporate preference items
+301	1874	Distributions of property
+302	1879	Distributions in redemption of stock
+303	1885	Distributions in redemption of stock to pay death taxes
+304	1887	Redemption through use of related corporations
+305	1894	Distributions of stock and stock rights
+306	1899	Dispositions of certain stock
+307	1903	Basis of stock and stock rights acquired in distributions
+311	1904	Taxability of corporation on distribution
+312	1909	Effect on earnings and profits
+316	1922	Dividend defined
+317	1924	Other definitions
+318	1924	Constructive ownership of stock
+331	1928	Gain or loss to shareholder in corporate liquidations
+332	1929	Complete liquidations of subsidiaries
+334	1932	Basis of property received in liquidations
+336	1935	Gain or loss recognized on property distributed in complete liquidation
+337	1941	Nonrecognition for property distributed to parent in complete liquidation
+338	1944	Certain stock purchases treated as asset acquisitions
+346	1954	Definition and special rule
+351	1956	Transfer to corporation controlled by transferor
+354	1962	Exchanges of stock and securities in certain reorganizations
+355	1965	Distribution of stock and securities of a controlled corporation
+356	1979	Receipt of additional consideration
+357	1981	Assumption of liability
+358	1984	Basis to distributees
+361	1988	Nonrecognition of gain or loss to corporations; treatment of distributions
+362	1990	Basis to corporations
+367	1994	Foreign corporations
+368	2001	Definitions relating to corporate reorganizations
+381	2010	Carryovers in certain corporate acquisitions
+382	2022	Limitation on net operating loss carryforwards and certain built-in losses
+383	2041	Special limitations on certain excess credits, etc.
+384	2045	Limitation on use of preacquisition losses to offset built-in gains
+385	2048	Treatment of certain interests in corporations as stock or indebtedness
+401	2052	Qualified pension, profit-sharing, and stock bonus plans
+402	2148	Taxability of beneficiary of employees' trust
+402A	2183	Optional treatment of elective deferrals as Roth contributions
+403	2192	Taxation of employee annuities
+404	2212	Deduction for contributions of an employer to an employees' trust or
+404A	2239	Deduction for certain foreign deferred compensation plans
+406	2245	Employees of foreign affiliates covered by section 3121(l) agreements
+407	2250	Certain employees of domestic subsidiaries engaged in business outside the
+408	2254	Individual retirement accounts
+408A	2294	Roth IRAs
+409	2305	Qualifications for tax credit employee stock ownership plans
+409A	2320	Inclusion in gross income of deferred compensation under nonqualified
+410	2328	Minimum participation standards
+411	2339	Minimum vesting standards
+412	2370	Minimum funding standards
+413	2386	Collectively bargained plans, etc.
+414	2393	Definitions and special rules
+414A	2444	Requirements related to automatic enrollment
+415	2445	Limitations on benefits and contribution under qualified plans
+416	2474	Special rules for top-heavy plans
+417	2484	Definitions and special rules for purposes of minimum survivor annuity
+418E	2494	Insolvent plans
+419	2498	Treatment of funded welfare benefit plans
+419A	2502	Qualified asset account; limitation on additions to account
+420	2509	Transfers of excess pension assets to retiree health accounts
+421	2524	General rules
+422	2527	Incentive stock options
+423	2532	Employee stock purchase plans
+424	2535	Definitions and special rules
+430	2540	Minimum funding standards for single-employer defined benefit pension
+431	2574	Minimum funding standards for multiemployer plans
+432	2585	Additional funding rules for multiemployer plans in endangered status or
+433	2618	Minimum funding standards for CSEC plans
+436	2631	Funding-based limits on benefits and benefit accruals under
+441	2639	Period for computation of taxable income
+442	2642	Change of annual accounting period
+443	2643	Returns for a period of less than 12 months
+444	2646	Election of taxable year other than required taxable year
+446	2649	General rule for methods of accounting
+447	2650	Method of accounting for corporations engaged in farming
+448	2656	Limitation on use of cash method of accounting
+451	2661	General rule for taxable year of inclusion
+453	2674	Installment method
+453A	2687	Special rules for nondealers
+453B	2692	Gain or loss on disposition of installment obligations
+454	2697	Obligations issued at discount
+455	2699	Prepaid subscription income
+456	2700	Prepaid dues income of certain membership organizations
+457	2702	Deferred compensation plans of State and local governments and
+457A	2718	Nonqualified deferred compensation from certain tax indifferent parties
+458	2721	Magazines, paperbacks, and records returned after the close of the taxable
+460	2724	Special rules for long-term contracts
+461	2736	General rule for taxable year of deduction
+464	2751	Limitations on deductions for certain farming expenses
+465	2754	Deductions limited to amount at risk
+467	2766	Certain payments for the use of property or services
+468	2772	Special rules for mining and solid waste reclamation and closing costs
+468A	2776	Special rules for nuclear decommissioning costs
+468B	2780	Special rules for designated settlement funds
+469	2784	Passive activity losses and credits limited
+470	2799	Limitation on deductions allocable to property used by governments or
+471	2804	General rule for inventories
+472	2806	Last-in, first-out inventories
+473	2807	Qualified liquidations of LIFO inventories
+474	2810	Simplified dollar-value LIFO method for certain small businesses
+475	2812	Mark to market accounting method for dealers in securities
+481	2818	Adjustments required by changes in method of accounting
+482	2822	Allocation of income and deductions among taxpayers
+483	2823	Interest on certain deferred payments
+501	2828	Exemption from tax on corporations, certain trusts, etc.
+502	2864	Feeder organizations
+503	2865	Requirements for exemption
+504	2869	Status after organization ceases to qualify for exemption under section
+505	2870	Additional requirements for organizations described in paragraph (9) or
+506	2873	Organizations required to notify Secretary of intent to operate under
+507	2875	Termination of private foundation status
+508	2878	Special rules with respect to section 501(c)(3) organizations
+509	2881	Private foundation defined
+511	2885	Imposition of tax on unrelated business income of charitable, etc.,
+512	2888	Unrelated business taxable income
+513	2907	Unrelated trade or business
+514	2913	Unrelated debt-financed income
+515	2926	Taxes of foreign countries and possessions of the United States
+521	2926	Exemption of farmers' cooperatives from tax
+526	2928	Shipowners' protection and indemnity associations
+527	2928	Political organizations
+528	2939	Certain homeowners associations
+529	2942	Qualified tuition programs
+529A	2956	Qualified ABLE programs
+530	2963	Coverdell education savings accounts
+530A	2970	Trump accounts
+531	2976	Imposition of accumulated earnings tax
+532	2977	Corporations subject to accumulated earnings tax
+533	2978	Evidence of purpose to avoid income tax
+534	2979	Burden of proof
+535	2980	Accumulated taxable income
+536	2986	Income not placed on annual basis
+537	2986	Reasonable needs of the business
+541	2987	Imposition of personal holding company tax
+542	2989	Definition of personal holding company
+543	2995	Personal holding company income
+544	3005	Rules for determining stock ownership
+545	3006	Undistributed personal holding company income
+546	3011	Income not placed on annual basis
+547	3011	Deduction for deficiency dividends
+561	3014	Definition of deduction for dividends paid
+562	3015	Rules applicable in determining dividends eligible for dividends paid
+563	3018	Rules relating to dividends paid after close of taxable year
+564	3019	Dividend carryover
+565	3020	Consent dividends
+581	3021	Definition of bank
+582	3022	Bad debts, losses, and gains with respect to securities held by financial
+584	3025	Common trust funds
+585	3030	Reserves for losses on loans of banks
+591	3036	Deduction for dividends paid on deposits
+593	3037	Reserves for losses on loans
+594	3046	Alternative tax for mutual savings banks conducting life insurance business
+597	3048	Treatment of transactions in which Federal financial assistance provided
+611	3051	Allowance of deduction for depletion
+612	3052	Basis for cost depletion
+613	3053	Percentage depletion
+613A	3060	Limitations on percentage depletion in case of oil and gas wells
+614	3071	Definition of property
+616	3076	Development expenditures
+617	3078	Deduction and recapture of certain mining exploration expenditures
+631	3083	Gain or loss in the case of timber, coal, or domestic iron ore
+636	3087	Income tax treatment of mineral production payments
+638	3088	Continental shelf areas
+641	3089	Imposition of tax
+642	3091	Special rules for credits and deductions
+643	3099	Definitions applicable to subparts A, B, C, and D
+644	3106	Taxable year of trusts
+645	3107	Certain revocable trusts treated as part of estate
+646	3108	Tax treatment of electing Alaska Native Settlement Trusts
+651	3111	Deduction for trusts distributing current income only
+652	3112	Inclusion of amounts in gross income of beneficiaries of trusts distributing
+661	3113	Deduction for estates and trusts accumulating income or distributing
+662	3113	Inclusion of amounts in gross income of beneficiaries of estates and trusts
+663	3115	Special rules applicable to sections 661 and 662
+664	3116	Charitable remainder trusts
+665	3123	Definitions applicable to subpart D
+666	3127	Accumulation distribution allocated to preceding years
+667	3129	Treatment of amounts deemed distributed by trust in preceding years
+668	3133	Interest charge on accumulation distributions from foreign trusts
+671	3136	Trust income, deductions, and credits attributable to grantors and others
+672	3137	Definitions and rules
+673	3140	Reversionary interests
+674	3141	Power to control beneficial enjoyment
+675	3144	Administrative powers
+676	3145	Power to revoke
+677	3145	Income for benefit of grantor
+678	3146	Person other than grantor treated as substantial owner
+679	3147	Foreign trusts having one or more United States beneficiaries
+681	3152	Limitation on charitable deduction
+683	3153	Use of trust as an exchange fund
+684	3153	Recognition of gain on certain transfers to certain foreign trusts and estates
+685	3154	Treatment of funeral trusts
+691	3156	Recipients of income in respect of decedents
+692	3162	Income taxes of members of Armed Forces, astronauts, and victims of
+701	3167	Partners, not partnership, subject to tax
+702	3167	Income and credits of partner
+703	3169	Partnership computations
+704	3171	Partner's distributive share
+705	3175	Determination of basis of partner's interest
+706	3176	Taxable years of partner and partnership
+707	3181	Transactions between partner and partnership
+708	3184	Continuation of partnership
+709	3185	Treatment of organization and syndication fees
+721	3186	Nonrecognition of gain or loss on contribution
+722	3187	Basis of contributing partner's interest
+723	3188	Basis of property contributed to partnership
+724	3188	Character of gain or loss on contributed unrealized receivables, inventory
+731	3190	Extent of recognition of gain or loss on distribution
+732	3194	Basis of distributed property other than money
+733	3197	Basis of distributee partner's interest
+734	3198	Adjustment to basis of undistributed partnership property where section
+735	3199	Character of gain or loss on disposition of distributed property
+736	3200	Payments to a retiring partner or a deceased partner's successor in interest
+737	3202	Recognition of precontribution gain in case of certain distributions to
+741	3203	Recognition and character of gain or loss on sale or exchange
+742	3204	Basis of transferee partner's interest
+743	3204	Special rules where section 754 election or substantial built-in loss
+751	3207	Unrealized receivables and inventory items
+752	3212	Treatment of certain liabilities
+753	3213	Partner receiving income in respect of decedent
+754	3213	Manner of electing optional adjustment to basis of partnership property
+755	3213	Rules for allocation of basis
+761	3214	Terms defined
+801	3218	Tax imposed
+803	3225	Life insurance gross income
+804	3226	Life insurance deductions
+805	3227	General deductions
+807	3233	Rules for certain reserves
+808	3241	Policyholder dividends deduction
+811	3245	Accounting provisions
+812	3247	Definition of company's share and policyholder's share
+814	3250	Contiguous country branches of domestic life insurance companies
+816	3253	Life insurance company defined
+817	3256	Treatment of variable contracts
+817A	3260	Special rules for modified guaranteed contracts
+818	3263	Other definitions and special rules
+831	3268	Tax on insurance companies other than life insurance companies
+832	3273	Insurance company taxable income
+833	3288	Treatment of Blue Cross and Blue Shield organizations, etc.
+834	3293	Determination of taxable investment income
+835	3297	Election by reciprocal
+841	3299	Credit for foreign taxes
+842	3300	Foreign companies carrying on insurance business
+843	3304	Annual accounting period
+845	3305	Certain reinsurance agreements
+846	3305	Discounted unpaid losses defined
+848	3310	Capitalization of certain policy acquisition expenses
+851	3316	Definition of regulated investment company
+852	3324	Taxation of regulated investment companies and their shareholders
+853	3343	Foreign tax credit allowed to shareholders
+853A	3345	Credits from tax credit bonds allowed to shareholders
+854	3347	Limitations applicable to dividends received from regulated investment
+855	3352	Dividends paid by regulated investment company after close of taxable
+856	3354	Definition of real estate investment trust
+857	3387	Taxation of real estate investment trusts and their beneficiaries
+858	3407	Dividends paid by real estate investment trust after close of taxable year
+859	3408	Adoption of annual accounting period
+860	3410	Deduction for deficiency dividends
+860A	3413	Taxation of REMIC's
+860B	3414	Taxation of holders of regular interests
+860C	3415	Taxation of residual interests
+860D	3417	REMIC defined
+860E	3418	Treatment of income in excess of daily accruals on residual interests
+860F	3423	Other rules
+860G	3426	Other definitions and special rules
+861	3433	Income from sources within the United States
+862	3446	Income from sources without the United States
+863	3449	Special rules for determining source
+864	3453	Definitions and special rules
+865	3472	Source rules for personal property sales
+871	3480	Tax on nonresident alien individuals
+872	3501	Gross income
+873	3504	Deductions
+874	3505	Allowance of deductions and credits
+875	3506	Partnerships; beneficiaries of estates and trusts
+876	3507	Alien residents of Puerto Rico, Guam, American Samoa, or the Northern
+877	3507	Expatriation to avoid tax
+877A	3516	Tax responsibilities of expatriation
+878	3522	Foreign educational, charitable, and certain other exempt organizations
+879	3523	Tax treatment of certain community income in the case of nonresident
+881	3524	Tax on income of foreign corporations not connected with United States
+882	3531	Tax on income of foreign corporations connected with United States
+883	3535	Exclusions from gross income
+884	3537	Branch profits tax
+885	3543	Cross references
+887	3544	Imposition of tax on gross transportation income of nonresident aliens and
+891	3546	Doubling of rates of tax on citizens and corporations of certain foreign
+892	3546	Income of foreign governments and of international organizations
+893	3548	Compensation of employees of foreign governments or international
+894	3549	Income affected by treaty
+895	3550	Income derived by a foreign central bank of issue from obligations of the
+896	3551	Adjustment of tax on nationals, residents, and corporations of certain
+897	3553	Disposition of investment in United States real property
+898	3571	Taxable year of certain foreign corporations
+901	3574	Taxes of foreign countries and of possessions of United States
+903	3589	Credit for taxes in lieu of income, etc., taxes
+904	3589	Limitation on credit
+905	3626	Applicable rules
+906	3629	Nonresident alien individuals and foreign corporations
+907	3630	Special rules in case of foreign oil and gas income
+908	3639	Reduction of credit for participation in or cooperation with an
+909	3640	Suspension of taxes and credits until related income taken into account
+911	3642	Citizens or residents of the United States living abroad
+912	3654	Exemption for certain allowances
+931	3658	Income from sources within Guam, American Samoa, or the Northern
+932	3662	Coordination of United States and Virgin Islands income taxes
+933	3665	Income from sources within Puerto Rico
+934	3665	Limitation on reduction in income tax liability incurred to the Virgin
+937	3669	Residence and source rules involving possessions
+951	3671	Amounts included in gross income of United States shareholders
+951A	3676	Net CFC tested income included in gross income of United States
+951B	3678	Amounts included in gross income of foreign controlled United States
+952	3680	Subpart F income defined
+953	3685	Insurance income
+954	3697	Foreign base company income
+956	3718	Investment of earnings in United States property
+957	3724	Controlled foreign corporations; United States persons
+958	3726	Rules for determining stock ownership
+959	3728	Exclusion from gross income of previously taxed earnings and profits
+960	3731	Deemed paid credit for subpart F inclusions
+961	3737	Adjustments to basis of stock in controlled foreign corporations and of
+962	3739	Election by individuals to be subject to tax at corporate rates
+964	3740	Miscellaneous provisions
+965	3743	Treatment of deferred foreign income upon transition to participation
+970	3756	Reduction of subpart F income of export trade corporations
+971	3759	Definitions
+982	3761	Admissibility of documentation maintained in foreign countries
+985	3763	Functional currency
+986	3764	Determination of foreign taxes and foreign corporation's earnings and
+987	3766	Branch transactions
+988	3767	Treatment of certain foreign currency transactions
+989	3775	Other definitions and special rules
+991	3777	Taxation of a domestic international sales corporation
+992	3779	Requirements of a domestic international sales corporation
+993	3782	Definitions and special rules
+994	3788	Inter-company pricing rules
+995	3789	Taxation of DISC income to shareholders
+996	3797	Rules for allocation in the case of distributions and losses
+997	3800	Special subchapter C rules
+999	3800	Reports by taxpayers; determinations
+1001	3804	Determination of amount of and recognition of gain or loss
+1011	3807	Adjusted basis for determining gain or loss
+1012	3808	Basis of property—cost
+1013	3810	Basis of property included in inventory
+1014	3810	Basis of property acquired from a decedent
+1015	3815	Basis of property acquired by gifts and transfers in trust
+1016	3818	Adjustments to basis
+1017	3832	Discharge of indebtedness
+1019	3836	Property on which lessee has made improvements
+1021	3837	Sale of annuities
+1023	3837	Cross references
+1031	3839	Exchange of real property held for productive use or investment
+1032	3844	Exchange of stock for property
+1033	3845	Involuntary conversions
+1035	3855	Certain exchanges of insurance policies
+1036	3857	Stock for stock of same corporation
+1037	3857	Certain exchanges of United States obligations
+1038	3859	Certain reacquisitions of real property
+1040	3862	Transfer of certain farm, etc., real property
+1041	3864	Transfers of property between spouses or incident to divorce
+1042	3865	Sales of stock to employee stock ownership plans or certain cooperatives
+1043	3873	Sale of property to comply with conflict-of-interest requirements
+1045	3875	Rollover of gain from qualified small business stock to another qualified
+1052	3878	Basis established by the Revenue Act of 1932 or 1934 or by the Internal
+1053	3878	Property acquired before March 1, 1913
+1054	3879	Certain stock of Federal National Mortgage Association
+1055	3879	Redeemable ground rents
+1058	3881	Transfers of securities under certain agreements
+1059	3882	Corporate shareholder's basis in stock reduced by nontaxed portion of
+1059A	3889	Limitation on taxpayer's basis or inventory cost in property imported
+1060	3890	Special allocation rules for certain asset acquisitions
+1061	3892	Partnership interests held in connection with performance of services
+1062	3894	Gain from the sale or exchange of qualified farmland property to
+1063	3896	Cross references
+1091	3898	Loss from wash sales of stock or securities
+1092	3900	Straddles
+1202	3913	Partial exclusion for gain from certain small business stock
+1211	3925	Limitation on capital losses
+1212	3926	Capital loss carrybacks and carryovers
+1221	3934	Capital asset defined
+1222	3937	Other terms relating to capital gains and losses
+1223	3939	Holding period of property
+1231	3945	Property used in the trade or business and involuntary conversions
+1233	3950	Gains and losses from short sales
+1234	3954	Options to buy or sell
+1234A	3956	Gains or losses from certain terminations
+1234B	3957	Gains or losses from securities futures contracts
+1235	3959	Sale or exchange of patents
+1236	3960	Dealers in securities
+1237	3962	Real property subdivided for sale
+1239	3965	Gain from sale of depreciable property between certain related taxpayers
+1241	3968	Cancellation of lease or distributor's agreement
+1242	3969	Losses on small business investment company stock
+1243	3969	Loss of small business investment company
+1244	3970	Losses on small business stock
+1245	3973	Gain from dispositions of certain depreciable property
+1248	3981	Gain from certain sales or exchanges of stock in certain foreign
+1249	3989	Gain from certain sales or exchanges of patents, etc., to foreign
+1250	3990	Gain from dispositions of certain depreciable realty
+1252	4003	Gain from disposition of farm land
+1253	4005	Transfers of franchises, trademarks, and trade names
+1254	4007	Gain from disposition of interest in oil, gas, geothermal, or other mineral
+1255	4009	Gain from disposition of section 126 property
+1256	4011	Section 1256 contracts marked to market
+1257	4022	Disposition of converted wetlands or highly erodible croplands
+1258	4023	Recharacterization of gain from certain financial transactions
+1259	4025	Constructive sales treatment for appreciated financial positions
+1260	4028	Gains from constructive ownership transactions
+1271	4032	Treatment of amounts received on retirement or sale or exchange of debt
+1272	4039	Current inclusion in income of original issue discount
+1273	4043	Determination of amount of original issue discount
+1274	4045	Determination of issue price in the case of certain debt instruments issued
+1274A	4050	Special rules for certain transactions where stated principal amount
+1275	4052	Other definitions and special rules
+1276	4056	Disposition gain representing accrued market discount treated as
+1277	4059	Deferral of interest deduction allocable to accrued market discount
+1278	4061	Definitions and special rules
+1281	4064	Current inclusion in income of discount on certain short-term obligations
+1282	4066	Deferral of interest deduction allocable to accrued discount
+1283	4067	Definitions and special rules
+1286	4069	Tax treatment of stripped bonds
+1287	4073	Denial of capital gain treatment for gains on certain obligations not in
+1288	4073	Treatment of original issue discount on tax-exempt obligations
+1291	4075	Interest on tax deferral
+1293	4081	Current taxation of income from qualified electing funds
+1294	4084	Election to extend time for payment of tax on undistributed earnings
+1295	4086	Qualified electing fund
+1296	4088	Election of mark to market for marketable stock
+1297	4093	Passive foreign investment company
+1298	4097	Special rules
+1301	4104	Averaging of farm income
+1311	4106	Correction of error
+1312	4108	Circumstances of adjustment
+1313	4109	Definitions
+1314	4110	Amount and method of adjustment
+1341	4113	Computation of tax where taxpayer restores substantial amount held
+1351	4117	Treatment of recoveries of foreign expropriation losses
+1352	4120	Alternative tax on qualifying shipping activities
+1353	4120	Notional shipping income
+1354	4122	Alternative tax election; revocation; termination
+1355	4123	Definitions and special rules
+1356	4127	Qualifying shipping activities
+1357	4129	Items not subject to regular tax; depreciation; interest
+1358	4130	Allocation of credits, income, and deductions
+1359	4131	Disposition of qualifying vessels
+1361	4132	S corporation defined
+1362	4145	Election; revocation; termination
+1363	4152	Effect of election on corporation
+1366	4155	Pass-thru of items to shareholders
+1367	4159	Adjustments to basis of stock of shareholders, etc.
+1368	4162	Distributions
+1371	4165	Coordination with subchapter C
+1372	4168	Partnership rules to apply for fringe benefit purposes
+1373	4169	Foreign income
+1374	4169	Tax imposed on certain built-in gains
+1375	4175	Tax imposed when passive investment income of corporation having
+1377	4178	Definitions and special rule
+1378	4180	Taxable year of S corporation
+1379	4181	Transitional rules on enactment
+1381	4183	Organizations to which part applies
+1382	4184	Taxable income of cooperatives
+1383	4187	Computation of tax where cooperative redeems nonqualified written
+1385	4188	Amounts includible in patron's gross income
+1388	4190	Definitions; special rules
+1391	4196	Designation procedure
+1392	4202	Eligibility criteria
+1393	4204	Definitions and special rules
+1394	4205	Tax-exempt enterprise zone facility bonds
+1396	4211	Empowerment zone employment credit
+1397	4213	Other definitions and special rules
+1397A	4214	Increase in expensing under section 179
+1397B	4215	Nonrecognition of gain on rollover of empowerment zone investments
+1397C	4217	Enterprise zone business defined
+1397D	4220	Qualified zone property defined
+1397F	4222	Regulations
+1398	4222	Rules relating to individuals' title 11 cases
+1399	4227	No separate taxable entities for partnerships, corporations, etc.
+1401	4239	Rate of tax
+1402	4253	Definitions
+1403	4277	Miscellaneous provisions
+1411	4277	Imposition of tax
+1441	4280	Withholding of tax on nonresident aliens
+1442	4286	Withholding of tax on foreign corporations
+1443	4289	Foreign tax-exempt organizations
+1444	4290	Withholding on Virgin Islands source income
+1445	4290	Withholding of tax on dispositions of United States real property interests
+1446	4298	Withholding of tax on foreign partners' share of effectively connected
+1461	4301	Liability for withheld tax
+1462	4302	Withheld tax as credit to recipient of income
+1463	4302	Tax paid by recipient of income
+1464	4303	Refunds and credits with respect to withheld tax
+1471	4303	Withholdable payments to foreign financial institutions
+1472	4308	Withholdable payments to other foreign entities
+1473	4309	Definitions
+1474	4310	Special rules
+1501	4312	Privilege to file consolidated returns
+1502	4312	Regulations
+1503	4314	Computation and payment of tax
+1504	4320	Definitions
+1505	4329	Cross references
+1552	4330	Earnings and profits
+1561	4331	Limitation on accumulated earnings credit in the case of certain
+1563	4335	Definitions and special rules
+2001	4343	Imposition and rate of tax
+2002	4349	Liability for payment
+2010	4350	Unified credit against estate tax
+2012	4354	Credit for gift tax
+2013	4356	Credit for tax on prior transfers
+2014	4358	Credit for foreign death taxes
+2015	4361	Credit for death taxes on remainders
+2016	4361	Recovery of taxes claimed as credit
+2031	4363	Definition of gross estate
+2032	4367	Alternate valuation
+2032A	4369	Valuation of certain farm, etc., real property
+2033	4383	Property in which the decedent had an interest
+2034	4384	Dower or curtesy interests
+2035	4384	Adjustments for certain gifts made within 3 years of decedent's death
+2036	4386	Transfers with retained life estate
+2037	4389	Transfers taking effect at death
+2038	4390	Revocable transfers
+2039	4391	Annuities
+2040	4395	Joint interests
+2041	4397	Powers of appointment
+2042	4399	Proceeds of life insurance
+2043	4399	Transfers for insufficient consideration
+2044	4400	Certain property for which marital deduction was previously allowed
+2045	4401	Prior interests
+2046	4401	Disclaimers
+2051	4402	Definition of taxable estate
+2053	4403	Expenses, indebtedness, and taxes
+2054	4406	Losses
+2055	4407	Transfers for public, charitable, and religious uses
+2056	4417	Bequests, etc., to surviving spouse
+2056A	4426	Qualified domestic trust
+2058	4432	State death taxes
+2101	4433	Tax imposed
+2102	4434	Credits against tax
+2103	4436	Definition of gross estate
+2104	4436	Property within the United States
+2105	4438	Property without the United States
+2106	4440	Taxable estate
+2107	4444	Expatriation to avoid tax
+2108	4447	Application of pre-1967 estate tax provisions
+2201	4449	Combat zone-related deaths of members of the Armed Forces, deaths of
+2203	4451	Definition of executor
+2204	4451	Discharge of fiduciary from personal liability
+2205	4453	Reimbursement out of estate
+2206	4453	Liability of life insurance beneficiaries
+2207	4454	Liability of recipient of property over which decedent had power of
+2207A	4454	Right of recovery in the case of certain marital deduction property
+2207B	4455	Right of recovery where decedent retained interest
+2208	4457	Certain residents of possessions considered citizens of the United States
+2209	4457	Certain residents of possessions considered nonresidents not citizens of
+2501	4458	Imposition of tax
+2502	4462	Rate of tax
+2503	4464	Taxable gifts
+2504	4467	Taxable gifts for preceding calendar periods
+2505	4469	Unified credit against gift tax
+2511	4472	Transfers in general
+2512	4473	Valuation of gifts
+2513	4473	Gift by husband or wife to third party
+2514	4475	Powers of appointment
+2515	4476	Treatment of generation-skipping transfer tax
+2516	4477	Certain property settlements
+2518	4478	Disclaimers
+2519	4479	Dispositions of certain life estates
+2522	4480	Charitable and similar gifts
+2523	4486	Gift to spouse
+2524	4491	Extent of deductions
+2601	4492	Tax imposed
+2602	4494	Amount of tax
+2603	4495	Liability for tax
+2611	4496	Generation-skipping transfer defined
+2612	4497	Taxable termination; taxable distribution; direct skip
+2613	4499	Skip person and non-skip person defined
+2621	4501	Taxable amount in case of taxable distribution
+2622	4501	Taxable amount in case of taxable termination
+2623	4502	Taxable amount in case of direct skip
+2624	4502	Valuation
+2631	4503	GST exemption
+2632	4504	Special rules for allocation of GST exemption
+2641	4507	Applicable rate
+2642	4508	Inclusion ratio
+2651	4515	Generation assignment
+2652	4517	Other definitions
+2653	4519	Taxation of multiple skips
+2654	4519	Special rules
+2661	4521	Administration
+2662	4522	Return requirements
+2663	4522	Regulations
+2701	4523	Special valuation rules in case of transfers of certain interests in
+2702	4531	Special valuation rules in case of transfers of interests in trusts
+2703	4532	Certain rights and restrictions disregarded
+2704	4533	Treatment of certain lapsing rights and restrictions
+2801	4535	Imposition of tax
+3101	4537	Rate of tax
+3102	4542	Deduction of tax from wages
+3111	4546	Rate of tax
+3112	4562	Instrumentalities of the United States
+3121	4563	Definitions
+3122	4616	Federal service
+3123	4620	Deductions as constructive payments
+3124	4620	Estimate of revenue reduction
+3125	4620	Returns in the case of governmental employees in States, Guam,
+3126	4623	Return and payment by governmental employer
+3127	4623	Exemption for employers and their employees where both are members of
+3128	4625	Short title
+3131	4626	Credit for paid sick leave
+3132	4631	Payroll credit for paid family leave
+3133	4636	Special rule related to tax on employers
+3134	4636	Employee retention credit for employers subject to closure due to
+3201	4644	Rate of tax
+3202	4648	Deduction of tax from compensation
+3211	4652	Rate of tax
+3212	4655	Determination of compensation
+3221	4655	Rate of tax
+3231	4661	Definitions
+3232	4672	Court jurisdiction
+3233	4673	Short title
+3241	4673	Determination of tier 2 tax rate based on average account benefits ratio
+3301	4674	Rate of tax
+3302	4677	Credits against tax
+3303	4688	Conditions of additional credit allowance
+3304	4692	Approval of State laws
+3305	4748	Applicability of State law
+3306	4751	Definitions
+3307	4772	Deductions as constructive payments
+3308	4772	Instrumentalities of the United States
+3309	4773	State law coverage of services performed for nonprofit organizations or
+3310	4776	Judicial review
+3311	4777	Short title
+3321	4778	Imposition of tax
+3322	4779	Definitions
+3401	4781	Definitions
+3402	4791	Income tax collected at source
+3403	4813	Liability for tax
+3404	4814	Return and payment by governmental employer
+3405	4814	Special rules for pensions, annuities, and certain other deferred income
+3406	4820	Backup withholding
+3501	4832	Collection and payment of taxes
+3502	4832	Nondeductibility of taxes in computing taxable income
+3503	4832	Erroneous payments
+3504	4833	Acts to be performed by agents
+3505	4833	Liability of third parties paying or providing for wages
+3506	4834	Individuals providing companion sitting placement services
+3508	4835	Treatment of real estate agents and direct sellers
+3509	4836	Determination of employer's liability for certain employment taxes
+3510	4837	Coordination of collection of domestic service employment taxes with
+3511	4839	Certified professional employer organizations
+3512	4841	Treatment of certain persons as employers with respect to motion picture
+4041	4850	Imposition of tax
+4042	4870	Tax on fuel used in commercial transportation on inland waterways
+4043	4873	Surtax on fuel used in aircraft part of a fractional ownership program
+4051	4876	Imposition of tax on heavy trucks and trailers sold at retail
+4052	4879	Definitions and special rules
+4053	4882	Exemptions
+4064	4886	Gas guzzler tax
+4071	4889	Imposition of tax
+4072	4893	Definitions
+4073	4895	Exemptions
+4081	4896	Imposition of tax
+4082	4914	Exemptions for diesel fuel and kerosene
+4083	4919	Definitions; special rule; administrative authority
+4084	4922	Cross references
+4101	4924	Registration and bond
+4102	4929	Inspection of records by local officers
+4103	4929	Certain additional persons liable for tax where willful failure to pay
+4104	4930	Information reporting for persons claiming certain tax benefits
+4105	4930	Two-party exchanges
+4121	4931	Imposition of tax
+4131	4936	Imposition of tax
+4132	4938	Definitions and special rules
+4161	4942	Imposition of tax
+4162	4946	Definitions; treatment of certain resales
+4181	4949	Imposition of tax
+4182	4949	Exemptions
+4216	4951	Definition of price
+4217	4957	Leases
+4218	4959	Use by manufacturer or importer considered sale
+4219	4961	Application of tax in case of sales by other than manufacturer or importer
+4221	4962	Certain tax-free sales
+4222	4970	Registration
+4223	4973	Special rules relating to further manufacture
+4225	4974	Exemption of articles manufactured or produced by Indians
+4227	4975	Cross reference
+4251	4977	Imposition of tax
+4252	4982	Definitions
+4253	4984	Exemptions
+4254	4988	Computation of tax
+4261	4990	Imposition of tax
+4262	5001	Definition of taxable transportation
+4263	5004	Special rules
+4271	5006	Imposition of tax
+4272	5010	Definition of taxable transportation, etc.
+4281	5011	Small aircraft on nonestablished lines
+4282	5012	Transportation by air for other members of affiliated group
+4291	5014	Cases where persons receiving payment must collect tax
+4293	5015	Exemption for United States and possessions
+4371	5020	Imposition of tax
+4372	5021	Definitions
+4373	5022	Exemptions
+4374	5023	Liability for tax
+4375	5024	Health insurance
+4376	5025	Self-insured health plans
+4377	5026	Definitions and special rules
+4401	5027	Imposition of tax
+4402	5028	Exemptions
+4403	5030	Record requirements
+4404	5030	Territorial extent
+4405	5030	Cross references
+4411	5030	Imposition of tax
+4412	5031	Registration
+4413	5032	Certain provisions made applicable
+4414	5032	Cross references
+4421	5032	Definitions
+4422	5033	Applicability of Federal and State laws
+4423	5033	Inspection of books
+4424	5033	Disclosure of wagering tax information
+4461	5035	Imposition of tax
+4462	5036	Definitions and special rules
+4471	5041	Imposition of tax
+4472	5041	Definitions
+4475	5042	Imposition of tax
+4481	5044	Imposition of tax
+4482	5049	Definitions
+4483	5051	Exemptions
+4484	5056	Cross references
+4501	5057	Repurchase of corporate stock
+4611	5063	Imposition of tax
+4612	5067	Definitions and special rules
+4661	5071	Imposition of tax
+4662	5073	Definitions and special rules
+4671	5081	Imposition of tax
+4672	5082	Definitions and special rules
+4681	5085	Imposition of tax
+4682	5086	Definitions and special rules
+4701	5093	Tax on issuer of registration-required obligation not in registered form
+4901	5095	Payment of tax
+4902	5096	Liability of partners
+4903	5096	Liability in case of business in more than one location
+4904	5096	Liability in case of different businesses of same ownership and location
+4905	5096	Liability in case of death or change of location
+4906	5097	Application of State laws
+4907	5097	Federal agencies or instrumentalities
+4911	5099	Tax on excess expenditures to influence legislation
+4912	5103	Tax on disqualifying lobbying expenditures of certain organizations
+4940	5105	Excise tax based on investment income
+4941	5112	Taxes on self-dealing
+4942	5117	Taxes on failure to distribute income
+4943	5125	Taxes on excess business holdings
+4944	5134	Taxes on investments which jeopardize charitable purpose
+4945	5136	Taxes on taxable expenditures
+4946	5140	Definitions and special rules
+4947	5142	Application of taxes to certain nonexempt trusts
+4948	5144	Application of taxes and denial of exemption with respect to certain
+4951	5145	Taxes on self-dealing
+4952	5148	Taxes on taxable expenditures
+4953	5150	Tax on excess contributions to black lung benefit trusts
+4955	5150	Taxes on political expenditures of section 501(c)(3) organizations
+4958	5153	Taxes on excess benefit transactions
+4959	5158	Taxes on failures by hospital organizations
+4960	5158	Tax on excess tax-exempt organization executive compensation
+4961	5161	Abatement of second tier taxes where there is correction
+4962	5162	Abatement of first tier taxes in certain cases
+4963	5163	Definitions
+4965	5165	Excise tax on certain tax-exempt entities entering into prohibited tax
+4966	5168	Taxes on taxable distributions
+4967	5170	Taxes on prohibited benefits
+4968	5171	Excise tax based on investment income of private colleges and universities
+4971	5175	Taxes on failure to meet minimum funding standards
+4972	5183	Tax on nondeductible contributions to qualified employer plans
+4973	5188	Tax on excess contributions to certain tax-favored accounts and annuities
+4974	5195	Excise tax on certain accumulations in qualified retirement plans
+4975	5197	Tax on prohibited transactions
+4976	5225	Taxes with respect to funded welfare benefit plans
+4977	5227	Tax on certain fringe benefits provided by an employer
+4978	5228	Tax on certain dispositions by employee stock ownership plans and
+4979	5232	Tax on certain excess contributions
+4979A	5234	Tax on certain prohibited allocations of qualified securities
+4980	5237	Tax on reversion of qualified plan assets to employer
+4980B	5244	Failure to satisfy continuation coverage requirements of group health
+4980C	5262	Requirements for issuers of qualified long-term care insurance contracts
+4980D	5263	Failure to meet certain group health plan requirements
+4980E	5267	Failure of employer to make comparable Archer MSA contributions
+4980F	5268	Failure of applicable plans reducing benefit accruals to satisfy notice
+4980G	5271	Failure of employer to make comparable health savings account
+4980H	5272	Shared responsibility for employers regarding health coverage
+4981	5277	Excise tax on undistributed income of real estate investment trusts
+4982	5279	Excise tax on undistributed income of regulated investment companies
+4985	5284	Stock compensation of insiders in expatriated corporations
+4999	5288	Golden parachute payments
+5000	5288	Certain group health plans
+5000A	5290	Requirement to maintain minimum essential coverage
+5000B	5299	Imposition of tax on indoor tanning services
+5000C	5300	Imposition of tax on certain foreign procurement
+5000D	5301	Designated drugs during noncompliance periods
+5001	5305	Imposition, rate, and attachment of tax
+5002	5315	Definitions
+5003	5318	Cross references to exemptions, etc.
+5004	5319	Lien for tax
+5005	5320	Persons liable for tax
+5006	5323	Determination of tax
+5007	5325	Collection of tax on distilled spirits
+5008	5326	Abatement, remission, refund, and allowance for loss or destruction of
+5010	5330	Credit for wine content and for flavors content
+5011	5332	Income tax credit for average cost of carrying excise tax
+5041	5335	Imposition and rate of tax
+5042	5342	Exemption from tax
+5043	5343	Collection of taxes on wines
+5044	5344	Refund of tax on wine
+5045	5345	Cross references
+5051	5346	Imposition and rate of tax
+5052	5351	Definitions
+5053	5352	Exemptions
+5054	5354	Determination and collection of tax on beer
+5055	5356	Drawback of tax
+5056	5356	Refund and credit of tax, or relief from liability
+5061	5358	Method of collecting tax
+5062	5364	Refund and drawback in case of exportation
+5064	5366	Losses resulting from disaster, vandalism, or malicious mischief
+5065	5369	Territorial extent of law
+5066	5369	Distilled spirits for use of foreign embassies, legations, etc.
+5067	5371	Reduced rates not allowed for smuggled or illegally produced beer, wine,
+5068	5371	Cross reference
+5101	5373	Notice of manufacture of still; notice of set up of still
+5102	5374	Definition of manufacturer of stills
+5111	5375	Eligibility
+5112	5377	Registration and regulation
+5113	5377	Investigation of claims
+5114	5378	Drawback
+5121	5380	Recordkeeping by wholesale dealers
+5122	5382	Recordkeeping by retail dealers
+5123	5383	Preservation and inspection of records, and entry of premises for
+5124	5384	Registration by dealers
+5131	5385	Packaging distilled spirits for industrial uses
+5132	5386	Prohibited purchases by dealers
+5171	5388	Establishment
+5172	5390	Application
+5173	5391	Bonds
+5175	5394	Export bonds
+5176	5395	New or renewed bonds
+5177	5396	Other provisions relating to bonds
+5178	5397	Premises of distilled spirits plants
+5179	5399	Registration of stills
+5180	5400	Signs
+5181	5401	Distilled spirits for fuel use
+5182	5403	Cross references
+5201	5404	Regulation of operations
+5202	5406	Supervision of operations
+5203	5406	Entry and examination of premises
+5204	5408	Gauging
+5206	5409	Containers
+5207	5410	Records and reports
+5211	5413	Production and entry of distilled spirits
+5212	5414	Transfer of distilled spirits between bonded premises
+5213	5415	Withdrawal of distilled spirits from bonded premises on determination of
+5214	5415	Withdrawal of distilled spirits from bonded premises free of tax or
+5215	5418	Return of tax determined distilled spirits to bonded premises
+5216	5420	Regulation of operations
+5221	5421	Commencement, suspension, and resumption of operations
+5222	5421	Production, receipt, removal, and use of distilling materials
+5223	5423	Redistillation of spirits, articles, and residues
+5231	5425	Entry for deposit
+5232	5425	Imported distilled spirits
+5235	5427	Bottling of alcohol for industrial purposes
+5236	5428	Discontinuance of storage facilities and transfer of distilled spirits
+5241	5429	Authority to denature
+5242	5429	Denaturing materials
+5243	5430	Sale of abandoned spirits for denaturation without collection of tax
+5244	5430	Cross references
+5271	5431	Permits
+5272	5433	Bonds
+5273	5434	Sale, use, and recovery of denatured distilled spirits
+5274	5435	Applicability of other laws
+5275	5436	Records and reports
+5291	5437	General
+5301	5438	General
+5311	5441	Detention of containers
+5312	5441	Production and use of distilled spirits for experimental research
+5313	5442	Withdrawal of distilled spirits from customs custody free of tax for use of
+5314	5442	Special applicability of certain provisions
+5351	5446	Bonded wine cellar
+5352	5447	Taxpaid wine bottling house
+5353	5447	Bonded wine warehouse
+5354	5447	Bond
+5355	5448	General provisions relating to bonds
+5356	5448	Application
+5357	5449	Premises
+5361	5450	Bonded wine cellar operations
+5362	5450	Removals of wine from bonded wine cellars
+5363	5453	Taxpaid wine bottling house operations
+5364	5453	Wine imported in bulk
+5365	5454	Segregation of operations
+5366	5454	Supervision
+5367	5455	Records
+5368	5455	Gauging and marking
+5369	5456	Inventories
+5370	5456	Losses
+5371	5457	Insurance coverage, etc.
+5372	5457	Sampling
+5373	5457	Wine spirits
+5381	5459	Natural wine
+5382	5460	Cellar treatment of natural wine
+5383	5462	Amelioration and sweetening limitations for natural grape wines
+5384	5463	Amelioration and sweetening limitations for natural fruit and berry wines
+5385	5465	Specially sweetened natural wines
+5386	5466	Special natural wines
+5387	5466	Agricultural wines
+5388	5467	Designation of wines
+5391	5469	Exemption from distilled spirits taxes
+5392	5470	Definitions
+5401	5471	Qualifying documents
+5402	5472	Definitions
+5403	5473	Cross references
+5411	5474	Use of brewery
+5412	5475	Removal of beer in containers or by pipeline
+5413	5475	Brewers procuring beer from other brewers
+5414	5476	Transfer of beer between bonded facilities
+5415	5477	Records and returns
+5416	5477	Definitions of package and packaging
+5417	5478	Pilot brewing plants
+5418	5478	Beer imported in bulk
+5501	5479	Establishment
+5502	5479	Qualification
+5503	5480	Construction and equipment
+5504	5480	Operation
+5505	5481	Applicability of provisions of this chapter
+5511	5482	Establishment and operation
+5512	5483	Control of products after manufacture
+5551	5485	General provisions relating to bonds
+5552	5486	Installation of meters, tanks, and other apparatus
+5553	5487	Supervision of premises and operations
+5554	5487	Pilot operations
+5555	5487	Records, statements, and returns
+5556	5489	Regulations
+5557	5489	Officers and agents authorized to investigate, issue search warrants, and
+5558	5490	Authority of enforcement officers
+5559	5490	Determinations
+5560	5491	Other provisions applicable
+5561	5491	Exemptions to meet the requirements of the national defense
+5562	5491	Exemptions from certain requirements in cases of disaster
+5601	5493	Criminal penalties
+5602	5496	Penalty for tax fraud by distiller
+5603	5496	Penalty relating to records, returns, and reports
+5604	5497	Penalties relating to marks, brands, and containers
+5605	5499	Penalty relating to return of materials used in the manufacture of distilled
+5606	5499	Penalty relating to containers of distilled spirits
+5607	5500	Penalty and forfeiture for unlawful use, recovery, or concealment of
+5608	5500	Penalty and forfeiture for fraudulent claims for export drawback or
+5609	5501	Destruction of unregistered stills, distilling apparatus, equipment, and
+5610	5502	Disposal of forfeited equipment and material for distilling
+5611	5502	Release of distillery before judgment
+5612	5503	Forfeiture of taxpaid distilled spirits remaining on bonded premises
+5613	5503	Forfeiture of distilled spirits not closed, marked, or branded as required
+5614	5504	Burden of proof in cases of seizure of spirits
+5615	5505	Property subject to forfeiture
+5661	5509	Penalty and forfeiture for violation of laws and regulations relating to
+5662	5509	Penalty for alteration of wine labels
+5663	5510	Cross reference
+5671	5511	Penalty and forfeiture for evasion of beer tax and fraudulent
+5672	5511	Penalty for failure of brewer to comply with requirements and to keep
+5673	5512	Forfeiture for flagrant and willful removal of beer without taxpayment
+5674	5512	Penalty for unlawful production or removal of beer
+5675	5513	Penalty for intentional removal or defacement of brewer's marks and
+5681	5514	Penalty relating to signs
+5682	5515	Penalty for breaking locks or gaining access
+5683	5516	Penalty and forfeiture for removal of liquors under improper brands
+5684	5516	Penalties relating to the payment and collection of liquor taxes
+5685	5517	Penalty and forfeiture relating to possession of devices for emitting gas,
+5686	5518	Penalty for having, possessing, or using liquor or property intended to be
+5687	5519	Penalty for offenses not specifically covered
+5688	5519	Disposition and release of seized property
+5690	5521	Definition of the term "person"
+5701	5523	Rate of tax
+5702	5531	Definitions
+5703	5536	Liability for tax and method of payment
+5704	5540	Exemption from tax
+5705	5543	Credit, refund, or allowance of tax
+5706	5544	Drawback of tax
+5708	5544	Losses caused by disaster
+5711	5546	Bond
+5712	5547	Application for permit
+5713	5548	Permit
+5721	5550	Inventories
+5722	5551	Reports
+5723	5552	Packages, marks, labels, and notices
+5731	5553	Imposition and rate of tax
+5732	5554	Payment of tax
+5733	5555	Provisions relating to liability for occupational taxes
+5734	5557	Application of State laws
+5741	5557	Records to be maintained
+5751	5559	Purchase, receipt, possession, or sale of tobacco products and cigarette
+5752	5560	Restrictions relating to marks, labels, notices, and packages
+5753	5560	Disposal of forfeited, condemned, and abandoned tobacco products, and
+5754	5561	Restriction on importation of previously exported tobacco products
+5761	5562	Civil penalties
+5762	5566	Criminal penalties
+5763	5567	Forfeitures
+5801	5569	Imposition of tax
+5802	5571	Registration of importers, manufacturers, and dealers
+5811	5572	Transfer tax
+5812	5572	Transfers
+5821	5573	Making tax
+5822	5574	Making
+5841	5575	Registration of firearms
+5842	5576	Identification of firearms
+5843	5577	Records and returns
+5844	5577	Importation
+5845	5578	Definitions
+5846	5580	Other laws applicable
+5847	5580	Effect on other laws
+5848	5581	Restrictive use of information
+5849	5581	Citation of chapter
+5851	5582	Special (occupational) tax exemption
+5852	5583	General transfer and making tax exemption
+5853	5583	Transfer and making tax exemption available to certain governmental
+5854	5584	Exportation of firearms exempt from transfer tax
+5861	5585	Prohibited acts
+5871	5586	Penalties
+5872	5587	Forfeitures
+5881	5587	Greenmail
+5891	5589	Structured settlement factoring transactions
+6001	5593	Notice or regulations requiring records, statements, and special returns
+6011	5594	General requirement of return, statement, or list
+6012	5602	Persons required to make returns of income
+6013	5609	Joint returns of income tax by husband and wife
+6014	5618	Income tax return—tax not computed by taxpayer
+6015	5620	Relief from joint and several liability on joint return
+6017	5627	Self-employment tax returns
+6018	5628	Estate tax returns
+6019	5630	Gift tax returns
+6020	5632	Returns prepared for or executed by Secretary
+6021	5632	Listing by Secretary of taxable objects owned by nonresidents of internal
+6031	5635	Return of partnership income
+6032	5639	Returns of banks with respect to common trust funds
+6033	5639	Returns by exempt organizations
+6034	5650	Returns by certain trusts
+6034A	5652	Information to beneficiaries of estates and trusts
+6035	5654	Basis information to persons acquiring property from decedent
+6036	5655	Notice of qualification as executor or receiver
+6037	5655	Return of S corporation
+6038	5657	Information reporting with respect to certain foreign corporations and
+6038A	5663	Information with respect to certain foreign-owned corporations
+6038B	5669	Notice of certain transfers to foreign persons
+6038C	5671	Information with respect to foreign corporations engaged in U.S.
+6038D	5672	Information with respect to foreign financial assets
+6038E	5674	Information with respect to assignment of lower rates or refunds by
+6039	5674	Returns required in connection with certain options
+6039C	5677	Returns with respect to foreign persons holding direct investments in
+6039D	5679	Returns and records with respect to certain fringe benefit plans
+6039E	5681	Information concerning resident status
+6039F	5682	Notice of large gifts received from foreign persons
+6039G	5683	Information on individuals losing United States citizenship
+6039H	5686	Information with respect to Alaska Native Settlement Trusts and Native
+6039I	5687	Returns and records with respect to employer-owned life insurance
+6039J	5688	Information reporting with respect to Commodity Credit Corporation
+6039K	5689	Returns with respect to qualified opportunity funds and qualified rural
+6039L	5692	Information required from qualified opportunity zone businesses and
+6040	5693	Cross references
+6041	5696	Information at source
+6041A	5700	Returns regarding payments of remuneration for services and direct
+6042	5703	Returns regarding payments of dividends and corporate earnings and
+6043	5705	Liquidating, etc., transactions
+6043A	5707	Returns relating to taxable mergers and acquisitions
+6044	5708	Returns regarding payments of patronage dividends
+6045	5711	Returns of brokers
+6045A	5718	Information required in connection with transfers of covered securities
+6045B	5719	Returns relating to actions affecting basis of specified securities
+6046	5720	Returns as to organization or reorganization of foreign corporations and
+6046A	5723	Returns as to interests in foreign partnerships
+6047	5724	Information relating to certain trusts and annuity plans
+6048	5728	Information with respect to certain foreign trusts
+6049	5731	Returns regarding payments of interest
+6050A	5740	Reporting requirements of certain fishing boat operators
+6050AA	5778	Returns relating to applicable passenger vehicle loan interest received
+6050B	5741	Returns relating to unemployment compensation
+6050D	5743	Returns relating to energy grants and financing
+6050E	5743	State and local income tax refunds
+6050F	5744	Returns relating to social security benefits
+6050G	5746	Returns relating to certain railroad retirement benefits
+6050H	5747	Returns relating to mortgage interest received in trade or business from
+6050I	5750	Returns relating to cash received in trade or business, etc.
+6050J	5754	Returns relating to foreclosures and abandonments of security
+6050K	5755	Returns relating to exchanges of certain partnership interests
+6050L	5757	Returns relating to certain donated property
+6050M	5758	Returns relating to persons receiving contracts from Federal executive
+6050N	5760	Returns regarding payments of royalties
+6050P	5761	Returns relating to the cancellation of indebtedness by certain entities
+6050Q	5762	Certain long-term care benefits
+6050R	5763	Returns relating to certain purchases of fish
+6050S	5764	Returns relating to higher education tuition and related expenses
+6050T	5768	Returns relating to credit for health insurance costs of eligible
+6050U	5769	Charges or payments for qualified long-term care insurance contracts
+6050V	5769	Returns relating to applicable insurance contracts in which certain
+6050W	5771	Returns relating to payments made in settlement of payment card and
+6050X	5774	Information with respect to certain fines, penalties, and other amounts
+6050Y	5775	Returns relating to certain life insurance contract transactions
+6050Z	5777	Reports relating to long-term care premium statements
+6051	5779	Receipts for employees
+6052	5787	Returns regarding payment of wages in the form of group-term life
+6053	5788	Reporting of tips
+6055	5791	Reporting of health insurance coverage
+6056	5793	Certain employers required to report on health insurance coverage
+6057	5797	Annual registration, etc.
+6058	5799	Information required in connection with certain plans of deferred
+6059	5803	Periodic report of actuary
+6060	5804	Information returns of tax return preparers
+6061	5806	Signing of returns and other documents
+6062	5807	Signing of corporation returns
+6063	5807	Signing of partnership returns
+6064	5807	Signature presumed authentic
+6065	5807	Verification of returns
+6071	5808	Time for filing returns and other documents
+6072	5809	Time for filing income tax returns
+6075	5812	Time for filing estate and gift tax returns
+6081	5814	Extension of time for filing returns
+6091	5816	Place for filing returns or other documents
+6096	5820	Designation by individuals
+6101	5824	Period covered by returns or other documents
+6102	5824	Computations on returns or other documents
+6103	5825	Confidentiality and disclosure of returns and return information
+6104	5898	Publicity of information required from certain exempt organizations and
+6105	5907	Confidentiality of information arising under treaty obligations
+6107	5909	Tax return preparer must furnish copy of return to taxpayer and must
+6108	5910	Statistical publications and studies
+6109	5911	Identifying numbers
+6110	5919	Public inspection of written determinations
+6111	5929	Disclosure of reportable transactions
+6112	5931	Material advisors of reportable transactions must keep lists of advisees,
+6113	5932	Disclosure of nondeductibility of contributions
+6114	5933	Treaty-based return positions
+6115	5934	Disclosure related to quid pro quo contributions
+6116	5935	Requirement for prisons located in United States to provide information
+6117	5935	Cross reference
+6151	5936	Time and place for paying tax shown on returns
+6155	5939	Payment on notice and demand
+6157	5940	Payment of Federal unemployment tax on quarterly or other time period
+6159	5943	Agreements for payment of tax liability in installments
+6161	5946	Extension of time for paying tax
+6163	5949	Extension of time for payment of estate tax on value of reversionary or
+6164	5951	Extension of time for payment of taxes by corporations expecting
+6165	5953	Bonds where time to pay tax or deficiency has been extended
+6166	5953	Extension of time for payment of estate tax where estate consists largely of
+6167	5964	Extension of time for payment of tax attributable to recovery of foreign
+6201	5967	Assessment authority
+6202	5971	Establishment by regulations of mode or time of assessment
+6203	5971	Method of assessment
+6204	5971	Supplemental assessments
+6205	5972	Special rules applicable to certain employment taxes
+6206	5973	Special rules applicable to excessive claims under certain sections
+6207	5975	Cross references
+6211	5976	Definition of a deficiency
+6212	5981	Notice of deficiency
+6213	5985	Restrictions applicable to deficiencies; petition to Tax Court
+6214	5997	Determinations by Tax Court
+6215	6000	Assessment of deficiency found by Tax Court
+6216	6001	Cross references
+6221	6002	Determination at partnership level
+6222	6003	Partner's return must be consistent with partnership return
+6223	6004	Partners bound by actions of partnership
+6225	6005	Partnership adjustment by Secretary
+6226	6010	Alternative to payment of imputed underpayment by partnership
+6227	6013	Administrative adjustment request by partnership
+6231	6014	Notice of proceedings and adjustment
+6232	6016	Assessment, collection, and payment
+6233	6018	Interest and penalties
+6234	6019	Judicial review of partnership adjustment
+6235	6021	Period of limitations on making adjustments
+6241	6023	Definitions and special rules
+6301	6027	Collection authority
+6302	6028	Mode or time of collection
+6303	6034	Notice and demand for tax
+6304	6035	Fair tax collection practices
+6305	6036	Collection of certain liability
+6306	6037	Qualified tax collection contracts
+6307	6041	Special compliance personnel program account
+6311	6043	Payment of tax by commercially acceptable means
+6313	6046	Fractional parts of a cent
+6314	6046	Receipt for taxes
+6315	6047	Payments of estimated income tax
+6316	6047	Payment by foreign currency
+6317	6047	Payments of Federal unemployment tax for calendar quarter
+6320	6048	Notice and opportunity for hearing upon filing of notice of lien
+6321	6050	Lien for taxes
+6322	6051	Period of lien
+6323	6051	Validity and priority against certain persons
+6324	6061	Special liens for estate and gift taxes
+6324A	6063	Special lien for estate tax deferred under section 6166
+6324B	6066	Special lien for additional estate tax attributable to farm, etc., valuation
+6325	6067	Release of lien or discharge of property
+6326	6071	Administrative appeal of liens
+6327	6071	Cross references
+6330	6073	Notice and opportunity for hearing before levy
+6331	6078	Levy and distraint
+6332	6084	Surrender of property subject to levy
+6333	6087	Production of books
+6334	6087	Property exempt from levy
+6335	6094	Sale of seized property
+6336	6097	Sale of perishable goods
+6337	6098	Redemption of property
+6338	6099	Certificate of sale; deed of real property
+6339	6099	Legal effect of certificate of sale of personal property and deed of real
+6340	6101	Records of sale
+6341	6102	Expense of levy and sale
+6342	6102	Application of proceeds of levy
+6343	6103	Authority to release levy and return property
+6344	6106	Cross references
+6401	6108	Amounts treated as overpayments
+6402	6111	Authority to make credits or refunds
+6403	6121	Overpayment of installment
+6404	6121	Abatements
+6405	6127	Reports of refunds and credits
+6406	6129	Prohibition of administrative review of decisions
+6407	6130	Date of allowance of refund or credit
+6408	6130	State escheat laws not to apply
+6409	6130	Refunds disregarded in the administration of Federal programs and
+6411	6133	Tentative carryback and refund adjustments
+6412	6138	Floor stocks refunds
+6413	6143	Special rules applicable to certain employment taxes
+6414	6150	Income tax withheld
+6415	6150	Credits or refunds to persons who collected certain taxes
+6416	6151	Certain taxes on sales and services
+6417	6165	Elective payment of applicable credits
+6418	6171	Transfer of certain credits
+6419	6175	Excise tax on wagering
+6420	6175	Gasoline used on farms
+6421	6180	Gasoline used for certain nonhighway purposes, used by local transit
+6422	6190	Cross references
+6423	6192	Conditions to allowance in the case of alcohol and tobacco taxes
+6425	6194	Adjustment of overpayment of estimated income tax by corporation
+6426	6196	Credit for alcohol fuel, biodiesel, and alternative fuel mixtures
+6427	6207	Fuels not used for taxable purposes
+6428	6231	2020 recovery rebates for individuals
+6428A	6237	Additional 2020 recovery rebates for individuals
+6428B	6245	2021 recovery rebates to individuals
+6430	6250	Treatment of tax imposed at Leaking Underground Storage Tank Trust
+6432	6251	Continuation coverage premium assistance
+6433	6254	Saver's Match
+6434	6260	Trump accounts contribution pilot program
+6435	6261	Dyed fuel
+6501	6262	Limitations on assessment and collection
+6502	6280	Collection after assessment
+6503	6281	Suspension of running of period of limitation
+6504	6290	Cross references
+6511	6293	Limitations on credit or refund
+6512	6304	Limitations in case of petition to Tax Court
+6513	6308	Time return deemed filed and tax considered paid
+6514	6310	Credits or refunds after period of limitation
+6515	6310	Cross references
+6521	6312	Mitigation of effect of limitation in case of related taxes under different
+6531	6312	Periods of limitation on criminal prosecutions
+6532	6314	Periods of limitation on suits
+6533	6315	Cross references
+6601	6316	Interest on underpayment, nonpayment, or extensions of time for
+6602	6326	Interest on erroneous refund recoverable by suit
+6603	6326	Deposits made to suspend running of interest on potential underpayments,
+6611	6328	Interest on overpayments
+6612	6334	Cross references
+6621	6335	Determination of rate of interest
+6622	6340	Interest compounded daily
+6631	6340	Notice requirements
+6651	6342	Failure to file tax return or to pay tax
+6652	6348	Failure to file certain information returns, registration statements, etc.
+6653	6363	Failure to pay stamp tax
+6654	6366	Failure by individual to pay estimated income tax
+6655	6380	Failure by corporation to pay estimated income tax
+6656	6397	Failure to make deposit of taxes
+6657	6400	Bad checks
+6658	6400	Coordination with title 11
+6659	6401	Improper claim for Trump account contribution pilot program credit
+6662	6402	Imposition of accuracy-related penalty on underpayments
+6662A	6412	Imposition of accuracy-related penalty on understatements with respect
+6663	6414	Imposition of fraud penalty
+6664	6415	Definitions and special rules
+6665	6418	Applicable rules
+6671	6423	Rules for application of assessable penalties
+6672	6423	Failure to collect and pay over tax, or attempt to evade or defeat tax
+6673	6426	Sanctions and costs awarded by courts
+6674	6428	Fraudulent statement or failure to furnish statement to employee
+6675	6428	Excessive claims with respect to the use of certain fuels
+6676	6430	Erroneous claim for refund or credit
+6677	6431	Failure to file information with respect to certain foreign trusts
+6679	6433	Failure to file returns, etc., with respect to foreign corporations or foreign
+6682	6435	False information with respect to withholding
+6684	6437	Assessable penalties with respect to liability for tax under chapter 42
+6685	6437	Assessable penalty with respect to public inspection requirements for
+6686	6438	Failure to file returns or supply information by DISC or former FSC
+6688	6439	Assessable penalties with respect to information required to be furnished
+6689	6440	Failure to file notice of redetermination of foreign tax
+6690	6440	Fraudulent statement or failure to furnish statement to plan participant
+6692	6441	Failure to file actuarial report
+6693	6441	Failure to provide reports on certain tax-favored accounts or annuities;
+6694	6445	Understatement of taxpayer's liability by tax return preparer
+6695	6448	Other assessable penalties with respect to the preparation of tax returns
+6695A	6452	Substantial and gross valuation misstatements attributable to incorrect
+6695B	6451	Penalty for substantial misstatements on certification provided by
+6696	6453	Rules applicable with respect to sections 6694, 6695, 6695A, and 6695B
+6698	6455	Failure to file partnership return
+6699	6457	Failure to file S corporation return
+6700	6459	Promoting abusive tax shelters, etc.
+6701	6461	Penalties for aiding and abetting understatement of tax liability
+6702	6462	Frivolous tax submissions
+6703	6464	Rules applicable to penalties under sections 6700, 6701, and 6702
+6704	6465	Failure to keep records necessary to meet reporting requirements under
+6705	6466	Failure by broker to provide notice to payors
+6706	6467	Original issue discount information requirements
+6707	6467	Failure to furnish information regarding reportable transactions
+6707A	6469	Penalty for failure to include reportable transaction information with
+6708	6471	Failure to maintain lists of advisees with respect to reportable
+6709	6472	Penalties with respect to mortgage credit certificates
+6710	6473	Failure to disclose that contributions are nondeductible
+6711	6473	Failure by tax-exempt organization to disclose that certain information or
+6712	6474	Failure to disclose treaty-based return positions
+6713	6475	Disclosure or use of information by preparers of returns
+6714	6476	Failure to meet disclosure requirements applicable to quid pro quo
+6715	6476	Dyed fuel sold for use or used in taxable use, etc.
+6715A	6478	Tampering with or failing to maintain security requirements for
+6717	6479	Refusal of entry
+6718	6479	Failure to display tax registration on vessels
+6719	6480	Failure to register or reregister
+6720	6481	Fraudulent acknowledgments with respect to donations of motor vehicles,
+6720A	6481	Penalty with respect to certain adulterated fuels
+6720B	6482	Fraudulent identification of exempt use property
+6720C	6482	Penalty for failure to notify health plan of cessation of eligibility for
+6721	6483	Failure to file correct information returns
+6722	6488	Failure to furnish correct payee statements
+6723	6492	Failure to comply with other information reporting requirements
+6724	6492	Waiver; definitions and special rules
+6725	6506	Failure to report information under section 4101
+6726	6506	Failure to comply with information reporting requirements relating to
+6751	6507	Procedural requirements
+6801	6509	Authority for establishment, alteration, and distribution
+6802	6509	Supply and distribution
+6803	6510	Accounting and safeguarding
+6804	6510	Attachment and cancellation
+6805	6511	Redemption of stamps
+6806	6512	Occupational tax stamps
+6807	6512	Stamping, marking, and branding seized goods
+6808	6512	Special provisions relating to stamps
+6851	6514	Termination assessments of income tax
+6852	6516	Termination assessments in case of flagrant political expenditures of
+6861	6517	Jeopardy assessments of income, estate, gift, and certain excise taxes
+6862	6519	Jeopardy assessment of taxes other than income, estate, gift, and certain
+6863	6520	Stay of collection of jeopardy assessments
+6864	6522	Termination of extended period for payment in case of carryback
+6867	6522	Presumptions where owner of large amount of cash is not identified
+6871	6524	Claims for income, estate, gift, and certain excise taxes in receivership
+6872	6525	Suspension of period on assessment
+6873	6526	Unpaid claims
+6901	6526	Transferred assets
+6902	6529	Provisions of special application to transferees
+6903	6529	Notice of fiduciary relationship
+6904	6529	Prohibition of injunctions
+6905	6530	Discharge of executor from personal liability for decedent's income and
+7001	6531	Collection of foreign items
+7011	6531	Registration—persons paying a special tax
+7012	6531	Cross references
+7101	6533	Form of bonds
+7102	6533	Single bond in lieu of multiple bonds
+7103	6533	Cross references—Other provisions for bonds
+7121	6535	Closing agreements
+7122	6536	Compromises
+7123	6539	Appeals dispute resolution procedures
+7124	6540	Cross references
+7201	6541	Attempt to evade or defeat tax
+7202	6542	Willful failure to collect or pay over tax
+7203	6542	Willful failure to file return, supply information, or pay tax
+7204	6543	Fraudulent statement or failure to make statement to employees
+7205	6543	Fraudulent withholding exemption certificate or failure to supply
+7206	6545	Fraud and false statements
+7207	6546	Fraudulent returns, statements, or other documents
+7208	6547	Offenses relating to stamps
+7209	6548	Unauthorized use or sale of stamps
+7210	6548	Failure to obey summons
+7211	6550	False statements to purchasers or lessees relating to tax
+7212	6550	Attempts to interfere with administration of internal revenue laws
+7213	6550	Unauthorized disclosure of information
+7213A	6555	Unauthorized inspection of returns or return information
+7214	6556	Offenses by officers and employees of the United States
+7215	6557	Offenses with respect to collected taxes
+7216	6558	Disclosure or use of information by preparers of returns
+7217	6559	Prohibition on executive branch influence over taxpayer audits and other
+7231	6561	Failure to obtain license for collection of foreign items
+7232	6561	Failure to register or reregister under section 4101, false representations
+7261	6565	Representation that retailers' excise tax is excluded from price of article
+7262	6565	Violation of occupational tax laws relating to wagering—failure to pay
+7268	6566	Possession with intent to sell in fraud of law or to evade tax
+7269	6566	Failure to produce records
+7270	6567	Insurance policies
+7271	6567	Penalties for offenses relating to stamps
+7272	6568	Penalty for failure to register or reregister
+7273	6569	Penalties for offenses relating to special taxes
+7275	6570	Penalty for offenses relating to certain airline tickets and advertising
+7301	6572	Property subject to tax
+7302	6572	Property used in violation of internal revenue laws
+7303	6573	Other property subject to forfeiture
+7304	6574	Penalty for fraudulently claiming drawback
+7321	6575	Authority to seize property subject to forfeiture
+7322	6575	Delivery of seized personal property to United States marshal
+7323	6575	Judicial action to enforce forfeiture
+7324	6575	Special disposition of perishable goods
+7325	6577	Personal property valued at $100,000 or less
+7327	6578	Customs laws applicable
+7328	6578	Cross references
+7341	6579	Penalty for sales to evade tax
+7342	6579	Penalty for refusal to permit entry or examination
+7343	6579	Definition of term "person"
+7344	6580	Extended application of penalties relating to officers of the Treasury
+7345	6580	Revocation or denial of passport in case of certain tax delinquencies
+7401	6583	Authorization
+7402	6583	Jurisdiction of district courts
+7403	6584	Action to enforce lien or to subject property to payment of tax
+7404	6585	Authority to bring civil action for estate taxes
+7405	6586	Action for recovery of erroneous refunds
+7406	6586	Disposition of judgments and moneys recovered
+7407	6586	Action to enjoin tax return preparers
+7408	6587	Actions to enjoin specified conduct related to tax shelters and reportable
+7409	6589	Action to enjoin flagrant political expenditures of section 501(c)(3)
+7410	6590	Cross references
+7421	6591	Prohibition of suits to restrain assessment or collection
+7422	6592	Civil actions for refund
+7423	6598	Repayments to officers or employees
+7424	6598	Intervention
+7425	6599	Discharge of liens
+7426	6601	Civil actions by persons other than taxpayers
+7427	6604	Tax return preparers
+7428	6605	Declaratory judgments relating to status and classification of
+7429	6608	Review of jeopardy levy or assessment procedures
+7430	6611	Awarding of costs and certain fees
+7431	6619	Civil damages for unauthorized inspection or disclosure of returns and
+7432	6621	Civil damages for failure to release lien
+7433	6622	Civil damages for certain unauthorized collection actions
+7433A	6624	Civil damages for certain unauthorized collection actions by persons
+7434	6625	Civil damages for fraudulent filing of information returns
+7435	6626	Civil damages for unauthorized enticement of information disclosure
+7436	6627	Proceedings for determination of employment status
+7437	6628	Cross references
+7441	6630	Status
+7442	6631	Jurisdiction
+7443	6632	Membership
+7443A	6634	Special trial judges
+7444	6636	Organization
+7445	6637	Offices
+7446	6637	Times and places of sessions
+7447	6637	Retirement
+7447A	6645	Retirement for special trial judges
+7448	6647	Annuities to surviving spouses and dependent children of judges and
+7451	6660	Petitions
+7452	6661	Representation of parties
+7453	6662	Rules of practice, procedure, and evidence
+7454	6663	Burden of proof in fraud, foundation manager, and transferee cases
+7455	6664	Service of process
+7456	6665	Administration of oaths and procurement of testimony
+7457	6668	Witness fees
+7458	6668	Hearings
+7459	6669	Reports and decisions
+7460	6670	Provisions of special application to divisions
+7461	6671	Publicity of proceedings
+7462	6671	Publication of reports
+7463	6672	Disputes involving $50,000 or less
+7464	6675	Intervention by trustee of debtor's estate
+7465	6675	Provisions of special application to transferees
+7466	6675	Judicial conduct and disability procedures
+7470	6676	Administration
+7470A	6676	Judicial conference
+7471	6677	Employees
+7472	6679	Expenditures
+7473	6680	Disposition of fees
+7474	6681	Fee for transcript of record
+7475	6681	Practice fee
+7476	6682	Declaratory judgments relating to qualification of certain retirement
+7477	6684	Declaratory judgments relating to value of certain gifts
+7478	6685	Declaratory judgments relating to status of certain governmental
+7479	6686	Declaratory judgments relating to eligibility of estate with respect to
+7481	6687	Date when Tax Court decision becomes final
+7482	6690	Courts of review
+7483	6695	Notice of appeal
+7484	6695	Change of incumbent in office
+7485	6696	Bond to stay assessment and collection
+7486	6697	Refund, credit, or abatement of amounts disallowed
+7487	6697	Cross references
+7491	6698	Burden of proof
+7501	6701	Liability for taxes withheld or collected
+7502	6701	Timely mailing treated as timely filing and paying
+7503	6704	Time for performance of acts where last day falls on Saturday, Sunday, or
+7504	6705	Fractional parts of a dollar
+7505	6705	Sale of personal property acquired by the United States
+7506	6706	Administration of real estate acquired by the United States
+7507	6707	Exemption of insolvent banks from tax
+7508	6708	Time for performing certain acts postponed by reason of service in
+7508A	6712	Authority to postpone certain deadlines by reason of Federally declared
+7509	6718	Expenditures incurred by the United States Postal Service
+7510	6718	Exemption from tax of domestic goods purchased for the United States
+7512	6719	Separate accounting for certain collected taxes, etc.
+7513	6720	Reproduction of returns and other documents
+7514	6721	Authority to prescribe or modify seals
+7516	6722	Supplying training and training aids on request
+7517	6722	Furnishing on request of statement explaining estate or gift valuation
+7518	6723	Tax incentives relating to merchant marine capital construction funds
+7519	6730	Required payments for entities electing not to have required taxable year
+7520	6734	Valuation tables
+7521	6735	Procedures involving taxpayer interviews
+7522	6737	Content of tax due, deficiency, and other notices
+7523	6737	Graphic presentation of major categories of Federal outlays and income
+7524	6739	Annual notice of tax delinquency
+7525	6739	Confidentiality privileges relating to taxpayer communications
+7526	6740	Low-income taxpayer clinics
+7526A	6742	Return preparation programs for applicable taxpayers
+7527	6745	Advance payment of credit for health insurance costs of eligible
+7527A	6748	Advance payment of child tax credit
+7528	6751	Internal Revenue Service user fees
+7529	6753	Notification of suspected identity theft
+7530	6755	Application of earned income tax credit to possessions of the United States
+7601	6758	Canvass of districts for taxable persons and objects
+7602	6759	Examination of books and witnesses
+7603	6761	Service of summons
+7604	6764	Enforcement of summons
+7605	6766	Time and place of examination
+7606	6768	Entry of premises for examination of taxable objects
+7608	6768	Authority of internal revenue enforcement officers
+7609	6772	Special procedures for third-party summonses
+7610	6779	Fees and costs for witnesses
+7611	6781	Restrictions on church tax inquiries and examinations
+7612	6786	Special procedures for summonses for computer software
+7613	6789	Cross references
+7621	6790	Internal revenue districts
+7622	6791	Authority to administer oaths and certify
+7623	6791	Expenses of detection of underpayments and fraud, etc.
+7624	6796	Reimbursement to State and local law enforcement agencies
+7651	6797	Administration and collection of taxes in possessions
+7652	6799	Shipments to the United States
+7653	6808	Shipments from the United States
+7654	6809	Coordination of United States and certain possession individual income
+7655	6810	Cross references
+7701	6812	Definitions
+7702	6854	Life insurance contract defined
+7702A	6864	Modified endowment contract defined
+7702B	6868	Treatment of qualified long-term care insurance
+7703	6875	Determination of marital status
+7704	6876	Certain publicly traded partnerships treated as corporations
+7705	6881	Certified professional employer organizations
+7801	6884	Authority of Department of the Treasury
+7802	6898	Internal Revenue Service Oversight Board
+7803	6904	Commissioner of Internal Revenue; other officials
+7804	6915	Other personnel
+7805	6921	Rules and regulations
+7806	6924	Construction of title
+7807	6924	Rules in effect upon enactment of this title
+7808	6925	Depositaries for collections
+7809	6925	Deposit of collections
+7810	6927	Revolving fund for redemption of real property
+7811	6928	Taxpayer Assistance Orders
+7812	6930	Streamlined critical pay authority for information technology positions
+7851	6931	Applicability of revenue laws
+7852	6937	Other applicable rules
+7871	6938	Indian tribal governments treated as States for certain purposes
+7872	6944	Treatment of loans with below-market interest rates
+7873	6953	Income derived by Indians from exercise of fishing rights
+7874	6954	Rules relating to expatriated entities and their foreign parents
+8001	6958	Authorization
+8002	6959	Membership
+8003	6960	Election of chairman and vice chairman
+8004	6960	Appointment and compensation of staff
+8005	6960	Payment of expenses
+8021	6960	Powers
+8022	6962	Duties
+8023	6964	Additional powers to obtain data
+9001	6966	Short title
+9002	6967	Definitions
+9003	6969	Condition for eligibility for payments
+9004	6971	Entitlement of eligible candidates to payments
+9005	6972	Certification by Commission
+9006	6973	Payments to eligible candidates
+9007	6975	Examinations and audits; repayments
+9008	6976	Payments for presidential nominating conventions
+9009	6979	Reports to Congress; regulations
+9010	6981	Participation by Commission in judicial proceedings
+9011	6982	Judicial review
+9012	6983	Criminal penalties
+9031	6986	Short title
+9032	6986	Definitions
+9033	6988	Eligibility for payments
+9034	6990	Entitlement of eligible candidates to payments
+9035	6990	Qualified campaign expense limitations
+9036	6991	Certification by Commission
+9037	6992	Payments to eligible candidates
+9038	6992	Examinations and audits; repayments
+9039	6993	Reports to Congress; regulations
+9040	6994	Participation by Commission in judicial proceedings
+9041	6995	Judicial review
+9042	6995	Criminal penalties
+9500	6997	Short title
+9501	6997	Black Lung Disability Trust Fund
+9502	7002	Airport and Airway Trust Fund
+9503	7017	Highway Trust Fund
+9504	7043	Sport Fish Restoration and Boating Trust Fund
+9505	7050	Harbor Maintenance Trust Fund
+9506	7051	Inland Waterways Trust Fund
+9507	7053	Hazardous Substance Superfund
+9508	7056	Leaking Underground Storage Tank Trust Fund
+9509	7061	Oil Spill Liability Trust Fund
+9510	7066	Vaccine Injury Compensation Trust Fund
+9511	7068	Patient-Centered Outcomes Research Trust Fund
+9601	7071	Transfer of amounts
+9602	7071	Management of Trust Funds
+9701	7072	Definitions of general applicability
+9702	7075	Establishment of the United Mine Workers of America Combined Benefit
+9703	7076	Plan benefits
+9704	7078	Liability of assigned operators
+9705	7084	Transfers
+9706	7086	Assignment of eligible beneficiaries
+9707	7089	Failure to pay premium
+9708	7091	Effect on pending claims or obligations
+9711	7091	Continued obligations of individual employer plans
+9712	7093	Establishment and coverage of 1992 UMWA Benefit Plan
+9721	7097	Civil enforcement
+9722	7098	Sham transactions
+9801	7099	Increased portability through limitation on preexisting condition
+9802	7107	Prohibiting discrimination against individual participants and
+9803	7110	Guaranteed renewability in multiemployer plans and certain multiple
+9811	7112	Standards relating to benefits for mothers and newborns
+9812	7113	Parity in mental health and substance use disorder benefits
+9813	7124	Coverage of dependent students on medically necessary leave of absence
+9816	7126	Preventing surprise medical bills
+9817	7143	Ending surprise air ambulance bills
+9818	7148	Continuity of care
+9819	7150	Maintenance of price comparison tool
+9820	7150	Protecting patients and improving the accuracy of provider directory
+9823	7153	Air ambulance report requirements
+9824	7154	Increasing transparency by removing gag clauses on price and quality
+9825	7155	Reporting on pharmacy benefits and drug costs
+9826	7157	Oversight of entities that provide pharmacy benefit management services
+9831	7164	General exceptions
+9832	7167	Definitions
+9833	7170	Regulations
+9834	7171	Enforcement

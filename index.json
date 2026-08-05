@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-07-27",
+  "updated": "2026-08-05",
   "description": "Source of truth for this repo. Nodes are skills, sources, and humans. Edges are typed relationships. README bucket tables are generated from this file.",
   "buckets": [
     "general",
@@ -340,7 +340,8 @@
             "Contract Law"
           ],
           "label": "Contract Law",
-          "status": "unresolved"
+          "status": "resolved",
+          "iri": "http://lmss.sali.org/RCIPwpgRpMs1eVz4vPid0pV"
         }
       ]
     },
@@ -1219,6 +1220,27 @@
           "status": "resolved"
         }
       ]
+    },
+    {
+      "id": "tax-analysis",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay \u2014 reads the actual IRC at runtime via a 1,896-section page index",
+      "review_date": "2026-08-05",
+      "risk": "first-party; reads a user-supplied IRC PDF at runtime",
+      "lmss": [
+        {
+          "facet": "Area of Law",
+          "query": [
+            "Tax Law"
+          ],
+          "label": "Tax Law",
+          "iri": "http://lmss.sali.org/RDGdgxwCGXpkY1zfT2WwGl9",
+          "status": "resolved"
+        }
+      ]
     }
   ],
   "edges": [
@@ -2080,6 +2102,21 @@
     {
       "from": "contract-dispute-analysis",
       "to": "mediation-prep",
+      "type": "feeds"
+    },
+    {
+      "from": "tax-analysis",
+      "to": "amanuel",
+      "type": "reviewed-by"
+    },
+    {
+      "from": "legal-research-memo",
+      "to": "tax-analysis",
+      "type": "use-with"
+    },
+    {
+      "from": "tax-analysis",
+      "to": "client-advice-letter",
       "type": "feeds"
     }
   ]

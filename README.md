@@ -39,7 +39,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Bucket | Skills | Status |
 |---|---:|---|
 | personal-assistant | 15 | active |
-| attorney-workflow | 12 | active |
+| attorney-workflow | 13 | active |
 | agent-infrastructure | 12 | active |
 | dev-operations | 12 | active |
 | market-analysis | 11 | active |
@@ -72,7 +72,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Skill | Use it for |
 |---|---|
 | [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup · SALI: Legal Services Industry |
-| [`contract-anatomy`](skills/contract-anatomy/SKILL.md) | Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures |
+| [`contract-anatomy`](skills/contract-anatomy/SKILL.md) | Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures · SALI: Contract Law |
 | [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags · SALI: Contract Law; Document Review |
 | [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures · SALI: Legal Hold Management |
 | [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers · SALI: Legal Research; Brief / Memorandum of Law |
@@ -83,6 +83,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation · SALI: Letter Communication |
 | [`negotiation-prep`](skills/negotiation-prep/SKILL.md) | Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist · SALI: Contract Negotiation Management |
 | [`mediation-prep`](skills/mediation-prep/SKILL.md) | Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness · SALI: Mediation Practice; Alternative Dispute Resolution Practice |
+| [`tax-analysis`](skills/tax-analysis/SKILL.md) | Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay — reads the actual IRC at runtime via a 1,896-section page index · SALI: Tax Law |
 
 ### agent-infrastructure (third-party AAS + distilled first-party)
 
