@@ -83,7 +83,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation · SALI: Letter Communication |
 | [`negotiation-prep`](skills/negotiation-prep/SKILL.md) | Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist · SALI: Contract Negotiation Management |
 | [`mediation-prep`](skills/mediation-prep/SKILL.md) | Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness · SALI: Mediation Practice; Alternative Dispute Resolution Practice |
-| [`tax-analysis`](skills/tax-analysis/SKILL.md) | Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay — reads the actual IRC at runtime via a 1,896-section page index · SALI: Tax Law |
+| [`tax-analysis`](skills/tax-analysis/SKILL.md) | Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay + Subchapter K entity overlay (partnerships/LLCs: formation, allocations, distributions, sales of interests, S corp contrast) — reads the actual IRC at runtime via a 1,896-section page index · SALI: Tax Law |
 
 ### agent-infrastructure (third-party AAS + distilled first-party)
 

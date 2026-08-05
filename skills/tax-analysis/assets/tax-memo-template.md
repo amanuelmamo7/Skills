@@ -1,7 +1,7 @@
 # Tax Analysis — <QUESTION SHORT NAME>
 
 `DRAFT — ANALYSIS SUPPORT — FOR REVIEW BY A TAX PROFESSIONAL — NOT TAX ADVICE`
-As of: <date> · Regime: <federal individual / SALT (state) / both — analyzed separately> · Code snapshot: Release Point <from PDF page> · Prepared for: <requester>
+As of: <date> · Regime: <federal individual / federal entity (Subchapter K or S) / SALT (state) — each analyzed separately> · Code snapshot: Release Point <from PDF page> · Prepared for: <requester>
 
 ## Question presented
 
@@ -21,6 +21,7 @@ As of: <date> · Regime: <federal individual / SALT (state) / both — analyzed 
 
 <Only the stages the question implicates; one line for uncontested stages.>
 
+**Entity overlay (if partnership/LLC/S corp):** <whose item is it and what character, from partnership-tax-framework — classification, allocation validity, basis, distribution/sale characterization — before the stages below price it>
 **Stage 1 — Income/exclusion:** <rule quoted from the Code with § pincite → anchored application>
 **Stage 2 — Deduction/character:** <same>
 **Stage 3 — Timing:** <same>

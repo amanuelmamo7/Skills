@@ -1227,7 +1227,7 @@
       "buckets": [
         "attorney-workflow"
       ],
-      "description": "Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay \u2014 reads the actual IRC at runtime via a 1,896-section page index",
+      "description": "Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay + Subchapter K entity overlay (partnerships/LLCs: formation, allocations, distributions, sales of interests, S corp contrast) \u2014 reads the actual IRC at runtime via a 1,896-section page index",
       "review_date": "2026-08-05",
       "risk": "first-party; reads a user-supplied IRC PDF at runtime",
       "lmss": [

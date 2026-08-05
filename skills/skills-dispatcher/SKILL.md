@@ -42,7 +42,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation [SALI: Letter Communication]
 - `negotiation-prep` — Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist [SALI: Contract Negotiation Management]
 - `mediation-prep` — Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness [SALI: Mediation Practice; Alternative Dispute Resolution Practice]
-- `tax-analysis` — Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay — reads the actual IRC at runtime via a 1,896-section page index [SALI: Tax Law]
+- `tax-analysis` — Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay + Subchapter K entity overlay (partnerships/LLCs: formation, allocations, distributions, sales of interests, S corp contrast) — reads the actual IRC at runtime via a 1,896-section page index [SALI: Tax Law]
 
 ### agent-infrastructure
 - `ai-agents-architect` — Agent system design patterns and sharp edges
