@@ -98,6 +98,37 @@
   details.notes summary{cursor:pointer}
   details.notes li{margin:4px 0 4px 18px}
   .record{color:var(--accent);font-weight:600}
+  /* builder — counsel's drafting desk */
+  .builder-wrap{max-width:880px;margin:0 auto}
+  .paper{background:#f4efe3;color:#1d1a14;border-radius:3px;min-height:380px;padding:32px 40px 36px 64px;position:relative;
+    font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;box-shadow:0 14px 44px rgba(0,0,0,.55);
+    background-image:linear-gradient(90deg,transparent 46px,rgba(180,60,55,.35) 46px,rgba(180,60,55,.35) 48px,transparent 48px)}
+  .paper h3{text-align:center;letter-spacing:.28em;font-size:15px;font-weight:600}
+  .paper .subtitle{text-align:center;font-style:italic;font-size:12.5px;color:#6b6353;margin:2px 0 16px}
+  .paper.dragover{outline:3px dashed var(--accent);outline-offset:-10px}
+  .clause{display:flex;gap:10px;padding:6px 4px;border-bottom:1px solid rgba(29,26,20,.14);font-size:14px;cursor:pointer;align-items:baseline}
+  .clause:hover{background:rgba(180,60,55,.07)}
+  .clause:hover .cx{visibility:visible}
+  .clause .cnum{color:#8a8170;font-size:12px;min-width:26px;font-variant-numeric:tabular-nums}
+  .clause .cx{margin-left:auto;color:#b43c37;visibility:hidden;font-size:12px}
+  .paper .empty{border:2px dashed rgba(29,26,20,.25);border-radius:6px;padding:44px 20px;text-align:center;color:#8a8170;font-style:italic;font-size:14px}
+  .bctrl{display:flex;gap:10px;margin:14px 0;align-items:center;flex-wrap:wrap}
+  .bctrl .go{background:var(--accent);color:#14161d;border:none;padding:10px 22px;border-radius:8px;font-weight:600;cursor:pointer;font-size:14px}
+  .bctrl .ghost2{background:var(--panel2);color:var(--text);border:1px solid var(--border);padding:10px 16px;border-radius:8px;cursor:pointer;font-size:14px}
+  .palette-head{display:flex;gap:8px;align-items:center;margin:14px 0 8px;flex-wrap:wrap}
+  .palette-head input{background:var(--panel);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:7px 10px;font-size:13px;flex:1;min-width:160px}
+  .palette{display:flex;flex-wrap:wrap;gap:6px;max-height:240px;overflow-y:auto;padding:8px;border:1px solid var(--border);border-radius:10px;background:var(--panel)}
+  .prov{display:inline-flex;align-items:center;gap:6px;background:var(--panel2);border:1px solid var(--border);color:var(--text);border-radius:8px;padding:6px 10px;font-size:12.5px;cursor:grab}
+  .prov:hover{border-color:var(--accent)}
+  .prov.used{opacity:.3;pointer-events:none}
+  .mrow{display:flex;align-items:center;gap:10px;font-size:13px;margin:5px 0}
+  .mrow .mname{min-width:230px}
+  .mbar{flex:1;height:8px;background:var(--bg);border-radius:4px;overflow:hidden}
+  .mbar div{height:100%;background:linear-gradient(90deg,var(--s),var(--accent))}
+  .vinsight{margin:7px 0;padding-left:16px;position:relative;font-size:13.5px;color:var(--muted);line-height:1.5}
+  .vinsight::before{content:'§';position:absolute;left:0;color:var(--accent)}
+  .vhead{font-size:17px;margin-bottom:2px}
+  .vsub{color:var(--muted);font-size:13px;margin-bottom:10px}
   .hidden{display:none}
   @media(max-width:800px){.layout{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.clist{flex-direction:row;flex-wrap:wrap}}
 </style>
@@ -112,6 +143,7 @@
   <button data-tab="compare">Compare</button>
   <button data-tab="matrix">DNA Matrix</button>
   <button data-tab="game">Game: Guess the Contract</button>
+  <button data-tab="builder">Builder: Draft Your Own</button>
 </nav>
 <main>
   <div class="legend">
@@ -196,6 +228,33 @@
         <li><b>Lapse-friendly streaks:</b> a broken streak "pauses" and your best stands — self-compassion framing predicts resumption; "I blew it" framing predicts quitting.</li>
       </ul>
     </details>
+  </section>
+
+  <section id="tab-builder" class="hidden">
+    <div class="builder-wrap">
+      <div class="paper" id="paper">
+        <h3>AGREEMENT</h3>
+        <div class="subtitle" id="paperSub">— an instrument of no fixed character —</div>
+        <div id="clauses"></div>
+        <div class="empty" id="paperEmpty">Drag provisions here — or click one below — to draft your instrument</div>
+      </div>
+      <div class="bctrl">
+        <button class="go" id="doneBtn">Done — read the instrument</button>
+        <button class="ghost2" id="clearBtn">Clear</button>
+        <span class="mutedtxt" id="provCount"></span>
+      </div>
+      <div class="card hidden" id="verdict"></div>
+      <div class="palette-head">
+        <input id="provSearch" placeholder="Filter provisions…">
+        <div class="modebtns" id="provGroups">
+          <button data-g="all" class="on">All</button>
+          <button data-g="u">Boilerplate</button>
+          <button data-g="s">Shared</button>
+          <button data-g="x">Signature</button>
+        </div>
+      </div>
+      <div class="palette" id="palette"></div>
+    </div>
   </section>
 </main>
 <script>
@@ -777,7 +836,7 @@ document.querySelectorAll('nav button').forEach(b=>{
   b.onclick = ()=>{
     document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
     b.classList.add('active');
-    ['explore','compare','matrix','game'].forEach(t=>
+    ['explore','compare','matrix','game','builder'].forEach(t=>
       document.getElementById('tab-'+t).classList.toggle('hidden', t!==b.dataset.tab));
   };
 });
@@ -1074,6 +1133,133 @@ document.getElementById('nextBtn').onclick=nextRound;
 document.getElementById('restartBtn').onclick=()=>newGame(false);
 renderCareer(); renderDailyBtn();
 newGame(false);
+
+/* ---------- builder: counsel's drafting desk ---------- */
+const PROVS=(()=>{
+  const map={};
+  C.forEach(c=>c.headings.forEach(h=>{
+    if(!map[h.c]) map[h.c]={c:h.c,labels:[],tags:{},types:new Set(),xIn:new Set()};
+    map[h.c].labels.push(h.t);
+    map[h.c].tags[h.tag]=(map[h.c].tags[h.tag]||0)+1;
+    map[h.c].types.add(c.name);
+    if(h.tag==='x') map[h.c].xIn.add(c.name);
+  }));
+  return Object.values(map).map(p=>({
+    c:p.c,
+    label:p.labels.sort((a,b)=>a.length-b.length)[0],
+    tag:Object.entries(p.tags).sort((a,b)=>b[1]-a[1])[0][0],
+    types:[...p.types], xIn:[...p.xIn]
+  })).sort((a,b)=>a.label.localeCompare(b.label));
+})();
+const provByC=Object.fromEntries(PROVS.map(p=>[p.c,p]));
+let draft=[];  /* ordered concept keys on the paper */
+let pGroup='all';
+
+function renderPalette(){
+  const q=(document.getElementById('provSearch').value||'').toLowerCase();
+  document.getElementById('palette').innerHTML='';
+  const pal=document.getElementById('palette');
+  PROVS.filter(p=>(pGroup==='all'||p.tag===pGroup)&&p.label.toLowerCase().includes(q)).forEach(p=>{
+    const b=document.createElement('button');
+    b.className='prov'+(draft.includes(p.c)?' used':'');
+    b.draggable=true;
+    b.innerHTML=`<span class="dot ${p.tag}"></span>${p.label}`;
+    b.title='Appears in: '+p.types.join(', ');
+    b.ondragstart=e=>e.dataTransfer.setData('text/plain',p.c);
+    b.onclick=()=>addProv(p.c);
+    pal.appendChild(b);
+  });
+}
+function renderPaper(){
+  const cl=document.getElementById('clauses');
+  cl.innerHTML=draft.map((c,i)=>
+    `<div class="clause" title="Click to strike this provision" onclick="removeProv('${c}')">
+      <span class="cnum">${i+1}.</span><span>${provByC[c].label}</span><span class="cx">✕ strike</span></div>`).join('');
+  document.getElementById('paperEmpty').classList.toggle('hidden',draft.length>0);
+  document.getElementById('provCount').textContent=draft.length?draft.length+' provision'+(draft.length>1?'s':'')+' drafted':'';
+  renderPalette();
+}
+function addProv(c){ if(!draft.includes(c)){ draft.push(c); document.getElementById('verdict').classList.add('hidden'); renderPaper(); } }
+function removeProv(c){ draft=draft.filter(x=>x!==c); document.getElementById('verdict').classList.add('hidden'); renderPaper(); }
+const paperEl=document.getElementById('paper');
+paperEl.ondragover=e=>{e.preventDefault(); paperEl.classList.add('dragover');};
+paperEl.ondragleave=()=>paperEl.classList.remove('dragover');
+paperEl.ondrop=e=>{e.preventDefault(); paperEl.classList.remove('dragover'); addProv(e.dataTransfer.getData('text/plain'));};
+document.getElementById('provSearch').oninput=renderPalette;
+document.querySelectorAll('#provGroups button').forEach(b=>{
+  b.onclick=()=>{ pGroup=b.dataset.g; document.querySelectorAll('#provGroups button').forEach(x=>x.classList.toggle('on',x===b)); renderPalette(); };
+});
+document.getElementById('clearBtn').onclick=()=>{ draft=[]; document.getElementById('verdict').classList.add('hidden'); document.getElementById('paperSub').textContent='— an instrument of no fixed character —'; renderPaper(); };
+
+function analyzeDraft(){
+  const S=new Set(draft);
+  const V=document.getElementById('verdict');
+  V.classList.remove('hidden');
+  if(!S.size){ V.innerHTML='<div class="vhead">A blank page</div><div class="vsub">Even a napkin deal has at least one term. Drag some provisions up onto the paper.</div>'; return; }
+  const scores=C.map(ct=>{
+    const A=new Set(ct.headings.map(h=>h.c));
+    const inter=[...A].filter(x=>S.has(x)).length;
+    const cov=inter/A.size, prec=inter/S.size;
+    return {ct,cov,prec,f1:(cov+prec)?2*cov*prec/(cov+prec):0,A};
+  }).sort((a,b)=>b.f1-a.f1);
+  const [top,second,third]=scores;
+  /* headline */
+  let head,sub;
+  if(S.size<4){
+    head='A term sheet, at best';
+    sub='Real instruments need a spine — a few provisions gesture at a deal but don\'t allocate its risks. Closest silhouette so far: '+top.ct.name+'.';
+  } else if(top.f1>=0.55 && top.f1-second.f1>=0.12){
+    head='This reads as a '+top.ct.name;
+    sub='It covers '+Math.round(top.cov*100)+'% of the standard form, and '+Math.round(top.prec*100)+'% of what you drafted belongs there. A clean, single-species instrument.';
+  } else if(top.f1>=0.25){
+    const mix=[top,second].concat(third&&top.f1-third.f1<0.1?[third]:[]);
+    head='A hybrid: '+mix.map(m=>m.ct.name).join(' × ');
+    sub='No single form dominates — this instrument splices '+mix.map(m=>m.ct.family).filter((v,i,a)=>a.indexOf(v)===i).join(' and ')+' DNA. Hybrids are drafted every day; the craft is deciding which form\'s risk allocation governs when they collide.';
+  } else {
+    head='A franken-instrument';
+    sub='No recognized commercial form comes close. That isn\'t automatically wrong — but every clause here will be construed without a market-standard backdrop, which means litigation over meaning instead of precedent.';
+  }
+  document.getElementById('paperSub').textContent='— '+head.replace('This reads as a ','')+' —';
+  /* insights */
+  const has=c=>S.has(c);
+  const ins=[];
+  if(S.size>=4){
+    const spine={'term-termination':'no term or termination — the instrument runs indefinitely and neither party can exit cleanly',
+      'fees-payment':'nothing about money — without fees or payment terms, the consideration supporting the whole bargain is unclear',
+      'misc-general':'no boilerplate tail — no governing law, notices, or severability, so every dispute begins with a fight about where and how to fight',
+      'definitions':'no definitions — every capitalized term becomes a latent ambiguity for a court to resolve',
+      'confidentiality':'no confidentiality — anything exchanged under this instrument can be shared freely'};
+    let sp=0;
+    for(const[k,txt]of Object.entries(spine)) if(!has(k)&&sp<3){ins.push(txt);sp++;}
+  }
+  if(has('indemnification')&&!has('limitation-liability')) ins.push('indemnification with no limitation of liability — the indemnity is uncapped, which few sophisticated counterparties would sign');
+  if(has('limitation-liability')&&!has('indemnification')&&!has('reps-warranties')) ins.push('a liability cap with no reps or indemnities — it limits exposure that nothing in the document actually creates');
+  if(has('security-collateral')&&!has('credit-terms')&&!has('interest')) ins.push('a security interest with no underlying debt — collateral must secure an obligation; pair it with loan terms or it fails for want of one');
+  if(has('no-lien')&&has('security-collateral')) ins.push('grants a security interest while waiving lien rights — the two provisions pull in opposite directions and a court would struggle to read them together');
+  if(has('sla')&&(has('title-risk')||has('delivery'))) ins.push('uptime SLAs beside title-and-risk-of-loss terms — a cloud/goods hybrid; workable (connected devices, logistics tech), but define where the service ends and the product begins');
+  if(has('non-compete')&&has('relationship-parties')) ins.push('a non-compete on an independent contractor — a classic misclassification flag; keeping it to non-solicitation preserves the contractor relationship');
+  if((has('covenants-negative')||has('covenants-financial'))&&has('events-default')) ins.push('covenants policed by events of default — lending DNA; whoever owes these covenants has effectively taken on a creditor');
+  if(has('interim-covenants')&&has('conditions-precedent')) ins.push('signing-to-closing covenants plus conditions precedent — an M&A-style execution gap; without termination triggers a party can be stuck between signing and closing');
+  if(has('release')&&has('severance')) ins.push('severance traded for a release — the separation-agreement bargain; the release is only as strong as its ADEA/OWBPA mechanics');
+  if(has('deadlock')&&!has('capital')) ins.push('deadlock machinery with no capital structure — governance without economics; a buy-sell needs something to buy and sell');
+  if(has('force-majeure')&&(has('events-default')||has('credit-terms'))) ins.push('force majeure in a lending context — lenders don\'t excuse payment; expect this clause to be struck in negotiation');
+  if(has('grant')&&has('territory-exclusivity')&&has('royalties')) ins.push('a granted right + territory + royalties — franchise/distribution DNA; check franchise-disclosure law before calling it a mere license');
+  /* scope vs. best-matching form */
+  if(S.size>=4&&top.f1>=0.25){
+    const missing=top.ct.headings.filter(h=>!S.has(h.c)).slice(0,3).map(h=>h.t);
+    if(missing.length) ins.push('vs. the standard '+top.ct.name+' form, you dropped '+missing.join(', ')+' — this narrows the instrument and leaves those risks unallocated between the parties');
+    const extras=draft.filter(c=>!top.A.has(c)).slice(0,3);
+    if(extras.length) ins.push('beyond the '+top.ct.name+' form, you added '+extras.map(c=>{
+      const p=provByC[c]; return p.label+(p.xIn.length&&p.xIn.length<=2?' (a '+p.xIn[0]+' tell)':'');
+    }).join(', ')+' — broadening the scope toward '+[...new Set(extras.flatMap(c=>provByC[c].xIn))].slice(0,2).join(' and ')+' territory');
+  }
+  V.innerHTML='<div class="vhead">'+head+'</div><div class="vsub">'+sub+'</div>'
+    +scores.slice(0,3).map(s=>'<div class="mrow"><span class="mname">'+s.ct.name+'</span><div class="mbar"><div style="width:'+Math.round(s.f1*100)+'%"></div></div><span class="mutedtxt">'+Math.round(s.f1*100)+'%</span></div>').join('')
+    +(ins.length?'<div style="margin-top:12px">'+ins.slice(0,7).map(t=>'<div class="vinsight">'+t+'</div>').join('')+'</div>':'');
+  V.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+document.getElementById('doneBtn').onclick=analyzeDraft;
+renderPaper();
 </script>
 </body>
 </html>
