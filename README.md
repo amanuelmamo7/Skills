@@ -39,10 +39,10 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Bucket | Skills | Status |
 |---|---:|---|
 | personal-assistant | 15 | active |
+| attorney-workflow | 12 | active |
 | agent-infrastructure | 12 | active |
 | dev-operations | 12 | active |
 | market-analysis | 11 | active |
-| attorney-workflow | 11 | active |
 | general | 10 | active |
 | web-application | 9 | active |
 | software-architecture | 8 | active |
@@ -66,6 +66,23 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`proactive-announce-policy`](skills/proactive-announce-policy/SKILL.md) | Deterministic voice/chat/silence announce routing with state-file dedup |
 | [`task-capture`](skills/task-capture/SKILL.md) | Parse chat task requests, post to task API, confirm, fallback |
 | [`vip-list-management`](skills/vip-list-management/SKILL.md) | VIP-senders file with manual tiers and protected auto-generated block |
+
+### attorney-workflow
+
+| Skill | Use it for |
+|---|---|
+| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup · SALI: Legal Services Industry |
+| [`contract-anatomy`](skills/contract-anatomy/SKILL.md) | Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures |
+| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags · SALI: Contract Law; Document Review |
+| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures · SALI: Legal Hold Management |
+| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers · SALI: Legal Research; Brief / Memorandum of Law |
+| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions · SALI: Regulatory Compliance |
+| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth · SALI: Contract Law; Dispute Service |
+| [`authority-synthesis`](skills/authority-synthesis/SKILL.md) | Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations · SALI: Legal Research |
+| [`legal-writing-editor`](skills/legal-writing-editor/SKILL.md) | Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance · SALI: A103 Draft/revise |
+| [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation · SALI: Letter Communication |
+| [`negotiation-prep`](skills/negotiation-prep/SKILL.md) | Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist · SALI: Contract Negotiation Management |
+| [`mediation-prep`](skills/mediation-prep/SKILL.md) | Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness · SALI: Mediation Practice; Alternative Dispute Resolution Practice |
 
 ### agent-infrastructure (third-party AAS + distilled first-party)
 
@@ -116,22 +133,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`gainers-tracking`](skills/gainers-tracking/SKILL.md) | Daily-to-quarterly gainers tracking schema with catalyst-pattern library |
 | [`investor-profile-template`](skills/investor-profile-template/SKILL.md) | Financial-profile template: horizon, risk, liquidity, watchlist, delivery preferences |
 | [`analyst-house-style`](skills/analyst-house-style/SKILL.md) | Eight non-negotiable analysis rules as a pre-ship rigor checklist |
-
-### attorney-workflow
-
-| Skill | Use it for |
-|---|---|
-| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup · SALI: Legal Services Industry |
-| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags · SALI: Contract Law; Document Review |
-| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures · SALI: Legal Hold Management |
-| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers · SALI: Legal Research; Brief / Memorandum of Law |
-| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions · SALI: Regulatory Compliance |
-| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth · SALI: Contract Law; Dispute Service |
-| [`authority-synthesis`](skills/authority-synthesis/SKILL.md) | Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations · SALI: Legal Research |
-| [`legal-writing-editor`](skills/legal-writing-editor/SKILL.md) | Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance · SALI: A103 Draft/revise |
-| [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation · SALI: Letter Communication |
-| [`negotiation-prep`](skills/negotiation-prep/SKILL.md) | Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist · SALI: Contract Negotiation Management |
-| [`mediation-prep`](skills/mediation-prep/SKILL.md) | Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness · SALI: Mediation Practice; Alternative Dispute Resolution Practice |
 
 ### general (third-party AAS + distilled first-party)
 

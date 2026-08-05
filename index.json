@@ -324,6 +324,27 @@
       ]
     },
     {
+      "id": "contract-anatomy",
+      "type": "skill",
+      "buckets": [
+        "attorney-workflow"
+      ],
+      "description": "Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures",
+      "review_date": "2026-08-05",
+      "risk": "first-party; reference data + local HTML game, no network calls",
+      "lmss": [
+        {
+          "facet": "Area of Law",
+          "query": [
+            "Commercial Law",
+            "Contract Law"
+          ],
+          "label": "Contract Law",
+          "status": "unresolved"
+        }
+      ]
+    },
+    {
       "id": "form-cro",
       "type": "skill",
       "buckets": [

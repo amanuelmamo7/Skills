@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contract Anatomy — Explorer & Game</title>
+<style>
+  :root{
+    --bg:#0f1117; --panel:#181b24; --panel2:#1f2330; --border:#2a2f3e;
+    --text:#e8eaf0; --muted:#9aa1b5; --accent:#e8b44a;
+    --u:#6b7280; --s:#4f83cc; --x:#e8b44a;
+    --good:#4caf7d; --bad:#d9534f;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.45}
+  header{padding:18px 24px 10px;border-bottom:1px solid var(--border)}
+  h1{font-size:20px;letter-spacing:.3px}
+  h1 span{color:var(--accent)}
+  .sub{color:var(--muted);font-size:13px;margin-top:2px}
+  nav{display:flex;gap:6px;padding:10px 24px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+  nav button{background:var(--panel);border:1px solid var(--border);color:var(--muted);padding:8px 16px;border-radius:8px;cursor:pointer;font-size:14px}
+  nav button.active{background:var(--accent);color:#14161d;border-color:var(--accent);font-weight:600}
+  main{padding:20px 24px;max-width:1200px;margin:0 auto}
+  .legend{display:flex;gap:14px;flex-wrap:wrap;margin:10px 0 16px;font-size:12.5px;color:var(--muted)}
+  .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:middle}
+  .dot.u{background:var(--u)} .dot.s{background:var(--s)} .dot.x{background:var(--x)}
+  /* explore */
+  .layout{display:grid;grid-template-columns:230px 1fr;gap:18px}
+  .clist{display:flex;flex-direction:column;gap:6px}
+  .clist button{text-align:left;background:var(--panel);border:1px solid var(--border);color:var(--text);padding:9px 12px;border-radius:8px;cursor:pointer;font-size:13.5px}
+  .clist button.active{border-color:var(--accent);background:var(--panel2)}
+  .clist .fam{display:block;font-size:11px;color:var(--muted)}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:18px}
+  .blurb{color:var(--muted);font-size:13.5px;margin:6px 0 14px}
+  .hrow{border-left:3px solid var(--border);padding:7px 10px;margin:5px 0;border-radius:0 8px 8px 0;background:var(--panel2);cursor:pointer}
+  .hrow.u{border-left-color:var(--u)} .hrow.s{border-left-color:var(--s)} .hrow.x{border-left-color:var(--x)}
+  .hrow .num{color:var(--muted);font-size:12px;margin-right:8px}
+  .hrow .tagchip{float:right;font-size:10.5px;padding:1px 7px;border-radius:10px;background:var(--bg);color:var(--muted)}
+  .hrow ul{margin:6px 0 2px 26px;color:var(--muted);font-size:13px;display:none}
+  .hrow.open ul{display:block}
+  .srcs{margin-top:14px;font-size:12px;color:var(--muted)}
+  .srcs a{color:var(--s);text-decoration:none;word-break:break-all}
+  .opt{margin-top:10px;font-size:13px;color:var(--muted)}
+  /* compare */
+  .pickers{display:flex;gap:12px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+  select{background:var(--panel);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:14px}
+  .simbadge{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:8px 14px;font-size:14px}
+  .simbadge b{color:var(--accent)}
+  .cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .col h3{font-size:14px;margin-bottom:8px;color:var(--muted)}
+  .pill{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;margin:4px 0;font-size:13px}
+  .pill.shared{border-color:var(--good)}
+  .pill.only{border-color:var(--x)}
+  .pill small{display:block;color:var(--muted);font-size:11px}
+  /* matrix */
+  table.mx{border-collapse:collapse;font-size:11.5px}
+  table.mx th{color:var(--muted);font-weight:500;padding:4px}
+  table.mx th.rowh{text-align:right;padding-right:8px;white-space:nowrap}
+  table.mx td{width:44px;height:34px;text-align:center;border:1px solid var(--bg);border-radius:4px;cursor:pointer;color:#14161d;font-weight:600}
+  .mxnote{color:var(--muted);font-size:12.5px;margin:10px 0}
+  /* game */
+  .game .card{max-width:680px;margin:0 auto}
+  .scorebar{display:flex;gap:18px;justify-content:center;margin-bottom:14px;font-size:14px;color:var(--muted)}
+  .scorebar b{color:var(--accent)}
+  .clues{min-height:120px;margin:12px 0}
+  .clue{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:8px 12px;margin:6px 0;font-size:14px;animation:fade .3s}
+  @keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1}}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+  .choices button{background:var(--panel2);border:1px solid var(--border);color:var(--text);padding:11px;border-radius:8px;cursor:pointer;font-size:14px}
+  .choices button:hover{border-color:var(--accent)}
+  .choices button.correct{background:var(--good);border-color:var(--good);color:#14161d;font-weight:600}
+  .choices button.wrong{background:var(--bad);border-color:var(--bad);color:#fff}
+  .gctrl{display:flex;gap:10px;justify-content:center;margin-top:14px}
+  .gctrl button{background:var(--accent);color:#14161d;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-weight:600;font-size:14px}
+  .gctrl button.ghost{background:var(--panel2);color:var(--text);border:1px solid var(--border)}
+  .feedback{text-align:center;margin-top:10px;font-size:14px;min-height:22px}
+  .hint{color:var(--muted);font-size:12.5px;text-align:center;margin-top:8px}
+  /* game psychology layer */
+  .mutedtxt{color:var(--muted);font-size:12.5px}
+  .crow{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px;font-size:13.5px;margin-bottom:6px}
+  .pbar{height:8px;background:var(--bg);border-radius:6px;overflow:hidden;border:1px solid var(--border)}
+  .pbar div{height:100%;background:linear-gradient(90deg,var(--s),var(--accent));width:0%;transition:width .6s}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px}
+  .chip{font-size:10.5px;padding:2px 8px;border-radius:10px;border:1px solid var(--border);color:var(--muted)}
+  .chip.done{border-color:var(--good);color:var(--good)}
+  .sessionbar{display:flex;gap:4px;margin:0 0 10px}
+  .seg{flex:1;height:6px;border-radius:3px;background:var(--bg);border:1px solid var(--border);transition:background .3s}
+  .seg.won{background:var(--good);border-color:var(--good)}
+  .seg.lost{background:var(--bad);border-color:var(--bad)}
+  .seg.cur{border-color:var(--accent)}
+  .bonusbanner{text-align:center;color:var(--accent);font-size:13px;font-weight:600;margin-top:8px}
+  .gamehead{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;max-width:680px;margin:0 auto 10px}
+  .modebtns{display:flex;gap:6px}
+  .modebtns button,.dailybtn{background:var(--panel);border:1px solid var(--border);color:var(--muted);padding:5px 10px;border-radius:8px;cursor:pointer;font-size:12px}
+  .modebtns button.on{border-color:var(--accent);color:var(--accent)}
+  .dailybtn.done{border-color:var(--good);color:var(--good)}
+  details.notes{max-width:680px;margin:14px auto 0;color:var(--muted);font-size:12.5px}
+  details.notes summary{cursor:pointer}
+  details.notes li{margin:4px 0 4px 18px}
+  .record{color:var(--accent);font-weight:600}
+  .hidden{display:none}
+  @media(max-width:800px){.layout{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.clist{flex-direction:row;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Contract <span>Anatomy</span></h1>
+  <div class="sub">What makes commercial contracts the same — and what makes each one itself. 19 contract types, 297 headings, built from real templates and SEC exhibits.</div>
+</header>
+<nav>
+  <button data-tab="explore" class="active">Explore</button>
+  <button data-tab="compare">Compare</button>
+  <button data-tab="matrix">DNA Matrix</button>
+  <button data-tab="game">Game: Guess the Contract</button>
+</nav>
+<main>
+  <div class="legend">
+    <span><span class="dot u"></span>Universal boilerplate — in nearly every contract</span>
+    <span><span class="dot s"></span>Shared — common across a family</span>
+    <span><span class="dot x"></span>Signature — the contract's fingerprint</span>
+  </div>
+
+  <section id="tab-explore">
+    <div class="layout">
+      <div class="clist" id="clist"></div>
+      <div class="card" id="detail"></div>
+    </div>
+  </section>
+
+  <section id="tab-compare" class="hidden">
+    <div class="pickers">
+      <select id="selA"></select>
+      <span style="color:var(--muted)">vs</span>
+      <select id="selB"></select>
+      <span class="simbadge">Structural similarity: <b id="simval">–</b></span>
+    </div>
+    <div class="cols">
+      <div class="col"><h3 id="onlyAh"></h3><div id="onlyA"></div></div>
+      <div class="col"><h3>Shared skeleton</h3><div id="sharedC"></div></div>
+      <div class="col"><h3 id="onlyBh"></h3><div id="onlyB"></div></div>
+    </div>
+  </section>
+
+  <section id="tab-matrix" class="hidden">
+    <div class="mxnote">Jaccard similarity of heading concepts (shared ÷ combined). Darker gold = more structural DNA in common. Click any cell to open the comparison.</div>
+    <div style="overflow-x:auto"><table class="mx" id="mxtable"></table></div>
+    <div class="mxnote" id="mxinsights"></div>
+  </section>
+
+  <section id="tab-game" class="hidden game">
+    <div class="card" style="max-width:680px;margin:0 auto 12px;padding:12px 18px">
+      <div class="crow">
+        <div>🏛 <b id="rankName">Summer Associate</b> <span class="mutedtxt" id="rankNext"></span></div>
+        <div class="mutedtxt">High score <b id="hsVal">0</b> · Best streak <b id="bsVal">0</b></div>
+      </div>
+      <div class="pbar"><div id="rankFill"></div></div>
+      <div class="chips" id="masteryChips"></div>
+      <div class="mutedtxt" id="masteryLine" style="margin-top:6px"></div>
+    </div>
+    <div class="gamehead">
+      <div class="scorebar" style="margin:0">
+        <span>Case <b id="gRound">1</b>/10</span>
+        <span>Score <b id="gScore">0</b></span>
+        <span>Streak <b id="gStreak">0</b></span>
+      </div>
+      <div class="modebtns">
+        <button id="modeAssoc" class="on" title="4 suspects per case">Associate</button>
+        <button id="modePartner" title="6 suspects per case · 1.5× points">Partner</button>
+        <button id="dailyBtn" class="dailybtn" title="Same 10 cases for every player today — resets at midnight">Daily Docket</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="sessionbar" id="sessionbar"></div>
+      <div style="text-align:center;color:var(--muted);font-size:13.5px">Headings reveal one at a time — boilerplate first, signature clauses last. Call it early for more points; you set the pace.</div>
+      <div class="bonusbanner hidden" id="bonusBanner">⚡ High-stakes brief — double points</div>
+      <div class="clues" id="clues"></div>
+      <div class="choices" id="choices"></div>
+      <div class="feedback" id="feedback"></div>
+      <div class="gctrl">
+        <button id="revealBtn" class="ghost">Reveal next heading</button>
+        <button id="nextBtn" class="hidden">Next case</button>
+        <button id="restartBtn" class="hidden">Play again</button>
+      </div>
+      <div class="hint" id="ptsHint"></div>
+    </div>
+    <details class="notes">
+      <summary>Why this game is built the way it is — behavioral design notes</summary>
+      <ul>
+        <li><b>Goal-gradient effect (Tier A/B):</b> the career bar and 10-case session bar make progress visible; effort reliably accelerates as a goal nears.</li>
+        <li><b>Competence feedback (self-determination theory, Tier A):</b> every case — won or lost — ends by teaching the "tell," and ranks track real skill. Absence of progress feedback is one of the strongest demotivators known.</li>
+        <li><b>Autonomy support (SDT, Tier A):</b> you choose the mode, the pace, and when to commit. Controlling designs trigger reactance; this one never forces a reveal.</li>
+        <li><b>Open loops / Zeigarnik (Tier B):</b> the uncracked-contract chips stay visibly unfinished — unclosed sets pull people back.</li>
+        <li><b>Fresh-start effect (Tier B):</b> the Daily Docket resets at midnight, giving each day a clean re-entry point.</li>
+        <li><b>Peak–end rule (Tier A):</b> the endscreen replays your sharpest call, so every session ends on its peak moment.</li>
+        <li><b>Probability overweighting (Tier B):</b> occasional double-point briefs add variable stakes without punishing anyone.</li>
+        <li><b>Lapse-friendly streaks:</b> a broken streak "pauses" and your best stands — self-compassion framing predicts resumption; "I blew it" framing predicts quitting.</li>
+      </ul>
+    </details>
+  </section>
+</main>
+<script>
+const DATA = {
+  "meta": {
+    "title": "Commercial Contract Heading Taxonomy",
+    "generated": "2026-08-04",
+    "tags": {
+      "u": "Universal boilerplate — appears in nearly every commercial contract",
+      "s": "Shared — common across a family of contract types",
+      "x": "Signature — distinctive to this contract type"
+    },
+    "notes": [
+      "Each heading carries a canonical concept key (c) so overlap can be computed across contract types.",
+      "Ordering reflects the representative order found in real templates and SEC EDGAR exhibits."
+    ]
+  },
+  "contracts": [
+    {
+      "id": "nda",
+      "name": "Mutual NDA",
+      "family": "Confidentiality",
+      "blurb": "Self-contained information-protection contract. Notably missing the full risk-allocation stack (indemnity, liability caps, force majeure) found elsewhere.",
+      "sources": [
+        "https://commonpaper.com/standards/mutual-nda/",
+        "https://arbor.law/insights/mutual-non-disclosure-agreement-nda/",
+        "https://www.legalzoom.com/templates/t/mutual-non-disclosure-agreement"
+      ],
+      "headings": [
+        {"t": "Parties, Recitals & Purpose", "c": "parties-recitals", "tag": "u", "sub": ["Permitted purpose of disclosure", "Effective date"]},
+        {"t": "Definition of Confidential Information", "c": "ci-definition", "tag": "x", "sub": ["Marked vs. reasonably-understood-as-confidential", "Categories: technical, business, pricing, roadmaps", "Existence of discussions itself"]},
+        {"t": "Use & Protection Obligations", "c": "ci-obligations", "tag": "x", "sub": ["Use solely for Purpose", "Standard of care", "Non-disclosure"]},
+        {"t": "Permitted Disclosures / Representatives", "c": "permitted-disclosure", "tag": "x", "sub": ["Need-to-know employees, advisors, contractors", "Bound by equivalent obligations"]},
+        {"t": "Exclusions from Confidential Information", "c": "ci-exclusions", "tag": "x", "sub": ["Publicly available", "Prior possession", "Third-party receipt", "Independent development"]},
+        {"t": "Compelled Disclosure", "c": "compelled-disclosure", "tag": "x", "sub": ["Notice to discloser", "Cooperation on protective order"]},
+        {"t": "Term & Termination", "c": "term-termination", "tag": "u", "sub": ["NDA term vs. surviving confidentiality term (1-yr sharing / 2-yr confidentiality benchmark)", "Trade-secret carve-out"]},
+        {"t": "Return or Destruction of Materials", "c": "return-destruction", "tag": "x", "sub": ["On request or termination", "Certification", "Backup-retention carve-out"]},
+        {"t": "No License; Rights Reserved", "c": "no-license", "tag": "x", "sub": []},
+        {"t": "No Warranty (AS-IS)", "c": "disclaimers", "tag": "s", "sub": ["Information provided as-is"]},
+        {"t": "No Obligation to Proceed", "c": "no-obligation", "tag": "x", "sub": []},
+        {"t": "Equitable / Injunctive Relief", "c": "equitable-relief", "tag": "x", "sub": ["Irreparable-harm acknowledgment"]},
+        {"t": "Governing Law & Jurisdiction", "c": "governing-law", "tag": "u", "sub": []},
+        {"t": "General / Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["Assignment (M&A carve-out)", "Waiver", "Severability", "Entire agreement", "Amendment", "Notices", "Counterparts"]}
+      ],
+      "optional": ["Residuals clause (unaided-memory use)", "Non-solicitation rider", "Affiliate-sharing rider"]
+    },
+    {
+      "id": "msa",
+      "name": "Master Services Agreement",
+      "family": "Services",
+      "blurb": "Framework contract: legal terms live here, commercial specifics live in SOWs incorporated by reference. Carries the full risk-allocation stack.",
+      "sources": [
+        "https://juro.com/contract-templates/msa-master-services-agreement",
+        "https://www.lawinsider.com/resources/contract-templates/master-service-agreement-template",
+        "https://www.sec.gov/Archives/edgar/data/1283699/000119312510114607/dex101.htm"
+      ],
+      "headings": [
+        {"t": "Definitions", "c": "definitions", "tag": "u", "sub": []},
+        {"t": "Services; Statements of Work", "c": "sow-framework", "tag": "x", "sub": ["Each SOW incorporates MSA, forms separate contract", "Engagement process"]},
+        {"t": "Order of Precedence", "c": "order-precedence", "tag": "x", "sub": ["MSA controls on liability/warranty/termination", "SOW may control commercial specifics"]},
+        {"t": "Performance Standards / Provider Obligations", "c": "provider-obligations", "tag": "s", "sub": ["Personnel", "Subcontracting", "Compliance with client policies"]},
+        {"t": "Client Obligations / Cooperation", "c": "client-obligations", "tag": "s", "sub": ["Access, information, dependencies"]},
+        {"t": "Change Management / Change Orders", "c": "change-control", "tag": "s", "sub": []},
+        {"t": "Fees, Invoicing & Payment", "c": "fees-payment", "tag": "u", "sub": ["Rates, expenses", "Invoicing cadence", "Late payment, taxes"]},
+        {"t": "Term & Termination", "c": "term-termination", "tag": "u", "sub": ["MSA term vs. SOW terms", "For convenience / for cause", "Wind-down / transition assistance", "Survival"]},
+        {"t": "Intellectual Property", "c": "ip-ownership", "tag": "s", "sub": ["Deliverables ownership: work-for-hire vs. license", "Background IP", "Tools"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": ["Embedded mini-NDA: definition, exclusions, return"]},
+        {"t": "Data Protection / Security", "c": "data-protection", "tag": "s", "sub": []},
+        {"t": "Representations & Warranties", "c": "reps-warranties", "tag": "u", "sub": ["Authority", "Workmanlike performance", "Non-infringement", "Warranty disclaimer"]},
+        {"t": "Indemnification", "c": "indemnification", "tag": "u", "sub": ["IP infringement", "Bodily injury / property damage", "Procedure: notice, control of defense"]},
+        {"t": "Limitation of Liability", "c": "limitation-liability", "tag": "u", "sub": ["Consequential-damages waiver", "Cap (often 12 months' fees)", "Carve-outs"]},
+        {"t": "Insurance", "c": "insurance", "tag": "s", "sub": ["Required coverage types and limits"]},
+        {"t": "Independent Contractor Relationship", "c": "relationship-parties", "tag": "s", "sub": ["No employment or agency", "Own taxes and benefits"]},
+        {"t": "Non-Solicitation", "c": "non-solicit", "tag": "s", "sub": ["Of personnel"]},
+        {"t": "Dispute Resolution; Governing Law", "c": "dispute-resolution", "tag": "u", "sub": ["Escalation, mediation/arbitration", "Venue"]},
+        {"t": "Force Majeure", "c": "force-majeure", "tag": "u", "sub": []},
+        {"t": "General / Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["Notices", "Assignment", "Severability", "Entire agreement", "Publicity", "Counterparts"]}
+      ],
+      "optional": []
+    },
+    {
+      "id": "saas",
+      "name": "SaaS Subscription Agreement",
+      "family": "Services",
+      "blurb": "Shares ~70% of its skeleton with the MSA. The SaaS delta: SLA + service credits, auto-renewal mechanics, suspension rights, DPA/subprocessors, data portability.",
+      "sources": [
+        "https://seqlegal.com/free-legal-documents/saas-agreement/",
+        "https://commonpaper.com/standards/cloud-service-agreement",
+        "https://www.pandadoc.com/saas-agreement-template/"
+      ],
+      "headings": [
+        {"t": "Definitions & Interpretation", "c": "definitions", "tag": "u", "sub": ["Authorized Users, Customer Data, Documentation, Order Form"]},
+        {"t": "Provision of the Service", "c": "services", "tag": "s", "sub": ["Availability commitment", "Planned maintenance", "Right to modify (no material degradation)"]},
+        {"t": "Order Forms", "c": "orders", "tag": "x", "sub": ["Plan, seats, fees, term — the commercial front page"]},
+        {"t": "License / Access Grant", "c": "ip-license", "tag": "s", "sub": ["Non-exclusive, non-transferable", "Internal business use", "Seat limits"]},
+        {"t": "Use Restrictions / Acceptable Use", "c": "restrictions", "tag": "x", "sub": ["No reverse engineering", "No competitive benchmarking", "No resale"]},
+        {"t": "Support", "c": "support", "tag": "s", "sub": ["Channels, hours, response times"]},
+        {"t": "Service Levels (SLA)", "c": "sla", "tag": "x", "sub": ["Uptime commitment (e.g., 99.9%)", "Downtime exclusions", "Service credits as sole and exclusive remedy"]},
+        {"t": "Fees & Payment", "c": "fees-payment", "tag": "u", "sub": ["Billing in advance", "Suspension for non-payment", "Renewal price-escalation caps"]},
+        {"t": "Data Protection / DPA", "c": "data-protection", "tag": "x", "sub": ["Controller/processor roles", "Subprocessors and objection rights", "Breach notification"]},
+        {"t": "Customer Data", "c": "customer-data", "tag": "x", "sub": ["Customer ownership", "License to provider to host/process", "Aggregated usage-data rights"]},
+        {"t": "Intellectual Property", "c": "ip-ownership", "tag": "s", "sub": ["Provider owns service/software", "Feedback license"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "Warranties & Disclaimers", "c": "reps-warranties", "tag": "u", "sub": ["Conformance with documentation", "Implied-warranty exclusion"]},
+        {"t": "Limitation of Liability", "c": "limitation-liability", "tag": "u", "sub": ["Consequential exclusion", "12-month-fees cap", "Carve-outs"]},
+        {"t": "Indemnification", "c": "indemnification", "tag": "u", "sub": ["Provider IP indemnity (modify/replace/refund)", "Customer data/use indemnity"]},
+        {"t": "Term & Termination", "c": "term-termination", "tag": "u", "sub": ["Auto-renewal with cancellation notice window", "Material breach, insolvency, non-payment"]},
+        {"t": "Effects of Termination / Data Portability", "c": "data-portability", "tag": "x", "sub": ["Data export/return window", "Deletion", "Survival"]},
+        {"t": "Force Majeure", "c": "force-majeure", "tag": "u", "sub": []},
+        {"t": "General; Governing Law", "c": "misc-general", "tag": "u", "sub": ["Assignment", "Severability", "Notices", "Entire agreement"]}
+      ],
+      "optional": []
+    },
+    {
+      "id": "sow",
+      "name": "Statement of Work",
+      "family": "Services",
+      "blurb": "Project-shaped rider under an MSA. Deliberately thin on boilerplate — the MSA carries it. Nearly everything here is operational.",
+      "sources": [
+        "https://www.docusign.com/templates/statement-of-work-sow",
+        "https://talkcounsel.com/blog/a-guide-to-msas-sows-work-orders-and-change-orders/",
+        "https://www.atlassian.com/software/confluence/templates/statement-of-work"
+      ],
+      "headings": [
+        {"t": "Incorporation of MSA; Order of Precedence", "c": "order-precedence", "tag": "x", "sub": ["Identifies governing MSA", "SOW subject to MSA terms"]},
+        {"t": "Project Overview & Objectives", "c": "purpose-scope", "tag": "s", "sub": []},
+        {"t": "Scope of Work / Description of Services", "c": "services", "tag": "s", "sub": ["Tasks, phases", "In-scope vs. out-of-scope exclusions"]},
+        {"t": "Deliverables", "c": "deliverables", "tag": "x", "sub": ["Itemized outputs with formats, specs, due dates"]},
+        {"t": "Timeline / Milestones", "c": "timeline", "tag": "x", "sub": ["Start/end dates", "Milestone table"]},
+        {"t": "Assumptions & Dependencies", "c": "assumptions", "tag": "x", "sub": ["What pricing/schedule rely on", "Client-provided inputs"]},
+        {"t": "Roles & Responsibilities", "c": "provider-obligations", "tag": "s", "sub": ["RACI-style allocation"]},
+        {"t": "Key Personnel / Staffing", "c": "personnel", "tag": "x", "sub": ["Named resources", "Replacement rules"]},
+        {"t": "Client Obligations", "c": "client-obligations", "tag": "s", "sub": ["Access, data, timely approvals"]},
+        {"t": "Acceptance Criteria & Procedure", "c": "acceptance", "tag": "x", "sub": ["Objective standards", "Review/cure period", "Deemed acceptance"]},
+        {"t": "Fees & Payment Schedule", "c": "fees-payment", "tag": "u", "sub": ["Fixed fee vs. T&M", "Milestone-linked payments", "Expenses"]},
+        {"t": "Change Order Process", "c": "change-control", "tag": "x", "sub": ["Written change request", "Impact assessment", "Dual sign-off — the anti-scope-creep clause"]},
+        {"t": "Reporting & Governance", "c": "reporting", "tag": "s", "sub": ["Status meetings", "Escalation path"]},
+        {"t": "Term of SOW / Completion", "c": "term-termination", "tag": "u", "sub": ["Project-specific; MSA otherwise governs"]},
+        {"t": "Signatures / Authorization", "c": "signatures", "tag": "s", "sub": []}
+      ],
+      "optional": ["Project-specific terms varying the MSA (special IP or liability treatment)"]
+    },
+    {
+      "id": "supply",
+      "name": "Supply / Purchase Agreement",
+      "family": "Goods",
+      "blurb": "Goods-flow contract: the signature machinery is forecasting, POs, delivery/Incoterms, title & risk, and inspection/acceptance.",
+      "sources": [
+        "https://www.pandadoc.com/supply-agreement-template/",
+        "https://terms.law/2024/01/14/critical-clauses-in-supply-agreements-template/",
+        "https://legaltemplates.net/form/manufacturing-and-supply-agreement/"
+      ],
+      "headings": [
+        {"t": "Definitions", "c": "definitions", "tag": "u", "sub": []},
+        {"t": "Sale & Purchase of Products", "c": "purpose-scope", "tag": "s", "sub": ["Product description", "Specifications (Exhibit A)"]},
+        {"t": "Forecasts & Purchase Orders", "c": "orders", "tag": "x", "sub": ["Rolling forecasts", "PO issuance/acceptance", "Battle-of-forms clause"]},
+        {"t": "Price", "c": "pricing", "tag": "s", "sub": ["Price list", "Adjustments/escalation", "Taxes"]},
+        {"t": "Payment Terms", "c": "fees-payment", "tag": "u", "sub": ["Invoicing, net-30/60", "Late interest", "Setoff"]},
+        {"t": "Delivery", "c": "delivery", "tag": "x", "sub": ["Incoterms (FOB, DDP)", "Late-delivery remedies", "Packaging & labeling"]},
+        {"t": "Title & Risk of Loss", "c": "title-risk", "tag": "x", "sub": []},
+        {"t": "Inspection, Acceptance & Rejection", "c": "acceptance", "tag": "x", "sub": ["Inspection window", "Deemed acceptance", "Repair/replace/refund"]},
+        {"t": "Quality; Quality Control", "c": "quality", "tag": "x", "sub": ["Quality standards", "Audits", "Recalls"]},
+        {"t": "Warranties", "c": "reps-warranties", "tag": "u", "sub": ["Conformity to spec", "Warranty period & remedy", "Disclaimers"]},
+        {"t": "Supply Assurance", "c": "supply-assurance", "tag": "x", "sub": ["Capacity, allocation", "Safety stock", "Second source"]},
+        {"t": "Tooling & Equipment", "c": "tooling", "tag": "x", "sub": []},
+        {"t": "Intellectual Property", "c": "ip-ownership", "tag": "s", "sub": ["Specs and tooling designs"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "Indemnification; Insurance", "c": "indemnification", "tag": "u", "sub": ["Product liability"]},
+        {"t": "Limitation of Liability", "c": "limitation-liability", "tag": "u", "sub": []},
+        {"t": "Term & Termination", "c": "term-termination", "tag": "u", "sub": ["Last-time-buy", "Effect of termination"]},
+        {"t": "Force Majeure", "c": "force-majeure", "tag": "u", "sub": []},
+        {"t": "Compliance with Laws", "c": "compliance", "tag": "s", "sub": ["Anti-bribery", "Trade/export", "Conflict minerals"]},
+        {"t": "Miscellaneous / General Provisions", "c": "misc-general", "tag": "u", "sub": []}
+      ],
+      "optional": []
+    },
+    {
+      "id": "distribution",
+      "name": "Distribution Agreement",
+      "family": "Goods",
+      "blurb": "A supply agreement wrapped in a relationship: appointment, territory/exclusivity, minimums, trademark license, and end-of-relationship inventory mechanics.",
+      "sources": [
+        "https://www.legalzoom.com/templates/t/distribution-agreement",
+        "https://www.pandadoc.com/exclusive-distribution-agreement-template/",
+        "https://fynk.com/en/templates/distribution-agreement/"
+      ],
+      "headings": [
+        {"t": "Definitions", "c": "definitions", "tag": "u", "sub": []},
+        {"t": "Appointment", "c": "grant", "tag": "x", "sub": ["Grant of distribution rights", "Sub-distributors"]},
+        {"t": "Territory & Exclusivity", "c": "territory-exclusivity", "tag": "x", "sub": ["Exclusive / non-exclusive / sole", "Out-of-territory restrictions", "Supplier's reserved house accounts"]},
+        {"t": "Products", "c": "purpose-scope", "tag": "s", "sub": ["Covered products", "Additions/discontinuation"]},
+        {"t": "Distributor Obligations", "c": "provider-obligations", "tag": "s", "sub": ["Best efforts to promote", "Sales targets", "No-competing-products covenant", "Reports"]},
+        {"t": "Minimum Purchase Requirements", "c": "minimums", "tag": "x", "sub": ["Consequence of shortfall: loss of exclusivity or termination"]},
+        {"t": "Supplier Obligations", "c": "client-obligations", "tag": "s", "sub": ["Supply, training, marketing support"]},
+        {"t": "Orders, Pricing & Payment", "c": "fees-payment", "tag": "u", "sub": ["Discount off list", "Credit limits"]},
+        {"t": "Delivery, Title & Risk of Loss", "c": "delivery", "tag": "s", "sub": ["Incoterms"]},
+        {"t": "Marketing; Resale Prices", "c": "marketing", "tag": "s", "sub": ["Co-op funds", "Non-price-fixing language"]},
+        {"t": "Trademarks & IP", "c": "trademarks", "tag": "x", "sub": ["Limited trademark license", "Brand guidelines", "No registration by distributor"]},
+        {"t": "Warranties & Product Returns", "c": "reps-warranties", "tag": "u", "sub": ["Pass-through warranty", "Recalls"]},
+        {"t": "Relationship of Parties", "c": "relationship-parties", "tag": "s", "sub": ["No agency", "No-franchise disclaimer"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "Indemnification & Insurance", "c": "indemnification", "tag": "u", "sub": []},
+        {"t": "Limitation of Liability", "c": "limitation-liability", "tag": "u", "sub": []},
+        {"t": "Compliance", "c": "compliance", "tag": "s", "sub": ["FCPA", "Export controls", "Local dealer-protection laws"]},
+        {"t": "Term & Termination", "c": "term-termination", "tag": "u", "sub": ["Termination for shortfall", "Inventory repurchase / sell-off period", "No goodwill indemnity"]},
+        {"t": "Force Majeure", "c": "force-majeure", "tag": "u", "sub": []},
+        {"t": "General Provisions", "c": "misc-general", "tag": "u", "sub": []}
+      ],
+      "optional": []
+    },
+    {
+      "id": "license",
+      "name": "IP / Software License",
+      "family": "IP",
+      "blurb": "Built around the grant: scope, restrictions, and reservation of rights. Royalty/audit machinery and source-code escrow are the enterprise tells.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1280363/000119312511065181/dex104.htm",
+        "https://www.sirion.ai/library/contracts/software-license-agreement/",
+        "https://ironcladapp.com/journal/contracts/software-license-agreement"
+      ],
+      "headings": [
+        {"t": "Definitions", "c": "definitions", "tag": "u", "sub": []},
+        {"t": "Grant of License", "c": "grant", "tag": "x", "sub": ["Exclusive vs. non-exclusive", "Field of use, territory", "Perpetual vs. term", "Sublicensing"]},
+        {"t": "License Restrictions", "c": "restrictions", "tag": "x", "sub": ["No reverse engineering", "No redistribution / service bureau", "Usage limits"]},
+        {"t": "Delivery & Installation", "c": "delivery", "tag": "s", "sub": ["License keys", "Acceptance testing"]},
+        {"t": "License Fees; Royalties", "c": "fees-payment", "tag": "u", "sub": ["One-time / royalties / subscription", "Royalty reports"]},
+        {"t": "Ownership / Reservation of Rights", "c": "ip-ownership", "tag": "x", "sub": ["Licensor retains all IP", "Feedback license", "Derivative works"]},
+        {"t": "Maintenance & Support", "c": "support", "tag": "s", "sub": ["Updates/upgrades", "Support tiers"]},
+        {"t": "Source Code Escrow", "c": "escrow", "tag": "x", "sub": ["Release conditions"]},
+        {"t": "Warranties & Disclaimers", "c": "reps-warranties", "tag": "u", "sub": ["Performance to documentation", "No-malware", "AS-IS disclaimers"]},
+        {"t": "IP Infringement Indemnity", "c": "indemnification", "tag": "u", "sub": ["Procure right / modify / refund remedies"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "Data Protection / Security", "c": "data-protection", "tag": "s", "sub": []},
+        {"t": "Limitation of Liability", "c": "limitation-liability", "tag": "u", "sub": ["Cap at fees paid"]},
+        {"t": "Audit / Verification Rights", "c": "audit", "tag": "x", "sub": ["License-compliance audits"]},
+        {"t": "Term & Termination", "c": "term-termination", "tag": "u", "sub": ["License ceases", "Destruction/return + certification"]},
+        {"t": "Export Compliance; Government Rights", "c": "export", "tag": "x", "sub": ["FAR/DFARS"]},
+        {"t": "General Provisions", "c": "misc-general", "tag": "u", "sub": ["Assignment often restricted"]}
+      ],
+      "optional": []
+    },
+    {
+      "id": "employment",
+      "name": "Executive Employment Agreement",
+      "family": "People",
+      "blurb": "Compensation architecture plus exit mechanics: the signature content is Cause/Good Reason definitions, severance, change-in-control, and restrictive covenants.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1477815/000119312521306603/d104360dex1010.htm",
+        "https://legaltemplates.net/form/employment-contract/executive/",
+        "https://www.sec.gov/Archives/edgar/data/1534992/000153499214000010/ceoexecutiveemploymentagre.htm"
+      ],
+      "headings": [
+        {"t": "Recitals / Purpose", "c": "parties-recitals", "tag": "u", "sub": []},
+        {"t": "Employment; Position & Duties", "c": "position-duties", "tag": "x", "sub": ["Title, reporting line", "Full business time", "Outside activities / board seats"]},
+        {"t": "Term of Employment", "c": "term-termination", "tag": "u", "sub": ["Fixed / at-will / evergreen"]},
+        {"t": "Compensation", "c": "compensation", "tag": "x", "sub": ["Base salary (annual review)", "Annual bonus (target %, metrics)", "Equity awards: vesting, acceleration"]},
+        {"t": "Employee Benefits", "c": "benefits", "tag": "x", "sub": ["Plans", "Vacation/PTO", "Perquisites"]},
+        {"t": "Expense Reimbursement", "c": "expenses", "tag": "s", "sub": []},
+        {"t": "Termination of Employment", "c": "termination-events", "tag": "x", "sub": ["For Cause / without Cause", "Good Reason", "Death & disability", "Change in Control definitions"]},
+        {"t": "Severance / Compensation upon Termination", "c": "severance", "tag": "x", "sub": ["Severance multiple", "COBRA continuation", "Pro-rata bonus", "Release-of-claims condition"]},
+        {"t": "Change in Control Provisions", "c": "change-in-control", "tag": "x", "sub": ["Double-trigger severance", "Section 280G golden parachute"]},
+        {"t": "Restrictive Covenants", "c": "non-compete", "tag": "x", "sub": ["Non-competition", "Non-solicitation (employees & customers)", "Non-disparagement"]},
+        {"t": "Confidential Information", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "IP / Invention Assignment", "c": "ip-ownership", "tag": "s", "sub": []},
+        {"t": "Cooperation", "c": "cooperation", "tag": "s", "sub": ["Post-termination litigation assistance"]},
+        {"t": "Clawback / Recoupment", "c": "clawback", "tag": "x", "sub": ["Public companies"]},
+        {"t": "Section 409A Compliance", "c": "tax-409a", "tag": "x", "sub": ["Deferred-compensation tax"]},
+        {"t": "Indemnification & D&O Insurance", "c": "indemnification", "tag": "u", "sub": []},
+        {"t": "Dispute Resolution / Arbitration", "c": "dispute-resolution", "tag": "u", "sub": []},
+        {"t": "Representations", "c": "reps-warranties", "tag": "u", "sub": ["No conflicting obligations"]},
+        {"t": "Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["Withholding", "Successors"]}
+      ],
+      "optional": []
+    },
+    {
+      "id": "consulting",
+      "name": "Consulting / Contractor Agreement",
+      "family": "People",
+      "blurb": "The employment agreement's mirror image: services-and-deliverables shaped, signature Independent Contractor Status section, present-assignment IP, no severance/benefits/409A.",
+      "sources": [
+        "https://legal.thomsonreuters.com/content/dam/ue/en-us/documents/legal/pdf/independent-contractor-consultant-agreement-pro-client.pdf",
+        "https://www.mbopartners.com/blog/contracts-finance/what-should-an-independent-contractor-agreement-include"
+      ],
+      "headings": [
+        {"t": "Services & Deliverables", "c": "services", "tag": "s", "sub": ["SOW-based scope"]},
+        {"t": "Fees & Invoicing", "c": "fees-payment", "tag": "u", "sub": ["Hourly / fixed / milestone", "No salary, bonus, or equity"]},
+        {"t": "Independent Contractor Status", "c": "relationship-parties", "tag": "x", "sub": ["No employee benefits", "Contractor pays own taxes/withholding/insurance", "No authority to bind"]},
+        {"t": "IP Assignment", "c": "ip-ownership", "tag": "x", "sub": ["Work-made-for-hire + present assignment", "Broader than employment invention assignment"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "Non-Solicitation / Conflicts", "c": "non-solicit", "tag": "s", "sub": ["Kept lighter than non-compete to avoid misclassification"]},
+        {"t": "Insurance", "c": "insurance", "tag": "s", "sub": []},
+        {"t": "Subcontracting Limits", "c": "personnel", "tag": "s", "sub": []},
+        {"t": "Term & Termination", "c": "term-termination", "tag": "u", "sub": ["Short-notice for convenience", "No severance"]},
+        {"t": "Warranties", "c": "reps-warranties", "tag": "u", "sub": []},
+        {"t": "Indemnification", "c": "indemnification", "tag": "u", "sub": []},
+        {"t": "Limitation of Liability", "c": "limitation-liability", "tag": "u", "sub": []},
+        {"t": "General Provisions", "c": "misc-general", "tag": "u", "sub": []}
+      ],
+      "optional": []
+    },
+    {
+      "id": "lease",
+      "name": "Commercial Lease",
+      "family": "Real Estate",
+      "blurb": "Property-law vocabulary all its own: CAM pass-throughs, SNDA, estoppel, quiet enjoyment, holdover, casualty/condemnation. Limitation of liability is rare — replaced by exculpation clauses.",
+      "sources": [
+        "https://legaltemplates.net/form/lease-agreement/commercial/",
+        "https://www.sec.gov/Archives/edgar/data/1278263/000119312504037148/dex107.htm",
+        "https://www.lawdepot.com/us/real-estate/commercial-lease-agreement/"
+      ],
+      "headings": [
+        {"t": "Parties / Premises", "c": "parties-recitals", "tag": "u", "sub": ["Demise", "Rentable square footage", "Common areas"]},
+        {"t": "Term", "c": "term-termination", "tag": "u", "sub": ["Commencement", "Delivery of possession", "Renewal options"]},
+        {"t": "Rent", "c": "rent", "tag": "x", "sub": ["Base rent", "Additional rent", "Escalations (step-ups or CPI)", "Security deposit"]},
+        {"t": "Operating Expenses / CAM Charges", "c": "cam", "tag": "x", "sub": ["Proportionate share", "Gross-up", "Expense caps", "Reconciliation/audit rights"]},
+        {"t": "Use of Premises", "c": "use-premises", "tag": "x", "sub": ["Permitted use", "Exclusives (retail)"]},
+        {"t": "Utilities & Services", "c": "utilities", "tag": "x", "sub": ["HVAC hours", "Janitorial"]},
+        {"t": "Maintenance & Repairs", "c": "maintenance", "tag": "x", "sub": ["Landlord vs. tenant obligations"]},
+        {"t": "Alterations & Improvements", "c": "alterations", "tag": "x", "sub": ["TI allowance", "Landlord consent", "Restoration"]},
+        {"t": "Insurance", "c": "insurance", "tag": "s", "sub": ["Waiver of subrogation"]},
+        {"t": "Damage & Destruction / Casualty", "c": "casualty", "tag": "x", "sub": ["Rent abatement", "Termination rights"]},
+        {"t": "Condemnation / Eminent Domain", "c": "condemnation", "tag": "x", "sub": []},
+        {"t": "Assignment & Subletting", "c": "sublet", "tag": "x", "sub": ["Consent standard", "Recapture rights"]},
+        {"t": "Default & Remedies", "c": "default-remedies", "tag": "s", "sub": ["Cure periods", "Landlord remedies"]},
+        {"t": "Subordination, Non-Disturbance & Attornment (SNDA)", "c": "snda", "tag": "x", "sub": []},
+        {"t": "Estoppel Certificates", "c": "estoppel", "tag": "x", "sub": []},
+        {"t": "Quiet Enjoyment", "c": "quiet-enjoyment", "tag": "x", "sub": []},
+        {"t": "Holdover", "c": "holdover", "tag": "x", "sub": []},
+        {"t": "Surrender; Right of Entry", "c": "surrender", "tag": "x", "sub": []},
+        {"t": "Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["Brokers", "Notices", "Governing law"]}
+      ],
+      "optional": ["Retail extras: Percentage Rent, Co-Tenancy, Continuous Operation, Signage"]
+    },
+    {
+      "id": "franchise",
+      "name": "Franchise Agreement",
+      "family": "Brand Systems",
+      "blurb": "A license + operating system + relationship contract in one: grant, territory, fee stack (initial fee, royalty, ad fund), marks, operations manual, and post-term de-identification.",
+      "sources": [
+        "https://www.franchising.com/guides/the_franchise_agreement.html",
+        "https://www.manningfulton.com/blog/breaking-down-franchise-agreements-10-things-to-know/",
+        "https://contracts.justia.com/companies/joint-corp-4840/contract/273821"
+      ],
+      "headings": [
+        {"t": "Grant of Franchise", "c": "grant", "tag": "x", "sub": ["Limited, non-exclusive license to operate under the System"]},
+        {"t": "Territory / Protected Area", "c": "territory-exclusivity", "tag": "x", "sub": ["Radius definition", "Reserved rights, online channels"]},
+        {"t": "Term & Renewal", "c": "term-termination", "tag": "u", "sub": ["Renewal conditions and fee"]},
+        {"t": "Fees", "c": "royalties", "tag": "x", "sub": ["Initial franchise fee", "Continuing royalty", "Advertising/brand-fund contributions", "Technology fees"]},
+        {"t": "Site Selection, Development & Opening", "c": "site-development", "tag": "x", "sub": ["Site approval", "Build-out", "Opening deadline"]},
+        {"t": "Training & Assistance", "c": "training", "tag": "x", "sub": ["Initial training", "Opening assistance"]},
+        {"t": "Trademarks / Proprietary Marks", "c": "trademarks", "tag": "x", "sub": ["Usage standards", "No goodwill accrual to franchisee"]},
+        {"t": "Operations Manual / Confidential Information", "c": "ops-manual", "tag": "x", "sub": ["Manual compliance", "Trade secrets"]},
+        {"t": "System Standards / Operational Obligations", "c": "quality", "tag": "s", "sub": ["Approved products/suppliers", "Hours, staffing"]},
+        {"t": "Advertising & Marketing", "c": "marketing", "tag": "s", "sub": ["Brand-fund administration", "Local marketing minimums"]},
+        {"t": "Records, Reporting & Audit", "c": "audit", "tag": "s", "sub": ["Sales reporting", "Inspection rights"]},
+        {"t": "Insurance", "c": "insurance", "tag": "s", "sub": []},
+        {"t": "Transfer & Assignment", "c": "transfer-restrictions", "tag": "s", "sub": ["Franchisor consent", "Right of first refusal", "Transfer fee"]},
+        {"t": "Default & Termination", "c": "default-remedies", "tag": "s", "sub": ["Curable vs. incurable defaults", "Cross-default"]},
+        {"t": "Post-Term Obligations", "c": "post-term", "tag": "x", "sub": ["De-identification", "Return of manuals", "Phone/domain transfer"]},
+        {"t": "Covenants Not to Compete", "c": "non-compete", "tag": "x", "sub": ["In-term and post-term"]},
+        {"t": "Independent Contractor Relationship", "c": "relationship-parties", "tag": "s", "sub": ["Joint-employer disclaimer"]},
+        {"t": "Indemnification", "c": "indemnification", "tag": "u", "sub": []},
+        {"t": "Dispute Resolution", "c": "dispute-resolution", "tag": "u", "sub": ["FDD / state-law addenda", "Jury waiver"]},
+        {"t": "Miscellaneous / Acknowledgments", "c": "misc-general", "tag": "u", "sub": ["Owner guaranty", "Receipt of FDD"]}
+      ],
+      "optional": []
+    },
+    {
+      "id": "loan",
+      "name": "Loan / Credit Agreement",
+      "family": "Finance",
+      "blurb": "Article-structured and covenant-driven: CPs → Reps → Affirmative/Negative/Financial covenants → Events of Default/Acceleration. Force majeure is conspicuously absent — lenders don't excuse payment.",
+      "sources": [
+        "https://www.fredlaw.com/alert-demystifying-the-loan-agreement-a-guide-for-lenders",
+        "https://home.treasury.gov/system/files/136/SPV-Credit-Agt.pdf",
+        "https://www.lucbro.com/news/blogs/detail/10559/credit-agreements-101-key-provisions-and-considerations",
+        "https://www.sec.gov/Archives/edgar/data/1056285/000095017024115935/kirk-ex10_1.htm"
+      ],
+      "headings": [
+        {"t": "Definitions & Accounting Terms", "c": "definitions", "tag": "u", "sub": ["SOFR / rate provisions"]},
+        {"t": "The Credits / Terms of the Loans", "c": "credit-terms", "tag": "x", "sub": ["Commitments", "Term vs. revolver", "Letters of credit"]},
+        {"t": "Interest, Fees & Payments", "c": "interest", "tag": "x", "sub": ["Default interest", "Commitment fees", "Prepayments (voluntary/mandatory)", "Repayment; evidence of debt", "Sharing of payments among lenders"]},
+        {"t": "Taxes, Yield Protection & Illegality", "c": "yield-protection", "tag": "x", "sub": ["Tax gross-up", "Illegality", "Inability to determine rates / benchmark replacement", "Increased costs; reserves", "Compensation for losses (breakage)", "Mitigation; replacement of lenders"]},
+        {"t": "Conditions Precedent", "c": "conditions-precedent", "tag": "x", "sub": ["Closing: loan docs, opinions, certificates, KYC", "Each credit event: bring-down of reps, no Default"]},
+        {"t": "Representations & Warranties", "c": "reps-warranties", "tag": "u", "sub": ["Financial statements, no MAC", "Litigation, ERISA, sanctions/AML", "Solvency"]},
+        {"t": "Affirmative Covenants", "c": "covenants-affirmative", "tag": "x", "sub": ["Financial reporting + compliance certificates", "Notices of default", "Use of proceeds"]},
+        {"t": "Negative Covenants", "c": "covenants-negative", "tag": "x", "sub": ["Liens, indebtedness, investments", "Mergers/asset sales", "Restricted payments"]},
+        {"t": "Financial Covenants", "c": "covenants-financial", "tag": "x", "sub": ["Leverage ratio", "Fixed-charge coverage", "Minimum liquidity"]},
+        {"t": "Events of Default; Acceleration", "c": "events-default", "tag": "x", "sub": ["Payment default, cross-default", "Bankruptcy, change of control", "Acceleration and remedies"]},
+        {"t": "Guaranty", "c": "guaranty", "tag": "x", "sub": []},
+        {"t": "Security / Collateral", "c": "security-collateral", "tag": "x", "sub": ["Grant of security interest"]},
+        {"t": "The Agent(s)", "c": "agent", "tag": "x", "sub": ["Syndicated deals: appointment, exculpation"]},
+        {"t": "Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["Amendments & waivers", "Expenses & indemnification", "Payments set aside", "Assignments & participations", "Setoff", "Interest-rate limitation (usury savings)", "Jury trial waiver", "No advisory or fiduciary duty", "PATRIOT Act notice", "Keepwell", "Bail-in & QFC acknowledgments"]}
+      ],
+      "optional": ["Conversion / Exchange article (convertible loans)", "Appointment of lead borrower as borrowers' agent (multi-borrower deals)", "Guaranty & security often housed in separate documents", "No standalone financial-covenants article in some deals (covenant-lite / ratio used only for pricing)"]
+    },
+    {
+      "id": "jv",
+      "name": "Joint Venture Agreement",
+      "family": "Corporate",
+      "blurb": "Governance-centric: capital contributions, reserved matters, deadlock mechanisms (Russian roulette, Texas shoot-out), transfer restrictions (ROFR/tag/drag), and exit buy-sell.",
+      "sources": [
+        "https://www.sirion.ai/library/contracts/joint-venture-agreement/",
+        "https://talkcounsel.com/blog/key-provisions-joint-venture-agreement-guide/",
+        "https://aaronhall.com/structuring-deadlock-clauses-joint-venture-agreements/"
+      ],
+      "headings": [
+        {"t": "Parties & Recitals", "c": "parties-recitals", "tag": "u", "sub": ["Strategic rationale"]},
+        {"t": "Definitions & Interpretation", "c": "definitions", "tag": "u", "sub": []},
+        {"t": "Formation & Structure", "c": "formation", "tag": "x", "sub": ["Entity form: LLC / corp / contractual", "Jurisdiction"]},
+        {"t": "Purpose & Scope of the Venture", "c": "purpose-scope", "tag": "s", "sub": ["Permitted activities", "Scope limits"]},
+        {"t": "Capital Contributions", "c": "capital", "tag": "x", "sub": ["Cash, IP, assets in-kind", "Ownership percentages", "Capital calls; failure-to-fund: dilution, default loans"]},
+        {"t": "Ownership Interests / Equity", "c": "equity", "tag": "s", "sub": ["Anti-dilution"]},
+        {"t": "Governance & Management", "c": "governance", "tag": "x", "sub": ["Board composition, appointment rights", "Reserved matters (supermajority/unanimous)", "Day-to-day operator"]},
+        {"t": "Deadlock Resolution", "c": "deadlock", "tag": "x", "sub": ["Escalation", "Buy-sell: Russian roulette, Texas shoot-out", "Dissolution as last resort"]},
+        {"t": "Profit Allocation; Distributions", "c": "distributions", "tag": "x", "sub": ["Waterfall", "Tax allocations"]},
+        {"t": "Funding & Finance", "c": "funding", "tag": "s", "sub": ["Business plan, budgets", "Third-party debt"]},
+        {"t": "Accounting & Information Rights", "c": "reporting", "tag": "s", "sub": ["Books, audit, inspection"]},
+        {"t": "Intellectual Property", "c": "ip-ownership", "tag": "s", "sub": ["Background vs. foreground IP", "Licenses to/from JV"]},
+        {"t": "Non-Compete & Non-Solicitation", "c": "non-compete", "tag": "s", "sub": ["Parents' restrictions vs. JV scope"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "Transfer Restrictions", "c": "transfer-restrictions", "tag": "x", "sub": ["Lock-up", "ROFR/ROFO", "Tag-along, drag-along"]},
+        {"t": "Exit, Default & Termination", "c": "exit", "tag": "x", "sub": ["Put/call options", "Buyout valuation", "Dissolution and winding-up"]},
+        {"t": "Representations & Warranties", "c": "reps-warranties", "tag": "u", "sub": ["Contribution warranties"]},
+        {"t": "Indemnification & Limitation of Liability", "c": "indemnification", "tag": "u", "sub": []},
+        {"t": "Dispute Resolution", "c": "dispute-resolution", "tag": "u", "sub": ["Arbitration (cross-border)"]},
+        {"t": "General Provisions", "c": "misc-general", "tag": "u", "sub": ["No partnership beyond JV", "Further assurances", "Announcements"]}
+      ],
+      "optional": []
+    },
+    {
+      "id": "spa",
+      "name": "Share Purchase Agreement (M&A)",
+      "family": "Corporate",
+      "blurb": "The M&A deal contract — here in UK locked-box style: Leakage covenants instead of price adjustments, W&I insurance instead of seller indemnities, and reps that don't survive closing. Definitions sit at the back, not the front. US-style SPAs swap in escrows, purchase-price adjustments, and a full indemnification article.",
+      "sources": [
+        "https://www.sec.gov/Archives/edgar/data/1552033/000119312518131580/d575421dex21.htm"
+      ],
+      "headings": [
+        {"t": "Purchase and Sale of Shares", "c": "sale-shares", "tag": "x", "sub": ["Sale free and clear of liens", "Closing mechanics", "Closing deliveries & payments: payoff of indebtedness, resignations, expense statement"]},
+        {"t": "Purchase Price", "c": "pricing", "tag": "s", "sub": ["Allocation schedule among sellers", "Locked-box: Leakage reps and pound-for-pound recovery", "Currency conversion"]},
+        {"t": "Representations & Warranties of the Company", "c": "reps-warranties", "tag": "u", "sub": ["Organization, authority, no contravention", "Capitalization; subsidiaries", "Financial statements; absence of changes", "Tax, employee benefits, IP, property, material contracts", "Anti-bribery, sanctions, data protection"]},
+        {"t": "Representations & Warranties of the Sellers", "c": "reps-sellers", "tag": "x", "sub": ["Capacity and authority", "Ownership of purchased shares"]},
+        {"t": "Representations & Warranties of the Purchaser", "c": "reps-purchaser", "tag": "x", "sub": ["Sufficient funds", "Investment representation", "Solvency"]},
+        {"t": "Covenants", "c": "interim-covenants", "tag": "x", "sub": ["Conduct of business between signing and closing", "Exclusivity / no-shop", "Reasonable best efforts: regulatory clearances", "Access to information and books", "Employee matters", "D&O insurance tail", "W&I insurance", "Financing cooperation", "Non-solicitation; release", "Section 280G"]},
+        {"t": "Conditions Precedent", "c": "conditions-precedent", "tag": "s", "sub": ["Each party's conditions", "Purchaser's conditions", "Sellers' conditions", "Frustration of closing conditions"]},
+        {"t": "Termination", "c": "term-termination", "tag": "u", "sub": ["Termination triggers", "Effect of termination"]},
+        {"t": "Certain Tax Matters", "c": "tax-matters", "tag": "x", "sub": ["Section 338 election", "Transfer taxes", "Liability for taxes", "Deductions and withholding"]},
+        {"t": "Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["No survival of reps & warranties (locked-box hallmark)", "Seller Representative", "Specific enforcement", "No recourse", "Provision respecting legal representation", "Guarantee", "Jury trial waiver", "Definitions & interpretation (at the back)"]}
+      ],
+      "optional": ["US-style variants: purchase-price adjustment, escrow, standalone indemnification article, disclosure schedules", "Appendices: closing deliverables, permitted leakage", "Exhibits: joinder, voting power of attorney, allocation schedule"]
+    },
+    {
+      "id": "logistics",
+      "name": "Logistics Services Agreement (3PL)",
+      "family": "Services",
+      "blurb": "Third-party logistics: a services skeleton (appendix-driven scope, order of precedence) crossed with goods-custody DNA — customer keeps title, the 3PL waives its warehouseman's lien, KPIs gate termination, and disaster recovery gets its own section.",
+      "sources": [
+        "https://contracts.justia.com/companies/kirklands-inc-760/contract/46981/"
+      ],
+      "headings": [
+        {"t": "Preamble & Recitals", "c": "parties-recitals", "tag": "u", "sub": ["Parties", "Whereas clauses: SERVICES, GOODS, DC definitions"]},
+        {"t": "The Engagement", "c": "purpose-scope", "tag": "s", "sub": ["Appointment of 3PL for distribution-center services", "Date of Commencement"]},
+        {"t": "Declarations & Undertakings", "c": "reps-warranties", "tag": "u", "sub": ["Authority and compliance undertakings"]},
+        {"t": "Hours of Provision of the Services", "c": "hours", "tag": "x", "sub": ["Operating hours and coverage"]},
+        {"t": "The Services", "c": "services", "tag": "s", "sub": ["Warehousing & distribution per Appendix A", "Professional and workmanlike standard", "KPI failure for consecutive months as termination trigger"]},
+        {"t": "Consideration & Payment Terms", "c": "fees-payment", "tag": "u", "sub": ["Rate schedule (Appendix B)", "No other fees or charges payable"]},
+        {"t": "Liability & Insurance", "c": "limitation-liability", "tag": "u", "sub": ["3PL liability regime for goods in custody", "Required insurance"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "The Agreement Period", "c": "term-termination", "tag": "u", "sub": ["Term, renewal, termination"]},
+        {"t": "Integrity of the Agreement; Amending Conditions", "c": "amendment", "tag": "u", "sub": []},
+        {"t": "No Lien Rights", "c": "no-lien", "tag": "x", "sub": ["Waiver of warehouseman's / carrier's lien over customer goods"]},
+        {"t": "Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["Including Language clause"]},
+        {"t": "Notices", "c": "notices", "tag": "u", "sub": []},
+        {"t": "Intellectual Property; Publicity; Press Releases", "c": "ip-ownership", "tag": "s", "sub": []},
+        {"t": "Record Retention & Right to Inspect", "c": "audit", "tag": "s", "sub": ["Books and records", "Customer audit rights"]},
+        {"t": "Title to Goods", "c": "title-risk", "tag": "s", "sub": ["Customer owns all right, title and interest in the goods"]},
+        {"t": "Force Majeure", "c": "force-majeure", "tag": "u", "sub": []},
+        {"t": "Order of Precedence", "c": "order-precedence", "tag": "s", "sub": ["Agreement vs. appendices on conflict"]},
+        {"t": "Disaster Recovery, Business Continuity & Change Control", "c": "bcp", "tag": "x", "sub": []}
+      ],
+      "optional": ["Appendices A–E: services scope, rate schedule, and incorporated operational exhibits"]
+    },
+    {
+      "id": "merger",
+      "name": "Merger Agreement (Public M&A)",
+      "family": "Corporate",
+      "blurb": "Public-company M&A, organized around the deal lifecycle: merger mechanics → stock conversion → dual reps articles → signing-to-closing covenants → conditions → termination with break fees. Like the locked-box SPA, reps don't survive closing — but here it's because target shareholders are cashed out.",
+      "sources": [
+        "https://contracts.justia.com/companies/kirklands-inc-760/contract/1349110/"
+      ],
+      "headings": [
+        {"t": "The Merger", "c": "merger-mechanics", "tag": "x", "sub": ["Closing; Effective Time", "Certificate of incorporation and bylaws of survivor", "Directors and officers"]},
+        {"t": "Effect on Capital Stock; Exchange of Certificates", "c": "exchange-mechanics", "tag": "x", "sub": ["Conversion of capital stock", "Exchange and payment", "Treatment of options and equity awards", "No fractional shares"]},
+        {"t": "Representations & Warranties of the Company", "c": "reps-warranties", "tag": "u", "sub": ["Capital stock", "SEC reports; financial statements", "State takeover statutes", "Opinion of financial advisor"]},
+        {"t": "Representations & Warranties of Parent and Merger Sub", "c": "reps-purchaser", "tag": "s", "sub": ["No Parent material adverse effect", "No prior activities of Merger Sub"]},
+        {"t": "Covenants", "c": "interim-covenants", "tag": "s", "sub": ["Conduct of business", "No solicitation (no-shop; fiduciary out)", "Form S-4 / proxy statement; shareholders meeting", "Indemnification, exculpation & D&O insurance", "280G analysis; director resignations"]},
+        {"t": "Conditions Precedent", "c": "conditions-precedent", "tag": "s", "sub": ["Each party's conditions", "Company vs. Parent/Merger Sub conditions", "Frustration of closing conditions"]},
+        {"t": "Termination, Amendment & Waiver", "c": "term-termination", "tag": "u", "sub": ["Termination triggers", "Effect of termination", "Fees and expenses — break fees"]},
+        {"t": "General Provisions", "c": "misc-general", "tag": "u", "sub": ["Nonsurvival of reps & warranties", "Certain definitions", "Specific performance", "Governing law"]}
+      ],
+      "optional": ["Two-step tender-offer variants", "Support / voting agreements as side documents"]
+    },
+    {
+      "id": "security",
+      "name": "Security Agreement",
+      "family": "Finance",
+      "blurb": "The credit agreement's companion — organized around collateral, not the deal: grant of security interest → UCC perfection → per-collateral-class articles (securities, IP, accounts) → foreclosure remedies. The agent gets attorney-in-fact powers and the security interest 'continues' until release.",
+      "sources": [
+        "https://contracts.justia.com/companies/kirklands-inc-760/contract/632310/"
+      ],
+      "headings": [
+        {"t": "Definitions & Interpretation", "c": "definitions", "tag": "u", "sub": ["Information certificate"]},
+        {"t": "Grant of Security; Secured Obligations", "c": "security-collateral", "tag": "x", "sub": ["Pledge; grant of security interest", "Secured obligations defined"]},
+        {"t": "Perfection; Supplements; Further Assurances", "c": "perfection", "tag": "x", "sub": ["Delivery of certificated securities collateral", "UCC financing statements and filings", "Further assurances"]},
+        {"t": "Representations, Warranties & Covenants", "c": "reps-warranties", "tag": "u", "sub": ["Limitation on liens", "Location of inventory and equipment", "Insurance"]},
+        {"t": "Securities Collateral Provisions", "c": "collateral-classes", "tag": "x", "sub": ["Pledge of additional securities", "Voting rights; distributions"]},
+        {"t": "Intellectual Property Collateral Provisions", "c": "collateral-classes", "tag": "x", "sub": ["License grant to agent", "After-acquired property"]},
+        {"t": "Accounts Collateral Provisions", "c": "collateral-classes", "tag": "x", "sub": ["Special reps for accounts", "Collection"]},
+        {"t": "Remedies", "c": "default-remedies", "tag": "s", "sub": ["Foreclosure; notice of sale", "Certain sales of collateral", "Application of proceeds"]},
+        {"t": "Miscellaneous", "c": "misc-general", "tag": "u", "sub": ["Agent as attorney-in-fact", "Continuing security interest", "Termination; release", "Obligations absolute", "Jury waiver"]}
+      ],
+      "optional": ["Often paired with separate pledge agreements, guaranties, and intercreditor agreements"]
+    },
+    {
+      "id": "separation",
+      "name": "Separation & Release Agreement",
+      "family": "People",
+      "blurb": "The employment agreement's exit door: severance is the consideration, the release is the product. Two-document architecture — agreement plus a separately executed Release exhibit with the ADEA/OWBPA machinery (21-day consideration, 7-day revocation).",
+      "sources": [
+        "https://contracts.justia.com/companies/kirklands-inc-760/contract/1332068/"
+      ],
+      "headings": [
+        {"t": "Transition Period", "c": "transition", "tag": "x", "sub": ["Resignation date vs. separation date", "Duties during transition"]},
+        {"t": "Severance", "c": "severance", "tag": "x", "sub": ["Salary-continuation installments", "Conditioned on execution and non-revocation of Release"]},
+        {"t": "Health Plan Benefits", "c": "benefits", "tag": "s", "sub": ["COBRA election", "Employer-paid premiums through severance period"]},
+        {"t": "Company Property", "c": "company-property", "tag": "x", "sub": ["Return of property and materials"]},
+        {"t": "Employment Agreement; Surviving Covenants", "c": "non-compete", "tag": "s", "sub": ["Employment agreement terminated", "Restrictive covenants survive"]},
+        {"t": "Release of Claims", "c": "release", "tag": "x", "sub": ["General release: Title VII, ADEA, ERISA, FMLA, ADA, state statutes", "Covenant not to sue — EEOC / whistleblower carve-outs", "ADEA/OWBPA: 21-day consideration, 7-day revocation", "No admission of liability"]},
+        {"t": "Confidentiality", "c": "confidentiality", "tag": "u", "sub": []},
+        {"t": "Non-Disparagement", "c": "non-disparagement", "tag": "x", "sub": ["Often mutual — company directs officers not to disparage"]},
+        {"t": "Cooperation", "c": "cooperation", "tag": "s", "sub": ["Post-separation assistance with legal matters"]},
+        {"t": "Miscellaneous; Entire Agreement", "c": "misc-general", "tag": "u", "sub": ["Governing law; jury waiver", "Successors and assigns", "Severability"]}
+      ],
+      "optional": ["Release executed as separate Exhibit A, signable only on/after separation date"]
+    },
+    {
+      "id": "underwriting",
+      "name": "Underwriting Agreement",
+      "family": "Securities",
+      "blurb": "Capital markets: the company and selling shareholders sell to a syndicate of underwriters. Signature machinery — over-allotment (greenshoe) option, comfort letters and triple legal opinions as closing conditions, lock-ups, '33 Act indemnification with a Contribution fallback, and underwriter-default substitution.",
+      "sources": [
+        "https://contracts.justia.com/companies/kirklands-inc-760/contract/1103691/"
+      ],
+      "headings": [
+        {"t": "Representations & Warranties", "c": "reps-warranties", "tag": "u", "sub": ["Compliance with registration requirements", "Absence of manipulation", "Selling-shareholder reps"]},
+        {"t": "Sale and Delivery to Underwriters; Closing", "c": "securities-sale", "tag": "x", "sub": ["Initial securities", "Option securities — over-allotment (greenshoe)", "Payment; denominations"]},
+        {"t": "Covenants of the Company", "c": "offering-covenants", "tag": "x", "sub": ["Delivery of registration statements and prospectuses", "Restriction on sale of securities (market standoff)"]},
+        {"t": "Payment of Expenses", "c": "expenses", "tag": "s", "sub": []},
+        {"t": "Conditions of Underwriters' Obligations", "c": "conditions-precedent", "tag": "s", "sub": ["Legal opinions: company, sellers', underwriters' counsel", "Accountant's comfort letter + bring-down", "Officers' certificates", "Lock-up agreements"]},
+        {"t": "Indemnification", "c": "indemnification", "tag": "u", "sub": ["Of underwriters; of company/directors/officers", "1933 Act §15 / 1934 Act §20 framework"]},
+        {"t": "Contribution", "c": "contribution", "tag": "x", "sub": ["Fallback if indemnification unavailable"]},
+        {"t": "Survival of Representations", "c": "survival", "tag": "s", "sub": ["Reps survive delivery of securities"]},
+        {"t": "Termination", "c": "term-termination", "tag": "u", "sub": ["Market-out and material-change triggers"]},
+        {"t": "Default by Underwriters", "c": "underwriter-default", "tag": "x", "sub": ["Substitution mechanics for defaulting underwriters"]},
+        {"t": "Notices; Parties; Governing Law", "c": "misc-general", "tag": "u", "sub": ["Effect of headings"]}
+      ],
+      "optional": ["Schedules: underwriter syndicate, selling shareholders", "Exhibits: opinion forms, lock-up letter form", "Price determination agreement"]
+    }
+  ]
+};
+
+const C = DATA.contracts;
+const byId = Object.fromEntries(C.map(c=>[c.id,c]));
+const tagName = {u:'universal', s:'shared', x:'signature'};
+
+/* ---------- tabs ---------- */
+document.querySelectorAll('nav button').forEach(b=>{
+  b.onclick = ()=>{
+    document.querySelectorAll('nav button').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    ['explore','compare','matrix','game'].forEach(t=>
+      document.getElementById('tab-'+t).classList.toggle('hidden', t!==b.dataset.tab));
+  };
+});
+
+/* ---------- explore ---------- */
+const clist = document.getElementById('clist');
+C.forEach((c,i)=>{
+  const b = document.createElement('button');
+  b.innerHTML = c.name + '<span class="fam">' + c.family + '</span>';
+  b.onclick = ()=>{ showDetail(c.id); clist.querySelectorAll('button').forEach(x=>x.classList.remove('active')); b.classList.add('active'); };
+  if(i===0) b.classList.add('active');
+  clist.appendChild(b);
+});
+function showDetail(id){
+  const c = byId[id];
+  const counts = {u:0,s:0,x:0};
+  c.headings.forEach(h=>counts[h.tag]++);
+  let html = `<h2>${c.name} <span style="font-size:12px;color:var(--muted);font-weight:400">(${c.family})</span></h2>
+    <div class="blurb">${c.blurb}</div>
+    <div style="font-size:12px;color:var(--muted);margin-bottom:10px">${c.headings.length} headings — ${counts.x} signature · ${counts.s} shared · ${counts.u} universal. Click a heading to expand subheadings.</div>`;
+  c.headings.forEach((h,i)=>{
+    html += `<div class="hrow ${h.tag}" onclick="this.classList.toggle('open')">
+      <span class="num">${i+1}.</span>${h.t}<span class="tagchip">${tagName[h.tag]}</span>
+      ${h.sub.length?'<ul>'+h.sub.map(s=>'<li>'+s+'</li>').join('')+'</ul>':''}</div>`;
+  });
+  if(c.optional && c.optional.length)
+    html += `<div class="opt"><b>Common add-ons:</b> ${c.optional.join(' · ')}</div>`;
+  html += `<div class="srcs"><b>Sources:</b><br>` + c.sources.map(s=>`<a href="${s}" target="_blank">${s}</a>`).join('<br>') + `</div>`;
+  document.getElementById('detail').innerHTML = html;
+}
+showDetail(C[0].id);
+
+/* ---------- compare ---------- */
+const selA = document.getElementById('selA'), selB = document.getElementById('selB');
+C.forEach(c=>{ selA.add(new Option(c.name,c.id)); selB.add(new Option(c.name,c.id)); });
+selA.value='msa'; selB.value='saas';
+function concepts(c){ return new Set(c.headings.map(h=>h.c)); }
+function jaccard(a,b){
+  const A=concepts(a), B=concepts(b);
+  const inter=[...A].filter(x=>B.has(x)).length;
+  return inter/(A.size+B.size-inter);
+}
+function renderCompare(){
+  const a=byId[selA.value], b=byId[selB.value];
+  const A=concepts(a), B=concepts(b);
+  const shared=[...A].filter(x=>B.has(x));
+  document.getElementById('simval').textContent = Math.round(jaccard(a,b)*100)+'%';
+  document.getElementById('onlyAh').textContent = 'Only in ' + a.name;
+  document.getElementById('onlyBh').textContent = 'Only in ' + b.name;
+  const hFor=(c,key)=>c.headings.find(h=>h.c===key);
+  document.getElementById('sharedC').innerHTML = shared.map(k=>{
+    const ha=hFor(a,k), hb=hFor(b,k);
+    const same = ha.t===hb.t;
+    return `<div class="pill shared">${ha.t}${same?'':` <small>vs. "${hb.t}" in ${b.name}</small>`}</div>`;
+  }).join('') || '<div class="pill">None</div>';
+  document.getElementById('onlyA').innerHTML = a.headings.filter(h=>!B.has(h.c))
+    .map(h=>`<div class="pill only">${h.t}<small>${tagName[h.tag]}</small></div>`).join('') || '<div class="pill">None</div>';
+  document.getElementById('onlyB').innerHTML = b.headings.filter(h=>!A.has(h.c))
+    .map(h=>`<div class="pill only">${h.t}<small>${tagName[h.tag]}</small></div>`).join('') || '<div class="pill">None</div>';
+}
+selA.onchange=renderCompare; selB.onchange=renderCompare;
+renderCompare();
+
+/* ---------- matrix ---------- */
+(function buildMatrix(){
+  const t=document.getElementById('mxtable');
+  const short = c=>c.name.split(/[\s/]/).slice(0,2).join(' ').replace('Agreement','').trim();
+  let html='<tr><th></th>'+C.map(c=>`<th>${short(c)}</th>`).join('')+'</tr>';
+  let best={v:0}, worst={v:1};
+  C.forEach(a=>{
+    html+=`<tr><th class="rowh">${short(a)}</th>`;
+    C.forEach(b=>{
+      if(a.id===b.id){ html+='<td style="background:var(--panel);color:var(--muted)">—</td>'; return; }
+      const v=jaccard(a,b);
+      if(v>best.v) best={v,a,b};
+      if(v<worst.v) worst={v,a,b};
+      const alpha=(0.12+v*0.88).toFixed(2);
+      html+=`<td style="background:rgba(232,180,74,${alpha})" title="${a.name} vs ${b.name}: ${Math.round(v*100)}%"
+        onclick="openCompare('${a.id}','${b.id}')">${Math.round(v*100)}</td>`;
+    });
+    html+='</tr>';
+  });
+  t.innerHTML=html;
+  document.getElementById('mxinsights').innerHTML =
+    `<b>Closest cousins:</b> ${best.a.name} & ${best.b.name} (${Math.round(best.v*100)}%). ` +
+    `<b>Most distant:</b> ${worst.a.name} & ${worst.b.name} (${Math.round(worst.v*100)}%). ` +
+    `The loan agreement and lease are the structural outliers — each speaks its own dialect (covenants/default architecture; property-law clauses).`;
+})();
+function openCompare(a,b){
+  selA.value=a; selB.value=b; renderCompare();
+  document.querySelector('nav button[data-tab="compare"]').click();
+}
+
+/* ---------- game ---------- */
+/* Persistence (localStorage with in-memory fallback) */
+const store = (()=> {
+  let mem = null;
+  const KEY='contractAnatomyV2';
+  return {
+    load(){
+      try{ const raw=localStorage.getItem(KEY); if(raw) return JSON.parse(raw); }catch(e){}
+      return mem || {career:0, high:0, bestStreak:0, mastery:{}, games:0, fastest:null, daily:{date:'',score:0}};
+    },
+    save(s){ mem=s; try{ localStorage.setItem(KEY, JSON.stringify(s)); }catch(e){} }
+  };
+})();
+let S = store.load();
+
+/* Career ladder (goal-gradient: always show distance to next rung) */
+const RANKS=[['Summer Associate',0],['Junior Associate',30],['Mid-Level Associate',75],['Senior Associate',140],['Of Counsel',220],['Partner',320],['Name Partner',450]];
+function renderCareer(){
+  let ri=0; RANKS.forEach((r,i)=>{ if(S.career>=r[1]) ri=i; });
+  const cur=RANKS[ri], next=RANKS[ri+1];
+  document.getElementById('rankName').textContent=cur[0];
+  if(next){
+    const pct=Math.min(100,((S.career-cur[1])/(next[1]-cur[1]))*100);
+    document.getElementById('rankFill').style.width=pct+'%';
+    document.getElementById('rankNext').textContent=`· ${next[1]-S.career} pts to ${next[0]}`;
+  } else {
+    document.getElementById('rankFill').style.width='100%';
+    document.getElementById('rankNext').textContent='· top of the letterhead';
+  }
+  document.getElementById('hsVal').textContent=S.high;
+  document.getElementById('bsVal').textContent=S.bestStreak;
+  /* Mastery chips — the open loop */
+  const cracked=C.filter(c=>S.mastery[c.id]);
+  document.getElementById('masteryChips').innerHTML=C.map(c=>
+    `<span class="chip ${S.mastery[c.id]?'done':''}" title="${S.mastery[c.id]?'Cracked — '+S.mastery[c.id]+' correct ID'+(S.mastery[c.id]>1?'s':''):'Not yet cracked'}">${S.mastery[c.id]?'✓ ':''}${c.name.split(' Agreement')[0].split(' /')[0]}</span>`).join('');
+  document.getElementById('masteryLine').textContent =
+    cracked.length===C.length ? 'All '+C.length+' contract types cracked — the full taxonomy is yours.'
+    : `Cracked ${cracked.length} of ${C.length} contract types — ${C.length-cracked.length} still open.`;
+}
+
+/* Seeded RNG for the Daily Docket (fresh-start effect: same docket for everyone, resets at midnight) */
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function todayStr(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function seedFrom(s){ let h=1779033703; for(let i=0;i<s.length;i++){ h=Math.imul(h^s.charCodeAt(i),3432918353); h=h<<13|h>>>19; } return h>>>0; }
+
+let g=null, mode='associate';
+function rngShuffle(arr,rng){ return arr.map(x=>[rng(),x]).sort((a,b)=>a[0]-b[0]).map(x=>x[1]); }
+
+function newGame(daily){
+  const rng = daily ? mulberry32(seedFrom(todayStr())) : Math.random.bind(Math);
+  const order = rngShuffle([...C],rng).slice(0,10);
+  /* variable stakes: 2 of 10 cases are double-point briefs (probability overweighting works in the player's favor) */
+  const bonusIdx = new Set(rngShuffle([...Array(10).keys()],rng).slice(0,2));
+  g = { round:0, score:0, streak:0, order, rng, daily:!!daily, bonusIdx, results:[], best:{revealed:99,name:null,pts:0} };
+  document.getElementById('restartBtn').classList.add('hidden');
+  renderDailyBtn();
+  nextRound();
+}
+function renderDailyBtn(){
+  const b=document.getElementById('dailyBtn');
+  const done = S.daily.date===todayStr();
+  b.classList.toggle('done',done);
+  b.textContent = done ? `Daily ✓ ${S.daily.score} pts` : 'Daily Docket';
+  b.title = done ? 'Today\'s docket filed. A new one arrives at midnight — try to beat '+S.daily.score+' pts, or free-play.' : 'Same 10 cases for every player today — resets at midnight';
+}
+function renderSession(){
+  document.getElementById('sessionbar').innerHTML =
+    [...Array(10).keys()].map(i=>{
+      let cls='seg';
+      if(i<g.results.length) cls+=' '+g.results[i];
+      else if(i===g.results.length) cls+=' cur';
+      return `<div class="${cls}"></div>`;
+    }).join('');
+}
+function multiplier(){ return (mode==='partner'?1.5:1)*(g.bonusIdx.has(g.round-1)?2:1); }
+function nextRound(){
+  if(g.round>=10){ return endGame(); }
+  const answer=g.order[g.round];
+  const rng=g.daily?g.rng:Math.random.bind(Math);
+  const clues=[
+    ...rngShuffle(answer.headings.filter(h=>h.tag==='u'),rng).slice(0,2),
+    ...rngShuffle(answer.headings.filter(h=>h.tag==='s'),rng).slice(0,1),
+    ...rngShuffle(answer.headings.filter(h=>h.tag==='x'),rng).slice(0,3)
+  ];
+  const nOpts = mode==='partner'?6:4;
+  const others=rngShuffle(C.filter(c=>c.id!==answer.id),rng).slice(0,nOpts-1);
+  g.cur={ answer, clues, revealed:0, opts:rngShuffle([answer,...others],rng), done:false };
+  g.round++;
+  renderSession();
+  document.getElementById('bonusBanner').classList.toggle('hidden', !g.bonusIdx.has(g.round-1));
+  document.getElementById('gRound').textContent=g.round;
+  document.getElementById('clues').innerHTML='';
+  document.getElementById('feedback').textContent='';
+  document.getElementById('nextBtn').classList.add('hidden');
+  document.getElementById('revealBtn').classList.remove('hidden');
+  const ch=document.getElementById('choices');
+  ch.innerHTML='';
+  g.cur.opts.forEach(o=>{
+    const b=document.createElement('button');
+    b.textContent=o.name;
+    b.onclick=()=>guess(o,b);
+    ch.appendChild(b);
+  });
+  reveal();
+}
+function pts(){ return Math.round(Math.max(1,6-g.cur.revealed)*multiplier()); }
+function reveal(){
+  const cur=g.cur;
+  if(cur.revealed>=cur.clues.length || cur.done) return;
+  const h=cur.clues[cur.revealed++];
+  const d=document.createElement('div');
+  d.className='clue';
+  d.innerHTML=`<span class="dot ${h.tag}"></span> ${h.t}`;
+  document.getElementById('clues').appendChild(d);
+  document.getElementById('ptsHint').textContent=
+    `Call it now for ${pts()} pts · ${cur.clues.length-cur.revealed} clue${cur.clues.length-cur.revealed===1?'':'s'} left`;
+  if(cur.revealed>=cur.clues.length) document.getElementById('revealBtn').classList.add('hidden');
+}
+function tellOf(cur){ return (cur.clues.filter(h=>h.tag==='x')[0] || cur.answer.headings.filter(h=>h.tag==='x')[0] || cur.clues[cur.clues.length-1]).t; }
+function guess(opt,btn){
+  const cur=g.cur;
+  if(cur.done) return;
+  cur.done=true;
+  document.getElementById('revealBtn').classList.add('hidden');
+  const fb=document.getElementById('feedback');
+  if(opt.id===cur.answer.id){
+    btn.classList.add('correct');
+    const p=pts();
+    g.score+=p; g.streak++;
+    g.results.push('won');
+    /* competence feedback: even a win teaches the tell */
+    const speed = cur.revealed<=2 ? 'Called it on the boilerplate — sharp. ' : cur.revealed<=4 ? 'Good instincts. ' : '';
+    fb.innerHTML=`✓ ${speed}<b style="color:var(--good)">+${p} pts</b> · The giveaway: "${tellOf(cur)}"`;
+    if(cur.revealed<g.best.revealed){ g.best={revealed:cur.revealed,name:cur.answer.name,pts:p}; }
+    S.mastery[cur.answer.id]=(S.mastery[cur.answer.id]||0)+1;
+    S.career+=p;
+    if(g.streak>S.bestStreak){ S.bestStreak=g.streak; }
+    store.save(S);
+    renderCareer();
+  } else {
+    btn.classList.add('wrong');
+    const hadStreak=g.streak;
+    g.streak=0;
+    g.results.push('lost');
+    document.querySelectorAll('#choices button').forEach(b=>{
+      if(b.textContent===cur.answer.name) b.classList.add('correct');
+    });
+    /* lapse-friendly framing: the streak pauses, the record stands */
+    const streakNote = hadStreak>=3 ? ` Streak paused at ${hadStreak} — your best (${S.bestStreak}) still stands.` : '';
+    fb.innerHTML=`✗ It was the <b>${cur.answer.name}</b> — the tell: "${tellOf(cur)}".${streakNote}`;
+  }
+  renderSession();
+  document.getElementById('gScore').textContent=g.score;
+  document.getElementById('gStreak').textContent=g.streak;
+  document.getElementById('nextBtn').classList.remove('hidden');
+  document.getElementById('nextBtn').textContent = g.round>=10 ? 'See verdict' : 'Next case';
+}
+function endGame(){
+  S.games++;
+  const newHigh = g.score>S.high;
+  if(newHigh) S.high=g.score;
+  if(g.daily){ S.daily={date:todayStr(),score:g.score}; }
+  store.save(S);
+  renderCareer(); renderDailyBtn();
+  const wins=g.results.filter(r=>r==='won').length;
+  const verdict = wins>=9?'Partner-level pattern recognition.':wins>=7?'Senior-associate instincts — the signature clauses are becoming reflexes.':wins>=5?'Solid mid-level read. The tells are starting to stick.':'Every miss showed you the tell — that\'s the fastest way to learn the taxonomy.';
+  const uncracked=C.filter(c=>!S.mastery[c.id]);
+  /* peak–end: end on the best moment + records + one open loop */
+  let html=`<div style="text-align:center;padding:14px 0">
+    <div style="font-size:34px;color:var(--accent);font-weight:700">${g.score} pts</div>
+    <div style="color:var(--muted);margin-top:4px">${wins}/10 cases · ${verdict}</div>`;
+  if(newHigh) html+=`<div class="record" style="margin-top:8px">★ New personal best (previous: ${g.score===S.high?'—':S.high})</div>`;
+  if(g.best.name) html+=`<div style="margin-top:8px;font-size:14px">Sharpest call: ID'd the <b>${g.best.name}</b> on clue ${g.best.revealed}.</div>`;
+  if(uncracked.length) html+=`<div style="margin-top:10px;font-size:13px;color:var(--muted)">Still uncracked: <b>${uncracked.slice(0,3).map(c=>c.name).join(', ')}${uncracked.length>3?' +'+(uncracked.length-3)+' more':''}</b> — they'll keep turning up until you catch them.</div>`;
+  else html+=`<div style="margin-top:10px;font-size:13px;color:var(--good)">Full taxonomy cracked. ${mode==='associate'?'Partner Mode is waiting.':''}</div>`;
+  if(mode==='associate' && wins>=8) html+=`<div style="margin-top:8px;font-size:13px;color:var(--accent)">You're outgrowing Associate Mode — Partner Mode pays 1.5×.</div>`;
+  if(S.daily.date!==todayStr()) html+=`<div style="margin-top:8px;font-size:13px;color:var(--muted)">Today's Daily Docket is still unfiled.</div>`;
+  html+=`</div>`;
+  document.getElementById('clues').innerHTML=html;
+  document.getElementById('choices').innerHTML='';
+  document.getElementById('feedback').textContent='';
+  document.getElementById('ptsHint').textContent='';
+  document.getElementById('bonusBanner').classList.add('hidden');
+  document.getElementById('revealBtn').classList.add('hidden');
+  document.getElementById('nextBtn').classList.add('hidden');
+  document.getElementById('restartBtn').classList.remove('hidden');
+  document.getElementById('restartBtn').textContent = newHigh ? 'Defend the record' : 'Play again';
+}
+/* mode + daily controls (autonomy: player chooses difficulty and format) */
+function setMode(m){
+  mode=m;
+  document.getElementById('modeAssoc').classList.toggle('on',m==='associate');
+  document.getElementById('modePartner').classList.toggle('on',m==='partner');
+  newGame(false);
+}
+document.getElementById('modeAssoc').onclick=()=>setMode('associate');
+document.getElementById('modePartner').onclick=()=>setMode('partner');
+document.getElementById('dailyBtn').onclick=()=>newGame(true);
+document.getElementById('revealBtn').onclick=reveal;
+document.getElementById('nextBtn').onclick=nextRound;
+document.getElementById('restartBtn').onclick=()=>newGame(false);
+renderCareer(); renderDailyBtn();
+newGame(false);
+</script>
+</body>
+</html>
