@@ -142,6 +142,8 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `legal-writing-editor` → `contract-dispute-analysis`
 - `negotiation-prep` → `mediation-prep`
 - `legal-research-memo` → `tax-analysis`
+- `commercial-contract-review` → `tax-analysis`
+- `negotiation-prep` → `tax-analysis`
 
 ## Dependencies (what a skill needs before it works)
 

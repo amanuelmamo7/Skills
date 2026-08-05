@@ -45,7 +45,7 @@ Session discipline: settle each topic fully before moving to the next — parall
 - `assets/negotiation-prep-template.md` — prep sheet, strategy block, session log, debrief.
 - `references/legal-house-rules.md` — calibration and confidentiality discipline apply to prep sheets as work product.
 
-Related skills: `commercial-contract-review` (the issue inventory for contract negotiations starts from its issue table), `mediation-prep` (when a neutral enters the picture), `client-advice-letter` (translating the recommended posture for a client decision).
+Related skills: `commercial-contract-review` (the issue inventory for contract negotiations starts from its issue table), `mediation-prep` (when a neutral enters the picture), `client-advice-letter` (translating the recommended posture for a client decision), `tax-analysis` (when a term under negotiation is a tax lever with opposed after-tax interests — partner-exit characterization, goodwill provisions, entity-sale structure — price the trade with its entity overlay before setting positions).
 
 ## What would make this skill wrong
 

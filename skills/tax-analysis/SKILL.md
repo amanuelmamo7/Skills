@@ -52,7 +52,7 @@ Every stage applies the house rules: elements anchored to facts (*because / as e
 - `references/salt-framework.md` — state-tax constitutional gates and the nexus timeline.
 - `references/legal-house-rules.md` — the eight rules; the tier system governs every Code quote.
 
-Related skills: `legal-research-memo` (the general-purpose research engine when a tax question needs case law beyond the framework's anchors), `authority-synthesis` (reconciling tax cases), `regulatory-change-analysis` (new tax legislation or regulations against a taxpayer's facts), `client-advice-letter` (translating for the client — with the tax-professional review gate intact).
+Related skills: `legal-research-memo` (the general-purpose research engine when a tax question needs case law beyond the framework's anchors), `authority-synthesis` (reconciling tax cases), `regulatory-change-analysis` (new tax legislation or regulations against a taxpayer's facts), `client-advice-letter` (translating for the client — with the tax-professional review gate intact), `commercial-contract-review` (partnership/LLC operating agreements route their tax-machinery clauses here, and this skill sends drafting-lever findings back to the review's issue table), `negotiation-prep` (when a deal term is itself a tax lever — e.g., §736 goodwill characterization in a partner exit, where the retiring and remaining partners' tax interests are directly opposed).
 
 ## What would make this skill wrong
 

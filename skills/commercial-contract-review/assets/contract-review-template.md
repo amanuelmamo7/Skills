@@ -16,7 +16,7 @@ Document reviewed: <filename / version / date>
 
 ## Clause sweep checklist (mark each: OK / issue #N / absent / N/A)
 
-Term, renewal & termination · Fees, payment & price escalation · Indemnification (scope, procedure, exclusivity) · Limitation of liability (cap amount & basis, exclusions, carve-outs) · IP ownership & license scope · Confidentiality (definition, term, exclusions) · Data protection & security · Warranties & disclaimers · Insurance · Assignment & change of control · Dispute resolution, forum, governing law · Notices · Force majeure · Definitions feeding the above (Affiliates, Losses, Confidential Information, Deliverables)
+Term, renewal & termination · Fees, payment & price escalation · Indemnification (scope, procedure, exclusivity) · Limitation of liability (cap amount & basis, exclusions, carve-outs) · IP ownership & license scope · Confidentiality (definition, term, exclusions) · Data protection & security · Warranties & disclaimers · Insurance · Assignment & change of control · Dispute resolution, forum, governing law · Notices · Force majeure · Definitions feeding the above (Affiliates, Losses, Confidential Information, Deliverables) · Tax-driven entity provisions, if a partnership/LLC agreement (capital accounts, allocations, chargebacks, goodwill/§754 — route to `tax-analysis`, don't redline as commercial terms)
 
 **Absent clauses that matter for this deal:** <list — an absence is a finding>
 

@@ -2118,6 +2118,16 @@
       "from": "tax-analysis",
       "to": "client-advice-letter",
       "type": "feeds"
+    },
+    {
+      "from": "commercial-contract-review",
+      "to": "tax-analysis",
+      "type": "use-with"
+    },
+    {
+      "from": "negotiation-prep",
+      "to": "tax-analysis",
+      "type": "use-with"
     }
   ]
 }

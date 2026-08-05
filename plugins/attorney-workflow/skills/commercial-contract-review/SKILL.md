@@ -23,7 +23,7 @@ A structured first pass that a supervising attorney can trust and check: every i
 
 1. **Intake (state-check).** Confirm: which side the user is on (paper matters — the same cap reads differently to vendor and customer), deal context (value, term, criticality), governing law, and whether a playbook exists. Missing side or context → ask; missing playbook → proceed with flagged defaults.
 2. **Read the whole agreement before writing anything.** Note the defined terms that shift risk (Affiliates, Losses, Confidential Information) — clause-level review with wrong definitions produces confident nonsense.
-3. **Sweep the risk-bearing clauses**, per the checklist in `assets/contract-review-template.md`: term/renewal/termination, fees and payment, indemnities, limitation of liability (cap, exclusions, carve-outs), IP ownership and license scope, confidentiality, data protection/security, warranties/disclaimers, insurance, assignment/change of control, dispute resolution and governing law, notice, and the definitions feeding each.
+3. **Sweep the risk-bearing clauses**, per the checklist in `assets/contract-review-template.md`: term/renewal/termination, fees and payment, indemnities, limitation of liability (cap, exclusions, carve-outs), IP ownership and license scope, confidentiality, data protection/security, warranties/disclaimers, insurance, assignment/change of control, dispute resolution and governing law, notice, and the definitions feeding each. If the agreement is a partnership agreement or LLC operating agreement, treat the tax-machinery clauses — capital-account maintenance, allocation waterfalls, deficit-restoration and qualified-income-offset provisions, minimum-gain chargebacks, goodwill-payment and §754-election provisions — as Subchapter K safe-harbor plumbing, not negotiable commercial boilerplate: flag them for `tax-analysis` review instead of marking them against the playbook.
 4. **Build the issue table.** For each finding: clause + pincite, quoted operative language, what the playbook (or flagged default) says, materiality rating (exposure × probability, per rule 5), proposed fallback position, and an escalation flag where the deviation exceeds stated authority or the exposure is uncapped.
 5. **Write the executive summary last**: three to five sentences a business stakeholder can act on — the two or three issues that matter, the overall risk posture, what needs escalation.
 6. **Close** with open questions (missing exhibits, facts only the business team knows), what would change the analysis, and the Sources footer (document version reviewed, playbook version applied).
@@ -37,7 +37,7 @@ Before delivering: verify every quote appears verbatim in the source document; c
 - `assets/contract-review-template.md` — clause checklist + issue-table format.
 - `references/legal-house-rules.md` — the eight rules; read before writing.
 
-Related skills: `legal-research-memo` (when enforceability of a clause needs authority), `regulatory-change-analysis` (when a clause implicates a regulatory regime).
+Related skills: `legal-research-memo` (when enforceability of a clause needs authority), `regulatory-change-analysis` (when a clause implicates a regulatory regime), `tax-analysis` (when the agreement is a partnership/LLC operating agreement — its allocation, chargeback, and exit provisions are tax machinery reviewed under that skill's entity overlay).
 
 ## What would make this skill wrong
 
