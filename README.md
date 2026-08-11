@@ -40,7 +40,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 |---|---:|---|
 | personal-assistant | 15 | active |
 | attorney-workflow | 13 | active |
-| agent-infrastructure | 12 | active |
+| agent-infrastructure | 13 | active |
 | dev-operations | 12 | active |
 | market-analysis | 11 | active |
 | general | 10 | active |
@@ -101,6 +101,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`mcp-builder`](skills/mcp-builder/SKILL.md) | Build and evaluate MCP servers (Anthropic) — ⚠ see manifest |
 | [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
 | [`skill-distiller`](skills/skill-distiller/SKILL.md) | Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers |
+| [`model-delegation`](skills/model-delegation/SKILL.md) | Two-dial task triage (model tier x effort): orchestrator assesses, delegates to cheapest capable tier, gates output via risk-tiered verify loop |
 
 ### dev-operations (distilled from StreamEZ project practice)
 

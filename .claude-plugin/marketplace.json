@@ -12,7 +12,7 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (90 skills across 8 buckets)."
+      "description": "The full curated library (91 skills across 8 buckets)."
     },
     {
       "name": "general",
@@ -42,7 +42,7 @@
     {
       "name": "agent-infrastructure",
       "source": "./plugins/agent-infrastructure",
-      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (12 skills)"
+      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (13 skills)"
     },
     {
       "name": "dev-operations",

@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (89 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (90 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -57,6 +57,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `mcp-builder` ⚠ — Build and evaluate MCP servers (Anthropic)
 - `effective-agent-skills` — How to author effective agent skills, with a security checklist
 - `skill-distiller` — Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers
+- `model-delegation` — Two-dial task triage (model tier x effort): orchestrator assesses, delegates to cheapest capable tier, gates output via risk-tiered verify loop
 
 ### dev-operations
 - `ai-build-house-rules` — 26-rule structural contract for building safely with AI assistance
@@ -122,6 +123,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `ai-agents-architect` and `autonomous-agent-patterns` overlap — architect = design guidance; patterns = concrete loop/permission/sandbox examples
 - `nextjs-app-router-patterns` and `nextjs-best-practices` overlap — same domain; patterns is example-driven, best-practices is principle tables
 - `contract-dispute-analysis` and `commercial-contract-review` overlap
+- `model-delegation` and `concise-planning` overlap
 
 ## Pipelines (skills that compose)
 
@@ -144,6 +146,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `legal-research-memo` → `tax-analysis`
 - `commercial-contract-review` → `tax-analysis`
 - `negotiation-prep` → `tax-analysis`
+- `model-delegation` → `ai-agents-architect`
 
 ## Dependencies (what a skill needs before it works)
 
