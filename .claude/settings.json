@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import json,sys; d=json.load(sys.stdin); p=d.get('tool_input',{}).get('file_path',''); gen=['/plugins/','graph.html','skills/skills-dispatcher/SKILL.md']; blocked=any(g in p for g in gen) or p.rstrip('/').endswith('/plugins'); sys.stderr.write('BLOCKED: '+p+' is machine-generated. Edit index.json (or the skill source) and run python3 tools/build.py instead.\\n') if blocked else None; sys.exit(2 if blocked else 0)\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import json,sys; d=json.load(sys.stdin); sys.exit(0 if d.get('tool_input',{}).get('file_path','').endswith('index.json') else 1)\" && python3 \"${CLAUDE_PROJECT_DIR:-.}/tools/build.py\" && echo 'index.json changed — tools/build.py auto-ran; generated artifacts refreshed' >&2; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}
