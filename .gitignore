@@ -3,3 +3,4 @@
 # local data — never publish
 /IRC*.pdf
 .DS_Store
+__pycache__/

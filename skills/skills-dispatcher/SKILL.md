@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (90 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (92 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -29,21 +29,6 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `task-capture` — Parse chat task requests, post to task API, confirm, fallback
 - `vip-list-management` — VIP-senders file with manual tiers and protected auto-generated block
 
-### attorney-workflow
-- `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup [SALI: Legal Services Industry]
-- `contract-anatomy` — Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures [SALI: Contract Law]
-- `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags [SALI: Contract Law; Document Review]
-- `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures [SALI: Legal Hold Management]
-- `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers [SALI: Legal Research; Brief / Memorandum of Law]
-- `regulatory-change-analysis` — New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions [SALI: Regulatory Compliance]
-- `contract-dispute-analysis` — Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth [SALI: Contract Law; Dispute Service]
-- `authority-synthesis` — Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations [SALI: Legal Research]
-- `legal-writing-editor` — Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance [SALI: A103 Draft/revise]
-- `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation [SALI: Letter Communication]
-- `negotiation-prep` — Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist [SALI: Contract Negotiation Management]
-- `mediation-prep` — Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness [SALI: Mediation Practice; Alternative Dispute Resolution Practice]
-- `tax-analysis` — Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay + Subchapter K entity overlay (partnerships/LLCs: formation, allocations, distributions, sales of interests, S corp contrast) — reads the actual IRC at runtime via a 1,896-section page index [SALI: Tax Law]
-
 ### agent-infrastructure
 - `ai-agents-architect` — Agent system design patterns and sharp edges
 - `autonomous-agent-patterns` — Autonomous agent design patterns: loops, permissions, sandboxing
@@ -58,6 +43,23 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `effective-agent-skills` — How to author effective agent skills, with a security checklist
 - `skill-distiller` — Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers
 - `model-delegation` — Two-dial task triage (model tier x effort): orchestrator assesses, delegates to cheapest capable tier, gates output via risk-tiered verify loop
+- `session-gate` ⚠ — Enforcement layer: PreToolUse gate blocks edits until Phase-0 triage recorded; manifest injection, self-silencing nudge, audited log with non-compliance tracking
+- `begin-task` — Human-invoked Phase-0 ritual: dispatcher route, model-delegation triage, covenant check, gate record — the front door session-gate verifies
+
+### attorney-workflow
+- `daily-legal-workflow-app-ideas` — Daily legal-AI research digest + app-idea brainstorm with run-memory dedup [SALI: Legal Services Industry]
+- `contract-anatomy` — Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures [SALI: Contract Law]
+- `commercial-contract-review` — Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags [SALI: Contract Law; Document Review]
+- `litigation-hold-and-triage` — Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures [SALI: Legal Hold Management]
+- `legal-research-memo` — Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers [SALI: Legal Research; Brief / Memorandum of Law]
+- `regulatory-change-analysis` — New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions [SALI: Regulatory Compliance]
+- `contract-dispute-analysis` — Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth [SALI: Contract Law; Dispute Service]
+- `authority-synthesis` — Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations [SALI: Legal Research]
+- `legal-writing-editor` — Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance [SALI: A103 Draft/revise]
+- `client-advice-letter` — Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation [SALI: Letter Communication]
+- `negotiation-prep` — Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist [SALI: Contract Negotiation Management]
+- `mediation-prep` — Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness [SALI: Mediation Practice; Alternative Dispute Resolution Practice]
+- `tax-analysis` — Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay + Subchapter K entity overlay (partnerships/LLCs: formation, allocations, distributions, sales of interests, S corp contrast) — reads the actual IRC at runtime via a 1,896-section page index [SALI: Tax Law]
 
 ### dev-operations
 - `ai-build-house-rules` — 26-rule structural contract for building safely with AI assistance
@@ -86,17 +88,6 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `investor-profile-template` — Financial-profile template: horizon, risk, liquidity, watchlist, delivery preferences
 - `analyst-house-style` — Eight non-negotiable analysis rules as a pre-ship rigor checklist
 
-### web-application
-- `form-cro` — Form conversion-rate optimization methodology
-- `frontend-design` — Design direction and visual quality guidance for web UI
-- `frontend-developer` — Frontend engineering persona and capability catalog
-- `nextjs-app-router-patterns` — Next.js App Router patterns and playbook
-- `nextjs-best-practices` — Next.js App Router principles and best practices
-- `react-best-practices` — Vercel Engineering's React performance guide (47 rules)
-- `seo-audit` — Diagnostic-only SEO audit framework
-- `shadcn` ⚠ — shadcn/ui component workflows via the official CLI
-- `tailwind-patterns` — Tailwind CSS v4 patterns and reference
-
 ### general
 - `gemini-deep-research` — Autonomous multi-step research with cited reports via Gemini API
 - `bulletmind` — Any input into clean hierarchical bullet notes
@@ -107,6 +98,18 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `deferred-work-register` — What / why-not-now / trigger register for consciously postponed work
 - `concise-planning` — Plan work concisely before executing multi-step tasks
 - `product-manager-toolkit` ⚠ — PM toolkit: RICE prioritization and customer-interview analysis scripts
+- `begin-task` — Human-invoked Phase-0 ritual: dispatcher route, model-delegation triage, covenant check, gate record — the front door session-gate verifies
+
+### web-application
+- `form-cro` — Form conversion-rate optimization methodology
+- `frontend-design` — Design direction and visual quality guidance for web UI
+- `frontend-developer` — Frontend engineering persona and capability catalog
+- `nextjs-app-router-patterns` — Next.js App Router patterns and playbook
+- `nextjs-best-practices` — Next.js App Router principles and best practices
+- `react-best-practices` — Vercel Engineering's React performance guide (47 rules)
+- `seo-audit` — Diagnostic-only SEO audit framework
+- `shadcn` ⚠ — shadcn/ui component workflows via the official CLI
+- `tailwind-patterns` — Tailwind CSS v4 patterns and reference
 
 ### software-architecture
 - `cqrs-implementation` — CQRS command/query separation with read-model synchronization
@@ -147,6 +150,8 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `commercial-contract-review` → `tax-analysis`
 - `negotiation-prep` → `tax-analysis`
 - `model-delegation` → `ai-agents-architect`
+- `session-gate` → `model-delegation`
+- `begin-task` → `session-gate`
 
 ## Dependencies (what a skill needs before it works)
 
@@ -157,6 +162,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `morning-music-alarm` needs `sonos` (voice/audio announce channel)
 - `proactive-announce-policy` needs `telegram-bot` (chat delivery channel to/from Bari)
 - `proactive-announce-policy` needs `sonos` (voice/audio announce channel)
+- `begin-task` needs skill `model-delegation`
 
 ## Risk caveats (⚠ skills — read manifest.json before invoking)
 
@@ -167,6 +173,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `privacy-mask` — third-party, DELEGATED TRUST: external pip package unvetted — see manifest
 - `product-manager-toolkit` — third-party, RUNS SCRIPTS (clean, stdlib-only, no network)
 - `mcp-builder` — third-party, RUNS SCRIPTS (clean); egress only Anthropic API + server under test
+- `session-gate` — first-party ⚠ — RUNS SCRIPTS + WRITES GLOBAL CONFIG: installer merges hooks into ~/.claude/settings.json (explicit user request + proposed-diff gate + backup only); hook scripts execute on every session start, prompt, and edit; kill switch SESSION_GATE_DISABLE=1 at claude launch; fail-open
 
 ## Standing rules
 

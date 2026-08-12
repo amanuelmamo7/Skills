@@ -1251,6 +1251,27 @@
    "description": "Two-dial task triage (model tier x effort): orchestrator assesses, delegates to cheapest capable tier, gates output via risk-tiered verify loop",
    "review_date": "2026-08-11",
    "risk": "first-party \u26a0 \u2014 writes user-global CLAUDE.md (explicit request + proposed-diff gate only); accepts delegated file edits via deterministic gate (git status + suppression grep) with risk-tiered review"
+  },
+  {
+   "id": "session-gate",
+   "type": "skill",
+   "buckets": [
+    "agent-infrastructure"
+   ],
+   "description": "Enforcement layer: PreToolUse gate blocks edits until Phase-0 triage recorded; manifest injection, self-silencing nudge, audited log with non-compliance tracking",
+   "review_date": "2026-08-11",
+   "risk": "first-party \u26a0 \u2014 RUNS SCRIPTS + WRITES GLOBAL CONFIG: installer merges hooks into ~/.claude/settings.json (explicit user request + proposed-diff gate + backup only); hook scripts execute on every session start, prompt, and edit; kill switch SESSION_GATE_DISABLE=1 at claude launch; fail-open"
+  },
+  {
+   "id": "begin-task",
+   "type": "skill",
+   "buckets": [
+    "agent-infrastructure",
+    "general"
+   ],
+   "description": "Human-invoked Phase-0 ritual: dispatcher route, model-delegation triage, covenant check, gate record \u2014 the front door session-gate verifies",
+   "review_date": "2026-08-11",
+   "risk": "first-party"
   }
  ],
  "edges": [
@@ -2158,6 +2179,36 @@
    "from": "model-delegation",
    "to": "concise-planning",
    "type": "overlaps-with"
+  },
+  {
+   "from": "session-gate",
+   "to": "weekly-wrap",
+   "type": "feeds"
+  },
+  {
+   "from": "session-gate",
+   "to": "model-delegation",
+   "type": "use-with"
+  },
+  {
+   "from": "begin-task",
+   "to": "session-gate",
+   "type": "use-with"
+  },
+  {
+   "from": "begin-task",
+   "to": "model-delegation",
+   "type": "depends-on"
+  },
+  {
+   "from": "session-gate",
+   "to": "amanuel",
+   "type": "reviewed-by"
+  },
+  {
+   "from": "begin-task",
+   "to": "amanuel",
+   "type": "reviewed-by"
   }
  ]
 }

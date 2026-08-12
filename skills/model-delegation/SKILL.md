@@ -92,8 +92,11 @@ note if it leaves the machine. The rubric never changes.
 
 ## Phase 2 — Delegation
 
-Read `references/delegate-prompts.md` before the first spawn of a session. Every
-spawn carries three mandatory blocks: self-contained spec, escalation clause,
+Preferred: spawn the pinned agent definitions in `references/agents/` (copy them
+to `~/.claude/agents/` once — model pinning and protocol then live in config, not
+memory). Fallback on surfaces without custom agents: read
+`references/delegate-prompts.md` and use its templates. Either way every spawn
+carries three mandatory blocks: self-contained spec, escalation clause,
 self-report format. Additionally:
 
 - **Recursion guard:** delegates execute; they never re-triage or sub-spawn. The
@@ -121,10 +124,12 @@ git status --porcelain            # falsifies SCOPE: "clean"
 git diff -- <spec'd paths> | grep -nE '@ts-ignore|eslint-disable|\.skip\(|it\.only|xit\(|# type: ignore'
 ```
 
-Then check the self-report: MODEL field matches the tier you requested (misroutes
-are otherwise invisible); CHECKS contains verbatim command output tails and exit
-codes, not summaries. A well-formatted report is not evidence — the raw output tail
-is.
+Then check the self-report: MODEL field matches the tier you requested — treat it
+as weak evidence (models are unreliable narrators of their own tier; the pinned
+agent defs make it redundant, and in the template-fallback path it is the least
+trustworthy signal available — a mismatch is a red flag, a match proves little);
+CHECKS contains verbatim command output tails and exit codes, not summaries. A
+well-formatted report is not evidence — the raw output tail is.
 
 **LOW risk:** deterministic gate + self-report scan. Accept on pass.
 

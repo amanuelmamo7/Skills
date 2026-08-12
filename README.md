@@ -39,11 +39,11 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Bucket | Skills | Status |
 |---|---:|---|
 | personal-assistant | 15 | active |
+| agent-infrastructure | 15 | active |
 | attorney-workflow | 13 | active |
-| agent-infrastructure | 13 | active |
 | dev-operations | 12 | active |
 | market-analysis | 11 | active |
-| general | 10 | active |
+| general | 11 | active |
 | web-application | 9 | active |
 | software-architecture | 8 | active |
 
@@ -67,24 +67,6 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`task-capture`](skills/task-capture/SKILL.md) | Parse chat task requests, post to task API, confirm, fallback |
 | [`vip-list-management`](skills/vip-list-management/SKILL.md) | VIP-senders file with manual tiers and protected auto-generated block |
 
-### attorney-workflow
-
-| Skill | Use it for |
-|---|---|
-| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup · SALI: Legal Services Industry |
-| [`contract-anatomy`](skills/contract-anatomy/SKILL.md) | Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures · SALI: Contract Law |
-| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags · SALI: Contract Law; Document Review |
-| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures · SALI: Legal Hold Management |
-| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers · SALI: Legal Research; Brief / Memorandum of Law |
-| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions · SALI: Regulatory Compliance |
-| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth · SALI: Contract Law; Dispute Service |
-| [`authority-synthesis`](skills/authority-synthesis/SKILL.md) | Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations · SALI: Legal Research |
-| [`legal-writing-editor`](skills/legal-writing-editor/SKILL.md) | Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance · SALI: A103 Draft/revise |
-| [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation · SALI: Letter Communication |
-| [`negotiation-prep`](skills/negotiation-prep/SKILL.md) | Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist · SALI: Contract Negotiation Management |
-| [`mediation-prep`](skills/mediation-prep/SKILL.md) | Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness · SALI: Mediation Practice; Alternative Dispute Resolution Practice |
-| [`tax-analysis`](skills/tax-analysis/SKILL.md) | Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay + Subchapter K entity overlay (partnerships/LLCs: formation, allocations, distributions, sales of interests, S corp contrast) — reads the actual IRC at runtime via a 1,896-section page index · SALI: Tax Law |
-
 ### agent-infrastructure (third-party AAS + distilled first-party)
 
 | Skill | Use it for |
@@ -102,6 +84,26 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`effective-agent-skills`](skills/effective-agent-skills/SKILL.md) | How to author effective agent skills, with a security checklist |
 | [`skill-distiller`](skills/skill-distiller/SKILL.md) | Guardrails-first meta-skill: distill operational lessons into governed, falsifiable skills — evidence gate, boundary card, staleness falsifiers |
 | [`model-delegation`](skills/model-delegation/SKILL.md) | Two-dial task triage (model tier x effort): orchestrator assesses, delegates to cheapest capable tier, gates output via risk-tiered verify loop |
+| [`session-gate`](skills/session-gate/SKILL.md) | Enforcement layer: PreToolUse gate blocks edits until Phase-0 triage recorded; manifest injection, self-silencing nudge, audited log with non-compliance tracking — ⚠ see manifest |
+| [`begin-task`](skills/begin-task/SKILL.md) | Human-invoked Phase-0 ritual: dispatcher route, model-delegation triage, covenant check, gate record — the front door session-gate verifies |
+
+### attorney-workflow
+
+| Skill | Use it for |
+|---|---|
+| [`daily-legal-workflow-app-ideas`](skills/daily-legal-workflow-app-ideas/SKILL.md) | Daily legal-AI research digest + app-idea brainstorm with run-memory dedup · SALI: Legal Services Industry |
+| [`contract-anatomy`](skills/contract-anatomy/SKILL.md) | Commercial-contract heading taxonomy (19 types, 297 headings from SEC/Justia exhibits) + explorer/quiz game; classify, compare, and extend contract structures · SALI: Contract Law |
+| [`commercial-contract-review`](skills/commercial-contract-review/SKILL.md) | Playbook-driven first-pass contract review: ranked issue table with quoted clauses, fallbacks, escalation flags · SALI: Contract Law; Document Review |
+| [`litigation-hold-and-triage`](skills/litigation-hold-and-triage/SKILL.md) | Dispute intake triage + litigation-hold notice drafting — counsel decides, the skill structures · SALI: Legal Hold Management |
+| [`legal-research-memo`](skills/legal-research-memo/SKILL.md) | Verification-disciplined research memos: tiered citations, mandatory contrary authority, calibrated answers · SALI: Legal Research; Brief / Memorandum of Law |
+| [`regulatory-change-analysis`](skills/regulatory-change-analysis/SKILL.md) | New rule → calibrated applicability, cited obligations table, gap analysis, ranked actions · SALI: Regulatory Compliance |
+| [`contract-dispute-analysis`](skills/contract-dispute-analysis/SKILL.md) | Sequential UCC/common-law dispute analysis: governing law → formation → defenses → terms → breach → excuses → remedies, contested-nodes-only depth · SALI: Contract Law; Dispute Service |
+| [`authority-synthesis`](skills/authority-synthesis/SKILL.md) | Cases → usable rule: per-element case charting, implicit-rule synthesis with labeling, load-bearing case illustrations · SALI: Legal Research |
+| [`legal-writing-editor`](skills/legal-writing-editor/SKILL.md) | Four-pass editing gate for legal drafts: architecture parity, flow, sentences, mechanics — edits style, flags substance · SALI: A103 Draft/revise |
+| [`client-advice-letter`](skills/client-advice-letter/SKILL.md) | Client-facing translation of analysis: plain-English answer up front, options with tradeoffs, calibration that survives translation · SALI: Letter Communication |
+| [`negotiation-prep`](skills/negotiation-prep/SKILL.md) | Negotiation preparation: reservation/target/BATNA quartet, perspective-taking map, anchoring and concession strategy, bias checklist · SALI: Contract Negotiation Management |
+| [`mediation-prep`](skills/mediation-prep/SKILL.md) | Party-side mediation preparation: mediation statement, interest map, settlement ranges, caucus strategy, process readiness · SALI: Mediation Practice; Alternative Dispute Resolution Practice |
+| [`tax-analysis`](skills/tax-analysis/SKILL.md) | Federal income tax four-stage framework (income, deductions, timing, attribution) + SALT constitutional overlay + Subchapter K entity overlay (partnerships/LLCs: formation, allocations, distributions, sales of interests, S corp contrast) — reads the actual IRC at runtime via a 1,896-section page index · SALI: Tax Law |
 
 ### dev-operations (distilled from StreamEZ project practice)
 
@@ -150,6 +152,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`concise-planning`](skills/concise-planning/SKILL.md) | Plan work concisely before executing multi-step tasks |
 | [`product-manager-toolkit`](skills/product-manager-toolkit/SKILL.md) | PM toolkit: RICE prioritization and customer-interview analysis scripts — ⚠ see manifest |
 | [`skills-dispatcher`](skills/skills-dispatcher/SKILL.md) | Routing map of the whole library: buckets, preferences, pipelines, caveats (generated) |
+| [`begin-task`](skills/begin-task/SKILL.md) | Human-invoked Phase-0 ritual: dispatcher route, model-delegation triage, covenant check, gate record — the front door session-gate verifies |
 
 ### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
 

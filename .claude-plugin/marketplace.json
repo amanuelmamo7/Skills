@@ -12,12 +12,12 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (91 skills across 8 buckets)."
+      "description": "The full curated library (93 skills across 8 buckets)."
     },
     {
       "name": "general",
       "source": "./plugins/general",
-      "description": "Research, writing, and thinking utilities: deep research, research briefs, note synthesis, proofreading. (10 skills)"
+      "description": "Research, writing, and thinking utilities: deep research, research briefs, note synthesis, proofreading. (11 skills)"
     },
     {
       "name": "web-application",
@@ -42,7 +42,7 @@
     {
       "name": "agent-infrastructure",
       "source": "./plugins/agent-infrastructure",
-      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (13 skills)"
+      "description": "Building and running agents: design patterns, orchestration, scheduling, memory. (15 skills)"
     },
     {
       "name": "dev-operations",
