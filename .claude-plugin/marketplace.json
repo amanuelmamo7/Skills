@@ -12,7 +12,7 @@
     {
       "name": "skills-library",
       "source": "./",
-      "description": "The full curated library (93 skills across 8 buckets)."
+      "description": "The full curated library (98 skills across 9 buckets)."
     },
     {
       "name": "general",
@@ -53,6 +53,11 @@
       "name": "software-architecture",
       "source": "./plugins/software-architecture",
       "description": "Design patterns for software: DDD, CQRS, event sourcing, sagas, dbt modeling. (8 skills)"
+    },
+    {
+      "name": "hedera",
+      "source": "./plugins/hedera",
+      "description": "Building on Hedera: Agent Kit plugins, hooks and policies; Consensus and Token Service with the Hiero JS SDK (third-party, pinned). (5 skills)"
     }
   ]
 }

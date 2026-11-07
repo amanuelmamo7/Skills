@@ -1,0 +1,9 @@
+{
+  "name": "hedera",
+  "version": "0.2.0",
+  "description": "Building on Hedera: Agent Kit plugins, hooks and policies; Consensus and Token Service with the Hiero JS SDK (third-party, pinned). (5 skills \u2014 generated from index.json, do not edit by hand.)",
+  "author": {
+    "name": "Amanuel Mamo",
+    "email": "amanuelmamo7@gmail.com"
+  }
+}
