@@ -10,12 +10,12 @@
           "name": "four-line-verdict",
           "type": "regex",
           "value": "Observed:[\\s\\S]*Implied:[\\s\\S]*Actual:[\\s\\S]*Gap:",
-          "rubric": "The output opens its analysis with the four-line Observed / Implied / Actual / Gap block, and the Gap line ends in one of: justified, overshoot, undershoot, unclear"
+          "rubric": "Near the top, preceded by nothing except at most a one-line take and a one-line prior, the output gives the four-line Observed / Implied / Actual / Gap block, and the Gap line ends in one of: justified, overshoot, undershoot, unclear"
         },
         {
           "name": "prior-first",
           "type": "rubric",
-          "rubric": "The output states a prior expectation BEFORE presenting the evidence, and later says whether the data confirmed or surprised that prior"
+          "rubric": "The output states a prior expectation BEFORE the four-line block and any other evidence, and later says explicitly whether the data confirmed or surprised that prior"
         },
         {
           "name": "decomposition",

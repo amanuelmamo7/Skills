@@ -7,8 +7,8 @@
       "expected_output": "A four-line Observed/Implied/Actual/Gap verdict, a stated prior, a mechanical decomposition of the 18% into re-rating vs. EPS growth vs. sector beta, a named comp set, a cyclical-vs-secular call, dated figures, and a falsifier section, with no buy/sell language.",
       "files": [],
       "assertions": [
-        "The output opens its analysis with the four-line Observed / Implied / Actual / Gap block, and the Gap line ends in one of: justified, overshoot, undershoot, unclear",
-        "The output states a prior expectation BEFORE presenting the evidence, and later says whether the data confirmed or surprised that prior",
+        "Near the top, preceded by nothing except at most a one-line take and a one-line prior, the output gives the four-line Observed / Implied / Actual / Gap block, and the Gap line ends in one of: justified, overshoot, undershoot, unclear",
+        "The output states a prior expectation BEFORE the four-line block and any other evidence, and later says explicitly whether the data confirmed or surprised that prior",
         "The output attributes the 18% move mechanically, roughly ~10% to multiple expansion (25.0x to 27.5x) and ~7% to EPS estimate growth ($4.80 to $5.15), and relates the move to the +7% sector benchmark",
         "The output names a comparison set: at minimum the sector ETF (+7%) and the S&P 500 (+3%)",
         "The output explicitly calls the move cyclical, secular, or a mix, and gives evidence for that call",
