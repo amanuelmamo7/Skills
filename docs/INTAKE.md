@@ -26,6 +26,13 @@ Run this before any skill from another repo enters this library. No exceptions, 
 
 Getting the commit SHA of what you reviewed: on the skill's GitHub page press `y` (URL pins to the current commit), or run `git log -1 --format=%H` in a clone.
 
+## Evals (first-party and third-party)
+
+Trust (this checklist) and effectiveness (evals) are separate questions. A skill that
+can produce a wrong or harmful output — legal, financial, job-application, or anything
+acting on the user's behalf — should ship with `evals/spec.json` before it's relied on.
+See [EVALS.md](EVALS.md). Fictional fixtures only; never real client or personal data.
+
 ## Update flow (when the weekly audit flags upstream drift)
 
 1. Read the diff between `pinned_commit` and upstream HEAD.

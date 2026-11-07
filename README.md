@@ -12,6 +12,7 @@ Curated skills library — reviewed, pinned, and indexed. Skills I write myself 
 - A [weekly drift audit](.github/workflows/drift-audit.yml) compares every pinned commit against upstream and opens an issue when a vendored skill changed — run it manually anytime with `python3 tools/drift_audit.py`.
 - [`graph.html`](graph.html) is an interactive view of the knowledge graph — open it in a browser.
 - After ANY change to index.json, run `python3 tools/build.py` to regenerate plugins, README tables, and the graph.
+- High-stakes skills carry **behavioral evals** in `skills/<id>/evals/spec.json` (marked ✓ in the dispatcher). They test whether a skill actually changes agent behavior, not just whether it's safe. See [docs/EVALS.md](docs/EVALS.md).
 
 ## Installing
 

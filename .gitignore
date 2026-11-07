@@ -4,3 +4,7 @@
 /IRC*.pdf
 .DS_Store
 __pycache__/
+
+# eval runs (outputs may echo fixture data)
+agent-skills-workspace/
+.env

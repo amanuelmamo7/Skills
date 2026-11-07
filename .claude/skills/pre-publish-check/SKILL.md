@@ -24,16 +24,21 @@ continue to later steps. A gate that warns is not a gate.
 
 3. **Generated-files sync check** — prove the committed artifacts match index.json:
    ```bash
-   git status --porcelain plugins/ graph.html README.md skills/skills-dispatcher/SKILL.md
+   git status --porcelain plugins/ graph.html README.md skills/skills-dispatcher/SKILL.md 'skills/*/evals/evals.json'
+   python3 tools/compile_evals.py --check
    ```
    Any output = generated files were stale (or hand-edited). Report which files changed.
    The fresh build output is the correct version — stage it. If the diff looks like a
    hand-edit being reverted, say so explicitly before staging anything.
 
-4. **Manifest pin check** — every third-party skill in index.json has a manifest.json
+4. **Eval fixture check** — every `skills/*/evals/spec.json` uses fictional data only
+   (no real names, clients, matters, emails, or account details). This repo is public and
+   eval traffic leaves the machine. Any real data = hard stop.
+
+5. **Manifest pin check** — every third-party skill in index.json has a manifest.json
    entry with a pinned commit. Report any missing pins.
 
-5. **Report** — one line per step, PASS/FAIL, then overall verdict:
+6. **Report** — one line per step, PASS/FAIL, then overall verdict:
    `READY TO PUSH` or `BLOCKED: <first failing step>`.
 
 ## Rules

@@ -39,6 +39,8 @@ def main() -> None:
         "How to use: find the bucket matching the task domain, pick the skill whose",
         "one-liner fits, then CHECK the routing rules and caveats below before invoking.",
         "",
+        "Legend: ⚠ = risk caveat (see below). ✓ = has behavioral evals (skills/<id>/evals/spec.json).",
+        "",
         "## Skills by bucket",
         "",
     ]
@@ -49,7 +51,8 @@ def main() -> None:
             flag = " ⚠" if any(w in s.get("risk", "") for w in FLAG_WORDS) else ""
             sali = [e["label"] for e in s.get("lmss", []) if e.get("status") == "resolved" and e.get("label")]
             tag = f" [SALI: {'; '.join(sali)}]" if sali else ""
-            lines.append(f"- `{s['id']}`{flag} — {s['description']}{tag}")
+            tested = " ✓" if (ROOT / "skills" / s["id"] / "evals" / "spec.json").exists() else ""
+            lines.append(f"- `{s['id']}`{flag}{tested} — {s['description']}{tag}")
         lines.append("")
 
     routing = [e for e in edges if e["type"] in ("use-instead", "overlaps-with")]
