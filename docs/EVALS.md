@@ -66,6 +66,19 @@ bumping the version, and re-check the model slugs in the config when models are 
   `--judge` model for routine reruns and keep the strong judge for first runs.
 - **Only test skills whose failures cost something.** Most skills don't need evals.
 
+## Results log
+
+Pass rate with skill vs. without (baseline), judge `openai/gpt-5.5`, target `anthropic/claude-sonnet-5.5`.
+
+| Date | Skill | With | Without | Δ | Notes |
+|---|---|---|---|---|---|
+| 2026-11-07 | analyst-house-style | 92.6% | 66.7% | +25.9 | iter 3; order fix (PR #5) not yet rerun |
+| 2026-11-07 | commercial-contract-review | 88.9% | 38.9% | +50.0 | iter 6; baseline said "I'd walk away" |
+| 2026-11-07 | legal-research-memo | 94.4% | 61.1% | +33.3 | iter 6; baseline cited cases unlabeled |
+| 2026-11-07 | client-advice-letter | 93.8% | 75.0% | +18.8 | iter 6; baseline lacked draft header, privilege note |
+
+Append a row per run. A skill whose Δ falls to ~0 is a candidate to cut.
+
 ## Rules
 
 - **Fictional fixtures only.** No real names, clients, matters, emails, or accounts. This

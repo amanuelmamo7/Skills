@@ -34,7 +34,13 @@ the candidate in full — every line, including any support files in its folder.
 4. **Legal-domain skills** — If the skill touches legal work, has SALI alignment
    (`tools/lmss_align.py`) been run / recorded?
 
-5. **Quality** — Clear trigger description, scoped instructions, no vendor promotion
+5. **Frontmatter & evals** — frontmatter parses as strict YAML (values containing `: `
+   are quoted) and `description` ≤ 1024 chars. If the skill is high-stakes (legal,
+   financial, acts on the user's behalf), note whether it has `evals/spec.json`;
+   missing evals on a high-stakes skill is a finding, severity MEDIUM. Eval fixtures
+   containing real names, clients, or personal data is a finding, severity HIGH.
+
+6. **Quality** — Clear trigger description, scoped instructions, no vendor promotion
    masquerading as guidance, no dead references to files or tools that don't exist
    in the skill's folder.
 
