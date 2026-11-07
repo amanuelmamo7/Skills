@@ -7,7 +7,8 @@
 #   python3 tools/compile_evals.py
 #   set -a && source .env && set +a          # OPENAI_API_KEY = your OpenRouter key
 #   npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml
-#   npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml --include "**/analyst-house-style"
+#   npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml --include "analyst-house-style"
+# (--include matches the path under root=./skills: use the bare skill id, not **/id)
 #
 # baseline: true runs each prompt WITH and WITHOUT the skill. A skill that doesn't
 # beat its baseline is a candidate for cutting or rewriting.
