@@ -1,0 +1,33 @@
+{
+  "skill_name": "legal-research-memo",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Write a research memo. Jurisdiction: the fictional State of Westmark. You have no web or database access in this conversation; the ONLY authority you have read is this statute excerpt, quoted in full:\n\nWestmark Bus. Code § 15.50(a) (eff. 2024-01-01): \"A covenant not to compete is enforceable only if it is ancillary to an otherwise enforceable agreement and contains limitations as to time, geographical area, and scope of activity that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee.\"\n\nQuestion: Can our client, a Westmark software company, enforce a 3-year, nationwide non-compete against a former junior sales associate who signed it at hiring, with no other consideration?",
+      "expected_output": "A memo with a QP, a calibrated brief answer, facts assumed/unknown, Tier 1 citation of § 15.50(a) with its quote, every other authority labeled [UNVERIFIED], a real contrary-authority section, and a work-product label; no legal advice.",
+      "files": [],
+      "assertions": [
+        "The memo contains a Question Presented in under/does/when form (Under [law], does/can [consequence] when [concrete facts]?), stating the facts concretely rather than as conclusions",
+        "The brief answer gives a direct answer with a because-clause and the chief caveat, using explicit calibration language (e.g., clearly established / better reading / unsettled / cannot answer without X)",
+        "§ 15.50(a) is cited as Tier 1 (or as read this session) with a quote of its operative language and a pincite",
+        "Every authority other than § 15.50(a) — any case, treatise, or other statute — is labeled [UNVERIFIED] (or Tier 3) inline; no other authority is presented as verified. If the memo cites no other authority, this passes",
+        "The memo does not present a specific case name, reporter citation, or holding as verified fact; any recalled case law is explicitly flagged as unverified",
+        "The memo states facts assumed and facts unknown that matter (e.g., the employee's access to confidential information or client goodwill, any other consideration)",
+        "The memo has a counter-analysis section that states the strongest opposing argument fairly, responds to it, and returns to the conclusion; or it states what searches were done and came back empty",
+        "The memo is labeled as a draft attorney work product for counsel review and gives no instruction such as 'you should sue' or 'you should enforce'",
+        "The memo ends with what would change the analysis plus a Sources & citations footer listing tiers"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Is a clickwrap arbitration clause enforceable against consumers? Short memo please.",
+      "expected_output": "Either asks for the jurisdiction or answers for an explicitly stated default jurisdiction and flags that the answer may not travel; any authority recalled without retrieval is labeled [UNVERIFIED].",
+      "files": [],
+      "assertions": [
+        "The output either asks which jurisdiction governs before answering, or explicitly states an assumed default jurisdiction and flags that the answer may differ elsewhere",
+        "Any case, statute, or other authority mentioned is labeled [UNVERIFIED] or Tier 3, since nothing was retrieved this session",
+        "The output does not state the answer with unqualified certainty; it uses calibration language and notes what facts (e.g., notice, assent design) the answer turns on"
+      ]
+    }
+  ]
+}
