@@ -23,7 +23,7 @@ A memo convinces a lawyer; a client letter helps a person decide. Same analysis,
 
 1. **Opening** — the question the client asked, restated plainly, and the short answer with its honest qualifier. Two to four sentences.
 2. **Facts as we understand them** — only the facts the analysis rests on, with an explicit invitation to correct anything wrong or incomplete, and a note that the answer could change if the facts do.
-3. **The analysis, translated** — plain business English; no citations unless the client asked for them; every unavoidable term of art defined in the sentence that first uses it. Explain *why* the answer is what it is in terms of the client's situation, not doctrine for its own sake.
+3. **The analysis, translated** — plain business English; no citations unless the client asked for them; every unavoidable term of art defined in the sentence that first uses it — anywhere in the letter, including the opening and facts sections, not just the analysis. Explain *why* the answer is what it is in terms of the client's situation, not doctrine for its own sake.
 4. **Options** — each realistic path with its practical tradeoffs (cost, time, risk, relationship). No option without a tradeoff; a tradeoff-free option list is advocacy wearing an options costume.
 5. **Next steps** — concrete: who does what by when, including what the client needs to send or decide, and what the attorney will do on receipt.
 6. **Closing + confidentiality** — invitation to call with questions; a note that the letter is confidential legal communication and shouldn't be forwarded without talking to the attorney first (forwarding can waive privilege — say so in plain terms).
