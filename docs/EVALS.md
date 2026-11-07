@@ -48,11 +48,11 @@ case** (no live data available, so the right answer is honesty, not invention).
 ```bash
 python3 tools/compile_evals.py
 set -a && source .env && set +a      # OPENAI_API_KEY = OpenRouter key; .env is gitignored
-npx agent-skills-eval --config agent-skills-eval.yaml --include "**/analyst-house-style"
+npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml --include "**/analyst-house-style"
 ```
 
-Before the first run: review the `agent-skills-eval` package like any third-party code,
-pin a version, and confirm the model slugs in the config still exist on OpenRouter.
+The runner is pinned to `agent-skills-eval@0.1.1` (reviewed 2026-11-07). Re-review before
+bumping the version, and re-check the model slugs in the config when models are retired.
 
 ## Rules
 

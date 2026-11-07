@@ -1,11 +1,13 @@
 # Run behavioral evals for every skill that has skills/<id>/evals/evals.json.
-# Tool: https://github.com/darkrishabh/agent-skills-eval (third-party, unpinned —
-# treat like any third-party code: review before first run, pin a version).
+# Tool: https://github.com/darkrishabh/agent-skills-eval — pinned to 0.1.1 (MIT).
+# Reviewed 2026-11-07: no install scripts; deps commander + js-yaml only; the sole
+# network call is POST {baseUrl}/chat/completions; writes only to the workspace dir.
+# Model slugs verified on OpenRouter 2026-11-07.
 #
 #   python3 tools/compile_evals.py
 #   set -a && source .env && set +a          # OPENAI_API_KEY = your OpenRouter key
-#   npx agent-skills-eval --config agent-skills-eval.yaml
-#   npx agent-skills-eval --config agent-skills-eval.yaml --include "**/analyst-house-style"
+#   npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml
+#   npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml --include "**/analyst-house-style"
 #
 # baseline: true runs each prompt WITH and WITHOUT the skill. A skill that doesn't
 # beat its baseline is a candidate for cutting or rewriting.
@@ -20,8 +22,8 @@ baseline: true
 
 # Target = the model the skill is written for; judge = a different, strong model
 # so the skill isn't graded by the same model that produced the output.
-target: anthropic/claude-sonnet-4.5
-judge: openai/gpt-5
+target: anthropic/claude-sonnet-5.5
+judge: openai/gpt-5.5
 
 baseUrl: https://openrouter.ai/api/v1
 apiKeyEnv: OPENAI_API_KEY
