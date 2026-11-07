@@ -10,8 +10,10 @@
 #   npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml --include "analyst-house-style"
 # (--include matches the path under root=./skills: use the bare skill id, not **/id)
 #
-# baseline: true runs each prompt WITH and WITHOUT the skill. A skill that doesn't
-# beat its baseline is a candidate for cutting or rewriting.
+# baseline is OFF by default to halve cost: the without-skill result only changes when
+# the PROMPTS change, not when the skill does. Add --baseline for a skill's first run,
+# or after editing its spec.json prompts. A skill that doesn't beat its baseline is a
+# candidate for cutting or rewriting.
 #
 # PRIVACY: prompts, skill text, and outputs go to whichever provider baseUrl points at.
 # Only run evals with fictional fixtures. Never put client, matter, or personal data
@@ -19,7 +21,7 @@
 
 root: ./skills
 workspace: ./agent-skills-workspace
-baseline: true
+baseline: false
 
 # Target = the model the skill is written for; judge = a different, strong model
 # so the skill isn't graded by the same model that produced the output.

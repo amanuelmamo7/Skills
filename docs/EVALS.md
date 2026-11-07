@@ -54,6 +54,18 @@ npx agent-skills-eval@0.1.1 --config agent-skills-eval.yaml --include "analyst-h
 The runner is pinned to `agent-skills-eval@0.1.1` (reviewed 2026-11-07). Re-review before
 bumping the version, and re-check the model slugs in the config when models are retired.
 
+## Keeping cost down
+
+- **Batch, don't iterate per tweak.** Fix a skill from the judge's evidence, then run once
+  when several skills have changed. Claude can check a fix against the previous run's
+  saved outputs in `agent-skills-workspace/` for free before you pay for a rerun.
+- **Baseline only when needed** (off by default). Use `--baseline` on a skill's first run
+  or after changing its prompts; the without-skill score doesn't move when only the skill
+  changes.
+- **The judge is the expensive call.** If cost matters more than rigor, pass a cheaper
+  `--judge` model for routine reruns and keep the strong judge for first runs.
+- **Only test skills whose failures cost something.** Most skills don't need evals.
+
 ## Rules
 
 - **Fictional fixtures only.** No real names, clients, matters, emails, or accounts. This
