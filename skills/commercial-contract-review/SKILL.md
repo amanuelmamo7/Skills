@@ -1,6 +1,6 @@
 ---
 name: commercial-contract-review
-description: First-pass review of a commercial agreement (vendor, SaaS, NDA, services, license) against a playbook — producing a ranked issue table with clause quotes and pincites, position-vs-playbook comparison, fallback positions, and escalation flags, wrapped in an executive summary. Use when the user uploads or pastes a contract for review, asks "what's wrong with this agreement," wants redline priorities, or asks whether terms are market. Differentiator: materiality-ranked output with every finding quoted from the actual text — never a generic clause checklist.
+description: 'First-pass review of a commercial agreement (vendor, SaaS, NDA, services, license) against a playbook — producing a ranked issue table with clause quotes and pincites, position-vs-playbook comparison, fallback positions, and escalation flags, wrapped in an executive summary. Use when the user uploads or pastes a contract for review, asks "what''s wrong with this agreement," wants redline priorities, or asks whether terms are market. Differentiator: materiality-ranked output with every finding quoted from the actual text — never a generic clause checklist.'
 ---
 
 # Commercial Contract Review

@@ -1,6 +1,6 @@
 ---
 name: authority-synthesis
-description: Turn a pile of cases into a usable rule — chart authorities per element (facts that mattered, holding, reasoning, comparison to the client's case), synthesize implicit rules from consistent outcomes, reconcile seemingly inconsistent decisions, and write tight case illustrations that prove the rule. Use when multiple opinions bear on one question, when the user asks "what's the rule from these cases," wants cases charted or compared, needs a synthesized rule stated, or when legal-research-memo's discussion section needs its authority layer built. Differentiator: the method between "found the cases" and "stated the rule" — research skills find authority; this skill makes it speak with one voice.
+description: 'Turn a pile of cases into a usable rule — chart authorities per element (facts that mattered, holding, reasoning, comparison to the client''s case), synthesize implicit rules from consistent outcomes, reconcile seemingly inconsistent decisions, and write tight case illustrations that prove the rule. Use when multiple opinions bear on one question, when the user asks "what''s the rule from these cases," wants cases charted or compared, needs a synthesized rule stated, or when legal-research-memo''s discussion section needs its authority layer built. Differentiator: the method between "found the cases" and "stated the rule" — research skills find authority; this skill makes it speak with one voice.'
 ---
 
 # Authority Synthesis

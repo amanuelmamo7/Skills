@@ -1,6 +1,6 @@
 ---
 name: legal-research-memo
-description: Research a legal question and produce a verification-disciplined memo — question presented, calibrated brief answer, tiered authorities with pincites, mandatory strongest-contrary-authority section, and open questions. Use when the user asks a legal question needing authority ("can we...", "is it enforceable...", "what does the statute require..."), asks for a research memo, or needs existing legal analysis cite-checked. Differentiator: every citation carries a verification tier and unread authorities are labeled UNVERIFIED — the structural defense against fabricated cites.
+description: 'Research a legal question and produce a verification-disciplined memo — question presented, calibrated brief answer, tiered authorities with pincites, mandatory strongest-contrary-authority section, and open questions. Use when the user asks a legal question needing authority ("can we...", "is it enforceable...", "what does the statute require..."), asks for a research memo, or needs existing legal analysis cite-checked. Differentiator: every citation carries a verification tier and unread authorities are labeled UNVERIFIED — the structural defense against fabricated cites.'
 ---
 
 # Legal Research Memo

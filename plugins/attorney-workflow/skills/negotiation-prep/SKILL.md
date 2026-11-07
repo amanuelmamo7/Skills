@@ -1,6 +1,6 @@
 ---
 name: negotiation-prep
-description: Prepare for and support a negotiation — the pre-work quartet (reservation point, target with justification, BATNA/WATNA, full issue inventory), a perspective-taking map of the other side, anchoring and concession-signal strategy, framing moves, and a live-session discipline with a cognitive-bias checklist. Use when the user is heading into any negotiation — deal terms, renewal, settlement, salary, vendor pricing — asks "help me prep for this negotiation," wants a counter-offer strategy, or needs a debrief after a session. Differentiator: preparation and decision-support only — the skill never negotiates with a counterparty or communicates externally.
+description: 'Prepare for and support a negotiation — the pre-work quartet (reservation point, target with justification, BATNA/WATNA, full issue inventory), a perspective-taking map of the other side, anchoring and concession-signal strategy, framing moves, and a live-session discipline with a cognitive-bias checklist. Use when the user is heading into any negotiation — deal terms, renewal, settlement, salary, vendor pricing — asks "help me prep for this negotiation," wants a counter-offer strategy, or needs a debrief after a session. Differentiator: preparation and decision-support only — the skill never negotiates with a counterparty or communicates externally.'
 ---
 
 # Negotiation Prep

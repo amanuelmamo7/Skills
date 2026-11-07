@@ -1,6 +1,6 @@
 ---
 name: contract-dispute-analysis
-description: Analyze a contract dispute end-to-end through the sequential enforceability framework — what law governs (UCC Article 2 vs. common law, predominant-purpose for mixed transactions), whether a contract was formed, defenses, what the terms actually are (parol evidence, implied and gap-filler terms, conditions), breach, excuses, remedies, and alternative theories like promissory estoppel. Use when a dispute exists or is brewing over whether a contract exists, what it requires, or who breached — "do we have a contract," "are we bound," "did they breach," "what are we owed." Differentiator: post-signature dispute posture — for pre-signature review of draft terms, use commercial-contract-review instead.
+description: 'Analyze a contract dispute end-to-end through the sequential enforceability framework — what law governs (UCC Article 2 vs. common law, predominant-purpose for mixed transactions), whether a contract was formed, defenses, what the terms actually are (parol evidence, implied and gap-filler terms, conditions), breach, excuses, remedies, and alternative theories like promissory estoppel. Use when a dispute exists or is brewing over whether a contract exists, what it requires, or who breached — "do we have a contract," "are we bound," "did they breach," "what are we owed." Differentiator: post-signature dispute posture — for pre-signature review of draft terms, use commercial-contract-review instead.'
 ---
 
 # Contract Dispute Analysis

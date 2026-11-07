@@ -1,6 +1,6 @@
 ---
 name: litigation-hold-and-triage
-description: Triage an incoming dispute (demand letter, complaint, credible threat) into a structured intake memo — claims, exposure range, critical deadlines, insurer-notice check — and draft the litigation-hold notice with custodian and source lists. Use when a demand letter or complaint arrives, the user says "we might get sued" or "should we put a hold in place," or preservation obligations need scoping. Differentiator: drafts and checklists only — the preservation-trigger call and every outbound notice remain with counsel, explicitly.
+description: 'Triage an incoming dispute (demand letter, complaint, credible threat) into a structured intake memo — claims, exposure range, critical deadlines, insurer-notice check — and draft the litigation-hold notice with custodian and source lists. Use when a demand letter or complaint arrives, the user says "we might get sued" or "should we put a hold in place," or preservation obligations need scoping. Differentiator: drafts and checklists only — the preservation-trigger call and every outbound notice remain with counsel, explicitly.'
 ---
 
 # Litigation Hold & Dispute Triage
