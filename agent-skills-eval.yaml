@@ -1,0 +1,40 @@
+# Run behavioral evals for every skill that has skills/<id>/evals/evals.json.
+# Tool: https://github.com/darkrishabh/agent-skills-eval (third-party, unpinned —
+# treat like any third-party code: review before first run, pin a version).
+#
+#   python3 tools/compile_evals.py
+#   set -a && source .env && set +a          # OPENAI_API_KEY = your OpenRouter key
+#   npx agent-skills-eval --config agent-skills-eval.yaml
+#   npx agent-skills-eval --config agent-skills-eval.yaml --include "**/analyst-house-style"
+#
+# baseline: true runs each prompt WITH and WITHOUT the skill. A skill that doesn't
+# beat its baseline is a candidate for cutting or rewriting.
+#
+# PRIVACY: prompts, skill text, and outputs go to whichever provider baseUrl points at.
+# Only run evals with fictional fixtures. Never put client, matter, or personal data
+# in a spec.json — this repo is public and the eval traffic leaves your machine.
+
+root: ./skills
+workspace: ./agent-skills-workspace
+baseline: true
+
+# Target = the model the skill is written for; judge = a different, strong model
+# so the skill isn't graded by the same model that produced the output.
+target: anthropic/claude-sonnet-4.5
+judge: openai/gpt-5
+
+baseUrl: https://openrouter.ai/api/v1
+apiKeyEnv: OPENAI_API_KEY
+
+concurrency: 2
+layout: iteration
+strict: true
+
+report:
+  enabled: true
+  title: Skills Library Eval Report
+
+targetParams:
+  temperature: 0
+judgeParams:
+  temperature: 0

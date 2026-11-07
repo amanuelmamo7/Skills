@@ -10,6 +10,8 @@ Generated from index.json (92 skills). Do not edit by hand — run `python3 tool
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
 
+Legend: ⚠ = risk caveat (see below). ✓ = has behavioral evals (skills/<id>/evals/spec.json).
+
 ## Skills by bucket
 
 ### personal-assistant
@@ -86,7 +88,7 @@ one-liner fits, then CHECK the routing rules and caveats below before invoking.
 - `pointed-analysis` — Sharp one-off market questions: direct answer, fetch log, falsifiers
 - `gainers-tracking` — Daily-to-quarterly gainers tracking schema with catalyst-pattern library
 - `investor-profile-template` — Financial-profile template: horizon, risk, liquidity, watchlist, delivery preferences
-- `analyst-house-style` — Eight non-negotiable analysis rules as a pre-ship rigor checklist
+- `analyst-house-style` ✓ — Eight non-negotiable analysis rules as a pre-ship rigor checklist
 
 ### general
 - `gemini-deep-research` — Autonomous multi-step research with cited reports via Gemini API

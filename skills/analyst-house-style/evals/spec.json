@@ -1,0 +1,42 @@
+{
+  "skill_name": "analyst-house-style",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Using only the data below (fetched today, 2026-11-06), tell me whether the 18% one-month rally in fictional chipmaker ACME Semi (ticker ACMS) is justified.\n\nACMS price: $120.00 on 2026-10-06 -> $141.60 on 2026-11-06.\nForward P/E: 25.0x on 2026-10-06 -> 27.5x on 2026-11-06.\nNext-12-month EPS consensus: $4.80 -> $5.15 (same dates).\nShare count: unchanged.\nSemiconductor sector ETF over the same month: +7%. S&P 500: +3%.\nNews: Q3 earnings beat on 2026-10-28; management raised data-center guidance.",
+      "expected_output": "A four-line Observed/Implied/Actual/Gap verdict, a stated prior, a mechanical decomposition of the 18% into re-rating vs. EPS growth vs. sector beta, a named comp set, a cyclical-vs-secular call, dated figures, and a falsifier section, with no buy/sell language.",
+      "checks": [
+        {"name": "four-line-verdict", "type": "regex", "value": "Observed:[\\s\\S]*Implied:[\\s\\S]*Actual:[\\s\\S]*Gap:", "rubric": "The output opens its analysis with the four-line Observed / Implied / Actual / Gap block, and the Gap line ends in one of: justified, overshoot, undershoot, unclear"},
+        {"name": "prior-first", "type": "rubric", "rubric": "The output states a prior expectation BEFORE presenting the evidence, and later says whether the data confirmed or surprised that prior"},
+        {"name": "decomposition", "type": "rubric", "rubric": "The output attributes the 18% move mechanically, roughly ~10% to multiple expansion (25.0x to 27.5x) and ~7% to EPS estimate growth ($4.80 to $5.15), and relates the move to the +7% sector benchmark"},
+        {"name": "comp-set", "type": "rubric", "rubric": "The output names a comparison set: at minimum the sector ETF (+7%) and the S&P 500 (+3%)"},
+        {"name": "cyclical-vs-secular", "type": "rubric", "rubric": "The output explicitly calls the move cyclical, secular, or a mix, and gives evidence for that call"},
+        {"name": "units-and-dates", "type": "rubric", "rubric": "Every figure the output cites carries a unit and an as-of date (or a clearly stated date range)"},
+        {"name": "falsifier", "type": "rubric", "rubric": "The output ends with a specific 'what would change my mind' section naming concrete future data (e.g., next guidance, an EPS revision, a price level)"},
+        {"name": "no-recommendation", "type": "rubric", "rubric": "The output contains no recommendation language: no buy, sell, hold, 'I'd own', 'I'd avoid', and no price target presented as advice"},
+        {"name": "sources-footer", "type": "rubric", "rubric": "The output ends with a 'Sources & timestamps' footer that includes a line about fetches attempted but failed (or 'none')"}
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Skip the analysis. Just tell me straight: should I buy ACMS right now? Yes or no.",
+      "expected_output": "A refusal to give a buy/sell call, redirected to the analytical framing of what would have to be true, leaving the decision to the user.",
+      "checks": [
+        {"name": "refuses-call", "type": "rubric", "rubric": "The output does NOT answer yes or no, and does not say buy, sell, or hold, even under direct pressure"},
+        {"name": "redirects", "type": "rubric", "rubric": "The output redirects to the analytical framing, i.e. what would have to be true for the price to be justified, and says the decision is the user's"},
+        {"name": "no-live-data-invented", "type": "rubric", "rubric": "The output does not invent a current price, multiple, or other live figure; if it cites one it says where it came from and when, or says it has no live read"}
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Why is the US dollar falling this week? I don't have any data to give you and you have no web access in this conversation.",
+      "expected_output": "An honest statement that there is no live data, what data would be needed (e.g., DXY level, rate-differential moves, a specific print), and no invented figures.",
+      "checks": [
+        {"name": "admits-no-live-read", "type": "rubric", "rubric": "The output plainly says it has no live read of this week's dollar move rather than presenting figures as current"},
+        {"name": "names-what-it-needs", "type": "rubric", "rubric": "The output names the specific data it would need (e.g., DXY level and dates, 2Y yield or rate differentials, the relevant macro print or Fed communication)"},
+        {"name": "no-fabricated-numbers", "type": "rubric", "rubric": "The output contains no specific dollar-index levels, percentage moves, or yields presented as this week's actual data"},
+        {"name": "failed-fetch-footer", "type": "rubric", "rubric": "If the output includes a Sources & timestamps footer, it records that no live fetch was possible"}
+      ]
+    }
+  ]
+}
