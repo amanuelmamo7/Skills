@@ -5,7 +5,7 @@ description: Routing map of Amanuel's entire skill library. Consult FIRST when d
 
 # Skills Dispatcher
 
-Generated from index.json (92 skills). Do not edit by hand — run `python3 tools/build.py`.
+Generated from index.json (97 skills). Do not edit by hand — run `python3 tools/build.py`.
 
 How to use: find the bucket matching the task domain, pick the skill whose
 one-liner fits, then CHECK the routing rules and caveats below before invoking.
@@ -123,12 +123,20 @@ Legend: ⚠ = risk caveat (see below). ✓ = has behavioral evals (skills/<id>/e
 - `saga-orchestration` — Distributed transactions via sagas and compensating actions
 - `dbt-transformation-patterns` — dbt data-transformation modeling patterns
 
+### hedera
+- `agent-kit-plugin` ✓ — Build custom Hedera Agent Kit plugins and BaseTool tools (Zod params, prompts, mutation/query)
+- `agent-kit-hook` — Non-blocking Hedera Agent Kit hooks: logging, audit trails, metrics around tool calls
+- `agent-kit-policy` — Blocking Hedera Agent Kit policies: thresholds, allowlists, rate limits that stop tool calls
+- `hedera-consensus-service` ✓ — Hedera Consensus Service (HCS) in JS: topics, messages, subscriptions, audit-trail patterns
+- `hedera-token-service` ✓ — Hedera Token Service (HTS) in JS: create/mint/transfer tokens and NFTs, compliance keys, fees
+
 ## Routing rules (prefer / disambiguate)
 
 - `ai-agents-architect` and `autonomous-agent-patterns` overlap — architect = design guidance; patterns = concrete loop/permission/sandbox examples
 - `nextjs-app-router-patterns` and `nextjs-best-practices` overlap — same domain; patterns is example-driven, best-practices is principle tables
 - `contract-dispute-analysis` and `commercial-contract-review` overlap
 - `model-delegation` and `concise-planning` overlap
+- `agent-kit-hook` and `agent-kit-policy` overlap — hook observes and never blocks; policy blocks by throwing — pick by whether the call must stop
 
 ## Pipelines (skills that compose)
 
@@ -154,6 +162,8 @@ Legend: ⚠ = risk caveat (see below). ✓ = has behavioral evals (skills/<id>/e
 - `model-delegation` → `ai-agents-architect`
 - `session-gate` → `model-delegation`
 - `begin-task` → `session-gate`
+- `agent-kit-plugin` → `agent-kit-policy` — every mutation tool an agent can call should ship with a policy capping what it can do
+- `hedera-consensus-service` → `agent-kit-hook` — HCS topics are the natural sink for an agent audit-trail hook
 
 ## Dependencies (what a skill needs before it works)
 

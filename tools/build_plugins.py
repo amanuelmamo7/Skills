@@ -29,6 +29,7 @@ BUCKET_DESCRIPTIONS = {
     "agent-infrastructure": "Building and running agents: design patterns, orchestration, scheduling, memory.",
     "dev-operations": "Running software responsibly: house rules, audits, incidents, rotations, costs, CI gates.",
     "software-architecture": "Design patterns for software: DDD, CQRS, event sourcing, sagas, dbt modeling.",
+    "hedera": "Building on Hedera: Agent Kit plugins, hooks and policies; Consensus and Token Service with the Hiero JS SDK (third-party, pinned).",
 }
 
 OWNER = {"name": "Amanuel Mamo", "email": "amanuelmamo7@gmail.com"}

@@ -24,7 +24,7 @@ Add the marketplace once, then install only the buckets you need:
 /plugin install attorney-workflow@amanuel-skills
 ```
 
-Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `projects`, `agent-infrastructure`, `dev-operations`, `software-architecture`, `job-search`.
+Available plugins: `skills-library` (everything), `general`, `web-application`, `attorney-workflow`, `market-analysis`, `personal-assistant`, `agent-infrastructure`, `dev-operations`, `software-architecture`, `hedera`.
 
 Bucket plugins under [`plugins/`](plugins/) are **generated** from index.json by [`tools/build_plugins.py`](tools/build_plugins.py) — never edit them by hand. After adding or re-bucketing a skill, run `python3 tools/build_plugins.py` and commit the result.
 
@@ -47,6 +47,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | general | 11 | active |
 | web-application | 9 | active |
 | software-architecture | 8 | active |
+| hedera | 5 | active |
 
 ### personal-assistant (from Bari + Cowork, plus reviewed third-party)
 
@@ -181,6 +182,16 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`projection-patterns`](skills/projection-patterns/SKILL.md) | Building read-model projections from event streams |
 | [`saga-orchestration`](skills/saga-orchestration/SKILL.md) | Distributed transactions via sagas and compensating actions |
 | [`dbt-transformation-patterns`](skills/dbt-transformation-patterns/SKILL.md) | dbt data-transformation modeling patterns |
+
+### hedera
+
+| Skill | Use it for |
+|---|---|
+| [`agent-kit-plugin`](skills/agent-kit-plugin/SKILL.md) | Build custom Hedera Agent Kit plugins and BaseTool tools (Zod params, prompts, mutation/query) |
+| [`agent-kit-hook`](skills/agent-kit-hook/SKILL.md) | Non-blocking Hedera Agent Kit hooks: logging, audit trails, metrics around tool calls |
+| [`agent-kit-policy`](skills/agent-kit-policy/SKILL.md) | Blocking Hedera Agent Kit policies: thresholds, allowlists, rate limits that stop tool calls |
+| [`hedera-consensus-service`](skills/hedera-consensus-service/SKILL.md) | Hedera Consensus Service (HCS) in JS: topics, messages, subscriptions, audit-trail patterns |
+| [`hedera-token-service`](skills/hedera-token-service/SKILL.md) | Hedera Token Service (HTS) in JS: create/mint/transfer tokens and NFTs, compliance keys, fees |
 <!-- GENERATED-BUCKETS:END -->
 
 ## Adding a skill
@@ -196,6 +207,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Bari (`~/.openclaw/workspace`) | 8 assistant skills |
 | Cowork (`~/Documents/Claude/Scheduled`) | 4 scheduled-task skills |
 | [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 23 skills: 9 web-application, 5 agent-infrastructure, 5 general, 4 personal-assistant (intake 2026-07-15; 11 rejected — see manifest.json) |
+| [hedera-skills](https://github.com/hedera-dev/hedera-skills) @ `8b1fccd` | 5 hedera skills: agent-kit-plugin, agent-kit-hook, agent-kit-policy, hedera-consensus-service, hedera-token-service (intake 2026-11-07, Apache-2.0; other 20 skills not taken) |
 
 Originals were copied, never moved. Scripts keep machine-specific paths as working references.
 
