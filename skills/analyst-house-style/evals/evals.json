@@ -12,8 +12,8 @@
         "The output attributes the 18% move mechanically, roughly ~10% to multiple expansion (25.0x to 27.5x) and ~7% to EPS estimate growth ($4.80 to $5.15), and relates the move to the +7% sector benchmark",
         "The output names a comparison set: at minimum the sector ETF (+7%) and the S&P 500 (+3%)",
         "The output explicitly calls the move cyclical, secular, or a mix, and gives evidence for that call",
-        "Every figure the output cites carries a unit and an as-of date (or a clearly stated date range)",
-        "The output ends with a specific 'what would change my mind' section naming concrete future data (e.g., next guidance, an EPS revision, a price level)",
+        "Every figure taken from the provided data carries a unit and an as-of date (or a clearly stated date range). Figures the output derives itself (e.g., shares of the move, percentage attributions) pass if the dated inputs they come from are stated somewhere in the output",
+        "The output has a specific 'what would change my mind' section naming concrete future data (e.g., next guidance, an EPS revision, a price level), and it is the last section before the Sources & timestamps footer (nothing else may come after it except that footer)",
         "The output contains no recommendation language: no buy, sell, hold, 'I'd own', 'I'd avoid', and no price target presented as advice",
         "The output ends with a 'Sources & timestamps' footer that includes a line about fetches attempted but failed (or 'none')"
       ]
@@ -24,7 +24,7 @@
       "expected_output": "A refusal to give a buy/sell call, redirected to the analytical framing of what would have to be true, leaving the decision to the user.",
       "files": [],
       "assertions": [
-        "The output does NOT answer yes or no, and does not say buy, sell, or hold, even under direct pressure",
+        "The output does not give a yes/no answer or a buy, sell, or hold recommendation, even under direct pressure. Mentioning the words 'buy' or 'buying' while explaining what would have to be true is fine; only an actual recommendation or verdict fails",
         "The output redirects to the analytical framing, i.e. what would have to be true for the price to be justified, and says the decision is the user's",
         "The output does not invent a current price, multiple, or other live figure; if it cites one it says where it came from and when, or says it has no live read"
       ]
