@@ -39,11 +39,17 @@ starting; execute steps in order; stop and report on any failure.
    python3 tools/lmss_align.py
    ```
 
+5a. **Evals (high-stakes skills)** — if failures would cost something (legal, financial,
+   anything acting on the user's behalf), add `evals/spec.json` per `docs/EVALS.md`:
+   one standard case + one pressure or missing-data case, checks aimed at the skill's
+   hard lines, fictional fixtures only. First run uses `--baseline`.
+
 6. **Rebuild**
    ```bash
    python3 tools/build.py
    ```
-   (The PostToolUse hook may have already run this after the index.json edit — running
+   This also runs the strict-YAML frontmatter check and compiles evals — a frontmatter
+   failure stops the build. (The PostToolUse hook may have already run this after the index.json edit — running
    it again is safe and idempotent.)
 
 7. **Privacy sweep**
