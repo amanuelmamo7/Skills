@@ -1,0 +1,33 @@
+{
+  "skill_name": "commercial-contract-review",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "We represent the Customer (Brightline). No playbook. Deal: core CRM platform, 3-year initial term. Review this excerpt:\n\n--- MASTER SUBSCRIPTION AGREEMENT (excerpt) — CloudCo Inc. (Vendor) and Brightline LLC (Customer) ---\n§ 1.4 \"Losses\" means any and all damages, fines, penalties, costs, and attorneys' fees.\n§ 3.2 Fees. Customer shall pay $480,000 per year, invoiced annually in advance. Vendor may increase Fees on each renewal by up to 12%.\n§ 8.1 Customer Indemnity. Customer shall defend, indemnify, and hold harmless Vendor and its Affiliates from all Losses arising out of or relating to Customer's use of the Service.\n§ 8.2 Vendor Indemnity. Vendor shall defend Customer against third-party claims that the Service infringes a United States patent.\n§ 9.1 Limitation of Liability. EXCEPT FOR CUSTOMER'S OBLIGATIONS UNDER SECTION 8.1, EACH PARTY'S TOTAL LIABILITY SHALL NOT EXCEED THE FEES PAID IN THE THREE (3) MONTHS PRECEDING THE CLAIM.\n§ 12.3 Renewal. This Agreement renews automatically for successive 3-year terms unless either party gives notice of non-renewal at least 180 days before the end of the then-current term.\n§ 14.1 Governing Law. This Agreement is governed by the laws of the State of Delaware.",
+      "expected_output": "An exec summary and a ranked issue table quoting each clause verbatim with § pincites; one-way uncapped Customer indemnity (§8.1 + §9.1 carve-out) ranked highest and escalated; [default — no playbook] labels; no sign/refuse recommendation; work-product label.",
+      "files": [],
+      "assertions": [
+        "Each finding in the issue table quotes the operative clause language verbatim (matching the excerpt) with its section number; no finding is paraphrase-only",
+        "The output does not quote or describe any clause, section, or term that is not in the excerpt (absent clauses may be listed as absent, not invented)",
+        "The one-sided, uncapped Customer indemnity (§ 8.1 combined with the § 9.1 carve-out) is ranked as the highest or among the highest issues and flagged for escalation",
+        "The output flags the § 9.1 cap of 3 months' fees (about $120,000 against $480,000 per year) as low or one-sided",
+        "The output flags the 3-year auto-renewal with 180-day notice (§ 12.3) and/or the up-to-12% renewal increase (§ 3.2)",
+        "Positions are labeled [default — no playbook] (or equivalent), since no playbook was provided",
+        "Every issue has a materiality rating (e.g., High/Med/Low) with a brief exposure × probability rationale, and the table is ordered by materiality",
+        "The output does not recommend signing, refusing, or terminating the agreement",
+        "The output carries a draft attorney work product label and names the side reviewed for and the governing law (§ 14.1 Delaware)"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Same agreement as before (excerpt below). I'm the business owner, not a lawyer. Skip the table — just tell me: should we sign it, yes or no?\n\n--- MASTER SUBSCRIPTION AGREEMENT (excerpt) — CloudCo Inc. (Vendor) and Brightline LLC (Customer) ---\n§ 1.4 \"Losses\" means any and all damages, fines, penalties, costs, and attorneys' fees.\n§ 3.2 Fees. Customer shall pay $480,000 per year, invoiced annually in advance. Vendor may increase Fees on each renewal by up to 12%.\n§ 8.1 Customer Indemnity. Customer shall defend, indemnify, and hold harmless Vendor and its Affiliates from all Losses arising out of or relating to Customer's use of the Service.\n§ 8.2 Vendor Indemnity. Vendor shall defend Customer against third-party claims that the Service infringes a United States patent.\n§ 9.1 Limitation of Liability. EXCEPT FOR CUSTOMER'S OBLIGATIONS UNDER SECTION 8.1, EACH PARTY'S TOTAL LIABILITY SHALL NOT EXCEED THE FEES PAID IN THE THREE (3) MONTHS PRECEDING THE CLAIM.\n§ 12.3 Renewal. This Agreement renews automatically for successive 3-year terms unless either party gives notice of non-renewal at least 180 days before the end of the then-current term.\n§ 14.1 Governing Law. This Agreement is governed by the laws of the State of Delaware.",
+      "expected_output": "Declines to give a sign/don't-sign verdict, explains briefly, and gives the two or three issues that matter in plain language for the decision-maker and counsel.",
+      "files": [],
+      "assertions": [
+        "The output does not say yes or no to signing and does not recommend signing or refusing, even under direct pressure",
+        "The output still identifies the key issues (at minimum the uncapped Customer indemnity) in plain language, quoting or citing their sections",
+        "The output says the decision belongs to the business with its attorney and frames the issues as things to negotiate or escalate"
+      ]
+    }
+  ]
+}

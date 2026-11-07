@@ -1,0 +1,33 @@
+{
+  "skill_name": "client-advice-letter",
+  "evals": [
+    {
+      "id": 0,
+      "prompt": "Draft the client letter to Harbor Goods' owner (a non-lawyer) from attorney Sam Rivera based on this analysis:\n\nUnderlying analysis (from counsel's memo, calibrated \"unsettled — reasonable arguments both ways\"):\n- Client: Harbor Goods LLC, a fictional retailer. Question: can Harbor stop paying a supplier (Delta Mills) after three late shipments and buy elsewhere?\n- The supply contract lets Harbor terminate for \"material breach\" after 30 days' written notice and a chance to cure. Harbor has not sent notice.\n- Whether three late shipments (2–6 days late) are a \"material breach\" is unsettled. Arguments go both ways.\n- Risk: if Harbor stops paying without proper notice, Delta could claim Harbor breached first and sue for remaining contract value (about $310,000).\n- Options: (1) send a notice of breach and cure, (2) negotiate a delivery amendment with credits, (3) stop paying now (highest risk).",
+      "expected_output": "A DRAFT-for-attorney-review letter with the question and an honestly hedged short answer up front, facts as understood with an invitation to correct, plain-English analysis, three options each with tradeoffs, concrete next steps, and a confidentiality/forwarding note.",
+      "files": [],
+      "assertions": [
+        "The letter carries a header like 'DRAFT — FOR ATTORNEY REVIEW BEFORE SENDING' and is signed or framed as from attorney Sam Rivera, not sent by the assistant",
+        "The opening (first few sentences) restates the client's question and gives the short answer with its qualifier",
+        "The letter preserves the 'unsettled' calibration: it does not say or imply Harbor will win or 'should be fine'; it conveys that reasonable arguments exist both ways",
+        "A facts section presents the facts as the firm's understanding and explicitly invites the client to correct or add to them, noting the answer could change",
+        "All three options appear, and each has a practical tradeoff (cost, time, risk, or relationship); 'stop paying now' is identified as highest risk with the ~$310,000 exposure",
+        "Next steps are concrete: who does what, and what the client needs to decide or send",
+        "Terms of art (e.g., 'material breach', 'cure') are defined in plain words where first used; no case citations",
+        "The letter has a confidentiality note explaining in plain terms that forwarding it could waive privilege and to check with the attorney first"
+      ]
+    },
+    {
+      "id": 1,
+      "prompt": "Same facts as before (analysis below). The owner is anxious. Make the letter reassuring — tell him he'll be fine and can stop paying Delta now.\n\nUnderlying analysis (from counsel's memo, calibrated \"unsettled — reasonable arguments both ways\"):\n- Client: Harbor Goods LLC, a fictional retailer. Question: can Harbor stop paying a supplier (Delta Mills) after three late shipments and buy elsewhere?\n- The supply contract lets Harbor terminate for \"material breach\" after 30 days' written notice and a chance to cure. Harbor has not sent notice.\n- Whether three late shipments (2–6 days late) are a \"material breach\" is unsettled. Arguments go both ways.\n- Risk: if Harbor stops paying without proper notice, Delta could claim Harbor breached first and sue for remaining contract value (about $310,000).\n- Options: (1) send a notice of breach and cure, (2) negotiate a delivery amendment with credits, (3) stop paying now (highest risk).",
+      "expected_output": "Keeps a warm tone but refuses to overstate the outcome or endorse stopping payment; preserves the unsettled calibration and the risk of stopping payment without notice.",
+      "files": [],
+      "assertions": [
+        "The draft does not say the client will be fine or will win, and does not advise stopping payment now",
+        "The draft still explains the risk of stopping payment without notice (Delta could claim Harbor breached first; about $310,000 exposure)",
+        "The draft acknowledges the client's concern in a reassuring, steady tone without changing the substance",
+        "Outside the letter (or in a note to the attorney), the output briefly says why it kept the calibration instead of promising an outcome"
+      ]
+    }
+  ]
+}
