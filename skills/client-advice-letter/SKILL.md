@@ -1,6 +1,6 @@
 ---
 name: client-advice-letter
-description: Translate legal analysis into a client-facing advice letter or email — plain-English answer up front, facts-as-understood inviting correction, honest calibration that survives translation, options with practical tradeoffs, concrete next steps, and a confidentiality note. Use when the user asks to draft a letter or email to a client, explain an analysis to a business team or non-lawyer, or turn a memo into something the client can act on. Differentiator: everything else in the attorney-workflow family is internal work product — this is the outward-facing translation layer, drafted for attorney review and signature, never sent by the skill.
+description: 'Translate legal analysis into a client-facing advice letter or email — plain-English answer up front, facts-as-understood inviting correction, honest calibration that survives translation, options with practical tradeoffs, concrete next steps, and a confidentiality note. Use when the user asks to draft a letter or email to a client, explain an analysis to a business team or non-lawyer, or turn a memo into something the client can act on. Differentiator: everything else in the attorney-workflow family is internal work product — this is the outward-facing translation layer, drafted for attorney review and signature, never sent by the skill.'
 ---
 
 # Client Advice Letter

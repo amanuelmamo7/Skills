@@ -1,6 +1,6 @@
 ---
 name: daily-legal-workflow-app-ideas
-description: Daily legal-tech research + brainstorm: scan AI-for-lawyers articles, LinkedIn, and GitHub, then generate app ideas for in-house counsel teams and law firm practice groups
+description: 'Daily legal-tech research + brainstorm: scan AI-for-lawyers articles, LinkedIn, and GitHub, then generate app ideas for in-house counsel teams and law firm practice groups'
 ---
 
 This task has two phases each morning: (1) research the current legal-AI landscape, then (2) use what you found to generate fresh application ideas. Deliver everything in chat.

@@ -1,6 +1,6 @@
 ---
 name: task-capture
-description: Turn a casual chat message ("remind me to X", "todo: X") into a structured task POSTed to a task API, with date parsing, one-line confirmation, and a local fallback so nothing is lost. Use when an assistant receives task-like requests over chat and needs to file them into the user's real task system.
+description: 'Turn a casual chat message ("remind me to X", "todo: X") into a structured task POSTed to a task API, with date parsing, one-line confirmation, and a local fallback so nothing is lost. Use when an assistant receives task-like requests over chat and needs to file them into the user''s real task system.'
 ---
 
 # Task Capture from Chat

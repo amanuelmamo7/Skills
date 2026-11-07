@@ -1,6 +1,6 @@
 ---
 name: skill-distiller
-description: Create new agent skills by distilling operational lessons — incidents, post-mortems, repeated corrections, hard-won workflows — into governed, falsifiable SKILL.md packages. A guardrails-first alternative to generic skill authoring: every skill must cite the evidence that motivated it, draw its boundaries before its workflow, and ship with a staleness falsifier. Use whenever the user says "make this a skill," "turn this lesson into a skill," "add this to my skill library," wants a post-mortem or debugging session captured as reusable process, or asks to review a drafted skill for boundary and verification gaps.
+description: 'Create new agent skills by distilling operational lessons — incidents, post-mortems, repeated corrections, hard-won workflows — into governed, falsifiable SKILL.md packages. A guardrails-first alternative to generic skill authoring: every skill must cite the evidence that motivated it, draw its boundaries before its workflow, and ship with a staleness falsifier. Use whenever the user says "make this a skill," "turn this lesson into a skill," "add this to my skill library," wants a post-mortem or debugging session captured as reusable process, or asks to review a drafted skill for boundary and verification gaps.'
 ---
 
 # Skill Distiller

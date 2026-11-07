@@ -1,6 +1,6 @@
 ---
 name: regulatory-change-analysis
-description: Analyze a new or amended statute, regulation, or agency guidance for a specific organization — calibrated applicability determination, obligations table with effective dates and citations, gap analysis against current practice, and a ranked action list with owners and deadlines. Use when the user asks "does this new rule apply to us," "what do we need to do about <regulation>," needs a compliance gap assessment, or wants a regulatory development translated into concrete obligations. Differentiator: separates what the rule says (cited) from whether it applies (calibrated) from what to do (ranked) — the three questions generic summaries blur together.
+description: 'Analyze a new or amended statute, regulation, or agency guidance for a specific organization — calibrated applicability determination, obligations table with effective dates and citations, gap analysis against current practice, and a ranked action list with owners and deadlines. Use when the user asks "does this new rule apply to us," "what do we need to do about <regulation>," needs a compliance gap assessment, or wants a regulatory development translated into concrete obligations. Differentiator: separates what the rule says (cited) from whether it applies (calibrated) from what to do (ranked) — the three questions generic summaries blur together.'
 ---
 
 # Regulatory Change Analysis

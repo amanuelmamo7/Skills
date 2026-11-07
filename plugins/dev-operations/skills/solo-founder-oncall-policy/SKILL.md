@@ -1,6 +1,6 @@
 ---
 name: solo-founder-oncall-policy
-description: Write an honest incident-response policy for a one-person on-call: acknowledgment SLOs, alert routing, a severity taxonomy mapped to response windows, and an explicit named gap where a backup human should be. Use when setting up production ops for a solo or tiny team.
+description: 'Write an honest incident-response policy for a one-person on-call: acknowledgment SLOs, alert routing, a severity taxonomy mapped to response windows, and an explicit named gap where a backup human should be. Use when setting up production ops for a solo or tiny team.'
 ---
 
 # Solo-Founder On-Call Policy

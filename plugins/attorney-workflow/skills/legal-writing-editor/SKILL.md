@@ -1,6 +1,6 @@
 ---
 name: legal-writing-editor
-description: Four-pass editing gate for legal drafts — structure (explanation-of-law separated from application, everything explained actually applied and vice versa), flow (roadmaps, headings, topic sentences, transitions), sentences (one idea each, subjects near verbs, minimal passive and nominalization, consistent terminology), and mechanics (proofread, pincites present, defined terms consistent). Use when the user asks to edit, polish, tighten, or review a memo, letter, brief section, or any legal draft — and as the final pass on every attorney-workflow skill's output before delivery. Differentiator: edits style, flags substance — it never silently changes legal meaning.
+description: 'Four-pass editing gate for legal drafts — structure (explanation-of-law separated from application, everything explained actually applied and vice versa), flow (roadmaps, headings, topic sentences, transitions), sentences (one idea each, subjects near verbs, minimal passive and nominalization, consistent terminology), and mechanics (proofread, pincites present, defined terms consistent). Use when the user asks to edit, polish, tighten, or review a memo, letter, brief section, or any legal draft — and as the final pass on every attorney-workflow skill''s output before delivery. Differentiator: edits style, flags substance — it never silently changes legal meaning.'
 ---
 
 # Legal Writing Editor

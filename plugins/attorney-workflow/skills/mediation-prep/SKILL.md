@@ -1,6 +1,6 @@
 ---
 name: mediation-prep
-description: Prepare a party for mediation — the mediation statement (facts, positions, interests, settlement history, what resolution looks like), an interest map behind both sides' positions, settlement ranges tied to negotiation fundamentals, and the process readiness check (settlement authority present, agreement-to-mediate and confidentiality terms signed, caucus strategy). Use when a matter is headed to mediation, the user asks for a mediation statement, wants caucus strategy, or needs the mediation process explained and planned. Differentiator: party-side preparation with the full process map as reference — the skill preps and drafts; the party and counsel mediate.
+description: 'Prepare a party for mediation — the mediation statement (facts, positions, interests, settlement history, what resolution looks like), an interest map behind both sides'' positions, settlement ranges tied to negotiation fundamentals, and the process readiness check (settlement authority present, agreement-to-mediate and confidentiality terms signed, caucus strategy). Use when a matter is headed to mediation, the user asks for a mediation statement, wants caucus strategy, or needs the mediation process explained and planned. Differentiator: party-side preparation with the full process map as reference — the skill preps and drafts; the party and counsel mediate.'
 ---
 
 # Mediation Prep
