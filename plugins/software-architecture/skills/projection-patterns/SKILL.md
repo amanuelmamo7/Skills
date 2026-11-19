@@ -1,10 +1,9 @@
 ---
 name: projection-patterns
-description: Build read models and projections from event streams. Use when implementing CQRS read sides, building materialized views, or optimizing query performance in event-sourced systems.
-metadata:
-  aas-risk: safe
-  aas-source: community
-  aas-date-added: '2026-02-27'
+description: "Build read models and projections from event streams. Use when implementing CQRS read sides, building materialized views, or optimizing query performance in event-sourced systems."
+risk: critical
+source: community
+date_added: "2026-02-27"
 ---
 
 # Projection Patterns
@@ -40,3 +39,9 @@ Comprehensive guide to building projections and read models for event-sourced sy
 - Use this skill only when the task clearly matches the scope described above.
 - Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
 - Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.
+
+## Example
+
+For `OrderItemAdded` at position 42, apply the increment and persist checkpoint 42
+in one transaction. Replay position 42 and verify no second increment; crash
+before commit and verify both the row update and checkpoint roll back together.

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026-11-07",
+  "updated": "2026-11-19",
   "description": "Source of truth for this repo. Nodes are skills, sources, and humans. Edges are typed relationships. README bucket tables are generated from this file.",
   "buckets": [
     "general",
@@ -43,14 +43,16 @@
       "type": "source",
       "name": "Agentic Awesome Skills (third-party)",
       "location": "https://github.com/sickn33/agentic-awesome-skills",
-      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0"
+      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
+      "pin_note": "intake commit; current per-skill pins live in manifest.json (last sync 2026-11-19)"
     },
     {
       "id": "src-aas-2",
       "type": "source",
       "name": "Agentic Awesome Skills (2nd intake)",
       "location": "https://github.com/sickn33/agentic-awesome-skills",
-      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d"
+      "pinned_commit": "ee66a9bf254b698c37ccb1a6c77b0733eecee65d",
+      "pin_note": "intake commit; current per-skill pins live in manifest.json (last sync 2026-11-19)"
     },
     {
       "id": "src-streamez",
@@ -353,7 +355,7 @@
         "web-application"
       ],
       "description": "Form conversion-rate optimization methodology",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -363,7 +365,7 @@
         "web-application"
       ],
       "description": "Design direction and visual quality guidance for web UI",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -373,7 +375,7 @@
         "web-application"
       ],
       "description": "Frontend engineering persona and capability catalog",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -383,7 +385,7 @@
         "web-application"
       ],
       "description": "Next.js App Router patterns and playbook",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -393,7 +395,7 @@
         "web-application"
       ],
       "description": "Next.js App Router principles and best practices",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -413,7 +415,7 @@
         "web-application"
       ],
       "description": "Diagnostic-only SEO audit framework",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -423,8 +425,8 @@
         "web-application"
       ],
       "description": "shadcn/ui component workflows via the official CLI",
-      "review_date": "2026-07-15",
-      "risk": "third-party, RUNS COMMANDS: auto-executes npx shadcn@latest at load; npm supply-chain exposure accepted — see manifest.json"
+      "review_date": "2026-11-19",
+      "risk": "third-party, RUNS COMMANDS: instructs npx shadcn CLI use on demand (auto-run at load removed upstream 2026-11-19); npm supply-chain exposure — see manifest.json"
     },
     {
       "id": "tailwind-patterns",
@@ -433,7 +435,7 @@
         "web-application"
       ],
       "description": "Tailwind CSS v4 patterns and reference",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -443,7 +445,7 @@
         "agent-infrastructure"
       ],
       "description": "Agent system design patterns and sharp edges",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -453,7 +455,7 @@
         "agent-infrastructure"
       ],
       "description": "Autonomous agent design patterns: loops, permissions, sandboxing",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only; risky patterns shown as examples only"
     },
     {
@@ -463,7 +465,7 @@
         "agent-infrastructure"
       ],
       "description": "Methodology for measuring and improving an agent's performance",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -473,7 +475,7 @@
         "agent-infrastructure"
       ],
       "description": "Scheduling unattended recurring agent runs (cron + pre-approved tools)",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, HIGH CONSEQUENCE: unattended execution — explicit user request only, see manifest"
     },
     {
@@ -483,7 +485,7 @@
         "agent-infrastructure"
       ],
       "description": "Persistent agent memory via external MCP server (webzler/agentMemory)",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, DELEGATED TRUST: external server unvetted — see manifest"
     },
     {
@@ -513,7 +515,7 @@
         "personal-assistant"
       ],
       "description": "Status reports, leadership updates, and newsletters in repeatable formats (Anthropic)",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only; reads broad workspace context by design"
     },
     {
@@ -523,7 +525,7 @@
         "general"
       ],
       "description": "Proofread and correct documents while preserving voice",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -543,7 +545,7 @@
         "personal-assistant"
       ],
       "description": "Natural-language time tracking into user's own Notion DB",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, writes via official Notion connector"
     },
     {
@@ -553,7 +555,7 @@
         "general"
       ],
       "description": "Turns vague asks into one precise deep-research prompt",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only; ignore ghost DeepAPI line"
     },
     {
@@ -563,7 +565,7 @@
         "general"
       ],
       "description": "Token-efficient web research protocol",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -573,7 +575,7 @@
         "personal-assistant"
       ],
       "description": "PII/secret redaction in screenshots via OCR",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, DELEGATED TRUST: external pip package unvetted — see manifest"
     },
     {
@@ -813,7 +815,7 @@
         "software-architecture"
       ],
       "description": "CQRS command/query separation with read-model synchronization",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -823,7 +825,7 @@
         "software-architecture"
       ],
       "description": "Mapping relationships between bounded contexts",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -833,7 +835,7 @@
         "software-architecture"
       ],
       "description": "Bounded contexts, subdomains, and strategic DDD",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -843,7 +845,7 @@
         "software-architecture"
       ],
       "description": "Entities, value objects, aggregates, and tactical DDD patterns",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -853,7 +855,7 @@
         "software-architecture"
       ],
       "description": "Designing an append-only event store for event sourcing",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -863,7 +865,7 @@
         "software-architecture"
       ],
       "description": "Building read-model projections from event streams",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -873,7 +875,7 @@
         "software-architecture"
       ],
       "description": "Distributed transactions via sagas and compensating actions",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only; contains an undisclosed vendor plug — see manifest"
     },
     {
@@ -883,7 +885,7 @@
         "software-architecture"
       ],
       "description": "dbt data-transformation modeling patterns",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -893,7 +895,7 @@
         "general"
       ],
       "description": "Plan work concisely before executing multi-step tasks",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -903,7 +905,7 @@
         "general"
       ],
       "description": "PM toolkit: RICE prioritization and customer-interview analysis scripts",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, RUNS SCRIPTS (clean, stdlib-only, no network)"
     },
     {
@@ -923,7 +925,7 @@
         "agent-infrastructure"
       ],
       "description": "How to author effective agent skills, with a security checklist",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only advisory"
     },
     {
@@ -933,7 +935,7 @@
         "dev-operations"
       ],
       "description": "Workflow-engine patterns: n8n, Temporal, Inngest",
-      "review_date": "2026-07-15",
+      "review_date": "2026-11-19",
       "risk": "third-party, markdown-only; over-broad triggers — see manifest"
     },
     {

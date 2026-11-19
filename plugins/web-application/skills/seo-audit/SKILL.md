@@ -1,10 +1,9 @@
 ---
 name: seo-audit
 description: Diagnose and audit SEO issues affecting crawlability, indexation, rankings, and organic performance.
-metadata:
-  aas-risk: safe
-  aas-source: community
-  aas-date-added: '2026-02-27'
+risk: safe
+source: community
+date_added: '2026-02-27'
 ---
 
 # SEO Audit
