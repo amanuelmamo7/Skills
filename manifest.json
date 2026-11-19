@@ -5,12 +5,12 @@
     {
       "skill": "form-cro",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/form-cro",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/form-cro",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. No commands, no network, no undisclosed behavior. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. No commands, no network, no undisclosed behavior. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "web-application"
       ]
@@ -18,12 +18,12 @@
     {
       "skill": "frontend-design",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/frontend-design",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/frontend-design",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Frontmatter description is persona-style rather than descriptive; content clean. Update 2026-10-05: Upstream rewrite 2026-09-05 (AAS maintainers): dropped the anti-system-font/\"restart if template-like\" stance, DFII now optional; adds verification checklist. Markdown only.",
+      "risk_notes": "Markdown only, advisory. Frontmatter description is persona-style rather than descriptive; content clean. Update 2026-10-05: Upstream rewrite 2026-09-05 (AAS maintainers): dropped the anti-system-font/\"restart if template-like\" stance, DFII now optional; adds verification checklist. Markdown only. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "web-application"
       ]
@@ -31,12 +31,12 @@
     {
       "skill": "frontend-developer",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/frontend-developer",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/frontend-developer",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory persona/capability catalog. No executable instructions. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory persona/capability catalog. No executable instructions. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "web-application"
       ]
@@ -44,12 +44,12 @@
     {
       "skill": "nextjs-app-router-patterns",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/nextjs-app-router-patterns",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/nextjs-app-router-patterns",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Code examples only. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. Code examples only. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "web-application"
       ]
@@ -58,11 +58,11 @@
       "skill": "nextjs-best-practices",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "skills/nextjs-best-practices",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Nothing executable. Update 2026-10-05: Upstream moved the canonical copy out of the aas-web-app-builder bundle to skills/nextjs-best-practices; source_path re-pointed. Content: risk tag only.",
+      "risk_notes": "Markdown only, advisory. Nothing executable. Update 2026-10-05: Upstream moved the canonical copy out of the aas-web-app-builder bundle to skills/nextjs-best-practices; source_path re-pointed. Content: risk tag only. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "web-application"
       ]
@@ -75,7 +75,7 @@
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
       "review_date": "2026-10-05",
       "license": "MIT",
-      "risk_notes": "Markdown only (SKILL.md + 47 rule files), advisory. Upstream author: Vercel Engineering. One benign 'npx svgo' example. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only (SKILL.md + 47 rule files), advisory. Upstream author: Vercel Engineering. One benign 'npx svgo' example. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Drift 2026-11-19: upstream changed; update DEFERRED (see DEFERRED.md), local copy remains at the pinned commit.",
       "buckets": [
         "web-application"
       ]
@@ -83,12 +83,12 @@
     {
       "skill": "seo-audit",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/seo-audit",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/seo-audit",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, diagnostic-only framework; explicitly refrains from implementing fixes unless asked. Update 2026-10-05: Upstream 2026-09-05: Health Index made optional/subjective; confidence separated from severity. Markdown only.",
+      "risk_notes": "Markdown only, diagnostic-only framework; explicitly refrains from implementing fixes unless asked. Update 2026-10-05: Upstream 2026-09-05: Health Index made optional/subjective; confidence separated from severity. Markdown only. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "web-application"
       ]
@@ -96,12 +96,12 @@
     {
       "skill": "shadcn",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/shadcn",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/shadcn",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "RUNS COMMANDS. Auto-executes 'npx shadcn@latest info --json' when the skill loads (SKILL.md line 29) — executes whatever shadcn@latest resolves to on npm that day (supply-chain exposure, accepted 2026-07-15). Also instructs blind pass-through of server-resolved preset codes to the CLI. Upstream: official shadcn/ui skill. Re-review this one with extra care on any upstream drift. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "RUNS COMMANDS. Auto-executes 'npx shadcn@latest info --json' when the skill loads (SKILL.md line 29) — executes whatever shadcn@latest resolves to on npm that day (supply-chain exposure, accepted 2026-07-15). Also instructs blind pass-through of server-resolved preset codes to the CLI. Upstream: official shadcn/ui skill. Re-review this one with extra care on any upstream drift. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream REMOVED the auto-executing 'npx shadcn@latest info' at load; skill now reads components.json/lockfile first and tells the agent to establish CLI version and registry before running npx. Still instructs npx CLI use on demand, so RUNS COMMANDS caveat stays in reduced form. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "web-application"
       ]
@@ -109,12 +109,12 @@
     {
       "skill": "tailwind-patterns",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-aas-web-app-builder/skills/tailwind-patterns",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/tailwind-patterns",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory Tailwind v4 reference. No commands or network. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory Tailwind v4 reference. No commands or network. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "web-application"
       ]
@@ -123,11 +123,11 @@
       "skill": "ai-agents-architect",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "plugins/agentic-awesome-skills-claude/skills/ai-agents-architect",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT (upstream: vibeship-spawner-skills, Apache-2.0)",
-      "risk_notes": "Markdown only, advisory agent design patterns. No commands, no persistence. Update 2026-10-05: Upstream 2026-09-05: bounded-action/permission language; drops \"log thoughts\" in favor of action/result traces. Markdown only.",
+      "risk_notes": "Markdown only, advisory agent design patterns. No commands, no persistence. Update 2026-10-05: Upstream 2026-09-05: bounded-action/permission language; drops \"log thoughts\" in favor of action/result traces. Markdown only. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "agent-infrastructure"
       ]
@@ -136,11 +136,11 @@
       "skill": "autonomous-agent-patterns",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "plugins/agentic-awesome-skills-claude/skills/autonomous-agent-patterns",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only. Code is illustrative, never instructed to run. Contains one risky pattern (hot-loading LLM-written MCP servers) presented as an example, not a directive. Self-labeled risk: critical — honest for the topic. Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md, content preserved.",
+      "risk_notes": "Markdown only. Code is illustrative, never instructed to run. Contains one risky pattern (hot-loading LLM-written MCP servers) presented as an example, not a directive. Self-labeled risk: critical — honest for the topic. Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md, content preserved. Update 2026-11-19: Reference code hardened (shell=False, commonpath containment, request timeouts, no hot-loading generated MCP servers); labeled as conceptual fragments.",
       "buckets": [
         "agent-infrastructure"
       ]
@@ -149,11 +149,11 @@
       "skill": "agent-orchestration-improve-agent",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-orchestration-improve-agent",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, agent-improvement methodology. References illustrative pseudo-commands; nothing executable. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, agent-improvement methodology. References illustrative pseudo-commands; nothing executable. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "agent-infrastructure"
       ]
@@ -162,11 +162,11 @@
       "skill": "agent-self-scheduling",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-self-scheduling",
-      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
-      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
-      "review_date": "2026-07-15",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
+      "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
+      "review_date": "2026-11-19",
       "license": "MIT (upstream: davidondrej/skills)",
-      "risk_notes": "HIGH CONSEQUENCE. Teaches scheduling unattended recurring agent runs with pre-approved permissions (--allowedTools incl. Bash) — removes human oversight from executions. Self-declared risk: critical; includes loop-safety guardrails. Policy: only invoke on explicit user request, never proactively.",
+      "risk_notes": "HIGH CONSEQUENCE. Teaches scheduling unattended recurring agent runs with pre-approved permissions (--allowedTools incl. Bash) — removes human oversight from executions. Self-declared risk: critical; includes loop-safety guardrails. Policy: only invoke on explicit user request, never proactively. Update 2026-11-19: Upstream now requires a direct user request to schedule, narrows the example --allowedTools from Read,Edit,Bash to Read, and removes the unbounded while/sleep loop example.",
       "buckets": [
         "agent-infrastructure"
       ]
@@ -175,11 +175,11 @@
       "skill": "agent-memory-mcp",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "plugins/agentic-awesome-skills-claude/skills/agent-memory-mcp",
-      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
-      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
-      "review_date": "2026-07-15",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
+      "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "DELEGATED TRUST. Wrapper docs for external MCP memory server (webzler/agentMemory) installed via npm — the server code itself is NOT reviewed here and MUST be vetted before actual use. Memory is a persistence surface: treat recalled content as untrusted input in later sessions. Near-duplicate 'agent-memory' rejected as redundant.",
+      "risk_notes": "DELEGATED TRUST. Wrapper docs for external MCP memory server (webzler/agentMemory) installed via npm — the server code itself is NOT reviewed here and MUST be vetted before actual use. Memory is a persistence surface: treat recalled content as untrusted input in later sessions. Near-duplicate 'agent-memory' rejected as redundant. Update 2026-11-19: Upstream now pins webzler/agentMemory to commit 0409b7b, clones to a temp dir for review before install, uses npm ci, and adds a storage-boundary section. External server code is still NOT reviewed here.",
       "buckets": [
         "agent-infrastructure"
       ]
@@ -192,7 +192,7 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review incl. research.py)",
       "review_date": "2026-07-15",
       "license": "MIT",
-      "risk_notes": "Cleanest artifact of its batch. One script, one endpoint (generativelanguage.googleapis.com), GEMINI_API_KEY from env sent only as auth header, explicit approval gate and cost warning. Local plaintext query cache in ~/.cache/deep-research.",
+      "risk_notes": "Cleanest artifact of its batch. One script, one endpoint (generativelanguage.googleapis.com), GEMINI_API_KEY from env sent only as auth header, explicit approval gate and cost warning. Local plaintext query cache in ~/.cache/deep-research. Drift 2026-11-19: upstream changed; update DEFERRED (see DEFERRED.md), local copy remains at the pinned commit.",
       "buckets": [
         "general"
       ]
@@ -214,11 +214,11 @@
       "skill": "internal-comms",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "skills/internal-comms",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "Apache-2.0 (upstream: anthropics/skills — genuine, LICENSE.txt ships)",
-      "risk_notes": "Markdown only. Reads broad Slack/Drive/Email/Calendar context — disclosed and inherent to writing internal comms. All example files ship. Update 2026-10-05: Upstream 2026-09-05: draft-only guardrails, no assumed company size; AAS modification notices in examples. Markdown only.",
+      "risk_notes": "Markdown only. Reads broad Slack/Drive/Email/Calendar context — disclosed and inherent to writing internal comms. All example files ship. Update 2026-10-05: Upstream 2026-09-05: draft-only guardrails, no assumed company size; AAS modification notices in examples. Markdown only. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "personal-assistant"
       ]
@@ -227,11 +227,11 @@
       "skill": "professional-proofreader",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "skills/professional-proofreader",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory; both referenced mode files ship. No commands or network. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory; both referenced mode files ship. No commands or network. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "general"
       ]
@@ -244,7 +244,7 @@
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
       "review_date": "2026-10-05",
       "license": "MIT",
-      "risk_notes": "RUNS SCRIPTS. Transcription itself is fully local (Whisper). Caveats: transcribe.py silently pip-installs rich/tqdm on ImportError; can pipe full transcripts to Claude/Copilot CLIs (meeting content leaves machine — disable unless wanted); recommends unofficial 'pip install claude-cli' (DO NOT — supply-chain risk); install script modifies system (pip/brew). Doc half-Portuguese, self-contradicts on external APIs. Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md; scripts byte-identical to prior review. Caveats unchanged.",
+      "risk_notes": "RUNS SCRIPTS. Transcription itself is fully local (Whisper). Caveats: transcribe.py silently pip-installs rich/tqdm on ImportError; can pipe full transcripts to Claude/Copilot CLIs (meeting content leaves machine — disable unless wanted); recommends unofficial 'pip install claude-cli' (DO NOT — supply-chain risk); install script modifies system (pip/brew). Doc half-Portuguese, self-contradicts on external APIs. Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md; scripts byte-identical to prior review. Caveats unchanged. Drift 2026-11-19: upstream changed; update DEFERRED (see DEFERRED.md), local copy remains at the pinned commit.",
       "buckets": [
         "personal-assistant"
       ]
@@ -253,11 +253,11 @@
       "skill": "time-ledger",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "skills/time-ledger",
-      "pinned_commit": "5e31f236726a988e833b39215d140b2173bf05c0",
-      "reviewed_by": "Amanuel (assisted by Claude line-by-line review)",
-      "review_date": "2026-07-15",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
+      "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
+      "review_date": "2026-11-19",
       "license": "MIT (upstream: cruisekkk/time-ledger)",
-      "risk_notes": "Markdown only. Writes to user's own Notion DB via the OFFICIAL Notion connector (relies on its approval prompts). Anti-fabrication honesty contract is a genuine safety property. External template repo is delegated trust for setup only.",
+      "risk_notes": "Markdown only. Writes to user's own Notion DB via the OFFICIAL Notion connector (relies on its approval prompts). Anti-fabrication honesty contract is a genuine safety property. External template repo is delegated trust for setup only. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "personal-assistant"
       ]
@@ -266,11 +266,11 @@
       "skill": "research-prompt",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "skills/research-prompt",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, prompt-crafting method. IGNORE line 58's ghost 'DeepAPI POST /v1/research/deep' reference — no such endpoint ships or is explained. Limitations section properly requires approval for active steps. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, prompt-crafting method. IGNORE line 58's ghost 'DeepAPI POST /v1/research/deep' reference — no such endpoint ships or is explained. Limitations section properly requires approval for active steps. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream removed the pointer to DeepAPI POST /v1/research/deep; drafting a prompt no longer implies executing it.",
       "buckets": [
         "general"
       ]
@@ -279,11 +279,11 @@
       "skill": "efficient-web-research",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "skills/efficient-web-research",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, token-efficiency research protocol. Circular trigger line; references foreign tool names (read_url_content, browser_subagent) that need mental mapping to local tools. Only endpoint: read-only api.github.com examples. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, token-efficiency research protocol. Circular trigger line; references foreign tool names (read_url_content, browser_subagent) that need mental mapping to local tools. Only endpoint: read-only api.github.com examples. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "general"
       ]
@@ -292,11 +292,11 @@
       "skill": "privacy-mask",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "skills/privacy-mask",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "DELEGATED TRUST. All functionality is the external pip package 'privacy-mask' (fullstackcrew-alpha/privacy-mask) — MUST be vetted before actual use; 'all processing local/offline' claim is unverifiable from this folder. Auto-triggers on shared screenshots (defensive intent, but routes credential-bearing images through third-party code). Update 2026-10-05: Upstream 2026-09-05: description de-truncated, risk tag only. No behavior change; delegated-trust caveat stands.",
+      "risk_notes": "DELEGATED TRUST. All functionality is the external pip package 'privacy-mask' (fullstackcrew-alpha/privacy-mask) — MUST be vetted before actual use; 'all processing local/offline' claim is unverifiable from this folder. Auto-triggers on shared screenshots (defensive intent, but routes credential-bearing images through third-party code). Update 2026-10-05: Upstream 2026-09-05: description de-truncated, risk tag only. No behavior change; delegated-trust caveat stands. Update 2026-11-19: Upstream no longer claims processing is local/offline by default and adds manual-inspection and dry-run-log sensitivity warnings. External pip package still unvetted.",
       "buckets": [
         "personal-assistant"
       ]
@@ -304,12 +304,12 @@
     {
       "skill": "cqrs-implementation",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/cqrs-implementation",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/cqrs-implementation",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Read-model sync section overlaps projection-patterns (complementary). Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. Read-model sync section overlaps projection-patterns (complementary). Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -317,12 +317,12 @@
     {
       "skill": "ddd-context-mapping",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/ddd-context-mapping",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/ddd-context-mapping",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Clean. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. Clean. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -330,12 +330,12 @@
     {
       "skill": "ddd-strategic-design",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/ddd-strategic-design",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/ddd-strategic-design",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Clean. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. Clean. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -343,12 +343,12 @@
     {
       "skill": "ddd-tactical-patterns",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/ddd-tactical-patterns",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/ddd-tactical-patterns",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Clean. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. Clean. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -356,12 +356,12 @@
     {
       "skill": "event-store-design",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/event-store-design",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/event-store-design",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Template sections inverted (real content in SKILL.md, thin playbook) — cosmetic. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. Template sections inverted (real content in SKILL.md, thin playbook) — cosmetic. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -369,12 +369,12 @@
     {
       "skill": "projection-patterns",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/projection-patterns",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/projection-patterns",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. Playbook duplicates SKILL.md verbatim — cosmetic. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. Playbook duplicates SKILL.md verbatim — cosmetic. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -382,12 +382,12 @@
     {
       "skill": "saga-orchestration",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-ddd-evented-architecture/skills/saga-orchestration",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/saga-orchestration",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. VENDOR STEERING: contains an undisclosed promotional section for DBOS and references foreign skills — treat that section as an ad, not advice. Minor code nit (undefined dataclass field in one example). Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md, content preserved.",
+      "risk_notes": "Markdown only, advisory. VENDOR STEERING: contains an undisclosed promotional section for DBOS and references foreign skills — treat that section as an ad, not advice. Minor code nit (undefined dataclass field in one example). Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md, content preserved. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -395,12 +395,12 @@
     {
       "skill": "dbt-transformation-patterns",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-data-engineering/skills/dbt-transformation-patterns",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/dbt-transformation-patterns",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. All commands are illustrative dbt usage. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. All commands are illustrative dbt usage. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "software-architecture"
       ]
@@ -409,11 +409,11 @@
       "skill": "concise-planning",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "plugins/agentic-bundle-essentials/skills/concise-planning",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, advisory. One circular boilerplate section — cosmetic. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, advisory. One circular boilerplate section — cosmetic. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "general"
       ]
@@ -421,12 +421,12 @@
     {
       "skill": "product-manager-toolkit",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-startup-founder/skills/product-manager-toolkit",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/product-manager-toolkit",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "RUNS SCRIPTS (clean): stdlib-only RICE prioritizer + interview analyzer, cwd-confined, no network. 'NLP-based' claim overstates keyword matching. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "RUNS SCRIPTS (clean): stdlib-only RICE prioritizer + interview analyzer, cwd-confined, no network. 'NLP-based' claim overstates keyword matching. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Both scripts changed: input validation, 5 MiB transcript cap, CSV-injection guard on export, refuse-overwrite on sample creation. Still stdlib-only, no network. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "general"
       ]
@@ -439,7 +439,7 @@
       "reviewed_by": "Amanuel (assisted by Claude line-by-line review of both scripts)",
       "review_date": "2026-07-15",
       "license": "MIT (upstream: Anthropic)",
-      "risk_notes": "RUNS SCRIPTS (clean): MCP build + eval harness. Egress only api.anthropic.com (ANTHROPIC_API_KEY from env) and the user-specified MCP server under test.",
+      "risk_notes": "RUNS SCRIPTS (clean): MCP build + eval harness. Egress only api.anthropic.com (ANTHROPIC_API_KEY from env) and the user-specified MCP server under test. Drift 2026-11-19: upstream changed; update DEFERRED (see DEFERRED.md), local copy remains at the pinned commit.",
       "buckets": [
         "agent-infrastructure"
       ]
@@ -448,11 +448,11 @@
       "skill": "effective-agent-skills",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
       "source_path": "plugins/agentic-bundle-skill-author/skills/effective-agent-skills",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT (upstream: davidondrej/skills)",
-      "risk_notes": "Markdown only, skill-authoring guide. Ships its own third-party-skill security checklist (§11) — aligns with this repo's intake process. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged.",
+      "risk_notes": "Markdown only, skill-authoring guide. Ships its own third-party-skill security checklist (§11) — aligns with this repo's intake process. Update 2026-10-05: frontmatter moved under metadata.aas-* / risk tag only; body unchanged. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations.",
       "buckets": [
         "agent-infrastructure"
       ]
@@ -460,12 +460,12 @@
     {
       "skill": "workflow-automation",
       "source_repo": "https://github.com/sickn33/agentic-awesome-skills",
-      "source_path": "plugins/agentic-bundle-automation-builder/skills/workflow-automation",
-      "pinned_commit": "bdacd76ed9e388733b5f91a5c75a4e8183a7c0b5",
+      "source_path": "skills/workflow-automation",
+      "pinned_commit": "444f05edf05566b0880ad34e8eba6e9034905483",
       "reviewed_by": "Amanuel (assisted by Claude diff-review vs prior pin)",
-      "review_date": "2026-10-05",
+      "review_date": "2026-11-19",
       "license": "MIT",
-      "risk_notes": "Markdown only, educational n8n/Temporal/Inngest patterns; no endpoints. Over-broad triggers (fires on bare 'automation'/'cron') and ghost delegation references — ignore those. Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md, content preserved.",
+      "risk_notes": "Markdown only, educational n8n/Temporal/Inngest patterns; no endpoints. Over-broad triggers (fires on bare 'automation'/'cron') and ghost delegation references — ignore those. Update 2026-10-05: Upstream 2026-09-05 restructure: body moved to references/detailed-guide.md, content preserved. Update 2026-11-19: Upstream catalog review pass (v20.0.0): caveats, factual corrections and frontmatter moved to top-level risk/source/date_added; no new files, commands or network destinations. Source path moved upstream from a bundle folder to the canonical skills/ path.",
       "buckets": [
         "dev-operations"
       ]

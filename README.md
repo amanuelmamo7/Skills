@@ -176,7 +176,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`skills-dispatcher`](skills/skills-dispatcher/SKILL.md) | Routing map of the whole library: buckets, preferences, pipelines, caveats (generated) |
 | [`begin-task`](skills/begin-task/SKILL.md) | Human-invoked Phase-0 ritual: dispatcher route, model-delegation triage, covenant check, gate record — the front door session-gate verifies |
 
-### web-application (third-party, from Agentic Awesome Skills — pinned `5e31f23`)
+### web-application (third-party, from Agentic Awesome Skills — per-skill pins in manifest.json)
 
 | Skill | Use it for |
 |---|---|
@@ -190,7 +190,7 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | [`shadcn`](skills/shadcn/SKILL.md) | shadcn/ui component workflows via the official CLI — ⚠ see manifest |
 | [`tailwind-patterns`](skills/tailwind-patterns/SKILL.md) | Tailwind CSS v4 patterns and reference |
 
-### software-architecture (third-party, from Agentic Awesome Skills — pinned `ee66a9b`)
+### software-architecture (third-party, from Agentic Awesome Skills — per-skill pins in manifest.json)
 
 | Skill | Use it for |
 |---|---|
@@ -228,6 +228,8 @@ Buckets are metadata, not folders — a skill can live in more than one.
 | Cowork (`~/Documents/Claude/Scheduled`) | 4 scheduled-task skills |
 | [Agentic Awesome Skills](https://github.com/sickn33/agentic-awesome-skills) @ `5e31f23` | 23 skills: 9 web-application, 5 agent-infrastructure, 5 general, 4 personal-assistant (intake 2026-07-15; 11 rejected — see manifest.json) |
 | [hedera-skills](https://github.com/hedera-dev/hedera-skills) @ `8b1fccd` | 5 hedera skills: agent-kit-plugin, agent-kit-hook, agent-kit-policy, hedera-consensus-service, hedera-token-service (intake 2026-11-07, Apache-2.0; other 20 skills not taken) |
+
+**Last upstream sync: 2026-11-19.** 31 Agentic Awesome Skills entries were diff-reviewed and re-pinned to `444f05e`; four (`gemini-deep-research`, `audio-transcriber`, `mcp-builder`, `react-best-practices`) are held at their earlier pins, with reasons and triggers in [DEFERRED.md](DEFERRED.md). The commits in the table above are the original intake commits; the current pin for every third-party skill is in [manifest.json](manifest.json).
 
 Originals were copied, never moved. Scripts keep machine-specific paths as working references.
 

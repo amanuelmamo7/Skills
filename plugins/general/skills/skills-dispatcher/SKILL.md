@@ -178,7 +178,7 @@ Legend: ⚠ = risk caveat (see below). ✓ = has behavioral evals (skills/<id>/e
 
 ## Risk caveats (⚠ skills — read manifest.json before invoking)
 
-- `shadcn` — third-party, RUNS COMMANDS: auto-executes npx shadcn@latest at load; npm supply-chain exposure accepted — see manifest.json
+- `shadcn` — third-party, RUNS COMMANDS: instructs npx shadcn CLI use on demand (auto-run at load removed upstream 2026-11-19); npm supply-chain exposure — see manifest.json
 - `agent-self-scheduling` — third-party, HIGH CONSEQUENCE: unattended execution — explicit user request only, see manifest
 - `agent-memory-mcp` — third-party, DELEGATED TRUST: external server unvetted — see manifest
 - `audio-transcriber` — third-party, RUNS SCRIPTS: local processing, but see manifest caveats (pip installs, CLI piping)

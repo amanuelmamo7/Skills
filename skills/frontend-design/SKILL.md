@@ -1,10 +1,9 @@
 ---
 name: frontend-design
-description: Design and implement a distinctive frontend within the product’s existing brand, accessibility, performance and framework constraints.
-metadata:
-  aas-risk: critical
-  aas-source: community
-  aas-date-added: '2026-02-27'
+description: "Design and implement a distinctive frontend within the product’s existing brand, accessibility, performance and framework constraints."
+risk: critical
+source: community
+date_added: "2026-02-27"
 ---
 
 # Frontend Design

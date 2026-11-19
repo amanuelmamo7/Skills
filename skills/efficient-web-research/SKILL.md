@@ -1,7 +1,7 @@
 ---
 name: efficient-web-research
 source: community
-date_added: "2026-09-04"
+date_added: "2026-06-15"
 risk: safe
 description: >
   Protocol for token-efficient web research. Use when accessing URLs, GitHub repos, or running search queries. Prevents full-page fetching waste.
@@ -16,6 +16,10 @@ using the right tool at the right depth, and stopping as soon as the question is
 
 ## When to Use
 - Use this skill when the task matches this description: Protocol for token-efficient web research. Use when accessing URLs, GitHub repos, or running search queries. Prevents full-page fetching waste.
+
+## Scope and evidence precedence
+
+The numeric file/URL/token caps below are efficiency defaults, not hard limits. Full-file/bundle audits, legal or security analysis, user-supplied multi-source comparisons and exact quotations require enough original context to support the requested conclusion; do not claim a complete review from excerpts. Search snippets are discovery clues, not sufficient evidence for consequential or ambiguous claims. Read the primary page and cite its exact supporting content. Tool names are illustrative; use the host's actual tools and delegate only when authorized. A URL fragment does not guarantee server-side section extraction.
 
 ## Core Principle
 
