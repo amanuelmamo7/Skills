@@ -1,6 +1,26 @@
 # Skills
 
-Curated skills library — reviewed, pinned, and indexed. Skills I write myself and skills pulled from other repos that have passed the [intake checklist](docs/INTAKE.md).
+**A reviewed, pinned, and tested library of AI agent skills, built and maintained by an attorney.**
+
+Agent skills are reusable instruction sets that tell an AI model how to do a specific job. Most skill collections are copy-and-paste. This one is governed the way a legal team governs a playbook: nothing enters without review, every third-party skill is pinned to the exact commit that was read, and the high-stakes skills carry tests that show they change what the model does.
+
+**[Explore the skills graph](https://amanuelmamo7.github.io/Skills/graph.html)** · **[Try the contract anatomy explorer](https://amanuelmamo7.github.io/Skills/docs/contract-game.html)**
+
+[![Interactive knowledge graph of every skill, its source, and how skills relate](docs/img/graph.png)](https://amanuelmamo7.github.io/Skills/graph.html)
+
+## Start here
+
+| If you want to see | Look at |
+|---|---|
+| Legal work product | The [attorney-workflow](#attorney-workflow) skills: [contract review against a playbook](skills/commercial-contract-review/SKILL.md), [research memos with mandatory contrary authority](skills/legal-research-memo/SKILL.md), [client advice letters](skills/client-advice-letter/SKILL.md), and ten more, each tagged to the SALI legal taxonomy |
+| How AI tooling is governed | The [intake checklist](docs/INTAKE.md) every skill passes, the [provenance ledger](manifest.json) of pinned commits and risk notes, and the [weekly drift audit](.github/workflows/drift-audit.yml) that flags upstream changes |
+| Proof that it works | [Behavioral evals](docs/EVALS.md): each tested skill is run with and without the skill loaded, on fictional fixtures, to measure the difference. Latest run: contract review passed 88.9% of checks with the skill against 38.9% without; research memos 94.4% against 61.1% |
+| How an agent picks a skill | The generated [skills dispatcher](skills/skills-dispatcher/SKILL.md): one routing map with overlaps, pipelines, and risk caveats |
+| A finished artifact | The [contract anatomy explorer](https://amanuelmamo7.github.io/Skills/docs/contract-game.html): 19 contract types and 297 headings drawn from public SEC exhibits, with a quiz mode |
+
+[![Contract anatomy explorer showing the heading structure of a mutual NDA](docs/img/contract-game.png)](https://amanuelmamo7.github.io/Skills/docs/contract-game.html)
+
+Skills I write myself sit alongside skills pulled from other repos that have passed the [intake checklist](docs/INTAKE.md).
 
 **How this repo works**
 
@@ -211,4 +231,4 @@ Buckets are metadata, not folders — a skill can live in more than one.
 
 Originals were copied, never moved. Scripts keep machine-specific paths as working references.
 
-*Seeded 2026-07-15 from the AI Skills library (built 2026-07-14). Roadmap: Phases 1-2 complete (first third-party intake done); next is Phase 3 (bucket-level plugins).*
+*Seeded 2026-07-15 from the AI Skills library (built 2026-07-14).*
